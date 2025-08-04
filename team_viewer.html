@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Horses Mouth Sports Data Team Viewer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #111;
+      line-height: 1.5;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    details {
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      padding: 12px 16px;
+    }
+
+    summary {
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .team-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 300px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      padding-bottom: 60px;
+    }
+
+    .team-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .team-logo {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 64px;
+      height: 64px;
+      background: #000;
+      border-radius: 8px;
+      padding: 6px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sport-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 6px 8px;
+      z-index: 2;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-height: 28px;
+    }
+
+    .team-info {
+      position: relative;
+      z-index: 2;
+    }
+
+    .team-info h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .team-info p {
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .team-info a {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Horses Mouth Sports Data Team Viewer</h1>
+  <div id="teamSections"></div>
+
+  <script>
+    fetch('data/teams.xml')
+      .then(response => response.text())
+      .then(xmlText => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, "application/xml");
+
+        const sports = Array.from(xml.querySelectorAll("sport"));
+
+        const container = document.getElementById("teamSections");
+
+        sports.forEach(sport => {
+          const teams = Array.from(sport.querySelectorAll("team"));
+
+          // Group by league > conference > division
+          const grouped = {};
+
+          teams.forEach(team => {
+            const league = team.querySelector("league")?.textContent || "Unknown League";
+            const conference = team.querySelector("conference")?.textContent || "Unknown Conference";
+            const division = team.querySelector("division")?.textContent || "Unknown Division";
+
+            if (!grouped[league]) grouped[league] = {};
+            if (!grouped[league][conference]) grouped[league][conference] = {};
+            if (!grouped[league][conference][division]) grouped[league][conference][division] = [];
+
+            grouped[league][conference][division].push(team);
+          });
+
+          // Create sections
+          for (const league in grouped) {
+            const leagueDetails = document.createElement("details");
+            leagueDetails.setAttribute("open", "true");
+            leagueDetails.innerHTML = `<summary>${league}</summary>`;
+
+            for (const conference in grouped[league]) {
+              const confDetails = document.createElement("details");
+              confDetails.setAttribute("open", "true");
+              confDetails.innerHTML = `<summary>${conference}</summary>`;
+
+              for (const division in grouped[league][conference]) {
+                const divDetails = document.createElement("details");
+                divDetails.setAttribute("open", "true");
+                divDetails.innerHTML = `<summary>${division}</summary>`;
+
+                const grid = document.createElement("div");
+                grid.className = "team-grid";
+
+                grouped[league][conference][division].forEach(team => {
+                  const name = team.querySelector("name")?.textContent || "";
+                  const logo = team.querySelector("logo")?.textContent || "";
+                  const bg = team.querySelector("background")?.textContent || "";
+                  const coach = team.querySelector("head_coach")?.textContent || "";
+                  const stadium = team.querySelector("stadium")?.textContent || "";
+                  const year = team.querySelector("established")?.textContent || "";
+                  const website = team.querySelector("url")?.textContent || "#";
+                  const leagueAbbr = team.querySelector("league_abbr")?.textContent || "";
+                  const div = team.querySelector("division")?.textContent || "";
+
+                  const card = document.createElement("div");
+                  card.className = "team-card";
+                  if (bg) card.style.backgroundImage = `url(${bg})`;
+
+                  card.innerHTML = `
+                    <div class="team-logo"><img src="${logo}" alt="${name} logo"></div>
+                    <div class="team-info">
+                      <h2>${name}</h2>
+                      <p><strong>Coach:</strong> ${coach}</p>
+                      <p><strong>Stadium:</strong> ${stadium}</p>
+                      <p><strong>Since:</strong> ${year}</p>
+                      <p><a href="${website}" target="_blank">Team Website</a></p>
+                    </div>
+                    <div class="sport-badge">${leagueAbbr} • ${div}</div>
+                  `;
+
+                  grid.appendChild(card);
+                });
+
+                divDetails.appendChild(grid);
+                confDetails.appendChild(divDetails);
+              }
+
+              leagueDetails.appendChild(confDetails);
+            }
+
+            container.appendChild(leagueDetails);
+          }
+        });
+      });
+  </script>
+
+</body>
+</html>
