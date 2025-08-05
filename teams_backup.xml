@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sports_teams last_updated="2025-08-05T13:32:30.296310" total_teams="32" total_leagues="1">
+  <league name="National Football League" abbreviation="NFL" country="USA" sport="American Football">
+    <conferences>
+      <conference name="NFC Conference" abbreviation="NFC">
+        <divisions>
+          <division name="West">
+            <team id="nfl_arizona-cardinals">
+              <basic_info>
+                <name>Arizona Cardinals</name>
+                <slug>arizona-cardinals</slug>
+                <established>1920</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Phoenix, AZ</hometown>
+                <population>1,644,409</population>
+              </location>
+              <visual_identity>
+                <primary_color>Cardinal Red</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/u9fltoslqdsyao8cpm0k</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/zglirxlttuukonnz1il0</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Jonathan Gannon</head_coach>
+                <owners>Michael Bidwill</owners>
+              </organization>
+              <venue>
+                <stadium>State Farm Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/arizona-cardinals/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/west/arizona-cardinals/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_los-angeles-rams">
+              <basic_info>
+                <name>Los Angeles Rams</name>
+                <slug>los-angeles-rams</slug>
+                <established>1937</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Los Angeles, CA</hometown>
+                <population>3,822,238</population>
+              </location>
+              <visual_identity>
+                <primary_color>Blue</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ayvwcmluj2ohkdlbiegi</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/eo223qd5mlxrna3bbdiv</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean McVay</head_coach>
+                <owners>Stan Kroenke</owners>
+              </organization>
+              <venue>
+                <stadium>SoFi Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/los-angeles-rams/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/west/los-angeles-rams/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_san-francisco-49ers">
+              <basic_info>
+                <name>San Francisco 49ers</name>
+                <slug>san-francisco-49ers</slug>
+                <established>1946</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>San Francisco, CA</hometown>
+                <population>808,437</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/dxibuyxbk0b9ua5ih9hn</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/aedv7exzsect9be58i0h</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Kyle Shanahan</head_coach>
+                <owners>Jed York</owners>
+              </organization>
+              <venue>
+                <stadium>Levi's® Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/san-francisco-49ers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/west/san-francisco-49ers/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_seattle-seahawks">
+              <basic_info>
+                <name>Seattle Seahawks</name>
+                <slug>seattle-seahawks</slug>
+                <established>1976</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Seattle, WA</hometown>
+                <population>749,256</population>
+              </location>
+              <visual_identity>
+                <primary_color>College Navy</primary_color>
+                <secondary_color>Action Green</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gcytzwpjdzbpwnwxincg</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/yfmuzipdfeduwgu4kfta</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Macdonald</head_coach>
+                <owners>Seattle Seahawks Ownership Trust</owners>
+              </organization>
+              <venue>
+                <stadium>Lumen Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/seattle-seahawks/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/west/seattle-seahawks/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="South">
+            <team id="nfl_atlanta-falcons">
+              <basic_info>
+                <name>Atlanta Falcons</name>
+                <slug>atlanta-falcons</slug>
+                <established>1966</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Atlanta, GA</hometown>
+                <population>499,127</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/d8m7hzpsbrl6pnqht8op</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/dgksdhs7zhmrioliyq9c</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Raheem Morris</head_coach>
+                <owners>Arthur Blank</owners>
+              </organization>
+              <venue>
+                <stadium>Mercedes-Benz Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/atlanta-falcons/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/south/atlanta-falcons/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_carolina-panthers">
+              <basic_info>
+                <name>Carolina Panthers</name>
+                <slug>carolina-panthers</slug>
+                <established>1995</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Charlotte, NC</hometown>
+                <population>897,720</population>
+              </location>
+              <visual_identity>
+                <primary_color>Panther Blue</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ervfzgrqdpnc7lh5gqwq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/eyotndxveoeyibcbag5k</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Dave Canales</head_coach>
+                <owners>David Tepper</owners>
+              </organization>
+              <venue>
+                <stadium>Bank of America Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/carolina-panthers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/south/carolina-panthers/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-orleans-saints">
+              <basic_info>
+                <name>New Orleans Saints</name>
+                <slug>new-orleans-saints</slug>
+                <established>1967</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>New Orleans, LA</hometown>
+                <population>369,746</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Old Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/qk0qesy5im61qccr5vp0</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Kellen Moore</head_coach>
+                <owners>Gayle Benson</owners>
+              </organization>
+              <venue>
+                <stadium>Caesars Superdome</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-orleans-saints/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/south/new-orleans-saints/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_tampa-bay-buccaneers">
+              <basic_info>
+                <name>Tampa Bay Buccaneers</name>
+                <slug>tampa-bay-buccaneers</slug>
+                <established>1976</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Tampa, FL</hometown>
+                <population>398,173</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/v8uqiualryypwqgvwcih</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/odiwi0h6uplawxy54sqc</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Todd Bowles</head_coach>
+                <owners>Bryan Glazer, Edward Glazer, Joel Glazer</owners>
+              </organization>
+              <venue>
+                <stadium>Raymond James Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/tampa-bay-buccaneers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/south/tampa-bay-buccaneers/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="North">
+            <team id="nfl_chicago-bears">
+              <basic_info>
+                <name>Chicago Bears</name>
+                <slug>chicago-bears</slug>
+                <established>1920</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Chicago, IL</hometown>
+                <population>2,665,039</population>
+              </location>
+              <visual_identity>
+                <primary_color>Dark Navy</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ijrplti0kmzsyoaikhv1</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/egkztdkxkhpio4a3unxg</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Ben Johnson</head_coach>
+                <owners>Virginia Halas McCaskey</owners>
+              </organization>
+              <venue>
+                <stadium>Soldier Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/chicago-bears/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/north/chicago-bears/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_detroit-lions">
+              <basic_info>
+                <name>Detroit Lions</name>
+                <slug>detroit-lions</slug>
+                <established>1930</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Detroit, MI</hometown>
+                <population>620,376</population>
+              </location>
+              <visual_identity>
+                <primary_color>Honolulu Blue</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ocvxwnapdvwevupe4tpr</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/dlyxxmgt52d7anojsknk</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Dan Campbell</head_coach>
+                <owners>Sheila Ford Hamp</owners>
+              </organization>
+              <venue>
+                <stadium>Ford Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/detroit-lions/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/north/detroit-lions/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_green-bay-packers">
+              <basic_info>
+                <name>Green Bay Packers</name>
+                <slug>green-bay-packers</slug>
+                <established>1921</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Green Bay, WI</hometown>
+                <population>106,095</population>
+              </location>
+              <visual_identity>
+                <primary_color>Dark Green</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gppfvr7n8gljgjaqux2x</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/nn9yhffph5ty4qj2gqwu</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Matt LaFleur</head_coach>
+                <owners>Green Bay Packers, Inc. (Governed by a Board of Directors)</owners>
+              </organization>
+              <venue>
+                <stadium>Lambeau Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/green-bay-packers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/north/green-bay-packers/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_minnesota-vikings">
+              <basic_info>
+                <name>Minnesota Vikings</name>
+                <slug>minnesota-vikings</slug>
+                <established>1961</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Minneapolis, MN</hometown>
+                <population>425,096</population>
+              </location>
+              <visual_identity>
+                <primary_color>Purple</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/teguylrnqqmfcwxvcmmz</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/fnmak0n2pitv59qqmaen</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Kevin O'Connell</head_coach>
+                <owners>Zygi Wilf</owners>
+              </organization>
+              <venue>
+                <stadium>U.S. Bank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/minnesota-vikings/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/north/minnesota-vikings/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="East">
+            <team id="nfl_dallas-cowboys">
+              <basic_info>
+                <name>Dallas Cowboys</name>
+                <slug>dallas-cowboys</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Dallas, TX</hometown>
+                <population>1,304,379</population>
+              </location>
+              <visual_identity>
+                <primary_color>Blue</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ieid8hoygzdlmzo0tnf6</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/q7qakjbkb5wt7q943epi</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Schottenheimer</head_coach>
+                <owners>Jerry Jones</owners>
+              </organization>
+              <venue>
+                <stadium>AT&amp;T Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/dallas-cowboys/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/east/dallas-cowboys/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-york-giants">
+              <basic_info>
+                <name>New York Giants</name>
+                <slug>new-york-giants</slug>
+                <established>1925</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>New York, NY</hometown>
+                <population>8,335,897</population>
+              </location>
+              <visual_identity>
+                <primary_color>Dark Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/t6mhdmgizi6qhndh8b9p</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/i94f24mjvgoc64hnqw3o</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Daboll</head_coach>
+                <owners>John Mara, Steve Tisch</owners>
+              </organization>
+              <venue>
+                <stadium>MetLife Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-york-giants/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/east/new-york-giants/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_philadelphia-eagles">
+              <basic_info>
+                <name>Philadelphia Eagles</name>
+                <slug>philadelphia-eagles</slug>
+                <established>1933</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Philadelphia, PA</hometown>
+                <population>1,550,542</population>
+              </location>
+              <visual_identity>
+                <primary_color>Midnight Green</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/puhrqgj71gobgdkdo6uq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/p8xl6x8jfe3acs71jtit</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Nick Sirianni</head_coach>
+                <owners>Jeffrey Lurie</owners>
+              </organization>
+              <venue>
+                <stadium>Lincoln Financial Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/philadelphia-eagles/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/east/philadelphia-eagles/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_washington-commanders">
+              <basic_info>
+                <name>Washington Commanders</name>
+                <slug>washington-commanders</slug>
+                <established>1932</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Washington D.C</hometown>
+                <population>671,803</population>
+              </location>
+              <visual_identity>
+                <primary_color>Burgundy</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/xymxwrxtyj9fhaemhdyd</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/kajwfzxaiqkjvgxozpat</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Dan Quinn</head_coach>
+                <owners>Josh Harris</owners>
+              </organization>
+              <venue>
+                <stadium>Northwest Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/washington-commanders/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/national-football-conference/east/washington-commanders/</operations_url>
+              </urls>
+            </team>
+          </division>
+        </divisions>
+      </conference>
+      <conference name="AFC Conference" abbreviation="AFC">
+        <divisions>
+          <division name="North">
+            <team id="nfl_baltimore-ravens">
+              <basic_info>
+                <name>Baltimore Ravens</name>
+                <slug>baltimore-ravens</slug>
+                <established>1996</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Baltimore, MD</hometown>
+                <population>569,931</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Purple</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ucsdijmddsqcj1i9tddd</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/o2k317ev82s6pa26dos7</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>John Harbaugh</head_coach>
+                <owners>Steve Bisciotti</owners>
+              </organization>
+              <venue>
+                <stadium>M&amp;T Bank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/baltimore-ravens/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/north/baltimore-ravens/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_cincinnati-bengals">
+              <basic_info>
+                <name>Cincinnati Bengals</name>
+                <slug>cincinnati-bengals</slug>
+                <established>1968</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Cincinnati, OH</hometown>
+                <population>309,513</population>
+              </location>
+              <visual_identity>
+                <primary_color>Orange</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/okxpteoliyayufypqalq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/maacoshfmktzddy1ob56</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Zac Taylor</head_coach>
+                <owners>Mike Brown</owners>
+              </organization>
+              <venue>
+                <stadium>Paycor Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/cincinnati-bengals/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/north/cincinnati-bengals/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_cleveland-browns">
+              <basic_info>
+                <name>Cleveland Browns</name>
+                <slug>cleveland-browns</slug>
+                <established>1946</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Cleveland, OH</hometown>
+                <population>361,607</population>
+              </location>
+              <visual_identity>
+                <primary_color>Dark Brown</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/bedyixmmjhszfcx5wv2l</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/skdxhpn1dmksuyrtwc7q</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Kevin Stefanski</head_coach>
+                <owners>Dee and Jimmy Haslam</owners>
+              </organization>
+              <venue>
+                <stadium>Huntington Bank Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/cleveland-browns/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/north/cleveland-browns/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_pittsburgh-steelers">
+              <basic_info>
+                <name>Pittsburgh Steelers</name>
+                <slug>pittsburgh-steelers</slug>
+                <established>1933</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Pittsburgh, PA</hometown>
+                <population>302,898</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Steelers Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/xujg9t3t4u5nmjgr54wx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/s2ugk74phksrnbla46e7</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Tomlin</head_coach>
+                <owners>Art Rooney II and Family</owners>
+              </organization>
+              <venue>
+                <stadium>Acrisure Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/pittsburgh-steelers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/north/pittsburgh-steelers/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="East">
+            <team id="nfl_buffalo-bills">
+              <basic_info>
+                <name>Buffalo Bills</name>
+                <slug>buffalo-bills</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Buffalo, NY</hometown>
+                <population>276,486</population>
+              </location>
+              <visual_identity>
+                <primary_color>Royal Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/giphcy6ie9mxbnldntsf</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/kujtrvt65vrfbzvlp9p7</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean McDermott</head_coach>
+                <owners>Kim and Terry Pegula</owners>
+              </organization>
+              <venue>
+                <stadium>Highmark Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/buffalo-bills/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/east/buffalo-bills/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_miami-dolphins">
+              <basic_info>
+                <name>Miami Dolphins</name>
+                <slug>miami-dolphins</slug>
+                <established>1966</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Miami, FL</hometown>
+                <population>449,514</population>
+              </location>
+              <visual_identity>
+                <primary_color>Aqua</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/lits6p8ycthy9to70bnt</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/xfxniandqn2wglltlxgm</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike McDaniel</head_coach>
+                <owners>Stephen M. Ross</owners>
+              </organization>
+              <venue>
+                <stadium>Hard Rock Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/miami-dolphins/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/east/miami-dolphins/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-england-patriots">
+              <basic_info>
+                <name>New England Patriots</name>
+                <slug>new-england-patriots</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Boston, MA</hometown>
+                <population>650,706</population>
+              </location>
+              <visual_identity>
+                <primary_color>Nautical Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/moyfxx3dq5pio4aiftnc</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/slea5gcxabohzknqnexo</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Vrabel</head_coach>
+                <owners>Robert Kraft</owners>
+              </organization>
+              <venue>
+                <stadium>Gillette Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-england-patriots/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/east/new-england-patriots/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-york-jets">
+              <basic_info>
+                <name>New York Jets</name>
+                <slug>new-york-jets</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>New York, NY</hometown>
+                <population>8,335,897</population>
+              </location>
+              <visual_identity>
+                <primary_color>Gotham Green</primary_color>
+                <secondary_color>Stealth Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/vdqo4iiufmdrimkaxslj</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/upload/f_auto/league/exgaakjbdsxmk77dzsed</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Aaron Glenn</head_coach>
+                <owners>Robert Wood Johnson IV</owners>
+              </organization>
+              <venue>
+                <stadium>MetLife Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-york-jets/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/east/new-york-jets/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="West">
+            <team id="nfl_denver-broncos">
+              <basic_info>
+                <name>Denver Broncos</name>
+                <slug>denver-broncos</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Denver, CO</hometown>
+                <population>713,252</population>
+              </location>
+              <visual_identity>
+                <primary_color>Broncos Navy</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/t0p7m5cjdjy18rnzzqbx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/zclpmokppqisomcdnnsh</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean Payton</head_coach>
+                <owners>Walton-Penner Family Ownership Group</owners>
+              </organization>
+              <venue>
+                <stadium>Empower Field at Mile High</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/denver-broncos/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/west/denver-broncos/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_kansas-city-chiefs">
+              <basic_info>
+                <name>Kansas City Chiefs</name>
+                <slug>kansas-city-chiefs</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Kansas City, MO</hometown>
+                <population>509,297</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ujshjqvmnxce8m4obmvs</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/ginftk4rv6gflay6mwur</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Andy Reid</head_coach>
+                <owners>Clark Hunt</owners>
+              </organization>
+              <venue>
+                <stadium>GEHA Field at Arrowhead Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/kansas-city-chiefs/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/west/kansas-city-chiefs/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_las-vegas-raiders">
+              <basic_info>
+                <name>Las Vegas Raiders</name>
+                <slug>las-vegas-raiders</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Las Vegas, NV</hometown>
+                <population>656,274</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gzcojbzcyjgubgyb6xf2</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/rthdytrwns8g5aed2uou</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Pete Carroll</head_coach>
+                <owners>Carol and Mark Davis</owners>
+              </organization>
+              <venue>
+                <stadium>Allegiant Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/las-vegas-raiders/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/west/las-vegas-raiders/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_los-angeles-chargers">
+              <basic_info>
+                <name>Los Angeles Chargers</name>
+                <slug>los-angeles-chargers</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Los Angeles, CA</hometown>
+                <population>3,822,238</population>
+              </location>
+              <visual_identity>
+                <primary_color>Powder Blue</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/dhfidtn8jrumakbogeu4</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/mkla4gj5w7882z6q0ywz</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Jim Harbaugh</head_coach>
+                <owners>Alex Spanos and Family</owners>
+              </organization>
+              <venue>
+                <stadium>SoFi Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/los-angeles-chargers/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/west/los-angeles-chargers/</operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="South">
+            <team id="nfl_houston-texans">
+              <basic_info>
+                <name>Houston Texans</name>
+                <slug>houston-texans</slug>
+                <established>2002</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Houston, TX</hometown>
+                <population>2,302,878</population>
+              </location>
+              <visual_identity>
+                <primary_color>Deep Steel Blue</primary_color>
+                <secondary_color>Battle Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/u6camnphqvjc6mku6u3c</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/upload/f_auto/league/j9yzmmknc8qsfhwr62o1</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>DeMeco Ryans</head_coach>
+                <owners>Janice S. McNair</owners>
+              </organization>
+              <venue>
+                <stadium>NRG Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/houston-texans</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/south/houston-texans/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_indianapolis-colts">
+              <basic_info>
+                <name>Indianapolis Colts</name>
+                <slug>indianapolis-colts</slug>
+                <established>1953</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Indianapolis, IN</hometown>
+                <population>880,621</population>
+              </location>
+              <visual_identity>
+                <primary_color>Speed Blue</primary_color>
+                <secondary_color>Gray</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ketwqeuschqzjsllbid5</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/q1v6xhz44symvucjoxym</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Shane Steichen</head_coach>
+                <owners>Carlie Irsay-Gordon</owners>
+              </organization>
+              <venue>
+                <stadium>Lucas Oil Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/indianapolis-colts</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/south/indianapolis-colts/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_jacksonville-jaguars">
+              <basic_info>
+                <name>Jacksonville Jaguars</name>
+                <slug>jacksonville-jaguars</slug>
+                <established>1995</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Jacksonville, FL</hometown>
+                <population>971,319</population>
+              </location>
+              <visual_identity>
+                <primary_color>Teal</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/qycbib6ivrm9dqaexryk</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/wok03vphgjx4knlyggx4</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Liam Coen</head_coach>
+                <owners>Shahid Khan</owners>
+              </organization>
+              <venue>
+                <stadium>EverBank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/jacksonville-jaguars/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/south/jacksonville-jaguars/</operations_url>
+              </urls>
+            </team>
+            <team id="nfl_tennessee-titans">
+              <basic_info>
+                <name>Tennessee Titans</name>
+                <slug>tennessee-titans</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Nashville, TN</hometown>
+                <population>692,587</population>
+              </location>
+              <visual_identity>
+                <primary_color>Titans Navy</primary_color>
+                <secondary_color>Titans Blue</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/pln44vuzugjgipyidsre</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/pctgb2f0u7z0oiwpaci3</header_background_url>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Callahan</head_coach>
+                <owners>Amy Adams Strunk</owners>
+              </organization>
+              <venue>
+                <stadium>Nissan Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/tennessee-titans/</official_url>
+                <operations_url>https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/south/tennessee-titans/</operations_url>
+              </urls>
+            </team>
+          </division>
+        </divisions>
+      </conference>
+    </conferences>
+  </league>
+</sports_teams>
