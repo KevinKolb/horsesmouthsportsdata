@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-NFL Schedule Scraper - Simple Version
-Scrapes all games and saves to ALL formats automatically
+NFL Schedule Scraper - Enhanced Version with Game IDs
+Scrapes all games and adds multiple game identification systems
 """
 
 import requests
@@ -95,8 +95,83 @@ class NFLScheduleScraper:
                 seen_games.add(game_key)
         
         self.games = unique_games
+        
+        # Add game IDs after parsing
+        self._add_game_ids()
+        
         print(f"Found {len(self.games)} games")
         return self.games
+    
+    def _add_game_ids(self):
+        """Add various game identification systems"""
+        print("Adding game IDs...")
+        
+        # Sort games by week and then by date/time if possible
+        self.games.sort(key=lambda g: (
+            int(g['week']) if g['week'] and g['week'].isdigit() else 999,
+            g['date'] or '',
+            g['time_et'] or ''
+        ))
+        
+        # Track games per week for week-based numbering
+        week_game_counters = {}
+        
+        for i, game in enumerate(self.games):
+            # 1. Sequential game number (1-272 for full season)
+            game['game_id'] = i + 1
+            
+            # 2. Week-based game ID (W1G1, W1G2, etc.)
+            week = game['week'] or 'WX'
+            if week not in week_game_counters:
+                week_game_counters[week] = 0
+            week_game_counters[week] += 1
+            game['week_game_id'] = f"W{week}G{week_game_counters[week]}"
+            
+            # 3. Season game number (formatted as 3-digit string)
+            game['season_game_number'] = f"{i + 1:03d}"
+            
+            # 4. Create a unique game code based on teams and week
+            away_code = self._get_team_code(game['away_team'])
+            home_code = self._get_team_code(game['home_team'])
+            game['game_code'] = f"2025W{week or 'X'}-{away_code}@{home_code}"
+            
+            # 5. NFL-style game identifier (if we can determine it)
+            game['nfl_game_key'] = self._generate_nfl_game_key(game, i + 1)
+    
+    def _get_team_code(self, team_name):
+        """Convert team name to 3-letter code"""
+        team_codes = {
+            'Arizona Cardinals': 'ARI', 'Atlanta Falcons': 'ATL', 'Baltimore Ravens': 'BAL',
+            'Buffalo Bills': 'BUF', 'Carolina Panthers': 'CAR', 'Chicago Bears': 'CHI',
+            'Cincinnati Bengals': 'CIN', 'Cleveland Browns': 'CLE', 'Dallas Cowboys': 'DAL',
+            'Denver Broncos': 'DEN', 'Detroit Lions': 'DET', 'Green Bay Packers': 'GB',
+            'Houston Texans': 'HOU', 'Indianapolis Colts': 'IND', 'Jacksonville Jaguars': 'JAX',
+            'Kansas City Chiefs': 'KC', 'Las Vegas Raiders': 'LV', 'Los Angeles Chargers': 'LAC',
+            'Los Angeles Rams': 'LAR', 'Miami Dolphins': 'MIA', 'Minnesota Vikings': 'MIN',
+            'New England Patriots': 'NE', 'New Orleans Saints': 'NO', 'New York Giants': 'NYG',
+            'New York Jets': 'NYJ', 'Philadelphia Eagles': 'PHI', 'Pittsburgh Steelers': 'PIT',
+            'San Francisco 49ers': 'SF', 'Seattle Seahawks': 'SEA', 'Tampa Bay Buccaneers': 'TB',
+            'Tennessee Titans': 'TEN', 'Washington Commanders': 'WAS'
+        }
+        
+        # Try exact match first
+        if team_name in team_codes:
+            return team_codes[team_name]
+        
+        # Try partial matching for variations
+        for full_name, code in team_codes.items():
+            if team_name.lower() in full_name.lower() or full_name.lower() in team_name.lower():
+                return code
+        
+        # Fallback: use first 3 letters
+        return team_name.replace(' ', '')[:3].upper()
+    
+    def _generate_nfl_game_key(self, game, sequence):
+        """Generate an NFL-style game key"""
+        # NFL typically uses format like: 2025090400 (year + month + day + game_of_day)
+        # Since we don't have exact dates parsed, we'll create a similar format
+        week = game['week'] or '00'
+        return f"2025{week.zfill(2)}{sequence:02d}"
     
     def _parse_table_rows(self, rows):
         """Parse table rows and extract games"""
@@ -271,9 +346,38 @@ class NFLScheduleScraper:
         
         print("All supported formats saved!")
         self._show_file_summary()
+        self._show_game_id_summary()
+    
+    def _show_game_id_summary(self):
+        """Show summary of the game ID systems added"""
+        if not self.games:
+            return
+        
+        print(f"\n🆔 GAME ID SYSTEMS ADDED:")
+        print(f"   📊 Sequential Game ID: 1 to {len(self.games)} (game_id)")
+        print(f"   📅 Week-based Game ID: W1G1, W1G2, etc. (week_game_id)")
+        print(f"   🔢 3-digit Season Number: 001 to {len(self.games):03d} (season_game_number)")
+        print(f"   🏈 Game Code: 2025W1-DAL@PHI format (game_code)")
+        print(f"   🔑 NFL Game Key: NFL-style identifier (nfl_game_key)")
+        
+        # Show examples
+        if len(self.games) >= 1:
+            sample_game = self.games[0]
+            print(f"\n📝 EXAMPLE - First Game:")
+            print(f"   Game ID: {sample_game.get('game_id', 'N/A')}")
+            print(f"   Week Game ID: {sample_game.get('week_game_id', 'N/A')}")
+            print(f"   Season Game #: {sample_game.get('season_game_number', 'N/A')}")
+            print(f"   Game Code: {sample_game.get('game_code', 'N/A')}")
+            print(f"   NFL Game Key: {sample_game.get('nfl_game_key', 'N/A')}")
+            print(f"   Matchup: {sample_game.get('away_team', '')} at {sample_game.get('home_team', '')}")
     
     def _save_csv(self):
         df = pd.DataFrame(self.games)
+        # Reorder columns to put game IDs first
+        id_columns = ['game_id', 'week_game_id', 'season_game_number', 'game_code', 'nfl_game_key']
+        other_columns = [col for col in df.columns if col not in id_columns]
+        df = df[id_columns + other_columns]
+        
         filepath = os.path.join(self.data_folder, 'nfl_schedule_2025.csv')
         df.to_csv(filepath, index=False)
         print(f"✅ CSV: {filepath}")
@@ -313,6 +417,12 @@ class NFLScheduleScraper:
                     date_elem.set('value', current_date or 'Unknown')
                 
                 game_elem = SubElement(date_elem, 'game')
+                
+                # Add game IDs as attributes
+                game_elem.set('id', str(game.get('game_id', '')))
+                game_elem.set('week_game_id', game.get('week_game_id', ''))
+                game_elem.set('game_code', game.get('game_code', ''))
+                game_elem.set('nfl_game_key', game.get('nfl_game_key', ''))
                 
                 teams_elem = SubElement(game_elem, 'teams')
                 away_elem = SubElement(teams_elem, 'away_team')
@@ -360,7 +470,11 @@ class NFLScheduleScraper:
                 if week not in structured_data['nfl_schedule']['weeks']:
                     structured_data['nfl_schedule']['weeks'][week] = []
                 
-                structured_data['nfl_schedule']['weeks'][week].append({
+                game_data = {
+                    'game_id': game.get('game_id'),
+                    'week_game_id': game.get('week_game_id'),
+                    'game_code': game.get('game_code'),
+                    'nfl_game_key': game.get('nfl_game_key'),
                     'date': game['date'],
                     'matchup': f"{game['away_team']} at {game['home_team']}",
                     'away_team': game['away_team'],
@@ -369,7 +483,9 @@ class NFLScheduleScraper:
                     'time_et': game['time_et'],
                     'time_local': game['time_local'],
                     'network': game['network']
-                })
+                }
+                
+                structured_data['nfl_schedule']['weeks'][week].append(game_data)
             
             filepath = os.path.join(self.data_folder, 'nfl_schedule_2025.yaml')
             with open(filepath, 'w', encoding='utf-8') as f:
@@ -382,6 +498,11 @@ class NFLScheduleScraper:
     def _save_excel(self):
         try:
             df = pd.DataFrame(self.games)
+            # Reorder columns to put game IDs first
+            id_columns = ['game_id', 'week_game_id', 'season_game_number', 'game_code', 'nfl_game_key']
+            other_columns = [col for col in df.columns if col not in id_columns]
+            df = df[id_columns + other_columns]
+            
             filepath = os.path.join(self.data_folder, 'nfl_schedule_2025.xlsx')
             
             with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
@@ -445,12 +566,16 @@ class NFLScheduleScraper:
         
         for game in self.games:
             event = Event()
-            title = f"{game['away_team']} @ {game['home_team']}"
+            title = f"Game {game.get('game_id', 'N/A')}: {game['away_team']} @ {game['home_team']}"
             if game['location_note']:
                 title += f" ({game['location_note']})"
             
             event.add('summary', title)
-            event.add('description', f"Network: {game['network']}\nWeek: {game['week']}")
+            description = f"Game ID: {game.get('game_id', 'N/A')}\n"
+            description += f"Week Game ID: {game.get('week_game_id', 'N/A')}\n"
+            description += f"Game Code: {game.get('game_code', 'N/A')}\n"
+            description += f"Network: {game['network']}\nWeek: {game['week']}"
+            event.add('description', description)
             event.add('dtstart', datetime.now())
             event.add('dtend', datetime.now())
             cal.add_component(event)
@@ -466,7 +591,14 @@ class NFLScheduleScraper:
             'metadata': {
                 'scraped_at': datetime.now().isoformat(),
                 'total_games': len(self.games),
-                'season': 2025
+                'season': 2025,
+                'game_id_systems': {
+                    'game_id': 'Sequential numbering (1-272)',
+                    'week_game_id': 'Week-based ID (W1G1, W1G2, etc.)',
+                    'season_game_number': '3-digit season number (001-272)',
+                    'game_code': 'Team-based code (2025W1-DAL@PHI)',
+                    'nfl_game_key': 'NFL-style game key'
+                }
             },
             'games': self.games
         }
@@ -500,7 +632,7 @@ def main():
         games = scraper.parse_schedule(html_content)
         if games:
             scraper.save_all_formats()
-            print(f"\n🏈 COMPLETE: {len(games)} NFL games saved to all formats!")
+            print(f"\n🏈 COMPLETE: {len(games)} NFL games with game IDs saved to all formats!")
         else:
             print("No games found")
     else:
