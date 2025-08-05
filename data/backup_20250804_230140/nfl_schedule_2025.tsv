@@ -1,0 +1,273 @@
+week	date	away_team	home_team	location_note	time_et	time_local	network	game_id	week_game_id	season_game_number	game_code	nfl_game_key
+1	Friday, Sept. 5, 2025	Kansas City Chiefs	Los Angeles Chargers	Sao Paulo	9:00p (BRT)	8:00p	YouTube	1	W1G1	001	2025W1-KC@LAC	20250101
+1	Monday, Sept. 8, 2025	Minnesota Vikings	Chicago Bears		7:15p (CT)	8:15p	ABC/ESPN	2	W1G2	002	2025W1-MIN@CHI	20250102
+1	Sunday, Sept. 07, 2025	Arizona Cardinals	New Orleans Saints		12:00p (CT)	1:00p	CBS	3	W1G3	003	2025W1-ARI@NO	20250103
+1	Sunday, Sept. 07, 2025	Tampa Bay Buccaneers	Atlanta Falcons		1:00p (ET)	1:00p	FOX	4	W1G4	004	2025W1-TB@ATL	20250104
+1	Sunday, Sept. 07, 2025	Cincinnati Bengals	Cleveland Browns		1:00p (ET)	1:00p	FOX	5	W1G5	005	2025W1-CIN@CLE	20250105
+1	Sunday, Sept. 07, 2025	Miami Dolphins	Indianapolis Colts		1:00p (ET)	1:00p	CBS	6	W1G6	006	2025W1-MIA@IND	20250106
+1	Sunday, Sept. 07, 2025	Carolina Panthers	Jacksonville Jaguars		1:00p (ET)	1:00p	FOX	7	W1G7	007	2025W1-CAR@JAX	20250107
+1	Sunday, Sept. 07, 2025	Las Vegas Raiders	New England Patriots		1:00p (ET)	1:00p	CBS	8	W1G8	008	2025W1-LV@NE	20250108
+1	Sunday, Sept. 07, 2025	Pittsburgh Steelers	New York Jets		1:00p (ET)	1:00p	CBS	9	W1G9	009	2025W1-PIT@NYJ	20250109
+1	Sunday, Sept. 07, 2025	New York Giants	Washington Commanders		1:00p (ET)	1:00p	FOX	10	W1G10	010	2025W1-NYG@WAS	20250110
+1	Sunday, Sept. 07, 2025	San Francisco 49ers	Seattle Seahawks		1:05p (PT)	4:05p	FOX	11	W1G11	011	2025W1-SF@SEA	20250111
+1	Sunday, Sept. 07, 2025	Houston Texans	Los Angeles Rams		1:25p (PT)	4:25p	CBS	12	W1G12	012	2025W1-HOU@LAR	20250112
+1	Sunday, Sept. 07, 2025	Tennessee Titans	Denver Broncos		2:05p (MT)	4:05p	FOX	13	W1G13	013	2025W1-TEN@DEN	20250113
+1	Sunday, Sept. 07, 2025	Detroit Lions	Green Bay Packers		3:25p (CT)	4:25p	CBS	14	W1G14	014	2025W1-DET@GB	20250114
+1	Sunday, Sept. 07, 2025	Baltimore Ravens	Buffalo Bills		8:20p (ET)	8:20p	NBC	15	W1G15	015	2025W1-BAL@BUF	20250115
+1	Thursday, Sept. 4, 2025	Dallas Cowboys	Philadelphia Eagles		8:20p (ET)	8:20p	NBC	16	W1G16	016	2025W1-DAL@PHI	20250116
+2	Monday, Sept. 15, 2025	Tampa Bay Buccaneers	Houston Texans		6:00p (CT)	7:00p	ABC	17	W2G1	017	2025W2-TB@HOU	20250217
+2	Monday, Sept. 15, 2025	Los Angeles Chargers	Las Vegas Raiders		7:00p (PT)	10:00p	ESPN	18	W2G2	018	2025W2-LAC@LV	20250218
+2	Sunday, Sept. 14, 2025	New York Giants	Dallas Cowboys		12:00p (CT)	1:00p	FOX	19	W2G3	019	2025W2-NYG@DAL	20250219
+2	Sunday, Sept. 14, 2025	San Francisco 49ers	New Orleans Saints		12:00p (CT)	1:00p	FOX	20	W2G4	020	2025W2-SF@NO	20250220
+2	Sunday, Sept. 14, 2025	Los Angeles Rams	Tennessee Titans		12:00p (CT)	1:00p	CBS	21	W2G5	021	2025W2-LAR@TEN	20250221
+2	Sunday, Sept. 14, 2025	Cleveland Browns	Baltimore Ravens		1:00p (ET)	1:00p	CBS	22	W2G6	022	2025W2-CLE@BAL	20250222
+2	Sunday, Sept. 14, 2025	Jacksonville Jaguars	Cincinnati Bengals		1:00p (ET)	1:00p	CBS	23	W2G7	023	2025W2-JAX@CIN	20250223
+2	Sunday, Sept. 14, 2025	Chicago Bears	Detroit Lions		1:00p (ET)	1:00p	FOX	24	W2G8	024	2025W2-CHI@DET	20250224
+2	Sunday, Sept. 14, 2025	New England Patriots	Miami Dolphins		1:00p (ET)	1:00p	CBS	25	W2G9	025	2025W2-NE@MIA	20250225
+2	Sunday, Sept. 14, 2025	Buffalo Bills	New York Jets		1:00p (ET)	1:00p	CBS	26	W2G10	026	2025W2-BUF@NYJ	20250226
+2	Sunday, Sept. 14, 2025	Seattle Seahawks	Pittsburgh Steelers		1:00p (ET)	1:00p	FOX	27	W2G11	027	2025W2-SEA@PIT	20250227
+2	Sunday, Sept. 14, 2025	Carolina Panthers	Arizona Cardinals		1:05p (MT)	4:05p	CBS	28	W2G12	028	2025W2-CAR@ARI	20250228
+2	Sunday, Sept. 14, 2025	Philadelphia Eagles	Kansas City Chiefs		3:25p (CT)	4:25p	FOX	29	W2G13	029	2025W2-PHI@KC	20250229
+2	Sunday, Sept. 14, 2025	Denver Broncos	Indianapolis Colts		4:05p (ET)	4:05p	CBS	30	W2G14	030	2025W2-DEN@IND	20250230
+2	Sunday, Sept. 14, 2025	Atlanta Falcons	Minnesota Vikings		7:20p (CT)	8:20p	NBC	31	W2G15	031	2025W2-ATL@MIN	20250231
+2	Thursday, Sept. 11, 2025	Washington Commanders	Green Bay Packers		7:15p (CT)	8:15p	Prime Video	32	W2G16	032	2025W2-WAS@GB	20250232
+3	Monday, Sept. 22, 2025	Detroit Lions	Baltimore Ravens		8:15p (ET)	8:15p	ESPN/ABC	33	W3G1	033	2025W3-DET@BAL	20250333
+3	Sunday, Sept. 21, 2025	Cincinnati Bengals	Minnesota Vikings		12:00p (CT)	1:00p	CBS	34	W3G2	034	2025W3-CIN@MIN	20250334
+3	Sunday, Sept. 21, 2025	Indianapolis Colts	Tennessee Titans		12:00p (CT)	1:00p	CBS	35	W3G3	035	2025W3-IND@TEN	20250335
+3	Sunday, Sept. 21, 2025	Atlanta Falcons	Carolina Panthers		1:00p (ET)	1:00p	FOX	36	W3G4	036	2025W3-ATL@CAR	20250336
+3	Sunday, Sept. 21, 2025	Green Bay Packers	Cleveland Browns		1:00p (ET)	1:00p	FOX	37	W3G5	037	2025W3-GB@CLE	20250337
+3	Sunday, Sept. 21, 2025	Houston Texans	Jacksonville Jaguars		1:00p (ET)	1:00p	CBS	38	W3G6	038	2025W3-HOU@JAX	20250338
+3	Sunday, Sept. 21, 2025	Pittsburgh Steelers	New England Patriots		1:00p (ET)	1:00p	CBS	39	W3G7	039	2025W3-PIT@NE	20250339
+3	Sunday, Sept. 21, 2025	Los Angeles Rams	Philadelphia Eagles		1:00p (ET)	1:00p	FOX	40	W3G8	040	2025W3-LAR@PHI	20250340
+3	Sunday, Sept. 21, 2025	New York Jets	Tampa Bay Buccaneers		1:00p (ET)	1:00p	FOX	41	W3G9	041	2025W3-NYJ@TB	20250341
+3	Sunday, Sept. 21, 2025	Las Vegas Raiders	Washington Commanders		1:00p (ET)	1:00p	FOX	42	W3G10	042	2025W3-LV@WAS	20250342
+3	Sunday, Sept. 21, 2025	Denver Broncos	Los Angeles Chargers		1:05p (PT)	4:05p	CBS	43	W3G11	043	2025W3-DEN@LAC	20250343
+3	Sunday, Sept. 21, 2025	New Orleans Saints	Seattle Seahawks		1:05p (PT)	4:05p	CBS	44	W3G12	044	2025W3-NO@SEA	20250344
+3	Sunday, Sept. 21, 2025	Arizona Cardinals	San Francisco 49ers		1:25p (PT)	4:25p	FOX	45	W3G13	045	2025W3-ARI@SF	20250345
+3	Sunday, Sept. 21, 2025	Dallas Cowboys	Chicago Bears		3:25p (CT)	4:25p	FOX	46	W3G14	046	2025W3-DAL@CHI	20250346
+3	Sunday, Sept. 21, 2025	Kansas City Chiefs	New York Giants		8:20p (ET)	8:20p	NBC	47	W3G15	047	2025W3-KC@NYG	20250347
+3	Thursday, Sept. 18, 2025	Miami Dolphins	Buffalo Bills		8:15p (ET)	8:15p	Prime Video	48	W3G16	048	2025W3-MIA@BUF	20250348
+4	Monday, Sept. 29, 2025	Cincinnati Bengals	Denver Broncos		6:15p (MT)	8:15p	ABC	49	W4G1	049	2025W4-CIN@DEN	20250449
+4	Monday, Sept. 29, 2025	New York Jets	Miami Dolphins		7:15p (ET)	7:15p	ESPN	50	W4G2	050	2025W4-NYJ@MIA	20250450
+4	Sunday, Sept. 28, 2025	Tennessee Titans	Houston Texans		12:00p (CT)	1:00p	CBS	51	W4G3	051	2025W4-TEN@HOU	20250451
+4	Sunday, Sept. 28, 2025	Washington Commanders	Atlanta Falcons		1:00p (ET)	1:00p	CBS	52	W4G4	052	2025W4-WAS@ATL	20250452
+4	Sunday, Sept. 28, 2025	New Orleans Saints	Buffalo Bills		1:00p (ET)	1:00p	CBS	53	W4G5	053	2025W4-NO@BUF	20250453
+4	Sunday, Sept. 28, 2025	Cleveland Browns	Detroit Lions		1:00p (ET)	1:00p	FOX	54	W4G6	054	2025W4-CLE@DET	20250454
+4	Sunday, Sept. 28, 2025	Carolina Panthers	New England Patriots		1:00p (ET)	1:00p	FOX	55	W4G7	055	2025W4-CAR@NE	20250455
+4	Sunday, Sept. 28, 2025	Los Angeles Chargers	New York Giants		1:00p (ET)	1:00p	CBS	56	W4G8	056	2025W4-LAC@NYG	20250456
+4	Sunday, Sept. 28, 2025	Philadelphia Eagles	Tampa Bay Buccaneers		1:00p (ET)	1:00p	FOX	57	W4G9	057	2025W4-PHI@TB	20250457
+4	Sunday, Sept. 28, 2025	Indianapolis Colts	Los Angeles Rams		1:05p (PT)	4:05p	FOX	58	W4G10	058	2025W4-IND@LAR	20250458
+4	Sunday, Sept. 28, 2025	Jacksonville Jaguars	San Francisco 49ers		1:05p (PT)	4:05p	FOX	59	W4G11	059	2025W4-JAX@SF	20250459
+4	Sunday, Sept. 28, 2025	Chicago Bears	Las Vegas Raiders		1:25p (PT)	4:25p	CBS	60	W4G12	060	2025W4-CHI@LV	20250460
+4	Sunday, Sept. 28, 2025	Minnesota Vikings	Pittsburgh Steelers	Dublin	2:30p (IST)	9:30a	NFLN	61	W4G13	061	2025W4-MIN@PIT	20250461
+4	Sunday, Sept. 28, 2025	Baltimore Ravens	Kansas City Chiefs		3:25p (CT)	4:25p	CBS	62	W4G14	062	2025W4-BAL@KC	20250462
+4	Sunday, Sept. 28, 2025	Green Bay Packers	Dallas Cowboys		7:20p (CT)	8:20p	NBC	63	W4G15	063	2025W4-GB@DAL	20250463
+4	Thursday, Sept. 25, 2025	Seattle Seahawks	Arizona Cardinals		5:15p (MT)	8:15p	Prime Video	64	W4G16	064	2025W4-SEA@ARI	20250464
+5	Monday, Oct. 6, 2025	Kansas City Chiefs	Jacksonville Jaguars		8:15p (ET)	8:15p	ESPN/ABC	65	W5G1	065	2025W5-KC@JAX	20250565
+5	Sunday, Oct. 5, 2025	New York Giants	New Orleans Saints		12:00p (CT)	1:00p	CBS	66	W5G2	066	2025W5-NYG@NO	20250566
+5	Sunday, Oct. 5, 2025	Houston Texans	Baltimore Ravens		1:00p (ET)	1:00p	CBS	67	W5G3	067	2025W5-HOU@BAL	20250567
+5	Sunday, Oct. 5, 2025	Miami Dolphins	Carolina Panthers		1:00p (ET)	1:00p	FOX	68	W5G4	068	2025W5-MIA@CAR	20250568
+5	Sunday, Oct. 5, 2025	Las Vegas Raiders	Indianapolis Colts		1:00p (ET)	1:00p	FOX	69	W5G5	069	2025W5-LV@IND	20250569
+5	Sunday, Oct. 5, 2025	Dallas Cowboys	New York Jets		1:00p (ET)	1:00p	FOX	70	W5G6	070	2025W5-DAL@NYJ	20250570
+5	Sunday, Oct. 5, 2025	Denver Broncos	Philadelphia Eagles		1:00p (ET)	1:00p	CBS	71	W5G7	071	2025W5-DEN@PHI	20250571
+5	Sunday, Oct. 5, 2025	Tennessee Titans	Arizona Cardinals		1:05p (MT)	4:05p	CBS	72	W5G8	072	2025W5-TEN@ARI	20250572
+5	Sunday, Oct. 5, 2025	Tampa Bay Buccaneers	Seattle Seahawks		1:05p (PT)	4:05p	CBS	73	W5G9	073	2025W5-TB@SEA	20250573
+5	Sunday, Oct. 5, 2025	Washington Commanders	Los Angeles Chargers		1:25p (PT)	4:25p	FOX	74	W5G10	074	2025W5-WAS@LAC	20250574
+5	Sunday, Oct. 5, 2025	Minnesota Vikings	Cleveland Browns	Tottenham	2:30p (BST)	9:30a	NFLN	75	W5G11	075	2025W5-MIN@CLE	20250575
+5	Sunday, Oct. 5, 2025	Detroit Lions	Cincinnati Bengals		4:25p (ET)	4:25p	FOX	76	W5G12	076	2025W5-DET@CIN	20250576
+5	Sunday, Oct. 5, 2025	New England Patriots	Buffalo Bills		8:20p (ET)	8:20p	NBC	77	W5G13	077	2025W5-NE@BUF	20250577
+5	Thursday, Oct. 2, 2025	San Francisco 49ers	Los Angeles Rams		5:15p (PT)	8:15p	Prime Video	78	W5G14	078	2025W5-SF@LAR	20250578
+6	Monday, Oct. 13, 2025	Buffalo Bills	Atlanta Falcons		7:15p (ET)	7:15p	ESPN	79	W6G1	079	2025W6-BUF@ATL	20250679
+6	Monday, Oct. 13, 2025	Chicago Bears	Washington Commanders		8:15p (ET)	8:15p	ABC	80	W6G2	080	2025W6-CHI@WAS	20250680
+6	Sunday, Oct. 12, 2025	Los Angeles Rams	Baltimore Ravens		1:00p (ET)	1:00p	FOX	81	W6G3	081	2025W6-LAR@BAL	20250681
+6	Sunday, Oct. 12, 2025	Dallas Cowboys	Carolina Panthers		1:00p (ET)	1:00p	FOX	82	W6G4	082	2025W6-DAL@CAR	20250682
+6	Sunday, Oct. 12, 2025	Arizona Cardinals	Indianapolis Colts		1:00p (ET)	1:00p	FOX	83	W6G5	083	2025W6-ARI@IND	20250683
+6	Sunday, Oct. 12, 2025	Seattle Seahawks	Jacksonville Jaguars		1:00p (ET)	1:00p	FOX	84	W6G6	084	2025W6-SEA@JAX	20250684
+6	Sunday, Oct. 12, 2025	Los Angeles Chargers	Miami Dolphins		1:00p (ET)	1:00p	CBS	85	W6G7	085	2025W6-LAC@MIA	20250685
+6	Sunday, Oct. 12, 2025	Cleveland Browns	Pittsburgh Steelers		1:00p (ET)	1:00p	CBS	86	W6G8	086	2025W6-CLE@PIT	20250686
+6	Sunday, Oct. 12, 2025	San Francisco 49ers	Tampa Bay Buccaneers		1:00p (ET)	1:00p	CBS	87	W6G9	087	2025W6-SF@TB	20250687
+6	Sunday, Oct. 12, 2025	Tennessee Titans	Las Vegas Raiders		1:05p (PT)	4:05p	FOX	88	W6G10	088	2025W6-TEN@LV	20250688
+6	Sunday, Oct. 12, 2025	Denver Broncos	New York Jets	Tottenham	2:30p (BST)	9:30a	NFLN	89	W6G11	089	2025W6-DEN@NYJ	20250689
+6	Sunday, Oct. 12, 2025	Cincinnati Bengals	Green Bay Packers		3:25p (CT)	4:25p	CBS	90	W6G12	090	2025W6-CIN@GB	20250690
+6	Sunday, Oct. 12, 2025	New England Patriots	New Orleans Saints		3:25p (CT)	4:25p	CBS	91	W6G13	091	2025W6-NE@NO	20250691
+6	Sunday, Oct. 12, 2025	Detroit Lions	Kansas City Chiefs		7:20p (CT)	8:20p	NBC	92	W6G14	092	2025W6-DET@KC	20250692
+6	Thursday, Oct. 9, 2025	Philadelphia Eagles	New York Giants		8:15p (ET)	8:15p	Prime Video	93	W6G15	093	2025W6-PHI@NYG	20250693
+7	Monday, Oct. 20, 2025	Tampa Bay Buccaneers	Detroit Lions		7:00p (ET)	7:00p	ESPN/ABC	94	W7G1	094	2025W7-TB@DET	20250794
+7	Monday, Oct. 20, 2025	Houston Texans	Seattle Seahawks		7:00p (PT)	10:00p	ESPN+	95	W7G2	095	2025W7-HOU@SEA	20250795
+7	Sunday, Oct. 19, 2025	New Orleans Saints	Chicago Bears		12:00p (CT)	1:00p	FOX	96	W7G3	096	2025W7-NO@CHI	20250796
+7	Sunday, Oct. 19, 2025	Las Vegas Raiders	Kansas City Chiefs		12:00p (CT)	1:00p	CBS	97	W7G4	097	2025W7-LV@KC	20250797
+7	Sunday, Oct. 19, 2025	Philadelphia Eagles	Minnesota Vikings		12:00p (CT)	1:00p	FOX	98	W7G5	098	2025W7-PHI@MIN	20250798
+7	Sunday, Oct. 19, 2025	New England Patriots	Tennessee Titans		12:00p (CT)	1:00p	CBS	99	W7G6	099	2025W7-NE@TEN	20250799
+7	Sunday, Oct. 19, 2025	Miami Dolphins	Cleveland Browns		1:00p (ET)	1:00p	CBS	100	W7G7	100	2025W7-MIA@CLE	202507100
+7	Sunday, Oct. 19, 2025	Carolina Panthers	New York Jets		1:00p (ET)	1:00p	FOX	101	W7G8	101	2025W7-CAR@NYJ	202507101
+7	Sunday, Oct. 19, 2025	Indianapolis Colts	Los Angeles Chargers		1:05p (PT)	4:05p	CBS	102	W7G9	102	2025W7-IND@LAC	202507102
+7	Sunday, Oct. 19, 2025	Green Bay Packers	Arizona Cardinals		1:25p (MT)	4:25p	FOX	103	W7G10	103	2025W7-GB@ARI	202507103
+7	Sunday, Oct. 19, 2025	New York Giants	Denver Broncos		2:05p (MT)	4:05p	CBS	104	W7G11	104	2025W7-NYG@DEN	202507104
+7	Sunday, Oct. 19, 2025	Los Angeles Rams	Jacksonville Jaguars	Wembley	2:30p (BST)	9:30a	NFLN	105	W7G12	105	2025W7-LAR@JAX	202507105
+7	Sunday, Oct. 19, 2025	Washington Commanders	Dallas Cowboys		3:25p (CT)	4:25p	FOX	106	W7G13	106	2025W7-WAS@DAL	202507106
+7	Sunday, Oct. 19, 2025	Atlanta Falcons	San Francisco 49ers		5:20p (PT)	8:20p	NBC	107	W7G14	107	2025W7-ATL@SF	202507107
+7	Thursday, Oct. 16, 2025	Pittsburgh Steelers	Cincinnati Bengals		8:15p (ET)	8:15p	Prime Video	108	W7G15	108	2025W7-PIT@CIN	202507108
+8	Monday, Oct. 27, 2025	Washington Commanders	Kansas City Chiefs		7:15p (CT)	8:15p	ESPN/ABC	109	W8G1	109	2025W8-WAS@KC	202508109
+8	Sunday, Oct. 26, 2025	San Francisco 49ers	Houston Texans		12:00p (CT)	1:00p	FOX	110	W8G2	110	2025W8-SF@HOU	202508110
+8	Sunday, Oct. 26, 2025	Miami Dolphins	Atlanta Falcons		1:00p (ET)	1:00p	CBS	111	W8G3	111	2025W8-MIA@ATL	202508111
+8	Sunday, Oct. 26, 2025	Chicago Bears	Baltimore Ravens		1:00p (ET)	1:00p	CBS	112	W8G4	112	2025W8-CHI@BAL	202508112
+8	Sunday, Oct. 26, 2025	Buffalo Bills	Carolina Panthers		1:00p (ET)	1:00p	FOX	113	W8G5	113	2025W8-BUF@CAR	202508113
+8	Sunday, Oct. 26, 2025	New York Jets	Cincinnati Bengals		1:00p (ET)	1:00p	CBS	114	W8G6	114	2025W8-NYJ@CIN	202508114
+8	Sunday, Oct. 26, 2025	Cleveland Browns	New England Patriots		1:00p (ET)	1:00p	FOX	115	W8G7	115	2025W8-CLE@NE	202508115
+8	Sunday, Oct. 26, 2025	New York Giants	Philadelphia Eagles		1:00p (ET)	1:00p	FOX	116	W8G8	116	2025W8-NYG@PHI	202508116
+8	Sunday, Oct. 26, 2025	Dallas Cowboys	Denver Broncos		2:25p (MT)	4:25p	CBS	117	W8G9	117	2025W8-DAL@DEN	202508117
+8	Sunday, Oct. 26, 2025	Tampa Bay Buccaneers	New Orleans Saints		3:05p (CT)	4:05p	FOX	118	W8G10	118	2025W8-TB@NO	202508118
+8	Sunday, Oct. 26, 2025	Tennessee Titans	Indianapolis Colts		4:25p (ET)	4:25p	CBS	119	W8G11	119	2025W8-TEN@IND	202508119
+8	Sunday, Oct. 26, 2025	Green Bay Packers	Pittsburgh Steelers		8:20p (ET)	8:20p	NBC	120	W8G12	120	2025W8-GB@PIT	202508120
+8	Thursday, Oct. 23, 2025	Minnesota Vikings	Los Angeles Chargers		5:15p (PT)	8:15p	Prime Video	121	W8G13	121	2025W8-MIN@LAC	202508121
+9	Monday, Nov. 3, 2025	Arizona Cardinals	Dallas Cowboys		7:15p (CT)	8:15p	ESPN/ABC	122	W9G1	122	2025W9-ARI@DAL	202509122
+9	Sunday, Nov. 2, 2025	Carolina Panthers	Green Bay Packers		12:00p (CT)	1:00p	FOX	123	W9G2	123	2025W9-CAR@GB	202509123
+9	Sunday, Nov. 2, 2025	Denver Broncos	Houston Texans		12:00p (CT)	1:00p	FOX	124	W9G3	124	2025W9-DEN@HOU	202509124
+9	Sunday, Nov. 2, 2025	Los Angeles Chargers	Tennessee Titans		12:00p (CT)	1:00p	CBS	125	W9G4	125	2025W9-LAC@TEN	202509125
+9	Sunday, Nov. 2, 2025	Chicago Bears	Cincinnati Bengals		1:00p (ET)	1:00p	CBS	126	W9G5	126	2025W9-CHI@CIN	202509126
+9	Sunday, Nov. 2, 2025	Minnesota Vikings	Detroit Lions		1:00p (ET)	1:00p	FOX	127	W9G6	127	2025W9-MIN@DET	202509127
+9	Sunday, Nov. 2, 2025	Atlanta Falcons	New England Patriots		1:00p (ET)	1:00p	CBS	128	W9G7	128	2025W9-ATL@NE	202509128
+9	Sunday, Nov. 2, 2025	San Francisco 49ers	New York Giants		1:00p (ET)	1:00p	CBS	129	W9G8	129	2025W9-SF@NYG	202509129
+9	Sunday, Nov. 2, 2025	Indianapolis Colts	Pittsburgh Steelers		1:00p (ET)	1:00p	CBS	130	W9G9	130	2025W9-IND@PIT	202509130
+9	Sunday, Nov. 2, 2025	New Orleans Saints	Los Angeles Rams		1:05p (PT)	4:05p	FOX	131	W9G10	131	2025W9-NO@LAR	202509131
+9	Sunday, Nov. 2, 2025	Jacksonville Jaguars	Las Vegas Raiders		1:05p (PT)	4:05p	FOX	132	W9G11	132	2025W9-JAX@LV	202509132
+9	Sunday, Nov. 2, 2025	Kansas City Chiefs	Buffalo Bills		4:25p (ET)	4:25p	CBS	133	W9G12	133	2025W9-KC@BUF	202509133
+9	Sunday, Nov. 2, 2025	Seattle Seahawks	Washington Commanders		8:20p (ET)	8:20p	NBC	134	W9G13	134	2025W9-SEA@WAS	202509134
+9	Thursday, Oct. 30, 2025	Baltimore Ravens	Miami Dolphins		8:15p (ET)	8:15p	Prime Video	135	W9G14	135	2025W9-BAL@MIA	202509135
+10	Monday, Nov. 10, 2025	Philadelphia Eagles	Green Bay Packers		7:15p (CT)	8:15p	ESPN/ABC	136	W10G1	136	2025W10-PHI@GB	202510136
+10	Sunday, Nov. 9, 2025	New York Giants	Chicago Bears		12:00p (CT)	1:00p	FOX	137	W10G2	137	2025W10-NYG@CHI	202510137
+10	Sunday, Nov. 9, 2025	Jacksonville Jaguars	Houston Texans		12:00p (CT)	1:00p	CBS	138	W10G3	138	2025W10-JAX@HOU	202510138
+10	Sunday, Nov. 9, 2025	Baltimore Ravens	Minnesota Vikings		12:00p (CT)	1:00p	FOX	139	W10G4	139	2025W10-BAL@MIN	202510139
+10	Sunday, Nov. 9, 2025	New Orleans Saints	Carolina Panthers		1:00p (ET)	1:00p	FOX	140	W10G5	140	2025W10-NO@CAR	202510140
+10	Sunday, Nov. 9, 2025	Buffalo Bills	Miami Dolphins		1:00p (ET)	1:00p	CBS	141	W10G6	141	2025W10-BUF@MIA	202510141
+10	Sunday, Nov. 9, 2025	Cleveland Browns	New York Jets		1:00p (ET)	1:00p	CBS	142	W10G7	142	2025W10-CLE@NYJ	202510142
+10	Sunday, Nov. 9, 2025	New England Patriots	Tampa Bay Buccaneers		1:00p (ET)	1:00p	CBS	143	W10G8	143	2025W10-NE@TB	202510143
+10	Sunday, Nov. 9, 2025	Arizona Cardinals	Seattle Seahawks		1:05p (PT)	4:05p	CBS	144	W10G9	144	2025W10-ARI@SEA	202510144
+10	Sunday, Nov. 9, 2025	Los Angeles Rams	San Francisco 49ers		1:25p (PT)	4:25p	FOX	145	W10G10	145	2025W10-LAR@SF	202510145
+10	Sunday, Nov. 9, 2025	Atlanta Falcons	Indianapolis Colts	Berlin	3:30p (CET)	9:30a	NFLN	146	W10G11	146	2025W10-ATL@IND	202510146
+10	Sunday, Nov. 9, 2025	Detroit Lions	Washington Commanders		4:25p (ET)	4:25p	FOX	147	W10G12	147	2025W10-DET@WAS	202510147
+10	Sunday, Nov. 9, 2025	Pittsburgh Steelers	Los Angeles Chargers		5:20p (PT)	8:20p	NBC	148	W10G13	148	2025W10-PIT@LAC	202510148
+10	Thursday, Nov. 6, 2025	Las Vegas Raiders	Denver Broncos		6:15p (MT)	8:15p	Prime Video	149	W10G14	149	2025W10-LV@DEN	202510149
+11	Monday, Nov. 17, 2025	Dallas Cowboys	Las Vegas Raiders		5:15p (PT)	8:15p	ESPN/ABC	150	W11G1	150	2025W11-DAL@LV	202511150
+11	Sunday, Nov. 16, 2025	Chicago Bears	Minnesota Vikings		12:00p (CT)	1:00p	FOX	151	W11G2	151	2025W11-CHI@MIN	202511151
+11	Sunday, Nov. 16, 2025	Houston Texans	Tennessee Titans		12:00p (CT)	1:00p	FOX	152	W11G3	152	2025W11-HOU@TEN	202511152
+11	Sunday, Nov. 16, 2025	Carolina Panthers	Atlanta Falcons		1:00p (ET)	1:00p	FOX	153	W11G4	153	2025W11-CAR@ATL	202511153
+11	Sunday, Nov. 16, 2025	Tampa Bay Buccaneers	Buffalo Bills		1:00p (ET)	1:00p	CBS	154	W11G5	154	2025W11-TB@BUF	202511154
+11	Sunday, Nov. 16, 2025	Los Angeles Chargers	Jacksonville Jaguars		1:00p (ET)	1:00p	CBS	155	W11G6	155	2025W11-LAC@JAX	202511155
+11	Sunday, Nov. 16, 2025	Green Bay Packers	New York Giants		1:00p (ET)	1:00p	FOX	156	W11G7	156	2025W11-GB@NYG	202511156
+11	Sunday, Nov. 16, 2025	Cincinnati Bengals	Pittsburgh Steelers		1:00p (ET)	1:00p	CBS	157	W11G8	157	2025W11-CIN@PIT	202511157
+11	Sunday, Nov. 16, 2025	Seattle Seahawks	Los Angeles Rams		1:05p (PT)	4:05p	FOX	158	W11G9	158	2025W11-SEA@LAR	202511158
+11	Sunday, Nov. 16, 2025	San Francisco 49ers	Arizona Cardinals		2:05p (MT)	4:05p	FOX	159	W11G10	159	2025W11-SF@ARI	202511159
+11	Sunday, Nov. 16, 2025	Kansas City Chiefs	Denver Broncos		2:25p (MT)	4:25p	CBS	160	W11G11	160	2025W11-KC@DEN	202511160
+11	Sunday, Nov. 16, 2025	Washington Commanders	Miami Dolphins	Madrid	3:30p (CET)	9:30a	NFLN	161	W11G12	161	2025W11-WAS@MIA	202511161
+11	Sunday, Nov. 16, 2025	Baltimore Ravens	Cleveland Browns		4:25p (ET)	4:25p	CBS	162	W11G13	162	2025W11-BAL@CLE	202511162
+11	Sunday, Nov. 16, 2025	Detroit Lions	Philadelphia Eagles		8:20p (ET)	8:20p	NBC	163	W11G14	163	2025W11-DET@PHI	202511163
+11	Thursday, Nov. 13, 2025	New York Jets	New England Patriots		8:15p (ET)	8:15p	Prime Video	164	W11G15	164	2025W11-NYJ@NE	202511164
+12	Monday, Nov. 24, 2025	Carolina Panthers	San Francisco 49ers		5:15p (PT)	8:15p	ESPN	165	W12G1	165	2025W12-CAR@SF	202512165
+12	Sunday, Nov. 23, 2025	Pittsburgh Steelers	Chicago Bears		12:00p (CT)	1:00p	CBS	166	W12G2	166	2025W12-PIT@CHI	202512166
+12	Sunday, Nov. 23, 2025	Minnesota Vikings	Green Bay Packers		12:00p (CT)	1:00p	FOX	167	W12G3	167	2025W12-MIN@GB	202512167
+12	Sunday, Nov. 23, 2025	Indianapolis Colts	Kansas City Chiefs		12:00p (CT)	1:00p	CBS	168	W12G4	168	2025W12-IND@KC	202512168
+12	Sunday, Nov. 23, 2025	Seattle Seahawks	Tennessee Titans		12:00p (CT)	1:00p	FOX	169	W12G5	169	2025W12-SEA@TEN	202512169
+12	Sunday, Nov. 23, 2025	New York Jets	Baltimore Ravens		1:00p (ET)	1:00p	CBS	170	W12G6	170	2025W12-NYJ@BAL	202512170
+12	Sunday, Nov. 23, 2025	New England Patriots	Cincinnati Bengals		1:00p (ET)	1:00p	CBS	171	W12G7	171	2025W12-NE@CIN	202512171
+12	Sunday, Nov. 23, 2025	New York Giants	Detroit Lions		1:00p (ET)	1:00p	FOX	172	W12G8	172	2025W12-NYG@DET	202512172
+12	Sunday, Nov. 23, 2025	Cleveland Browns	Las Vegas Raiders		1:05p (PT)	4:05p	CBS	173	W12G9	173	2025W12-CLE@LV	202512173
+12	Sunday, Nov. 23, 2025	Jacksonville Jaguars	Arizona Cardinals		2:05p (MT)	4:05p	CBS	174	W12G10	174	2025W12-JAX@ARI	202512174
+12	Sunday, Nov. 23, 2025	Philadelphia Eagles	Dallas Cowboys		3:25p (CT)	4:25p	FOX	175	W12G11	175	2025W12-PHI@DAL	202512175
+12	Sunday, Nov. 23, 2025	Atlanta Falcons	New Orleans Saints		3:25p (CT)	4:25p	FOX	176	W12G12	176	2025W12-ATL@NO	202512176
+12	Sunday, Nov. 23, 2025	Tampa Bay Buccaneers	Los Angeles Rams		5:20p (PT)	8:20p	NBC	177	W12G13	177	2025W12-TB@LAR	202512177
+12	Thursday, Nov. 20, 2025	Buffalo Bills	Houston Texans		7:15p (CT)	8:15p	Prime Video	178	W12G14	178	2025W12-BUF@HOU	202512178
+13	Friday, Nov. 28, 2025	Chicago Bears	Philadelphia Eagles		3:00p (ET)	3:00p	Prime Video	179	W13G1	179	2025W13-CHI@PHI	202513179
+13	Monday, Dec. 1, 2025	New York Giants	New England Patriots		8:15p (ET)	8:15p	ESPN	180	W13G2	180	2025W13-NYG@NE	202513180
+13	Sunday, Nov. 30, 2025	Jacksonville Jaguars	Tennessee Titans		12:00p (CT)	1:00p	CBS	181	W13G3	181	2025W13-JAX@TEN	202513181
+13	Sunday, Nov. 30, 2025	Los Angeles Rams	Carolina Panthers		1:00p (ET)	1:00p	FOX	182	W13G4	182	2025W13-LAR@CAR	202513182
+13	Sunday, Nov. 30, 2025	San Francisco 49ers	Cleveland Browns		1:00p (ET)	1:00p	CBS	183	W13G5	183	2025W13-SF@CLE	202513183
+13	Sunday, Nov. 30, 2025	Houston Texans	Indianapolis Colts		1:00p (ET)	1:00p	CBS	184	W13G6	184	2025W13-HOU@IND	202513184
+13	Sunday, Nov. 30, 2025	New Orleans Saints	Miami Dolphins		1:00p (ET)	1:00p	FOX	185	W13G7	185	2025W13-NO@MIA	202513185
+13	Sunday, Nov. 30, 2025	Atlanta Falcons	New York Jets		1:00p (ET)	1:00p	FOX	186	W13G8	186	2025W13-ATL@NYJ	202513186
+13	Sunday, Nov. 30, 2025	Arizona Cardinals	Tampa Bay Buccaneers		1:00p (ET)	1:00p	FOX	187	W13G9	187	2025W13-ARI@TB	202513187
+13	Sunday, Nov. 30, 2025	Minnesota Vikings	Seattle Seahawks		1:05p (PT)	4:05p	FOX	188	W13G10	188	2025W13-MIN@SEA	202513188
+13	Sunday, Nov. 30, 2025	Las Vegas Raiders	Los Angeles Chargers		1:25p (PT)	4:25p	CBS	189	W13G11	189	2025W13-LV@LAC	202513189
+13	Sunday, Nov. 30, 2025	Buffalo Bills	Pittsburgh Steelers		4:25p (ET)	4:25p	CBS	190	W13G12	190	2025W13-BUF@PIT	202513190
+13	Sunday, Nov. 30, 2025	Denver Broncos	Washington Commanders		8:20p (ET)	8:20p	NBC	191	W13G13	191	2025W13-DEN@WAS	202513191
+13	Thursday, Nov. 27, 2025	Green Bay Packers	Detroit Lions	Thanksgiving	1:00p (ET)	1:00p	FOX	192	W13G14	192	2025W13-GB@DET	202513192
+13	Thursday, Nov. 27, 2025	Kansas City Chiefs	Dallas Cowboys	Thanksgiving	3:30p (CT)	4:30p	CBS	193	W13G15	193	2025W13-KC@DAL	202513193
+13	Thursday, Nov. 27, 2025	Cincinnati Bengals	Baltimore Ravens	Thanksgiving	8:20p (ET)	8:20p	NBC	194	W13G16	194	2025W13-CIN@BAL	202513194
+14	Monday, Dec. 8, 2025	Philadelphia Eagles	Los Angeles Chargers		5:15p (PT)	8:15p	ESPN/ABC	195	W14G1	195	2025W14-PHI@LAC	202514195
+14	Sunday, Dec. 7, 2025	Chicago Bears	Green Bay Packers		12:00p (CT)	1:00p	FOX	196	W14G2	196	2025W14-CHI@GB	202514196
+14	Sunday, Dec. 7, 2025	Washington Commanders	Minnesota Vikings		12:00p (CT)	1:00p	FOX	197	W14G3	197	2025W14-WAS@MIN	202514197
+14	Sunday, Dec. 7, 2025	Seattle Seahawks	Atlanta Falcons		1:00p (ET)	1:00p	FOX	198	W14G4	198	2025W14-SEA@ATL	202514198
+14	Sunday, Dec. 7, 2025	Pittsburgh Steelers	Baltimore Ravens		1:00p (ET)	1:00p	CBS	199	W14G5	199	2025W14-PIT@BAL	202514199
+14	Sunday, Dec. 7, 2025	Tennessee Titans	Cleveland Browns		1:00p (ET)	1:00p	FOX	200	W14G6	200	2025W14-TEN@CLE	202514200
+14	Sunday, Dec. 7, 2025	Indianapolis Colts	Jacksonville Jaguars		1:00p (ET)	1:00p	CBS	201	W14G7	201	2025W14-IND@JAX	202514201
+14	Sunday, Dec. 7, 2025	Miami Dolphins	New York Jets		1:00p (ET)	1:00p	CBS	202	W14G8	202	2025W14-MIA@NYJ	202514202
+14	Sunday, Dec. 7, 2025	New Orleans Saints	Tampa Bay Buccaneers		1:00p (ET)	1:00p	CBS	203	W14G9	203	2025W14-NO@TB	202514203
+14	Sunday, Dec. 7, 2025	Denver Broncos	Las Vegas Raiders		1:05p (PT)	4:05p	CBS	204	W14G10	204	2025W14-DEN@LV	202514204
+14	Sunday, Dec. 7, 2025	Los Angeles Rams	Arizona Cardinals		2:25p (MT)	4:25p	FOX	205	W14G11	205	2025W14-LAR@ARI	202514205
+14	Sunday, Dec. 7, 2025	Cincinnati Bengals	Buffalo Bills		4:25p (ET)	4:25p	FOX	206	W14G12	206	2025W14-CIN@BUF	202514206
+14	Sunday, Dec. 7, 2025	Houston Texans	Kansas City Chiefs		7:20p (CT)	8:20p	NBC	207	W14G13	207	2025W14-HOU@KC	202514207
+14	Thursday, Dec. 04, 2025	Dallas Cowboys	Detroit Lions		8:15p (ET)	8:15p	Prime Video	208	W14G14	208	2025W14-DAL@DET	202514208
+15	Monday, Dec. 15, 2025	Miami Dolphins	Pittsburgh Steelers		8:15p (ET)	8:15p	ESPN/ABC	209	W15G1	209	2025W15-MIA@PIT	202515209
+15	Sunday, Dec. 14, 2025	Cleveland Browns	Chicago Bears		12:00p (CT)	1:00p	FOX	210	W15G2	210	2025W15-CLE@CHI	202515210
+15	Sunday, Dec. 14, 2025	Arizona Cardinals	Houston Texans		12:00p (CT)	1:00p	FOX	211	W15G3	211	2025W15-ARI@HOU	202515211
+15	Sunday, Dec. 14, 2025	Los Angeles Chargers	Kansas City Chiefs		12:00p (CT)	1:00p	CBS	212	W15G4	212	2025W15-LAC@KC	202515212
+15	Sunday, Dec. 14, 2025	Baltimore Ravens	Cincinnati Bengals		1:00p (ET)	1:00p	CBS	213	W15G5	213	2025W15-BAL@CIN	202515213
+15	Sunday, Dec. 14, 2025	New York Jets	Jacksonville Jaguars		1:00p (ET)	1:00p	CBS	214	W15G6	214	2025W15-NYJ@JAX	202515214
+15	Sunday, Dec. 14, 2025	Buffalo Bills	New England Patriots		1:00p (ET)	1:00p	CBS	215	W15G7	215	2025W15-BUF@NE	202515215
+15	Sunday, Dec. 14, 2025	Washington Commanders	New York Giants		1:00p (ET)	1:00p	FOX	216	W15G8	216	2025W15-WAS@NYG	202515216
+15	Sunday, Dec. 14, 2025	Las Vegas Raiders	Philadelphia Eagles		1:00p (ET)	1:00p	FOX	217	W15G9	217	2025W15-LV@PHI	202515217
+15	Sunday, Dec. 14, 2025	Detroit Lions	Los Angeles Rams		1:25p (PT)	4:25p	FOX	218	W15G10	218	2025W15-DET@LAR	202515218
+15	Sunday, Dec. 14, 2025	Indianapolis Colts	Seattle Seahawks		1:25p (PT)	4:25p	CBS	219	W15G11	219	2025W15-IND@SEA	202515219
+15	Sunday, Dec. 14, 2025	Tennessee Titans	San Francisco 49ers		1:25p (PT)	4:25p	FOX	220	W15G12	220	2025W15-TEN@SF	202515220
+15	Sunday, Dec. 14, 2025	Green Bay Packers	Denver Broncos		2:25p (MT)	4:25p	CBS	221	W15G13	221	2025W15-GB@DEN	202515221
+15	Sunday, Dec. 14, 2025	Carolina Panthers	New Orleans Saints		3:25p (CT)	4:25p	FOX	222	W15G14	222	2025W15-CAR@NO	202515222
+15	Sunday, Dec. 14, 2025	Minnesota Vikings	Dallas Cowboys		7:20p (CT)	8:20p	NBC	223	W15G15	223	2025W15-MIN@DAL	202515223
+15	Thursday, Dec. 11, 2025	Atlanta Falcons	Tampa Bay Buccaneers		8:15p (ET)	8:15p	Prime Video	224	W15G16	224	2025W15-ATL@TB	202515224
+16	Monday, Dec. 22, 2025	San Francisco 49ers	Indianapolis Colts		8:15p (ET)	8:15p	ESPN	225	W16G1	225	2025W16-SF@IND	202516225
+16	Saturday, Dec. 20, 2025	Green Bay Packers	Chicago Bears		TBD	TBD	FOX	226	W16G2	226	2025W16-GB@CHI	202516226
+16	Saturday, Dec. 20, 2025	Philadelphia Eagles	Washington Commanders		TBD	TBD	FOX	227	W16G3	227	2025W16-PHI@WAS	202516227
+16	Sunday, Dec. 21, 2025	Los Angeles Chargers	Dallas Cowboys		12:00p (CT)	1:00p	FOX	228	W16G4	228	2025W16-LAC@DAL	202516228
+16	Sunday, Dec. 21, 2025	New York Jets	New Orleans Saints		12:00p (CT)	1:00p	CBS	229	W16G5	229	2025W16-NYJ@NO	202516229
+16	Sunday, Dec. 21, 2025	Kansas City Chiefs	Tennessee Titans		12:00p (CT)	1:00p	CBS	230	W16G6	230	2025W16-KC@TEN	202516230
+16	Sunday, Dec. 21, 2025	New England Patriots	Baltimore Ravens		1:00p (ET)	1:00p	CBS	231	W16G7	231	2025W16-NE@BAL	202516231
+16	Sunday, Dec. 21, 2025	Tampa Bay Buccaneers	Carolina Panthers		1:00p (ET)	1:00p	FOX	232	W16G8	232	2025W16-TB@CAR	202516232
+16	Sunday, Dec. 21, 2025	Buffalo Bills	Cleveland Browns		1:00p (ET)	1:00p	CBS	233	W16G9	233	2025W16-BUF@CLE	202516233
+16	Sunday, Dec. 21, 2025	Minnesota Vikings	New York Giants		1:00p (ET)	1:00p	FOX	234	W16G10	234	2025W16-MIN@NYG	202516234
+16	Sunday, Dec. 21, 2025	Atlanta Falcons	Arizona Cardinals		2:05p (MT)	4:05p	FOX	235	W16G11	235	2025W16-ATL@ARI	202516235
+16	Sunday, Dec. 21, 2025	Jacksonville Jaguars	Denver Broncos		2:05p (MT)	4:05p	FOX	236	W16G12	236	2025W16-JAX@DEN	202516236
+16	Sunday, Dec. 21, 2025	Las Vegas Raiders	Houston Texans		3:25p (CT)	4:25p	CBS	237	W16G13	237	2025W16-LV@HOU	202516237
+16	Sunday, Dec. 21, 2025	Pittsburgh Steelers	Detroit Lions		4:25p (ET)	4:25p	CBS	238	W16G14	238	2025W16-PIT@DET	202516238
+16	Sunday, Dec. 21, 2025	Cincinnati Bengals	Miami Dolphins		8:20p (ET)	8:20p	NBC	239	W16G15	239	2025W16-CIN@MIA	202516239
+16	Thursday, Dec. 18, 2025	Los Angeles Rams	Seattle Seahawks		5:15p (PT)	8:15p	Prime Video	240	W16G16	240	2025W16-LAR@SEA	202516240
+17	Monday, Dec. 29, 2025	Los Angeles Rams	Atlanta Falcons		8:15p (ET)	8:15p	ESPN	241	W17G1	241	2025W17-LAR@ATL	202517241
+17	Saturday, Dec. 27, 2025 - Time/Network TBD	Seattle Seahawks	Carolina Panthers		TBD	TBD	TBD	242	W17G2	242	2025W17-SEA@CAR	202517242
+17	Saturday, Dec. 27, 2025 - Time/Network TBD	Arizona Cardinals	Cincinnati Bengals		TBD	TBD	TBD	243	W17G3	243	2025W17-ARI@CIN	202517243
+17	Saturday, Dec. 27, 2025 - Time/Network TBD	Baltimore Ravens	Green Bay Packers		TBD	TBD	TBD	244	W17G4	244	2025W17-BAL@GB	202517244
+17	Saturday, Dec. 27, 2025 - Time/Network TBD	Houston Texans	Los Angeles Chargers		TBD	TBD	TBD	245	W17G5	245	2025W17-HOU@LAC	202517245
+17	Saturday, Dec. 27, 2025 - Time/Network TBD	New York Giants	Las Vegas Raiders		TBD	TBD	TBD	246	W17G6	246	2025W17-NYG@LV	202517246
+17	Sunday, Dec. 28, 2025	New Orleans Saints	Tennessee Titans		12:00p (CT)	1:00p	CBS	247	W17G7	247	2025W17-NO@TEN	202517247
+17	Sunday, Dec. 28, 2025	Pittsburgh Steelers	Cleveland Browns		1:00p (ET)	1:00p	CBS	248	W17G8	248	2025W17-PIT@CLE	202517248
+17	Sunday, Dec. 28, 2025	Jacksonville Jaguars	Indianapolis Colts		1:00p (ET)	1:00p	FOX	249	W17G9	249	2025W17-JAX@IND	202517249
+17	Sunday, Dec. 28, 2025	Tampa Bay Buccaneers	Miami Dolphins		1:00p (ET)	1:00p	FOX	250	W17G10	250	2025W17-TB@MIA	202517250
+17	Sunday, Dec. 28, 2025	New England Patriots	New York Jets		1:00p (ET)	1:00p	CBS	251	W17G11	251	2025W17-NE@NYJ	202517251
+17	Sunday, Dec. 28, 2025	Philadelphia Eagles	Buffalo Bills		4:25p (ET)	4:25p	FOX	252	W17G12	252	2025W17-PHI@BUF	202517252
+17	Sunday, Dec. 28, 2025	Chicago Bears	San Francisco 49ers		5:20p (PT)	8:20p	NBC	253	W17G13	253	2025W17-CHI@SF	202517253
+17	Thursday, Dec. 25, 2025	Dallas Cowboys	Washington Commanders	Christmas	1:00p (ET)	1:00p	NETFLIX	254	W17G14	254	2025W17-DAL@WAS	202517254
+17	Thursday, Dec. 25, 2025	Detroit Lions	Minnesota Vikings	Christmas	3:30p (CT)	4:30p	NETFLIX	255	W17G15	255	2025W17-DET@MIN	202517255
+17	Thursday, Dec. 25, 2025	Denver Broncos	Kansas City Chiefs	Christmas	7:15p (CT)	8:15p	Prime Video	256	W17G16	256	2025W17-DEN@KC	202517256
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	New Orleans Saints	Atlanta Falcons		TBD	TBD	TBD	257	W18G1	257	2025W18-NO@ATL	202518257
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	New York Jets	Buffalo Bills		TBD	TBD	TBD	258	W18G2	258	2025W18-NYJ@BUF	202518258
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Detroit Lions	Chicago Bears		TBD	TBD	TBD	259	W18G3	259	2025W18-DET@CHI	202518259
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Cleveland Browns	Cincinnati Bengals		TBD	TBD	TBD	260	W18G4	260	2025W18-CLE@CIN	202518260
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Los Angeles Chargers	Denver Broncos		TBD	TBD	TBD	261	W18G5	261	2025W18-LAC@DEN	202518261
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Indianapolis Colts	Houston Texans		TBD	TBD	TBD	262	W18G6	262	2025W18-IND@HOU	202518262
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Tennessee Titans	Jacksonville Jaguars		TBD	TBD	TBD	263	W18G7	263	2025W18-TEN@JAX	202518263
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Arizona Cardinals	Los Angeles Rams		TBD	TBD	TBD	264	W18G8	264	2025W18-ARI@LAR	202518264
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Kansas City Chiefs	Las Vegas Raiders		TBD	TBD	TBD	265	W18G9	265	2025W18-KC@LV	202518265
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Green Bay Packers	Minnesota Vikings		TBD	TBD	TBD	266	W18G10	266	2025W18-GB@MIN	202518266
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Miami Dolphins	New England Patriots		TBD	TBD	TBD	267	W18G11	267	2025W18-MIA@NE	202518267
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Dallas Cowboys	New York Giants		TBD	TBD	TBD	268	W18G12	268	2025W18-DAL@NYG	202518268
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Washington Commanders	Philadelphia Eagles		TBD	TBD	TBD	269	W18G13	269	2025W18-WAS@PHI	202518269
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Baltimore Ravens	Pittsburgh Steelers		TBD	TBD	TBD	270	W18G14	270	2025W18-BAL@PIT	202518270
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Seattle Seahawks	San Francisco 49ers		TBD	TBD	TBD	271	W18G15	271	2025W18-SEA@SF	202518271
+18	Saturday, Jan. 3, 2026 or Sunday, Jan. 4, 2026	Carolina Panthers	Tampa Bay Buccaneers		TBD	TBD	TBD	272	W18G16	272	2025W18-CAR@TB	202518272
