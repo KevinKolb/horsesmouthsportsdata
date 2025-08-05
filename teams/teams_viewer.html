@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horses Mouth Sports Data Team Viewer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #111;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .metadata {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .error {
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #c33;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-header {
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 40px 0 20px 0;
+      padding: 0;
+      background: none;
+      border: none;
+    }
+
+    .section-header.league {
+      font-size: 1.8rem;
+      margin-top: 50px;
+    }
+
+    .section-header.conference {
+      font-size: 1.6rem;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+
+    .section-header.division {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      margin-left: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      padding: 24px 0;
+      margin-left: 60px;
+    }
+
+    .team-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 400px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      padding-bottom: 80px;
+      transition: all 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .team-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+      z-index: 1;
+    }
+
+    .team-logo {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 80px;
+      height: 80px;
+      background: #000000;
+      border-radius: 10px;
+      padding: 8px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    .team-logo img:not([src]), .team-logo img[src=""] {
+      display: none;
+    }
+
+    .team-logo div {
+      color: #ffffff;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .team-colors {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 2;
+      display: flex;
+      gap: 4px;
+    }
+
+    .color-swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.8);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .sport-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 12px 16px;
+      z-index: 2;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .team-id {
+      font-size: 0.6rem;
+      opacity: 0.7;
+      text-transform: lowercase;
+    }
+
+    .team-info {
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    }
+
+    .team-info h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+      color: #ffffff;
+    }
+
+    .team-info .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      margin-bottom: 8px;
+      background: rgba(0,0,0,0.4);
+      padding: 12px;
+      border-radius: 8px;
+      backdrop-filter: blur(2px);
+    }
+
+    .team-info p {
+      font-size: 0.85rem;
+      margin-bottom: 3px;
+      opacity: 0.98;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .team-info .info-label {
+      font-weight: 600;
+      opacity: 0.9;
+      color: #e0e0e0;
+    }
+
+    .team-info a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-size: 0.8rem;
+      opacity: 1;
+      display: inline-block;
+      margin-top: 6px;
+      background: rgba(0,0,0,0.5);
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      transition: all 0.2s ease;
+    }
+
+    .team-info a:hover {
+      opacity: 1;
+      text-decoration: none;
+      background: rgba(0,0,0,0.7);
+      transform: translateY(-1px);
+    }
+
+    .population {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+      }
+      
+      .section-header.conference {
+        margin-left: 10px;
+      }
+      
+      .section-header.division {
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      
+      .team-grid {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        padding: 16px 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .team-card {
+        height: 380px;
+      }
+
+      .team-info .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        margin-left: 0 !important;
+      }
+
+      .section-header.league {
+        font-size: 1.5rem;
+      }
+
+      .section-header.conference {
+        font-size: 1.3rem;
+      }
+
+      .section-header.division {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Color mapping for common team colors */
+    .color-red { background-color: #dc143c; }
+    .color-blue { background-color: #0066cc; }
+    .color-green { background-color: #228b22; }
+    .color-black { background-color: #000000; }
+    .color-white { background-color: #ffffff; border-color: #ccc; }
+    .color-gold { background-color: #ffd700; }
+    .color-silver { background-color: #c0c0c0; }
+    .color-orange { background-color: #ff8c00; }
+    .color-purple { background-color: #800080; }
+    .color-navy { background-color: #000080; }
+    .color-teal { background-color: #008080; }
+    .color-brown { background-color: #8b4513; }
+  </style>
+</head>
+<body>
+
+  <h1>Horses Mouth Sports Data Team Viewer</h1>
+  <div id="loading" class="loading">Loading teams data...</div>
+  <div id="error" class="error" style="display: none;"></div>
+  <div id="metadata" class="metadata" style="display: none;"></div>
+  <div id="teamSections"></div>
+
+  <script>
+    const loadingEl = document.getElementById('loading');
+    const errorEl = document.getElementById('error');
+    const metadataEl = document.getElementById('metadata');
+    const container = document.getElementById('teamSections');
+
+    function showError(message) {
+      loadingEl.style.display = 'none';
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+    }
+
+    function hideLoading() {
+      loadingEl.style.display = 'none';
+    }
+
+    function getColorClass(colorName) {
+      const colorMap = {
+        'red': 'color-red',
+        'cardinal red': 'color-red',
+        'battle red': 'color-red',
+        'blue': 'color-blue',
+        'royal blue': 'color-blue',
+        'powder blue': 'color-blue',
+        'speed blue': 'color-blue',
+        'honolulu blue': 'color-blue',
+        'panther blue': 'color-blue',
+        'deep steel blue': 'color-blue',
+        'nautical blue': 'color-blue',
+        'titans blue': 'color-blue',
+        'broncos navy': 'color-navy',
+        'dark navy': 'color-navy',
+        'titans navy': 'color-navy',
+        'college navy': 'color-navy',
+        'midnight green': 'color-green',
+        'gotham green': 'color-green',
+        'action green': 'color-green',
+        'dark green': 'color-green',
+        'black': 'color-black',
+        'stealth black': 'color-black',
+        'white': 'color-white',
+        'gold': 'color-gold',
+        'old gold': 'color-gold',
+        'steelers gold': 'color-gold',
+        'silver': 'color-silver',
+        'orange': 'color-orange',
+        'purple': 'color-purple',
+        'aqua': 'color-teal',
+        'teal': 'color-teal',
+        'dark brown': 'color-brown',
+        'burgundy': 'color-red'
+      };
+      return colorMap[colorName?.toLowerCase()] || 'color-blue';
+    }
+
+    function createColorSwatches(primaryColor, secondaryColor) {
+      const swatches = [];
+      if (primaryColor) {
+        swatches.push(`<div class="color-swatch ${getColorClass(primaryColor)}" title="${primaryColor}"></div>`);
+      }
+      if (secondaryColor && secondaryColor !== primaryColor) {
+        swatches.push(`<div class="color-swatch ${getColorClass(secondaryColor)}" title="${secondaryColor}"></div>`);
+      }
+      return swatches.join('');
+    }
+
+    function formatPopulation(pop) {
+      if (!pop) return '';
+      const num = parseInt(pop.replace(/,/g, ''));
+      if (num >= 1000000) {
+        return `${(num / 1000000).toFixed(1)}M`;
+      } else if (num >= 1000) {
+        return `${(num / 1000).toFixed(0)}K`;
+      }
+      return num.toString();
+    }
+
+    function createTeamCard(team, leagueAbbr, conferenceAbbr, divisionName) {
+      // Extract all available data from the XML structure
+      const teamId = team.getAttribute('id') || '';
+      const name = team.querySelector("basic_info name")?.textContent?.trim() || "Unknown Team";
+      const slug = team.querySelector("basic_info slug")?.textContent?.trim() || "";
+      const logo = team.querySelector("visual_identity logo_url")?.textContent?.trim() || "";
+      const bg = team.querySelector("visual_identity header_background_url")?.textContent?.trim() || "";
+      const coach = team.querySelector("organization head_coach")?.textContent?.trim() || "Unknown";
+      const owners = team.querySelector("organization owners")?.textContent?.trim() || "Unknown";
+      const stadium = team.querySelector("venue stadium")?.textContent?.trim() || "Unknown";
+      const year = team.querySelector("basic_info established")?.textContent?.trim() || "Unknown";
+      const website = team.querySelector("urls official_url")?.textContent?.trim() || "#";
+      const operationsUrl = team.querySelector("urls operations_url")?.textContent?.trim() || "";
+      const hometown = team.querySelector("location hometown")?.textContent?.trim() || "";
+      const population = team.querySelector("location population")?.textContent?.trim() || "";
+      const primaryColor = team.querySelector("visual_identity primary_color")?.textContent?.trim() || "";
+      const secondaryColor = team.querySelector("visual_identity secondary_color")?.textContent?.trim() || "";
+
+      const card = document.createElement("div");
+      card.className = "team-card";
+      if (bg) {
+        card.style.backgroundImage = `url(${bg})`;
+      }
+
+      const logoHtml = logo ? 
+        `<img src="${logo}" alt="${name} logo" onerror="this.style.display='none'">` : 
+        `<div style="text-align: center; font-size: 0.9rem; font-weight: bold;">${name.split(' ').map(w => w[0]).join('').substring(0,3)}</div>`;
+
+      const colorSwatches = createColorSwatches(primaryColor, secondaryColor);
+
+      card.innerHTML = `
+        <div class="team-logo">${logoHtml}</div>
+        ${colorSwatches ? `<div class="team-colors">${colorSwatches}</div>` : ''}
+        <div class="team-info">
+          <h2>${name}</h2>
+          <div class="info-grid">
+            <p><span class="info-label">Coach:</span> ${coach}</p>
+            <p><span class="info-label">Since:</span> ${year}</p>
+            <p><span class="info-label">Stadium:</span> ${stadium}</p>
+            <p><span class="info-label">Location:</span> ${hometown}</p>
+            ${owners !== "Unknown" ? `<p><span class="info-label">Owner:</span> ${owners.length > 25 ? owners.substring(0, 25) + '...' : owners}</p>` : ''}
+            ${population ? `<p class="population"><span class="info-label">Population:</span> ${formatPopulation(population)}</p>` : ''}
+          </div>
+          ${website !== "#" ? `<a href="${website}" target="_blank" rel="noopener">Official Website</a>` : ''}
+          ${operationsUrl ? `<a href="${operationsUrl}" target="_blank" rel="noopener" style="margin-left: 8px;">Team History</a>` : ''}
+        </div>
+        <div class="sport-badge">
+          <span>${leagueAbbr} • ${conferenceAbbr} • ${divisionName}</span>
+          <span class="team-id">${teamId}</span>
+        </div>
+      `;
+
+      return card;
+    }
+
+    function processTeamsData(xmlText) {
+      try {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, "application/xml");
+
+        // Check for XML parsing errors
+        const parserError = xml.querySelector("parsererror");
+        if (parserError) {
+          throw new Error("Invalid XML format");
+        }
+
+        // Extract metadata
+        const rootElement = xml.querySelector("sports_teams");
+        if (rootElement) {
+          const lastUpdated = rootElement.getAttribute("last_updated");
+          const totalTeams = rootElement.getAttribute("total_teams");
+          const totalLeagues = rootElement.getAttribute("total_leagues");
+          
+          if (lastUpdated || totalTeams || totalLeagues) {
+            const updateDate = lastUpdated ? new Date(lastUpdated).toLocaleDateString() : '';
+            metadataEl.innerHTML = `
+              <strong>NFL Team Database</strong><br>
+              ${totalTeams ? `${totalTeams} teams` : ''}
+              ${totalLeagues ? ` across ${totalLeagues} league${totalLeagues > 1 ? 's' : ''}` : ''}
+              ${updateDate ? ` • Last updated: ${updateDate}` : ''}
+            `;
+            metadataEl.style.display = 'block';
+          }
+        }
+
+        // Find all leagues
+        const leagues = Array.from(xml.querySelectorAll("league"));
+        
+        if (leagues.length === 0) {
+          throw new Error("No league data found in XML");
+        }
+
+        leagues.forEach(league => {
+          const leagueName = league.getAttribute("name") || "Unknown League";
+          const leagueAbbr = league.getAttribute("abbreviation") || "";
+          const country = league.getAttribute("country") || "";
+          const sport = league.getAttribute("sport") || "";
+          const conferences = Array.from(league.querySelectorAll("conference"));
+          
+          if (conferences.length === 0) return;
+
+          // Create league header
+          const leagueHeader = document.createElement("h2");
+          leagueHeader.className = "section-header league";
+          leagueHeader.textContent = `${leagueName} (${leagueAbbr})`;
+          container.appendChild(leagueHeader);
+
+          conferences.forEach(conference => {
+            const conferenceName = conference.getAttribute("name") || "Unknown Conference";
+            const conferenceAbbr = conference.getAttribute("abbreviation") || "";
+            const divisions = Array.from(conference.querySelectorAll("division"));
+            
+            if (divisions.length === 0) return;
+
+            // Create conference header
+            const confHeader = document.createElement("h3");
+            confHeader.className = "section-header conference";
+            confHeader.textContent = `${conferenceName} (${conferenceAbbr})`;
+            container.appendChild(confHeader);
+
+            divisions.forEach(division => {
+              const divisionName = division.getAttribute("name") || "Unknown Division";
+              const teams = Array.from(division.querySelectorAll("team"));
+              
+              if (teams.length === 0) return;
+
+              // Create division header
+              const divHeader = document.createElement("h4");
+              divHeader.className = "section-header division";
+              divHeader.textContent = `${divisionName} Division`;
+              container.appendChild(divHeader);
+
+              // Create team grid
+              const grid = document.createElement("div");
+              grid.className = "team-grid";
+
+              teams.forEach(team => {
+                const card = createTeamCard(team, leagueAbbr, conferenceAbbr, divisionName);
+                grid.appendChild(card);
+              });
+
+              container.appendChild(grid);
+            });
+          });
+        });
+
+        hideLoading();
+      } catch (error) {
+        console.error("Error processing teams data:", error);
+        showError(`Error processing teams data: ${error.message}`);
+      }
+    }
+
+    // Try to fetch teams.xml
+    fetch('teams.xml')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(xmlText => {
+        processTeamsData(xmlText);
+      })
+      .catch(error => {
+        console.error("Could not load teams.xml:", error);
+        showError(`Could not load teams.xml: ${error.message}. Please make sure the teams.xml file is in the same directory as this HTML file.`);
+      });
+  </script>
+
+</body>
+</html>
