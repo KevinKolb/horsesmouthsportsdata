@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<sports_teams last_updated="2025-08-05T13:58:52.687680" total_teams="32" total_leagues="1">
+<sports_teams last_updated="2025-08-06T00:26:39.013073" total_teams="32" total_leagues="1">
   <league name="National Football League" abbreviation="NFL" country="USA" sport="American Football">
+    <branding>
+      <logo_url>https://static.www.nfl.com/image/upload/v1554321393/league/nvfr7ogywskqrfaiu38m.svg</logo_url>
+    </branding>
     <conferences>
       <conference name="NFC Conference" abbreviation="NFC">
         <divisions>

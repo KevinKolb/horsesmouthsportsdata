@@ -12,29 +12,33 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #f6f6f6;
-      color: #111;
-      line-height: 1.5;
-      padding: 40px 20px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #2d2d2d;
+      line-height: 1.4;
+      padding: 60px 40px;
+      font-weight: 400;
     }
 
     h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
       text-align: center;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
     }
 
     .metadata {
       text-align: center;
       color: #666;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       font-size: 0.9rem;
-      background: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+      background: #f8f8f8;
+      padding: 16px;
+      border-radius: 2px;
+      border: none;
+      font-weight: 300;
     }
 
     .loading {
@@ -54,39 +58,103 @@
       text-align: center;
     }
 
+    /* Collapsible section styles */
+    .section-toggle {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 0;
+      margin-bottom: 2px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .section-toggle:hover {
+      border-color: #d0d0d0;
+    }
+
     .section-header {
-      color: #000;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 40px 0 20px 0;
-      padding: 0;
-      background: none;
-      border: none;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      font-weight: 400;
+      transition: background-color 0.15s ease;
+    }
+
+    .section-toggle:hover .section-header {
+      background: #fafafa;
     }
 
     .section-header.league {
-      font-size: 1.8rem;
-      margin-top: 50px;
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      background: #ffffff;
+      font-weight: 300;
+      letter-spacing: -0.01em;
     }
 
     .section-header.conference {
-      font-size: 1.6rem;
-      margin-top: 40px;
-      margin-left: 20px;
+      font-size: 1rem;
+      color: #2d2d2d;
+      margin-left: 0;
+      padding-left: 48px;
+      font-weight: 400;
     }
 
     .section-header.division {
-      font-size: 1.4rem;
-      margin-top: 30px;
-      margin-left: 40px;
+      font-size: 0.95rem;
+      color: #404040;
+      margin-left: 0;
+      padding-left: 72px;
+      font-weight: 400;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      background: #f0f0f0;
+      color: #666666;
+      padding: 4px 12px;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .toggle-icon {
+      font-size: 1rem;
+      transition: all 0.15s ease;
+      color: #999999;
+      min-width: 20px;
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .section-content {
+      overflow: hidden;
+      transition: all 0.2s ease;
+      background: #fafafa;
+      max-height: 0;
+    }
+
+    .section-toggle.expanded > .section-content {
+      max-height: none;
+      padding: 0;
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      padding: 24px 0;
-      margin-left: 60px;
+      gap: 20px;
+      padding: 32px;
+      margin: 0;
     }
 
     .team-card {
@@ -267,7 +335,6 @@
     @media (max-width: 900px) {
       .team-grid {
         grid-template-columns: 1fr;
-        margin-left: 20px;
       }
       
       .section-header.conference {
@@ -286,8 +353,7 @@
       
       .team-grid {
         grid-template-columns: 1fr;
-        margin-left: 0;
-        padding: 16px 0;
+        padding: 16px;
       }
       
       h1 {
@@ -302,20 +368,24 @@
         grid-template-columns: 1fr;
       }
 
-      .section-header {
-        margin-left: 0 !important;
-      }
-
-      .section-header.league {
-        font-size: 1.5rem;
-      }
-
       .section-header.conference {
-        font-size: 1.3rem;
+        margin-left: 0;
       }
 
       .section-header.division {
+        margin-left: 0;
+      }
+
+      .section-header.league {
         font-size: 1.2rem;
+      }
+
+      .section-header.conference {
+        font-size: 1.1rem;
+      }
+
+      .section-header.division {
+        font-size: 1rem;
       }
     }
 
@@ -356,6 +426,56 @@
 
     function hideLoading() {
       loadingEl.style.display = 'none';
+    }
+
+    function createCollapsibleSection(title, level, teamCount = 0) {
+      const section = document.createElement('div');
+      section.className = 'section-toggle';
+      
+      const levelClass = level === 1 ? 'league' : level === 2 ? 'conference' : 'division';
+      
+      section.innerHTML = `
+        <div class="section-header ${levelClass}">
+          <div class="section-title">
+            <span>${title}</span>
+            ${teamCount > 0 ? `<span class="section-badge">${teamCount} teams</span>` : ''}
+          </div>
+          <span class="toggle-icon">▶</span>
+        </div>
+        <div class="section-content"></div>
+      `;
+
+      const header = section.querySelector('.section-header');
+      const content = section.querySelector('.section-content');
+      const icon = section.querySelector('.toggle-icon');
+
+      header.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = section.classList.contains('expanded');
+        
+        if (isExpanded) {
+          // Collapsing - first collapse all children
+          const childSections = content.querySelectorAll('.section-toggle.expanded');
+          childSections.forEach(child => {
+            child.classList.remove('expanded');
+            const childIcon = child.querySelector('.toggle-icon');
+            if (childIcon) childIcon.textContent = '▶';
+          });
+          
+          // Then collapse this section
+          section.classList.remove('expanded');
+          icon.textContent = '▶';
+        } else {
+          // Expanding
+          section.classList.add('expanded');
+          icon.textContent = '▼';
+        }
+      });
+
+      return {
+        element: section,
+        content: content
+      };
     }
 
     function getColorClass(colorName) {
@@ -495,7 +615,6 @@
           if (lastUpdated || totalTeams || totalLeagues) {
             const updateDate = lastUpdated ? new Date(lastUpdated).toLocaleDateString() : '';
             metadataEl.innerHTML = `
-              <strong>NFL Team Database</strong><br>
               ${totalTeams ? `${totalTeams} teams` : ''}
               ${totalLeagues ? ` across ${totalLeagues} league${totalLeagues > 1 ? 's' : ''}` : ''}
               ${updateDate ? ` • Last updated: ${updateDate}` : ''}
@@ -520,11 +639,26 @@
           
           if (conferences.length === 0) return;
 
-          // Create league header
-          const leagueHeader = document.createElement("h2");
-          leagueHeader.className = "section-header league";
-          leagueHeader.textContent = `${leagueName} (${leagueAbbr})`;
-          container.appendChild(leagueHeader);
+          // Count total teams in league
+          const totalLeagueTeams = conferences.reduce((sum, conf) => {
+            return sum + conf.querySelectorAll("team").length;
+          }, 0);
+
+          // Get league logo if available
+          const leagueLogo = league.querySelector("branding logo_url")?.textContent?.trim() || "";
+          
+          // Create league title with logo
+          const leagueTitle = leagueLogo ? 
+            `<img src="${leagueLogo}" alt="${leagueName} logo" style="height: 24px; width: auto; margin-right: 12px; vertical-align: middle;"> ${leagueName} (${leagueAbbr})` :
+            `${leagueName} (${leagueAbbr})`;
+
+          // Create collapsible league section
+          const leagueSection = createCollapsibleSection(
+            leagueTitle,
+            1,
+            totalLeagueTeams
+          );
+          container.appendChild(leagueSection.element);
 
           conferences.forEach(conference => {
             const conferenceName = conference.getAttribute("name") || "Unknown Conference";
@@ -533,11 +667,18 @@
             
             if (divisions.length === 0) return;
 
-            // Create conference header
-            const confHeader = document.createElement("h3");
-            confHeader.className = "section-header conference";
-            confHeader.textContent = `${conferenceName} (${conferenceAbbr})`;
-            container.appendChild(confHeader);
+            // Count teams in conference
+            const totalConfTeams = divisions.reduce((sum, div) => {
+              return sum + div.querySelectorAll("team").length;
+            }, 0);
+
+            // Create collapsible conference section
+            const confSection = createCollapsibleSection(
+              `${conferenceName} (${conferenceAbbr})`,
+              2,
+              totalConfTeams
+            );
+            leagueSection.content.appendChild(confSection.element);
 
             divisions.forEach(division => {
               const divisionName = division.getAttribute("name") || "Unknown Division";
@@ -545,11 +686,13 @@
               
               if (teams.length === 0) return;
 
-              // Create division header
-              const divHeader = document.createElement("h4");
-              divHeader.className = "section-header division";
-              divHeader.textContent = `${divisionName} Division`;
-              container.appendChild(divHeader);
+              // Create collapsible division section
+              const divSection = createCollapsibleSection(
+                `${divisionName} Division`,
+                3,
+                teams.length
+              );
+              confSection.content.appendChild(divSection.element);
 
               // Create team grid
               const grid = document.createElement("div");
@@ -560,7 +703,7 @@
                 grid.appendChild(card);
               });
 
-              container.appendChild(grid);
+              divSection.content.appendChild(grid);
             });
           });
         });

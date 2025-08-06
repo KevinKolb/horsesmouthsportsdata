@@ -36,9 +36,9 @@ class NFLScheduleFetcher:
         }
         
         # File paths
-        self.xml_file = 'games.xml'
-        self.backup_file = 'games_backup.xml'
-        self.log_file = 'games_log.txt'
+        self.xml_file = 'games/games.xml'
+        self.backup_file = 'games/games_backup.xml'
+        self.log_file = 'games/games_log.txt'
         
         # Data storage
         self.games = []

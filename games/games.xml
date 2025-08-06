@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<nfl_schedule season="2025" total_games="272" last_updated="2025-08-05T10:21:00.274680">
+<nfl_schedule season="2025" total_games="272" last_updated="2025-08-06T00:27:31.121058">
   <week number="1">
     <date value="Friday, Sept. 5, 2025">
       <game id="2025-001" week_game_id="2025-W1G1" game_code="2025W1-kansas-city-chiefs@los-angeles-chargers" nfl_game_key="20250101">
@@ -13,7 +13,6 @@
           <et_kickoff>8:00p</et_kickoff>
         </times>
         <network>YouTube</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Monday, Sept. 8, 2025">
@@ -27,7 +26,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ABC/ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Sept. 07, 2025">
@@ -41,7 +39,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-004" week_game_id="2025-W1G4" game_code="2025W1-tampa-bay-buccaneers@atlanta-falcons" nfl_game_key="20250104">
         <teams>
@@ -53,7 +50,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-005" week_game_id="2025-W1G5" game_code="2025W1-cincinnati-bengals@cleveland-browns" nfl_game_key="20250105">
         <teams>
@@ -65,7 +61,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-006" week_game_id="2025-W1G6" game_code="2025W1-miami-dolphins@indianapolis-colts" nfl_game_key="20250106">
         <teams>
@@ -77,7 +72,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-007" week_game_id="2025-W1G7" game_code="2025W1-carolina-panthers@jacksonville-jaguars" nfl_game_key="20250107">
         <teams>
@@ -89,7 +83,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-008" week_game_id="2025-W1G8" game_code="2025W1-las-vegas-raiders@new-england-patriots" nfl_game_key="20250108">
         <teams>
@@ -101,7 +94,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-009" week_game_id="2025-W1G9" game_code="2025W1-pittsburgh-steelers@new-york-jets" nfl_game_key="20250109">
         <teams>
@@ -113,7 +105,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-010" week_game_id="2025-W1G10" game_code="2025W1-new-york-giants@washington-commanders" nfl_game_key="20250110">
         <teams>
@@ -125,7 +116,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-011" week_game_id="2025-W1G11" game_code="2025W1-san-francisco-49ers@seattle-seahawks" nfl_game_key="20250111">
         <teams>
@@ -137,7 +127,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-012" week_game_id="2025-W1G12" game_code="2025W1-houston-texans@los-angeles-rams" nfl_game_key="20250112">
         <teams>
@@ -149,7 +138,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-013" week_game_id="2025-W1G13" game_code="2025W1-tennessee-titans@denver-broncos" nfl_game_key="20250113">
         <teams>
@@ -161,7 +149,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-014" week_game_id="2025-W1G14" game_code="2025W1-detroit-lions@green-bay-packers" nfl_game_key="20250114">
         <teams>
@@ -173,7 +160,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-015" week_game_id="2025-W1G15" game_code="2025W1-baltimore-ravens@buffalo-bills" nfl_game_key="20250115">
         <teams>
@@ -185,7 +171,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Sept. 4, 2025">
@@ -199,7 +184,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -215,7 +199,6 @@
           <et_kickoff>7:00p</et_kickoff>
         </times>
         <network>ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-018" week_game_id="2025-W2G2" game_code="2025W2-los-angeles-chargers@las-vegas-raiders" nfl_game_key="20250218">
         <teams>
@@ -227,7 +210,6 @@
           <et_kickoff>10:00p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Sept. 14, 2025">
@@ -241,7 +223,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-020" week_game_id="2025-W2G4" game_code="2025W2-san-francisco-49ers@new-orleans-saints" nfl_game_key="20250220">
         <teams>
@@ -253,7 +234,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-021" week_game_id="2025-W2G5" game_code="2025W2-los-angeles-rams@tennessee-titans" nfl_game_key="20250221">
         <teams>
@@ -265,7 +245,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-022" week_game_id="2025-W2G6" game_code="2025W2-cleveland-browns@baltimore-ravens" nfl_game_key="20250222">
         <teams>
@@ -277,7 +256,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-023" week_game_id="2025-W2G7" game_code="2025W2-jacksonville-jaguars@cincinnati-bengals" nfl_game_key="20250223">
         <teams>
@@ -289,7 +267,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-024" week_game_id="2025-W2G8" game_code="2025W2-chicago-bears@detroit-lions" nfl_game_key="20250224">
         <teams>
@@ -301,7 +278,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-025" week_game_id="2025-W2G9" game_code="2025W2-new-england-patriots@miami-dolphins" nfl_game_key="20250225">
         <teams>
@@ -313,7 +289,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-026" week_game_id="2025-W2G10" game_code="2025W2-buffalo-bills@new-york-jets" nfl_game_key="20250226">
         <teams>
@@ -325,7 +300,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-027" week_game_id="2025-W2G11" game_code="2025W2-seattle-seahawks@pittsburgh-steelers" nfl_game_key="20250227">
         <teams>
@@ -337,7 +311,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-028" week_game_id="2025-W2G12" game_code="2025W2-carolina-panthers@arizona-cardinals" nfl_game_key="20250228">
         <teams>
@@ -349,7 +322,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-029" week_game_id="2025-W2G13" game_code="2025W2-philadelphia-eagles@kansas-city-chiefs" nfl_game_key="20250229">
         <teams>
@@ -361,7 +333,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-030" week_game_id="2025-W2G14" game_code="2025W2-denver-broncos@indianapolis-colts" nfl_game_key="20250230">
         <teams>
@@ -373,7 +344,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-031" week_game_id="2025-W2G15" game_code="2025W2-atlanta-falcons@minnesota-vikings" nfl_game_key="20250231">
         <teams>
@@ -385,7 +355,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Sept. 11, 2025">
@@ -399,7 +368,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -415,7 +383,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Sept. 21, 2025">
@@ -429,7 +396,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-035" week_game_id="2025-W3G3" game_code="2025W3-indianapolis-colts@tennessee-titans" nfl_game_key="20250335">
         <teams>
@@ -441,7 +407,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-036" week_game_id="2025-W3G4" game_code="2025W3-atlanta-falcons@carolina-panthers" nfl_game_key="20250336">
         <teams>
@@ -453,7 +418,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-037" week_game_id="2025-W3G5" game_code="2025W3-green-bay-packers@cleveland-browns" nfl_game_key="20250337">
         <teams>
@@ -465,7 +429,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-038" week_game_id="2025-W3G6" game_code="2025W3-houston-texans@jacksonville-jaguars" nfl_game_key="20250338">
         <teams>
@@ -477,7 +440,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-039" week_game_id="2025-W3G7" game_code="2025W3-pittsburgh-steelers@new-england-patriots" nfl_game_key="20250339">
         <teams>
@@ -489,7 +451,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-040" week_game_id="2025-W3G8" game_code="2025W3-los-angeles-rams@philadelphia-eagles" nfl_game_key="20250340">
         <teams>
@@ -501,7 +462,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-041" week_game_id="2025-W3G9" game_code="2025W3-new-york-jets@tampa-bay-buccaneers" nfl_game_key="20250341">
         <teams>
@@ -513,7 +473,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-042" week_game_id="2025-W3G10" game_code="2025W3-las-vegas-raiders@washington-commanders" nfl_game_key="20250342">
         <teams>
@@ -525,7 +484,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-043" week_game_id="2025-W3G11" game_code="2025W3-denver-broncos@los-angeles-chargers" nfl_game_key="20250343">
         <teams>
@@ -537,7 +495,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-044" week_game_id="2025-W3G12" game_code="2025W3-new-orleans-saints@seattle-seahawks" nfl_game_key="20250344">
         <teams>
@@ -549,7 +506,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-045" week_game_id="2025-W3G13" game_code="2025W3-arizona-cardinals@san-francisco-49ers" nfl_game_key="20250345">
         <teams>
@@ -561,7 +517,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-046" week_game_id="2025-W3G14" game_code="2025W3-dallas-cowboys@chicago-bears" nfl_game_key="20250346">
         <teams>
@@ -573,7 +528,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-047" week_game_id="2025-W3G15" game_code="2025W3-kansas-city-chiefs@new-york-giants" nfl_game_key="20250347">
         <teams>
@@ -585,7 +539,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Sept. 18, 2025">
@@ -599,7 +552,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -615,7 +567,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-050" week_game_id="2025-W4G2" game_code="2025W4-new-york-jets@miami-dolphins" nfl_game_key="20250450">
         <teams>
@@ -627,7 +578,6 @@
           <et_kickoff>7:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Sept. 28, 2025">
@@ -641,7 +591,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-052" week_game_id="2025-W4G4" game_code="2025W4-washington-commanders@atlanta-falcons" nfl_game_key="20250452">
         <teams>
@@ -653,7 +602,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-053" week_game_id="2025-W4G5" game_code="2025W4-new-orleans-saints@buffalo-bills" nfl_game_key="20250453">
         <teams>
@@ -665,7 +613,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-054" week_game_id="2025-W4G6" game_code="2025W4-cleveland-browns@detroit-lions" nfl_game_key="20250454">
         <teams>
@@ -677,7 +624,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-055" week_game_id="2025-W4G7" game_code="2025W4-carolina-panthers@new-england-patriots" nfl_game_key="20250455">
         <teams>
@@ -689,7 +635,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-056" week_game_id="2025-W4G8" game_code="2025W4-los-angeles-chargers@new-york-giants" nfl_game_key="20250456">
         <teams>
@@ -701,7 +646,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-057" week_game_id="2025-W4G9" game_code="2025W4-philadelphia-eagles@tampa-bay-buccaneers" nfl_game_key="20250457">
         <teams>
@@ -713,7 +657,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-058" week_game_id="2025-W4G10" game_code="2025W4-indianapolis-colts@los-angeles-rams" nfl_game_key="20250458">
         <teams>
@@ -725,7 +668,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-059" week_game_id="2025-W4G11" game_code="2025W4-jacksonville-jaguars@san-francisco-49ers" nfl_game_key="20250459">
         <teams>
@@ -737,7 +679,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-060" week_game_id="2025-W4G12" game_code="2025W4-chicago-bears@las-vegas-raiders" nfl_game_key="20250460">
         <teams>
@@ -749,7 +690,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-061" week_game_id="2025-W4G13" game_code="2025W4-minnesota-vikings@pittsburgh-steelers" nfl_game_key="20250461">
         <teams>
@@ -762,7 +702,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-062" week_game_id="2025-W4G14" game_code="2025W4-baltimore-ravens@kansas-city-chiefs" nfl_game_key="20250462">
         <teams>
@@ -774,7 +713,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-063" week_game_id="2025-W4G15" game_code="2025W4-green-bay-packers@dallas-cowboys" nfl_game_key="20250463">
         <teams>
@@ -786,7 +724,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Sept. 25, 2025">
@@ -800,7 +737,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -816,7 +752,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Oct. 5, 2025">
@@ -830,7 +765,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-067" week_game_id="2025-W5G3" game_code="2025W5-houston-texans@baltimore-ravens" nfl_game_key="20250567">
         <teams>
@@ -842,7 +776,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-068" week_game_id="2025-W5G4" game_code="2025W5-miami-dolphins@carolina-panthers" nfl_game_key="20250568">
         <teams>
@@ -854,7 +787,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-069" week_game_id="2025-W5G5" game_code="2025W5-las-vegas-raiders@indianapolis-colts" nfl_game_key="20250569">
         <teams>
@@ -866,7 +798,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-070" week_game_id="2025-W5G6" game_code="2025W5-dallas-cowboys@new-york-jets" nfl_game_key="20250570">
         <teams>
@@ -878,7 +809,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-071" week_game_id="2025-W5G7" game_code="2025W5-denver-broncos@philadelphia-eagles" nfl_game_key="20250571">
         <teams>
@@ -890,7 +820,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-072" week_game_id="2025-W5G8" game_code="2025W5-tennessee-titans@arizona-cardinals" nfl_game_key="20250572">
         <teams>
@@ -902,7 +831,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-073" week_game_id="2025-W5G9" game_code="2025W5-tampa-bay-buccaneers@seattle-seahawks" nfl_game_key="20250573">
         <teams>
@@ -914,7 +842,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-074" week_game_id="2025-W5G10" game_code="2025W5-washington-commanders@los-angeles-chargers" nfl_game_key="20250574">
         <teams>
@@ -926,7 +853,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-075" week_game_id="2025-W5G11" game_code="2025W5-minnesota-vikings@cleveland-browns" nfl_game_key="20250575">
         <teams>
@@ -939,7 +865,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-076" week_game_id="2025-W5G12" game_code="2025W5-detroit-lions@cincinnati-bengals" nfl_game_key="20250576">
         <teams>
@@ -951,7 +876,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-077" week_game_id="2025-W5G13" game_code="2025W5-new-england-patriots@buffalo-bills" nfl_game_key="20250577">
         <teams>
@@ -963,7 +887,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Oct. 2, 2025">
@@ -977,7 +900,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -993,7 +915,6 @@
           <et_kickoff>7:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-080" week_game_id="2025-W6G2" game_code="2025W6-chicago-bears@washington-commanders" nfl_game_key="20250680">
         <teams>
@@ -1005,7 +926,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Oct. 12, 2025">
@@ -1019,7 +939,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-082" week_game_id="2025-W6G4" game_code="2025W6-dallas-cowboys@carolina-panthers" nfl_game_key="20250682">
         <teams>
@@ -1031,7 +950,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-083" week_game_id="2025-W6G5" game_code="2025W6-arizona-cardinals@indianapolis-colts" nfl_game_key="20250683">
         <teams>
@@ -1043,7 +961,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-084" week_game_id="2025-W6G6" game_code="2025W6-seattle-seahawks@jacksonville-jaguars" nfl_game_key="20250684">
         <teams>
@@ -1055,7 +972,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-085" week_game_id="2025-W6G7" game_code="2025W6-los-angeles-chargers@miami-dolphins" nfl_game_key="20250685">
         <teams>
@@ -1067,7 +983,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-086" week_game_id="2025-W6G8" game_code="2025W6-cleveland-browns@pittsburgh-steelers" nfl_game_key="20250686">
         <teams>
@@ -1079,7 +994,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-087" week_game_id="2025-W6G9" game_code="2025W6-san-francisco-49ers@tampa-bay-buccaneers" nfl_game_key="20250687">
         <teams>
@@ -1091,7 +1005,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-088" week_game_id="2025-W6G10" game_code="2025W6-tennessee-titans@las-vegas-raiders" nfl_game_key="20250688">
         <teams>
@@ -1103,7 +1016,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-089" week_game_id="2025-W6G11" game_code="2025W6-denver-broncos@new-york-jets" nfl_game_key="20250689">
         <teams>
@@ -1116,7 +1028,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-090" week_game_id="2025-W6G12" game_code="2025W6-cincinnati-bengals@green-bay-packers" nfl_game_key="20250690">
         <teams>
@@ -1128,7 +1039,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-091" week_game_id="2025-W6G13" game_code="2025W6-new-england-patriots@new-orleans-saints" nfl_game_key="20250691">
         <teams>
@@ -1140,7 +1050,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-092" week_game_id="2025-W6G14" game_code="2025W6-detroit-lions@kansas-city-chiefs" nfl_game_key="20250692">
         <teams>
@@ -1152,7 +1061,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Oct. 9, 2025">
@@ -1166,7 +1074,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -1182,7 +1089,6 @@
           <et_kickoff>7:00p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-095" week_game_id="2025-W7G2" game_code="2025W7-houston-texans@seattle-seahawks" nfl_game_key="20250795">
         <teams>
@@ -1194,7 +1100,6 @@
           <et_kickoff>10:00p</et_kickoff>
         </times>
         <network>ESPN+</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Oct. 19, 2025">
@@ -1208,7 +1113,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-097" week_game_id="2025-W7G4" game_code="2025W7-las-vegas-raiders@kansas-city-chiefs" nfl_game_key="20250797">
         <teams>
@@ -1220,7 +1124,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-098" week_game_id="2025-W7G5" game_code="2025W7-philadelphia-eagles@minnesota-vikings" nfl_game_key="20250798">
         <teams>
@@ -1232,7 +1135,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-099" week_game_id="2025-W7G6" game_code="2025W7-new-england-patriots@tennessee-titans" nfl_game_key="20250799">
         <teams>
@@ -1244,7 +1146,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-100" week_game_id="2025-W7G7" game_code="2025W7-miami-dolphins@cleveland-browns" nfl_game_key="202507100">
         <teams>
@@ -1256,7 +1157,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-101" week_game_id="2025-W7G8" game_code="2025W7-carolina-panthers@new-york-jets" nfl_game_key="202507101">
         <teams>
@@ -1268,7 +1168,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-102" week_game_id="2025-W7G9" game_code="2025W7-indianapolis-colts@los-angeles-chargers" nfl_game_key="202507102">
         <teams>
@@ -1280,7 +1179,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-103" week_game_id="2025-W7G10" game_code="2025W7-green-bay-packers@arizona-cardinals" nfl_game_key="202507103">
         <teams>
@@ -1292,7 +1190,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-104" week_game_id="2025-W7G11" game_code="2025W7-new-york-giants@denver-broncos" nfl_game_key="202507104">
         <teams>
@@ -1304,7 +1201,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-105" week_game_id="2025-W7G12" game_code="2025W7-los-angeles-rams@jacksonville-jaguars" nfl_game_key="202507105">
         <teams>
@@ -1317,7 +1213,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-106" week_game_id="2025-W7G13" game_code="2025W7-washington-commanders@dallas-cowboys" nfl_game_key="202507106">
         <teams>
@@ -1329,7 +1224,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-107" week_game_id="2025-W7G14" game_code="2025W7-atlanta-falcons@san-francisco-49ers" nfl_game_key="202507107">
         <teams>
@@ -1341,7 +1235,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Oct. 16, 2025">
@@ -1355,7 +1248,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -1371,7 +1263,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Oct. 26, 2025">
@@ -1385,7 +1276,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-111" week_game_id="2025-W8G3" game_code="2025W8-miami-dolphins@atlanta-falcons" nfl_game_key="202508111">
         <teams>
@@ -1397,7 +1287,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-112" week_game_id="2025-W8G4" game_code="2025W8-chicago-bears@baltimore-ravens" nfl_game_key="202508112">
         <teams>
@@ -1409,7 +1298,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-113" week_game_id="2025-W8G5" game_code="2025W8-buffalo-bills@carolina-panthers" nfl_game_key="202508113">
         <teams>
@@ -1421,7 +1309,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-114" week_game_id="2025-W8G6" game_code="2025W8-new-york-jets@cincinnati-bengals" nfl_game_key="202508114">
         <teams>
@@ -1433,7 +1320,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-115" week_game_id="2025-W8G7" game_code="2025W8-cleveland-browns@new-england-patriots" nfl_game_key="202508115">
         <teams>
@@ -1445,7 +1331,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-116" week_game_id="2025-W8G8" game_code="2025W8-new-york-giants@philadelphia-eagles" nfl_game_key="202508116">
         <teams>
@@ -1457,7 +1342,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-117" week_game_id="2025-W8G9" game_code="2025W8-dallas-cowboys@denver-broncos" nfl_game_key="202508117">
         <teams>
@@ -1469,7 +1353,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-118" week_game_id="2025-W8G10" game_code="2025W8-tampa-bay-buccaneers@new-orleans-saints" nfl_game_key="202508118">
         <teams>
@@ -1481,7 +1364,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-119" week_game_id="2025-W8G11" game_code="2025W8-tennessee-titans@indianapolis-colts" nfl_game_key="202508119">
         <teams>
@@ -1493,7 +1375,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-120" week_game_id="2025-W8G12" game_code="2025W8-green-bay-packers@pittsburgh-steelers" nfl_game_key="202508120">
         <teams>
@@ -1505,7 +1386,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Oct. 23, 2025">
@@ -1519,7 +1399,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -1535,7 +1414,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Nov. 2, 2025">
@@ -1549,7 +1427,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-124" week_game_id="2025-W9G3" game_code="2025W9-denver-broncos@houston-texans" nfl_game_key="202509124">
         <teams>
@@ -1561,7 +1438,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-125" week_game_id="2025-W9G4" game_code="2025W9-los-angeles-chargers@tennessee-titans" nfl_game_key="202509125">
         <teams>
@@ -1573,7 +1449,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-126" week_game_id="2025-W9G5" game_code="2025W9-chicago-bears@cincinnati-bengals" nfl_game_key="202509126">
         <teams>
@@ -1585,7 +1460,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-127" week_game_id="2025-W9G6" game_code="2025W9-minnesota-vikings@detroit-lions" nfl_game_key="202509127">
         <teams>
@@ -1597,7 +1471,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-128" week_game_id="2025-W9G7" game_code="2025W9-atlanta-falcons@new-england-patriots" nfl_game_key="202509128">
         <teams>
@@ -1609,7 +1482,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-129" week_game_id="2025-W9G8" game_code="2025W9-san-francisco-49ers@new-york-giants" nfl_game_key="202509129">
         <teams>
@@ -1621,7 +1493,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-130" week_game_id="2025-W9G9" game_code="2025W9-indianapolis-colts@pittsburgh-steelers" nfl_game_key="202509130">
         <teams>
@@ -1633,7 +1504,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-131" week_game_id="2025-W9G10" game_code="2025W9-new-orleans-saints@los-angeles-rams" nfl_game_key="202509131">
         <teams>
@@ -1645,7 +1515,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-132" week_game_id="2025-W9G11" game_code="2025W9-jacksonville-jaguars@las-vegas-raiders" nfl_game_key="202509132">
         <teams>
@@ -1657,7 +1526,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-133" week_game_id="2025-W9G12" game_code="2025W9-kansas-city-chiefs@buffalo-bills" nfl_game_key="202509133">
         <teams>
@@ -1669,7 +1537,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-134" week_game_id="2025-W9G13" game_code="2025W9-seattle-seahawks@washington-commanders" nfl_game_key="202509134">
         <teams>
@@ -1681,7 +1548,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Oct. 30, 2025">
@@ -1695,7 +1561,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -1711,7 +1576,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Nov. 9, 2025">
@@ -1725,7 +1589,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-138" week_game_id="2025-W10G3" game_code="2025W10-jacksonville-jaguars@houston-texans" nfl_game_key="202510138">
         <teams>
@@ -1737,7 +1600,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-139" week_game_id="2025-W10G4" game_code="2025W10-baltimore-ravens@minnesota-vikings" nfl_game_key="202510139">
         <teams>
@@ -1749,7 +1611,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-140" week_game_id="2025-W10G5" game_code="2025W10-new-orleans-saints@carolina-panthers" nfl_game_key="202510140">
         <teams>
@@ -1761,7 +1622,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-141" week_game_id="2025-W10G6" game_code="2025W10-buffalo-bills@miami-dolphins" nfl_game_key="202510141">
         <teams>
@@ -1773,7 +1633,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-142" week_game_id="2025-W10G7" game_code="2025W10-cleveland-browns@new-york-jets" nfl_game_key="202510142">
         <teams>
@@ -1785,7 +1644,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-143" week_game_id="2025-W10G8" game_code="2025W10-new-england-patriots@tampa-bay-buccaneers" nfl_game_key="202510143">
         <teams>
@@ -1797,7 +1655,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-144" week_game_id="2025-W10G9" game_code="2025W10-arizona-cardinals@seattle-seahawks" nfl_game_key="202510144">
         <teams>
@@ -1809,7 +1666,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-145" week_game_id="2025-W10G10" game_code="2025W10-los-angeles-rams@san-francisco-49ers" nfl_game_key="202510145">
         <teams>
@@ -1821,7 +1677,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-146" week_game_id="2025-W10G11" game_code="2025W10-atlanta-falcons@indianapolis-colts" nfl_game_key="202510146">
         <teams>
@@ -1834,7 +1689,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-147" week_game_id="2025-W10G12" game_code="2025W10-detroit-lions@washington-commanders" nfl_game_key="202510147">
         <teams>
@@ -1846,7 +1700,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-148" week_game_id="2025-W10G13" game_code="2025W10-pittsburgh-steelers@los-angeles-chargers" nfl_game_key="202510148">
         <teams>
@@ -1858,7 +1711,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Nov. 6, 2025">
@@ -1872,7 +1724,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -1888,7 +1739,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Nov. 16, 2025">
@@ -1902,7 +1752,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-152" week_game_id="2025-W11G3" game_code="2025W11-houston-texans@tennessee-titans" nfl_game_key="202511152">
         <teams>
@@ -1914,7 +1763,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-153" week_game_id="2025-W11G4" game_code="2025W11-carolina-panthers@atlanta-falcons" nfl_game_key="202511153">
         <teams>
@@ -1926,7 +1774,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-154" week_game_id="2025-W11G5" game_code="2025W11-tampa-bay-buccaneers@buffalo-bills" nfl_game_key="202511154">
         <teams>
@@ -1938,7 +1785,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-155" week_game_id="2025-W11G6" game_code="2025W11-los-angeles-chargers@jacksonville-jaguars" nfl_game_key="202511155">
         <teams>
@@ -1950,7 +1796,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-156" week_game_id="2025-W11G7" game_code="2025W11-green-bay-packers@new-york-giants" nfl_game_key="202511156">
         <teams>
@@ -1962,7 +1807,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-157" week_game_id="2025-W11G8" game_code="2025W11-cincinnati-bengals@pittsburgh-steelers" nfl_game_key="202511157">
         <teams>
@@ -1974,7 +1818,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-158" week_game_id="2025-W11G9" game_code="2025W11-seattle-seahawks@los-angeles-rams" nfl_game_key="202511158">
         <teams>
@@ -1986,7 +1829,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-159" week_game_id="2025-W11G10" game_code="2025W11-san-francisco-49ers@arizona-cardinals" nfl_game_key="202511159">
         <teams>
@@ -1998,7 +1840,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-160" week_game_id="2025-W11G11" game_code="2025W11-kansas-city-chiefs@denver-broncos" nfl_game_key="202511160">
         <teams>
@@ -2010,7 +1851,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-161" week_game_id="2025-W11G12" game_code="2025W11-washington-commanders@miami-dolphins" nfl_game_key="202511161">
         <teams>
@@ -2023,7 +1863,6 @@
           <et_kickoff>9:30a</et_kickoff>
         </times>
         <network>NFLN</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-162" week_game_id="2025-W11G13" game_code="2025W11-baltimore-ravens@cleveland-browns" nfl_game_key="202511162">
         <teams>
@@ -2035,7 +1874,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-163" week_game_id="2025-W11G14" game_code="2025W11-detroit-lions@philadelphia-eagles" nfl_game_key="202511163">
         <teams>
@@ -2047,7 +1885,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Nov. 13, 2025">
@@ -2061,7 +1898,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -2077,7 +1913,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Nov. 23, 2025">
@@ -2091,7 +1926,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-167" week_game_id="2025-W12G3" game_code="2025W12-minnesota-vikings@green-bay-packers" nfl_game_key="202512167">
         <teams>
@@ -2103,7 +1937,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-168" week_game_id="2025-W12G4" game_code="2025W12-indianapolis-colts@kansas-city-chiefs" nfl_game_key="202512168">
         <teams>
@@ -2115,7 +1948,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-169" week_game_id="2025-W12G5" game_code="2025W12-seattle-seahawks@tennessee-titans" nfl_game_key="202512169">
         <teams>
@@ -2127,7 +1959,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-170" week_game_id="2025-W12G6" game_code="2025W12-new-york-jets@baltimore-ravens" nfl_game_key="202512170">
         <teams>
@@ -2139,7 +1970,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-171" week_game_id="2025-W12G7" game_code="2025W12-new-england-patriots@cincinnati-bengals" nfl_game_key="202512171">
         <teams>
@@ -2151,7 +1981,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-172" week_game_id="2025-W12G8" game_code="2025W12-new-york-giants@detroit-lions" nfl_game_key="202512172">
         <teams>
@@ -2163,7 +1992,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-173" week_game_id="2025-W12G9" game_code="2025W12-cleveland-browns@las-vegas-raiders" nfl_game_key="202512173">
         <teams>
@@ -2175,7 +2003,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-174" week_game_id="2025-W12G10" game_code="2025W12-jacksonville-jaguars@arizona-cardinals" nfl_game_key="202512174">
         <teams>
@@ -2187,7 +2014,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-175" week_game_id="2025-W12G11" game_code="2025W12-philadelphia-eagles@dallas-cowboys" nfl_game_key="202512175">
         <teams>
@@ -2199,7 +2025,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-176" week_game_id="2025-W12G12" game_code="2025W12-atlanta-falcons@new-orleans-saints" nfl_game_key="202512176">
         <teams>
@@ -2211,7 +2036,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-177" week_game_id="2025-W12G13" game_code="2025W12-tampa-bay-buccaneers@los-angeles-rams" nfl_game_key="202512177">
         <teams>
@@ -2223,7 +2047,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Nov. 20, 2025">
@@ -2237,7 +2060,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -2253,7 +2075,6 @@
           <et_kickoff>3:00p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Monday, Dec. 1, 2025">
@@ -2267,7 +2088,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Nov. 30, 2025">
@@ -2281,7 +2101,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-182" week_game_id="2025-W13G4" game_code="2025W13-los-angeles-rams@carolina-panthers" nfl_game_key="202513182">
         <teams>
@@ -2293,7 +2112,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-183" week_game_id="2025-W13G5" game_code="2025W13-san-francisco-49ers@cleveland-browns" nfl_game_key="202513183">
         <teams>
@@ -2305,7 +2123,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-184" week_game_id="2025-W13G6" game_code="2025W13-houston-texans@indianapolis-colts" nfl_game_key="202513184">
         <teams>
@@ -2317,7 +2134,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-185" week_game_id="2025-W13G7" game_code="2025W13-new-orleans-saints@miami-dolphins" nfl_game_key="202513185">
         <teams>
@@ -2329,7 +2145,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-186" week_game_id="2025-W13G8" game_code="2025W13-atlanta-falcons@new-york-jets" nfl_game_key="202513186">
         <teams>
@@ -2341,7 +2156,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-187" week_game_id="2025-W13G9" game_code="2025W13-arizona-cardinals@tampa-bay-buccaneers" nfl_game_key="202513187">
         <teams>
@@ -2353,7 +2167,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-188" week_game_id="2025-W13G10" game_code="2025W13-minnesota-vikings@seattle-seahawks" nfl_game_key="202513188">
         <teams>
@@ -2365,7 +2178,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-189" week_game_id="2025-W13G11" game_code="2025W13-las-vegas-raiders@los-angeles-chargers" nfl_game_key="202513189">
         <teams>
@@ -2377,7 +2189,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-190" week_game_id="2025-W13G12" game_code="2025W13-buffalo-bills@pittsburgh-steelers" nfl_game_key="202513190">
         <teams>
@@ -2389,7 +2200,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-191" week_game_id="2025-W13G13" game_code="2025W13-denver-broncos@washington-commanders" nfl_game_key="202513191">
         <teams>
@@ -2401,7 +2211,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Nov. 27, 2025">
@@ -2416,7 +2225,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-193" week_game_id="2025-W13G15" game_code="2025W13-kansas-city-chiefs@dallas-cowboys" nfl_game_key="202513193">
         <teams>
@@ -2429,7 +2237,6 @@
           <et_kickoff>4:30p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-194" week_game_id="2025-W13G16" game_code="2025W13-cincinnati-bengals@baltimore-ravens" nfl_game_key="202513194">
         <teams>
@@ -2442,7 +2249,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -2458,7 +2264,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Dec. 7, 2025">
@@ -2472,7 +2277,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-197" week_game_id="2025-W14G3" game_code="2025W14-washington-commanders@minnesota-vikings" nfl_game_key="202514197">
         <teams>
@@ -2484,7 +2288,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-198" week_game_id="2025-W14G4" game_code="2025W14-seattle-seahawks@atlanta-falcons" nfl_game_key="202514198">
         <teams>
@@ -2496,7 +2299,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-199" week_game_id="2025-W14G5" game_code="2025W14-pittsburgh-steelers@baltimore-ravens" nfl_game_key="202514199">
         <teams>
@@ -2508,7 +2310,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-200" week_game_id="2025-W14G6" game_code="2025W14-tennessee-titans@cleveland-browns" nfl_game_key="202514200">
         <teams>
@@ -2520,7 +2321,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-201" week_game_id="2025-W14G7" game_code="2025W14-indianapolis-colts@jacksonville-jaguars" nfl_game_key="202514201">
         <teams>
@@ -2532,7 +2332,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-202" week_game_id="2025-W14G8" game_code="2025W14-miami-dolphins@new-york-jets" nfl_game_key="202514202">
         <teams>
@@ -2544,7 +2343,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-203" week_game_id="2025-W14G9" game_code="2025W14-new-orleans-saints@tampa-bay-buccaneers" nfl_game_key="202514203">
         <teams>
@@ -2556,7 +2354,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-204" week_game_id="2025-W14G10" game_code="2025W14-denver-broncos@las-vegas-raiders" nfl_game_key="202514204">
         <teams>
@@ -2568,7 +2365,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-205" week_game_id="2025-W14G11" game_code="2025W14-los-angeles-rams@arizona-cardinals" nfl_game_key="202514205">
         <teams>
@@ -2580,7 +2376,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-206" week_game_id="2025-W14G12" game_code="2025W14-cincinnati-bengals@buffalo-bills" nfl_game_key="202514206">
         <teams>
@@ -2592,7 +2387,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-207" week_game_id="2025-W14G13" game_code="2025W14-houston-texans@kansas-city-chiefs" nfl_game_key="202514207">
         <teams>
@@ -2604,7 +2398,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Dec. 04, 2025">
@@ -2618,7 +2411,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -2634,7 +2426,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN/ABC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Dec. 14, 2025">
@@ -2648,7 +2439,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-211" week_game_id="2025-W15G3" game_code="2025W15-arizona-cardinals@houston-texans" nfl_game_key="202515211">
         <teams>
@@ -2660,7 +2450,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-212" week_game_id="2025-W15G4" game_code="2025W15-los-angeles-chargers@kansas-city-chiefs" nfl_game_key="202515212">
         <teams>
@@ -2672,7 +2461,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-213" week_game_id="2025-W15G5" game_code="2025W15-baltimore-ravens@cincinnati-bengals" nfl_game_key="202515213">
         <teams>
@@ -2684,7 +2472,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-214" week_game_id="2025-W15G6" game_code="2025W15-new-york-jets@jacksonville-jaguars" nfl_game_key="202515214">
         <teams>
@@ -2696,7 +2483,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-215" week_game_id="2025-W15G7" game_code="2025W15-buffalo-bills@new-england-patriots" nfl_game_key="202515215">
         <teams>
@@ -2708,7 +2494,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-216" week_game_id="2025-W15G8" game_code="2025W15-washington-commanders@new-york-giants" nfl_game_key="202515216">
         <teams>
@@ -2720,7 +2505,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-217" week_game_id="2025-W15G9" game_code="2025W15-las-vegas-raiders@philadelphia-eagles" nfl_game_key="202515217">
         <teams>
@@ -2732,7 +2516,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-218" week_game_id="2025-W15G10" game_code="2025W15-detroit-lions@los-angeles-rams" nfl_game_key="202515218">
         <teams>
@@ -2744,7 +2527,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-219" week_game_id="2025-W15G11" game_code="2025W15-indianapolis-colts@seattle-seahawks" nfl_game_key="202515219">
         <teams>
@@ -2756,7 +2538,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-220" week_game_id="2025-W15G12" game_code="2025W15-tennessee-titans@san-francisco-49ers" nfl_game_key="202515220">
         <teams>
@@ -2768,7 +2549,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-221" week_game_id="2025-W15G13" game_code="2025W15-green-bay-packers@denver-broncos" nfl_game_key="202515221">
         <teams>
@@ -2780,7 +2560,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-222" week_game_id="2025-W15G14" game_code="2025W15-carolina-panthers@new-orleans-saints" nfl_game_key="202515222">
         <teams>
@@ -2792,7 +2571,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-223" week_game_id="2025-W15G15" game_code="2025W15-minnesota-vikings@dallas-cowboys" nfl_game_key="202515223">
         <teams>
@@ -2804,7 +2582,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Dec. 11, 2025">
@@ -2818,7 +2595,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -2834,7 +2610,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Saturday, Dec. 20, 2025">
@@ -2848,7 +2623,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-227" week_game_id="2025-W16G3" game_code="2025W16-philadelphia-eagles@washington-commanders" nfl_game_key="202516227">
         <teams>
@@ -2860,7 +2634,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Dec. 21, 2025">
@@ -2874,7 +2647,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-229" week_game_id="2025-W16G5" game_code="2025W16-new-york-jets@new-orleans-saints" nfl_game_key="202516229">
         <teams>
@@ -2886,7 +2658,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-230" week_game_id="2025-W16G6" game_code="2025W16-kansas-city-chiefs@tennessee-titans" nfl_game_key="202516230">
         <teams>
@@ -2898,7 +2669,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-231" week_game_id="2025-W16G7" game_code="2025W16-new-england-patriots@baltimore-ravens" nfl_game_key="202516231">
         <teams>
@@ -2910,7 +2680,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-232" week_game_id="2025-W16G8" game_code="2025W16-tampa-bay-buccaneers@carolina-panthers" nfl_game_key="202516232">
         <teams>
@@ -2922,7 +2691,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-233" week_game_id="2025-W16G9" game_code="2025W16-buffalo-bills@cleveland-browns" nfl_game_key="202516233">
         <teams>
@@ -2934,7 +2702,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-234" week_game_id="2025-W16G10" game_code="2025W16-minnesota-vikings@new-york-giants" nfl_game_key="202516234">
         <teams>
@@ -2946,7 +2713,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-235" week_game_id="2025-W16G11" game_code="2025W16-atlanta-falcons@arizona-cardinals" nfl_game_key="202516235">
         <teams>
@@ -2958,7 +2724,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-236" week_game_id="2025-W16G12" game_code="2025W16-jacksonville-jaguars@denver-broncos" nfl_game_key="202516236">
         <teams>
@@ -2970,7 +2735,6 @@
           <et_kickoff>4:05p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-237" week_game_id="2025-W16G13" game_code="2025W16-las-vegas-raiders@houston-texans" nfl_game_key="202516237">
         <teams>
@@ -2982,7 +2746,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-238" week_game_id="2025-W16G14" game_code="2025W16-pittsburgh-steelers@detroit-lions" nfl_game_key="202516238">
         <teams>
@@ -2994,7 +2757,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-239" week_game_id="2025-W16G15" game_code="2025W16-cincinnati-bengals@miami-dolphins" nfl_game_key="202516239">
         <teams>
@@ -3006,7 +2768,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Dec. 18, 2025">
@@ -3020,7 +2781,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -3036,7 +2796,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>ESPN</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Saturday, Dec. 27, 2025 - Time/Network TBD">
@@ -3050,7 +2809,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-243" week_game_id="2025-W17G3" game_code="2025W17-arizona-cardinals@cincinnati-bengals" nfl_game_key="202517243">
         <teams>
@@ -3062,7 +2820,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-244" week_game_id="2025-W17G4" game_code="2025W17-baltimore-ravens@green-bay-packers" nfl_game_key="202517244">
         <teams>
@@ -3074,7 +2831,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-245" week_game_id="2025-W17G5" game_code="2025W17-houston-texans@los-angeles-chargers" nfl_game_key="202517245">
         <teams>
@@ -3086,7 +2842,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-246" week_game_id="2025-W17G6" game_code="2025W17-new-york-giants@las-vegas-raiders" nfl_game_key="202517246">
         <teams>
@@ -3098,7 +2853,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Sunday, Dec. 28, 2025">
@@ -3112,7 +2866,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-248" week_game_id="2025-W17G8" game_code="2025W17-pittsburgh-steelers@cleveland-browns" nfl_game_key="202517248">
         <teams>
@@ -3124,7 +2877,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-249" week_game_id="2025-W17G9" game_code="2025W17-jacksonville-jaguars@indianapolis-colts" nfl_game_key="202517249">
         <teams>
@@ -3136,7 +2888,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-250" week_game_id="2025-W17G10" game_code="2025W17-tampa-bay-buccaneers@miami-dolphins" nfl_game_key="202517250">
         <teams>
@@ -3148,7 +2899,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-251" week_game_id="2025-W17G11" game_code="2025W17-new-england-patriots@new-york-jets" nfl_game_key="202517251">
         <teams>
@@ -3160,7 +2910,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>CBS</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-252" week_game_id="2025-W17G12" game_code="2025W17-philadelphia-eagles@buffalo-bills" nfl_game_key="202517252">
         <teams>
@@ -3172,7 +2921,6 @@
           <et_kickoff>4:25p</et_kickoff>
         </times>
         <network>FOX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-253" week_game_id="2025-W17G13" game_code="2025W17-chicago-bears@san-francisco-49ers" nfl_game_key="202517253">
         <teams>
@@ -3184,7 +2932,6 @@
           <et_kickoff>8:20p</et_kickoff>
         </times>
         <network>NBC</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
     <date value="Thursday, Dec. 25, 2025">
@@ -3199,7 +2946,6 @@
           <et_kickoff>1:00p</et_kickoff>
         </times>
         <network>NETFLIX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-255" week_game_id="2025-W17G15" game_code="2025W17-detroit-lions@minnesota-vikings" nfl_game_key="202517255">
         <teams>
@@ -3212,7 +2958,6 @@
           <et_kickoff>4:30p</et_kickoff>
         </times>
         <network>NETFLIX</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-256" week_game_id="2025-W17G16" game_code="2025W17-denver-broncos@kansas-city-chiefs" nfl_game_key="202517256">
         <teams>
@@ -3225,7 +2970,6 @@
           <et_kickoff>8:15p</et_kickoff>
         </times>
         <network>Prime Video</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>
@@ -3241,7 +2985,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-258" week_game_id="2025-W18G2" game_code="2025W18-new-york-jets@buffalo-bills" nfl_game_key="202518258">
         <teams>
@@ -3253,7 +2996,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-259" week_game_id="2025-W18G3" game_code="2025W18-detroit-lions@chicago-bears" nfl_game_key="202518259">
         <teams>
@@ -3265,7 +3007,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-260" week_game_id="2025-W18G4" game_code="2025W18-cleveland-browns@cincinnati-bengals" nfl_game_key="202518260">
         <teams>
@@ -3277,7 +3018,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-261" week_game_id="2025-W18G5" game_code="2025W18-los-angeles-chargers@denver-broncos" nfl_game_key="202518261">
         <teams>
@@ -3289,7 +3029,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-262" week_game_id="2025-W18G6" game_code="2025W18-indianapolis-colts@houston-texans" nfl_game_key="202518262">
         <teams>
@@ -3301,7 +3040,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-263" week_game_id="2025-W18G7" game_code="2025W18-tennessee-titans@jacksonville-jaguars" nfl_game_key="202518263">
         <teams>
@@ -3313,7 +3051,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-264" week_game_id="2025-W18G8" game_code="2025W18-arizona-cardinals@los-angeles-rams" nfl_game_key="202518264">
         <teams>
@@ -3325,7 +3062,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-265" week_game_id="2025-W18G9" game_code="2025W18-kansas-city-chiefs@las-vegas-raiders" nfl_game_key="202518265">
         <teams>
@@ -3337,7 +3073,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-266" week_game_id="2025-W18G10" game_code="2025W18-green-bay-packers@minnesota-vikings" nfl_game_key="202518266">
         <teams>
@@ -3349,7 +3084,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-267" week_game_id="2025-W18G11" game_code="2025W18-miami-dolphins@new-england-patriots" nfl_game_key="202518267">
         <teams>
@@ -3361,7 +3095,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-268" week_game_id="2025-W18G12" game_code="2025W18-dallas-cowboys@new-york-giants" nfl_game_key="202518268">
         <teams>
@@ -3373,7 +3106,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-269" week_game_id="2025-W18G13" game_code="2025W18-washington-commanders@philadelphia-eagles" nfl_game_key="202518269">
         <teams>
@@ -3385,7 +3117,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-270" week_game_id="2025-W18G14" game_code="2025W18-baltimore-ravens@pittsburgh-steelers" nfl_game_key="202518270">
         <teams>
@@ -3397,7 +3128,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-271" week_game_id="2025-W18G15" game_code="2025W18-seattle-seahawks@san-francisco-49ers" nfl_game_key="202518271">
         <teams>
@@ -3409,7 +3139,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
       <game id="2025-272" week_game_id="2025-W18G16" game_code="2025W18-carolina-panthers@tampa-bay-buccaneers" nfl_game_key="202518272">
         <teams>
@@ -3421,7 +3150,6 @@
           <et_kickoff>TBD</et_kickoff>
         </times>
         <network>TBD</network>
-        <surface_type>Unknown</surface_type>
       </game>
     </date>
   </week>

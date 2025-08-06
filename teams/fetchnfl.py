@@ -10,9 +10,9 @@ import re
 
 BASE_URL = "https://www.nfl.com"
 TEAMS_URL = f"{BASE_URL}/teams"
-OUTPUT_FILE = "teams.xml"
-BACKUP_FILE = "teams_backup.xml"
-LOG_FILE = "teams_log.txt"
+OUTPUT_FILE = "teams/teams.xml"
+BACKUP_FILE = "teams/teamsbackup.xml"
+LOG_FILE = "teams/log.txt"
 OPERATIONS_BASE_URL = "https://operations.nfl.com/learn-the-game/nfl-basics/team-histories"
 
 HEADERS = {
@@ -121,6 +121,87 @@ def detect_actual_changes(current_teams, backup_teams):
     
     log_message("NO_CHANGES: Current data is identical to backup")
     return False
+
+def fetch_nfl_league_logo():
+    """Fetch the main NFL league logo from NFL.com"""
+    log_message("NFL_LOGO_FETCH_START: Attempting to extract NFL league logo")
+    
+    try:
+        # Try main NFL.com page first
+        res = requests.get(BASE_URL, headers=HEADERS)
+        soup = BeautifulSoup(res.text, "html.parser")
+        
+        # Look for NFL logo in common locations
+        logo_selectors = [
+            "img[alt*='NFL']",
+            "img[src*='nfl-logo']",
+            "img[src*='nfl_logo']",
+            ".nfl-logo img",
+            ".logo img",
+            "header img[alt*='National Football League']",
+            "nav img[alt*='NFL']",
+            "img[data-src*='nfl-logo']"
+        ]
+        
+        for selector in logo_selectors:
+            logo_imgs = soup.select(selector)
+            for img in logo_imgs:
+                src = img.get('data-src') or img.get('src', '')
+                alt = img.get('alt', '').lower()
+                
+                if src and ('nfl' in alt or 'logo' in src.lower()):
+                    # Clean and validate the URL
+                    if src.startswith('//'):
+                        src = 'https:' + src
+                    elif src.startswith('/'):
+                        src = urljoin(BASE_URL, src)
+                    
+                    log_message(f"NFL_LOGO_FOUND: {src}")
+                    return src
+        
+        # Fallback: try to find any logo from the header/nav area
+        header_nav = soup.select("header, nav, .header, .nav")
+        for section in header_nav:
+            imgs = section.select("img")
+            for img in imgs:
+                src = img.get('data-src') or img.get('src', '')
+                if src and any(term in src.lower() for term in ['logo', 'nfl']):
+                    if src.startswith('//'):
+                        src = 'https:' + src
+                    elif src.startswith('/'):
+                        src = urljoin(BASE_URL, src)
+                    
+                    log_message(f"NFL_LOGO_FOUND_FALLBACK: {src}")
+                    return src
+        
+        # If no logo found on main page, try teams page
+        log_message("NFL_LOGO_MAIN_FAILED: Trying teams page")
+        res = requests.get(TEAMS_URL, headers=HEADERS)
+        soup = BeautifulSoup(res.text, "html.parser")
+        
+        for selector in logo_selectors:
+            logo_imgs = soup.select(selector)
+            for img in logo_imgs:
+                src = img.get('data-src') or img.get('src', '')
+                alt = img.get('alt', '').lower()
+                
+                if src and ('nfl' in alt or 'logo' in src.lower()):
+                    if src.startswith('//'):
+                        src = 'https:' + src
+                    elif src.startswith('/'):
+                        src = urljoin(BASE_URL, src)
+                    
+                    log_message(f"NFL_LOGO_FOUND_TEAMS: {src}")
+                    return src
+        
+        # Ultimate fallback - use a known NFL logo URL structure
+        fallback_url = "https://static.www.nfl.com/image/private/f_auto/league/u9fltoslqdsyao8cpm0k"
+        log_message(f"NFL_LOGO_FALLBACK_URL: Using fallback URL {fallback_url}")
+        return fallback_url
+        
+    except Exception as e:
+        log_message(f"NFL_LOGO_ERROR: {str(e)}")
+        return "ERROR"
 
 def fetch_teams_from_nfl():
     """Fetch basic team info from NFL.com teams page, prioritizing vibrant background images"""
@@ -314,11 +395,9 @@ def fetch_team_operations_data(team_name, operations_url):
                 hometown_p = slide2.find("p")
                 if hometown_p and hometown_p.text.strip():
                     hometown = hometown_p.text.strip()
-                    hometown = re.sub(r'\s+', ' ', hometown).strip('.')
-                    # Normalize Washington D.C. to Washington, D.C.
-                    if hometown == "Washington D.C.":
-                        hometown = "Washington, D.C."
-                        log_message(f"OPERATIONS_HOMETOWN_NORMALIZED: {team_name} - Washington D.C. → Washington, D.C.")
+                    hometown = re.sub(r'\s+', ' ', hometown)
+                    # Remove trailing period if present but preserve the exact scraped format
+                    hometown = hometown.rstrip('.')
                     if hometown and len(hometown) > 2:
                         team_data['hometown'] = hometown
                         log_message(f"OPERATIONS_HOMETOWN_FOUND_SLIDE2: {team_name} - {hometown}")
@@ -339,15 +418,15 @@ def fetch_team_operations_data(team_name, operations_url):
                 r'greater\s+([A-Za-z\s]+)\s+area',
                 r'metropolitan\s+([A-Za-z\s,]+?)\s+area',
                 r'(?<=Hometown\s)([A-Za-z\s,]+?)(?=\s+Population|\s*$|\n)',
-                r'Washington D\.C\.(?=\s+Population|\s*$|\n)',  # Handle Washington D.C. in page text
+                r'Washington D\.C\.(?=\s+Population|\s*$|\n)',
             ]
             
             for pattern in location_patterns:
                 match = re.search(pattern, page_text, re.IGNORECASE)
                 if match:
                     if pattern == r'Washington D\.C\.(?=\s+Population|\s*$|\n)':
-                        hometown = "Washington, D.C."
-                        log_message(f"OPERATIONS_HOMETOWN_NORMALIZED: {team_name} - Washington D.C. → Washington, D.C. (regex)")
+                        hometown = "Washington D.C."
+                        log_message(f"OPERATIONS_HOMETOWN_FOUND: {team_name} - {hometown} (regex)")
                     elif len(match.groups()) >= 2 and match.group(2):
                         hometown = f"{match.group(1).strip()}, {match.group(2).strip()}"
                     else:
@@ -522,7 +601,7 @@ def enhance_teams_with_operations_data(basic_teams, conference_data):
     return enhanced_teams
 
 def save_to_xml_multi_league(teams, league_info=None):
-    """Save teams data to XML with multi-league structure"""
+    """Save teams data to XML with multi-league structure including NFL logo"""
     if league_info is None:
         league_info = {
             'name': 'National Football League',
@@ -530,6 +609,9 @@ def save_to_xml_multi_league(teams, league_info=None):
             'country': 'USA',
             'sport': 'American Football'
         }
+    
+    # Fetch NFL league logo
+    nfl_logo_url = fetch_nfl_league_logo()
     
     root = etree.Element("sports_teams")
     root.set("last_updated", datetime.now().isoformat())
@@ -541,6 +623,10 @@ def save_to_xml_multi_league(teams, league_info=None):
     league_elem.set("abbreviation", league_info['abbreviation'])
     league_elem.set("country", league_info['country'])
     league_elem.set("sport", league_info['sport'])
+    
+    # Add league logo to the league element
+    league_branding = etree.SubElement(league_elem, "branding")
+    etree.SubElement(league_branding, "logo_url").text = nfl_logo_url
     
     conferences_elem = etree.SubElement(league_elem, "conferences")
     
@@ -604,6 +690,7 @@ def save_to_xml_multi_league(teams, league_info=None):
     error_count = count_errors_in_xml()
     log_message(f"XML_WRITTEN: {OUTPUT_FILE} ({len(teams)} teams in multi-league structure)")
     log_message(f"ERROR_SUMMARY: {error_count} ERROR values found in generated XML")
+    log_message(f"NFL_LOGO_INCLUDED: League logo URL added to XML structure")
 
 def cleanup_unnecessary_backup(backup_created, changes_detected):
     """Remove backup file if no changes were made."""
