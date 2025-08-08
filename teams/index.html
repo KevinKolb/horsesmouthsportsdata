@@ -2,735 +2,285 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Viewer - Horses Mouth Sports Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teams</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* Swiss / International Typographic Style — mobile-first */
+    :root{
+      --bg:#ffffff;
+      --fg:#101010;
+      --muted:#666666;
+      --rule:#e6e6e6;
+      --ink:#000000;
+      --accent:#000000;
+      --maxw:980px;
+      --leading:1.5;
+    }
+    *,*::before,*::after{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height:var(--leading);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 16px; }
+
+    header{
+      padding:56px 0 28px;
+      border-bottom:1px solid var(--rule);
+    }
+    .title{
+      font-size:clamp(36px, 7vw, 60px);
+      font-weight:900;
+      letter-spacing:-.02em;
+      text-transform:uppercase;
+      margin:0;
+    }
+    .tagline{
+      color:var(--muted);
+      margin-top:8px;
+      font-size:14px;
+      text-transform:lowercase;
     }
 
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #2d2d2d;
-      line-height: 1.4;
-      padding: 60px 40px;
-      font-weight: 400;
+    /* Section labels */
+    .section-label{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+      backdrop-filter:saturate(180%) blur(6px);
+      -webkit-backdrop-filter:saturate(180%) blur(6px);
+      padding:14px 0 10px;
+      border-bottom:1px solid var(--rule);
+    }
+    .league-name{
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .league-meta{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 3rem;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #1a1a1a;
+    .conf-badge{
+      display:inline-block;
+      margin:18px 0 12px;
+      padding:6px 10px;
+      background:var(--ink);
+      color:#fff;
+      border-radius:4px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
     }
 
-    .metadata {
-      text-align: center;
-      color: #666;
-      margin-bottom: 3rem;
-      font-size: 0.9rem;
-      background: #f8f8f8;
-      padding: 16px;
-      border-radius: 2px;
-      border: none;
-      font-weight: 300;
+    /* Horizontal full-width team cards */
+    .card{
+      width:100%;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px 4px;
+      border-bottom:1px solid var(--rule);
+    }
+    .card:last-child{ border-bottom:none; }
+
+    .logo{
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
+      border:1px solid var(--rule);
+      border-radius:6px;
+      background:#fff;
+      object-fit:contain;
+      display:block;
+    }
+    .logo.hidden{ display:none; }
+
+    .card-body{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      width:100%;
+      min-width:0;
     }
 
-    .loading {
-      text-align: center;
-      padding: 40px;
-      font-size: 1.1rem;
-      color: #666;
+    .name{
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:.01em;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .right{
+      margin-left:auto;
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
 
-    .error {
-      background: #fee;
-      border: 1px solid #fcc;
-      color: #c33;
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      text-align: center;
+    /* Hover affordance on larger screens */
+    @media (hover:hover){
+      .card{ transition:background .15s ease; }
+      .card:hover{ background:#fafafa; }
     }
 
-    /* Collapsible section styles */
-    .section-toggle {
-      background: #ffffff;
-      border: 1px solid #e8e8e8;
-      border-radius: 0;
-      margin-bottom: 2px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      user-select: none;
+    footer{
+      border-top:1px solid var(--rule);
+      color:var(--muted);
+      font-size:12px;
+      padding:24px 0 40px;
+      text-align:center;
+      margin-top:28px;
     }
-
-    .section-toggle:hover {
-      border-color: #d0d0d0;
-    }
-
-    .section-header {
-      padding: 20px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ffffff;
-      font-weight: 400;
-      transition: background-color 0.15s ease;
-    }
-
-    .section-toggle:hover .section-header {
-      background: #fafafa;
-    }
-
-    .section-header.league {
-      font-size: 1.2rem;
-      color: #1a1a1a;
-      background: #ffffff;
-      font-weight: 300;
-      letter-spacing: -0.01em;
-    }
-
-    .section-header.conference {
-      font-size: 1rem;
-      color: #2d2d2d;
-      margin-left: 0;
-      padding-left: 48px;
-      font-weight: 400;
-    }
-
-    .section-header.division {
-      font-size: 0.95rem;
-      color: #404040;
-      margin-left: 0;
-      padding-left: 72px;
-      font-weight: 400;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .section-badge {
-      background: #f0f0f0;
-      color: #666666;
-      padding: 4px 12px;
-      border-radius: 2px;
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-
-    .toggle-icon {
-      font-size: 1rem;
-      transition: all 0.15s ease;
-      color: #999999;
-      min-width: 20px;
-      text-align: center;
-      font-weight: 300;
-    }
-
-    .section-content {
-      overflow: hidden;
-      transition: all 0.2s ease;
-      background: #fafafa;
-      max-height: 0;
-    }
-
-    .section-toggle.expanded > .section-content {
-      max-height: none;
-      padding: 0;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      padding: 32px;
-      margin: 0;
-    }
-
-    .team-card {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      background-color: #ddd;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      overflow: hidden;
-      height: 400px;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 20px;
-      padding-bottom: 80px;
-      transition: all 0.3s ease;
-    }
-
-    .team-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-
-    .team-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
-      z-index: 1;
-    }
-
-    .team-logo {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      width: 80px;
-      height: 80px;
-      background: #000000;
-      border-radius: 10px;
-      padding: 8px;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      border: 2px solid rgba(255,255,255,0.1);
-    }
-
-    .team-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      filter: brightness(1.1) contrast(1.1);
-    }
-
-    .team-logo img:not([src]), .team-logo img[src=""] {
-      display: none;
-    }
-
-    .team-logo div {
-      color: #ffffff;
-      font-weight: bold;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-
-    .team-colors {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      z-index: 2;
-      display: flex;
-      gap: 4px;
-    }
-
-    .color-swatch {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.8);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-
-    .sport-badge {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.9);
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 12px 16px;
-      z-index: 2;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      backdrop-filter: blur(4px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .team-id {
-      font-size: 0.6rem;
-      opacity: 0.7;
-      text-transform: lowercase;
-    }
-
-    .team-info {
-      position: relative;
-      z-index: 2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-    }
-
-    .team-info h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      line-height: 1.2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-      color: #ffffff;
-    }
-
-    .team-info .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 12px;
-      margin-bottom: 8px;
-      background: rgba(0,0,0,0.4);
-      padding: 12px;
-      border-radius: 8px;
-      backdrop-filter: blur(2px);
-    }
-
-    .team-info p {
-      font-size: 0.85rem;
-      margin-bottom: 3px;
-      opacity: 0.98;
-      color: #ffffff;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-    }
-
-    .team-info .info-label {
-      font-weight: 600;
-      opacity: 0.9;
-      color: #e0e0e0;
-    }
-
-    .team-info a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-size: 0.8rem;
-      opacity: 1;
-      display: inline-block;
-      margin-top: 6px;
-      background: rgba(0,0,0,0.5);
-      padding: 4px 8px;
-      border-radius: 4px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-      transition: all 0.2s ease;
-    }
-
-    .team-info a:hover {
-      opacity: 1;
-      text-decoration: none;
-      background: rgba(0,0,0,0.7);
-      transform: translateY(-1px);
-    }
-
-    .population {
-      font-size: 0.75rem;
-      opacity: 0.9;
-      color: #f0f0f0;
-    }
-
-    @media (max-width: 900px) {
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .section-header.conference {
-        margin-left: 10px;
-      }
-      
-      .section-header.division {
-        margin-left: 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 20px 10px;
-      }
-      
-      .team-grid {
-        grid-template-columns: 1fr;
-        padding: 16px;
-      }
-      
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .team-card {
-        height: 380px;
-      }
-
-      .team-info .info-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-header.conference {
-        margin-left: 0;
-      }
-
-      .section-header.division {
-        margin-left: 0;
-      }
-
-      .section-header.league {
-        font-size: 1.2rem;
-      }
-
-      .section-header.conference {
-        font-size: 1.1rem;
-      }
-
-      .section-header.division {
-        font-size: 1rem;
-      }
-    }
-
-    /* Color mapping for common team colors */
-    .color-red { background-color: #dc143c; }
-    .color-blue { background-color: #0066cc; }
-    .color-green { background-color: #228b22; }
-    .color-black { background-color: #000000; }
-    .color-white { background-color: #ffffff; border-color: #ccc; }
-    .color-gold { background-color: #ffd700; }
-    .color-silver { background-color: #c0c0c0; }
-    .color-orange { background-color: #ff8c00; }
-    .color-purple { background-color: #800080; }
-    .color-navy { background-color: #000080; }
-    .color-teal { background-color: #008080; }
-    .color-brown { background-color: #8b4513; }
   </style>
 </head>
 <body>
+  <header>
+    <div class="wrap">
+      <h1 class="title">Teams</h1>
+      <div class="tagline">by Kevin Kolb</div>
+    </div>
+  </header>
 
-  <h1>Horses Mouth Sports Data Team Viewer</h1>
-  <div id="loading" class="loading">Loading teams data...</div>
-  <div id="error" class="error" style="display: none;"></div>
-  <div id="metadata" class="metadata" style="display: none;"></div>
-  <div id="teamSections"></div>
+  <main class="wrap" id="app" aria-live="polite">
+    <p style="padding:20px 0;">Loading…</p>
+  </main>
+
+  <footer>
+    <div class="wrap"><span id="meta"></span></div>
+  </footer>
 
   <script>
-    const loadingEl = document.getElementById('loading');
-    const errorEl = document.getElementById('error');
-    const metadataEl = document.getElementById('metadata');
-    const container = document.getElementById('teamSections');
-
-    function showError(message) {
-      loadingEl.style.display = 'none';
-      errorEl.textContent = message;
-      errorEl.style.display = 'block';
+    function text(el, sel){
+      const n = el.querySelector(sel);
+      return n ? (n.textContent || '').trim() : '';
     }
 
-    function hideLoading() {
-      loadingEl.style.display = 'none';
+    async function loadXML(){
+      const res = await fetch('teams.xml', { cache:'no-store' });
+      const raw = await res.text();
+      return new DOMParser().parseFromString(raw, 'text/xml');
     }
 
-    function createCollapsibleSection(title, level, teamCount = 0) {
-      const section = document.createElement('div');
-      section.className = 'section-toggle';
-      
-      const levelClass = level === 1 ? 'league' : level === 2 ? 'conference' : 'division';
-      
-      section.innerHTML = `
-        <div class="section-header ${levelClass}">
-          <div class="section-title">
-            <span>${title}</span>
-            ${teamCount > 0 ? `<span class="section-badge">${teamCount} teams</span>` : ''}
-          </div>
-          <span class="toggle-icon">▶</span>
-        </div>
-        <div class="section-content"></div>
-      `;
+    function groupData(dom){
+      const teams = [...dom.querySelectorAll('team')].map(t => ({
+        league: text(t, 'league'),
+        conference: text(t, 'conference') || '—',
+        conference_short: text(t, 'conference_short'),
+        subdivision: text(t, 'subdivision'),
+        name: text(t, 'name'),
+        logo: text(t, 'visual_identity > logo_url') || text(t, 'logo_url')
+      })).filter(t => t.league && t.name);
 
-      const header = section.querySelector('.section-header');
-      const content = section.querySelector('.section-content');
-      const icon = section.querySelector('.toggle-icon');
-
-      header.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isExpanded = section.classList.contains('expanded');
-        
-        if (isExpanded) {
-          // Collapsing - first collapse all children
-          const childSections = content.querySelectorAll('.section-toggle.expanded');
-          childSections.forEach(child => {
-            child.classList.remove('expanded');
-            const childIcon = child.querySelector('.toggle-icon');
-            if (childIcon) childIcon.textContent = '▶';
-          });
-          
-          // Then collapse this section
-          section.classList.remove('expanded');
-          icon.textContent = '▶';
-        } else {
-          // Expanding
-          section.classList.add('expanded');
-          icon.textContent = '▼';
-        }
-      });
-
-      return {
-        element: section,
-        content: content
-      };
-    }
-
-    function getColorClass(colorName) {
-      const colorMap = {
-        'red': 'color-red',
-        'cardinal red': 'color-red',
-        'battle red': 'color-red',
-        'blue': 'color-blue',
-        'royal blue': 'color-blue',
-        'powder blue': 'color-blue',
-        'speed blue': 'color-blue',
-        'honolulu blue': 'color-blue',
-        'panther blue': 'color-blue',
-        'deep steel blue': 'color-blue',
-        'nautical blue': 'color-blue',
-        'titans blue': 'color-blue',
-        'broncos navy': 'color-navy',
-        'dark navy': 'color-navy',
-        'titans navy': 'color-navy',
-        'college navy': 'color-navy',
-        'midnight green': 'color-green',
-        'gotham green': 'color-green',
-        'action green': 'color-green',
-        'dark green': 'color-green',
-        'black': 'color-black',
-        'stealth black': 'color-black',
-        'white': 'color-white',
-        'gold': 'color-gold',
-        'old gold': 'color-gold',
-        'steelers gold': 'color-gold',
-        'silver': 'color-silver',
-        'orange': 'color-orange',
-        'purple': 'color-purple',
-        'aqua': 'color-teal',
-        'teal': 'color-teal',
-        'dark brown': 'color-brown',
-        'burgundy': 'color-red'
-      };
-      return colorMap[colorName?.toLowerCase()] || 'color-blue';
-    }
-
-    function createColorSwatches(primaryColor, secondaryColor) {
-      const swatches = [];
-      if (primaryColor) {
-        swatches.push(`<div class="color-swatch ${getColorClass(primaryColor)}" title="${primaryColor}"></div>`);
+      // by league -> conference
+      const byLeague = new Map();
+      for(const team of teams){
+        if(!byLeague.has(team.league)) byLeague.set(team.league, new Map());
+        const m = byLeague.get(team.league);
+        const key = team.conference || '—';
+        if(!m.has(key)) m.set(key, []);
+        m.get(key).push(team);
       }
-      if (secondaryColor && secondaryColor !== primaryColor) {
-        swatches.push(`<div class="color-swatch ${getColorClass(secondaryColor)}" title="${secondaryColor}"></div>`);
-      }
-      return swatches.join('');
+      return byLeague;
     }
 
-    function formatPopulation(pop) {
-      if (!pop) return '';
-      const num = parseInt(pop.replace(/,/g, ''));
-      if (num >= 1000000) {
-        return `${(num / 1000000).toFixed(1)}M`;
-      } else if (num >= 1000) {
-        return `${(num / 1000).toFixed(0)}K`;
-      }
-      return num.toString();
-    }
+    function render(byLeague){
+      const app = document.getElementById('app');
+      app.innerHTML = '';
 
-    function createTeamCard(team, leagueAbbr, conferenceAbbr, divisionName) {
-      // Extract all available data from the XML structure
-      const teamId = team.getAttribute('id') || '';
-      const name = team.querySelector("basic_info name")?.textContent?.trim() || "Unknown Team";
-      const slug = team.querySelector("basic_info slug")?.textContent?.trim() || "";
-      const logo = team.querySelector("visual_identity logo_url")?.textContent?.trim() || "";
-      const bg = team.querySelector("visual_identity header_background_url")?.textContent?.trim() || "";
-      const coach = team.querySelector("organization head_coach")?.textContent?.trim() || "Unknown";
-      const owners = team.querySelector("organization owners")?.textContent?.trim() || "Unknown";
-      const stadium = team.querySelector("venue stadium")?.textContent?.trim() || "Unknown";
-      const year = team.querySelector("basic_info established")?.textContent?.trim() || "Unknown";
-      const website = team.querySelector("urls official_url")?.textContent?.trim() || "#";
-      const operationsUrl = team.querySelector("urls operations_url")?.textContent?.trim() || "";
-      const hometown = team.querySelector("location hometown")?.textContent?.trim() || "";
-      const population = team.querySelector("location population")?.textContent?.trim() || "";
-      const primaryColor = team.querySelector("visual_identity primary_color")?.textContent?.trim() || "";
-      const secondaryColor = team.querySelector("visual_identity secondary_color")?.textContent?.trim() || "";
+      const leagues = [...byLeague.keys()].sort((a,b)=>a.localeCompare(b));
+      for(const lg of leagues){
+        const confMap = byLeague.get(lg);
 
-      const card = document.createElement("div");
-      card.className = "team-card";
-      if (bg) {
-        card.style.backgroundImage = `url(${bg})`;
-      }
+        // League label (sticky)
+        const sec = document.createElement('section');
+        const label = document.createElement('div');
+        label.className = 'section-label';
+        const ln = document.createElement('div');
+        ln.className = 'league-name';
+        ln.textContent = lg;
+        const meta = document.createElement('div');
+        meta.className = 'league-meta';
+        let count = 0; confMap.forEach(v => count += v.length);
+        meta.textContent = count + ' teams';
+        label.appendChild(ln);
+        label.appendChild(meta);
+        sec.appendChild(label);
 
-      const logoHtml = logo ? 
-        `<img src="${logo}" alt="${name} logo" onerror="this.style.display='none'">` : 
-        `<div style="text-align: center; font-size: 0.9rem; font-weight: bold;">${name.split(' ').map(w => w[0]).join('').substring(0,3)}</div>`;
+        // Conferences
+        const confs = [...confMap.keys()].sort((a,b)=>a.localeCompare(b));
+        for(const cf of confs){
+          const badge = document.createElement('div');
+          badge.className = 'conf-badge';
+          badge.textContent = cf;
+          sec.appendChild(badge);
 
-      const colorSwatches = createColorSwatches(primaryColor, secondaryColor);
+          const list = confMap.get(cf).slice().sort((a,b)=>a.name.localeCompare(b.name));
+          for(const t of list){
+            const card = document.createElement('div');
+            card.className = 'card';
 
-      card.innerHTML = `
-        <div class="team-logo">${logoHtml}</div>
-        ${colorSwatches ? `<div class="team-colors">${colorSwatches}</div>` : ''}
-        <div class="team-info">
-          <h2>${name}</h2>
-          <div class="info-grid">
-            <p><span class="info-label">Coach:</span> ${coach}</p>
-            <p><span class="info-label">Since:</span> ${year}</p>
-            <p><span class="info-label">Stadium:</span> ${stadium}</p>
-            <p><span class="info-label">Location:</span> ${hometown}</p>
-            ${owners !== "Unknown" ? `<p><span class="info-label">Owner:</span> ${owners.length > 25 ? owners.substring(0, 25) + '...' : owners}</p>` : ''}
-            ${population ? `<p class="population"><span class="info-label">Population:</span> ${formatPopulation(population)}</p>` : ''}
-          </div>
-          ${website !== "#" ? `<a href="${website}" target="_blank" rel="noopener">Official Website</a>` : ''}
-          ${operationsUrl ? `<a href="${operationsUrl}" target="_blank" rel="noopener" style="margin-left: 8px;">Team History</a>` : ''}
-        </div>
-        <div class="sport-badge">
-          <span>${leagueAbbr} • ${conferenceAbbr} • ${divisionName}</span>
-          <span class="team-id">${teamId}</span>
-        </div>
-      `;
+            const img = document.createElement('img');
+            img.className = 'logo';
+            if(t.logo){
+              img.src = t.logo;
+              img.alt = '';
+              img.loading = 'lazy';
+              img.onerror = () => { img.classList.add('hidden'); };
+            } else {
+              img.classList.add('hidden');
+            }
+            card.appendChild(img);
 
-      return card;
-    }
+            const body = document.createElement('div');
+            body.className = 'card-body';
 
-    function processTeamsData(xmlText) {
-      try {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(xmlText, "application/xml");
+            const name = document.createElement('div');
+            name.className = 'name';
+            name.textContent = t.name;
+            body.appendChild(name);
 
-        // Check for XML parsing errors
-        const parserError = xml.querySelector("parsererror");
-        if (parserError) {
-          throw new Error("Invalid XML format");
-        }
+            const right = document.createElement('div');
+            right.className = 'right';
+            right.textContent = [t.conference_short || '', t.subdivision || '']
+              .filter(Boolean).join(' • ');
+            body.appendChild(right);
 
-        // Extract metadata
-        const rootElement = xml.querySelector("sports_teams");
-        if (rootElement) {
-          const lastUpdated = rootElement.getAttribute("last_updated");
-          const totalTeams = rootElement.getAttribute("total_teams");
-          const totalLeagues = rootElement.getAttribute("total_leagues");
-          
-          if (lastUpdated || totalTeams || totalLeagues) {
-            const updateDate = lastUpdated ? new Date(lastUpdated).toLocaleDateString() : '';
-            metadataEl.innerHTML = `
-              ${totalTeams ? `${totalTeams} teams` : ''}
-              ${totalLeagues ? ` across ${totalLeagues} league${totalLeagues > 1 ? 's' : ''}` : ''}
-              ${updateDate ? ` • Last updated: ${updateDate}` : ''}
-            `;
-            metadataEl.style.display = 'block';
+            card.appendChild(body);
+            sec.appendChild(card);
           }
         }
 
-        // Find all leagues
-        const leagues = Array.from(xml.querySelectorAll("league"));
-        
-        if (leagues.length === 0) {
-          throw new Error("No league data found in XML");
-        }
-
-        leagues.forEach(league => {
-          const leagueName = league.getAttribute("name") || "Unknown League";
-          const leagueAbbr = league.getAttribute("abbreviation") || "";
-          const country = league.getAttribute("country") || "";
-          const sport = league.getAttribute("sport") || "";
-          const conferences = Array.from(league.querySelectorAll("conference"));
-          
-          if (conferences.length === 0) return;
-
-          // Count total teams in league
-          const totalLeagueTeams = conferences.reduce((sum, conf) => {
-            return sum + conf.querySelectorAll("team").length;
-          }, 0);
-
-          // Get league logo if available
-          const leagueLogo = league.querySelector("branding logo_url")?.textContent?.trim() || "";
-          
-          // Create league title with logo
-          const leagueTitle = leagueLogo ? 
-            `<img src="${leagueLogo}" alt="${leagueName} logo" style="height: 24px; width: auto; margin-right: 12px; vertical-align: middle;"> ${leagueName} (${leagueAbbr})` :
-            `${leagueName} (${leagueAbbr})`;
-
-          // Create collapsible league section
-          const leagueSection = createCollapsibleSection(
-            leagueTitle,
-            1,
-            totalLeagueTeams
-          );
-          container.appendChild(leagueSection.element);
-
-          conferences.forEach(conference => {
-            const conferenceName = conference.getAttribute("name") || "Unknown Conference";
-            const conferenceAbbr = conference.getAttribute("abbreviation") || "";
-            const divisions = Array.from(conference.querySelectorAll("division"));
-            
-            if (divisions.length === 0) return;
-
-            // Count teams in conference
-            const totalConfTeams = divisions.reduce((sum, div) => {
-              return sum + div.querySelectorAll("team").length;
-            }, 0);
-
-            // Create collapsible conference section
-            const confSection = createCollapsibleSection(
-              `${conferenceName} (${conferenceAbbr})`,
-              2,
-              totalConfTeams
-            );
-            leagueSection.content.appendChild(confSection.element);
-
-            divisions.forEach(division => {
-              const divisionName = division.getAttribute("name") || "Unknown Division";
-              const teams = Array.from(division.querySelectorAll("team"));
-              
-              if (teams.length === 0) return;
-
-              // Create collapsible division section
-              const divSection = createCollapsibleSection(
-                `${divisionName} Division`,
-                3,
-                teams.length
-              );
-              confSection.content.appendChild(divSection.element);
-
-              // Create team grid
-              const grid = document.createElement("div");
-              grid.className = "team-grid";
-
-              teams.forEach(team => {
-                const card = createTeamCard(team, leagueAbbr, conferenceAbbr, divisionName);
-                grid.appendChild(card);
-              });
-
-              divSection.content.appendChild(grid);
-            });
-          });
-        });
-
-        hideLoading();
-      } catch (error) {
-        console.error("Error processing teams data:", error);
-        showError(`Error processing teams data: ${error.message}`);
+        app.appendChild(sec);
       }
     }
 
-    // Try to fetch teams.xml
-    fetch('teams.xml')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then(xmlText => {
-        processTeamsData(xmlText);
-      })
-      .catch(error => {
-        console.error("Could not load teams.xml:", error);
-        showError(`Could not load teams.xml: ${error.message}. Please make sure the teams.xml file is in the same directory as this HTML file.`);
-      });
-  </script>
+    async function init(){
+      try{
+        const dom = await loadXML();
+        const grouped = groupData(dom);
+        render(grouped);
+        const generatedAt = dom.querySelector('meta > generated_at')?.textContent || '';
+        if(generatedAt) document.getElementById('meta').textContent = 'Data generated at ' + generatedAt;
+      }catch(err){
+        console.error(err);
+        document.getElementById('app').innerHTML = '<p style="padding:20px 0;">Failed to load teams.xml</p>';
+      }
+    }
 
+    init();
+  </script>
 </body>
 </html>
