@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sports_teams last_updated="2025-08-08T20:50:11.387769" total_teams="14" total_leagues="15">
+  <league name="NCAA" abbreviation="NCAA" country="USA" sport="College Football">
+    <conferences>
+      <conference name="American Athletic Conference" abbreviation="AC">
+        <divisions>
+          <division name="—">
+            <team id="aac_army">
+              <basic_info>
+                <name>Army</name>
+                <slug>army</slug>
+                <established />
+                <league>NCAA Division I FBS</league>
+                <league_abbr>FBS</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>

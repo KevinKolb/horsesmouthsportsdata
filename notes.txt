@@ -1,0 +1,2 @@
+<!-- https://raw.githubusercontent.com/KevinKolb/horsesmouthsportsdata/refs/heads/main/games/nflgames.xml -->
+<!-- https://raw.githubusercontent.com/KevinKolb/horsesmouthsportsdata/refs/heads/main/games/collegegames.xml -->

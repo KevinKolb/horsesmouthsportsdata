@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teams</title>
+  <style>
+    /* Swiss / International Typographic Style — mobile-first */
+    :root{
+      --bg:#ffffff;
+      --fg:#101010;
+      --muted:#666666;
+      --rule:#e6e6e6;
+      --ink:#000000;
+      --accent:#000000;
+      --maxw:980px;
+      --leading:1.5;
+    }
+    *,*::before,*::after{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height:var(--leading);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 16px; }
+
+    header{
+      padding:56px 0 28px;
+      border-bottom:1px solid var(--rule);
+    }
+    .title{
+      font-size:clamp(36px, 7vw, 60px);
+      font-weight:900;
+      letter-spacing:-.02em;
+      text-transform:uppercase;
+      margin:0;
+    }
+    .tagline{
+      color:var(--muted);
+      margin-top:8px;
+      font-size:14px;
+      text-transform:lowercase;
+    }
+
+    /* Section labels */
+    .section-label{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+      backdrop-filter:saturate(180%) blur(6px);
+      -webkit-backdrop-filter:saturate(180%) blur(6px);
+      padding:14px 0 10px;
+      border-bottom:1px solid var(--rule);
+    }
+    .league-name{
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .league-meta{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+    }
+
+    .conf-badge{
+      display:inline-block;
+      margin:18px 0 12px;
+      padding:6px 10px;
+      background:var(--ink);
+      color:#fff;
+      border-radius:4px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    /* Horizontal full-width team cards */
+    .card{
+      width:100%;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px 4px;
+      border-bottom:1px solid var(--rule);
+    }
+    .card:last-child{ border-bottom:none; }
+
+    .logo{
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
+      border:1px solid var(--rule);
+      border-radius:6px;
+      background:#fff;
+      object-fit:contain;
+      display:block;
+    }
+    .logo.hidden{ display:none; }
+
+    .card-body{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      width:100%;
+      min-width:0;
+    }
+
+    .name{
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:.01em;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .right{
+      margin-left:auto;
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    /* Hover affordance on larger screens */
+    @media (hover:hover){
+      .card{ transition:background .15s ease; }
+      .card:hover{ background:#fafafa; }
+    }
+
+    footer{
+      border-top:1px solid var(--rule);
+      color:var(--muted);
+      font-size:12px;
+      padding:24px 0 40px;
+      text-align:center;
+      margin-top:28px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1 class="title">Teams</h1>
+      <div class="tagline">by Kevin Kolb</div>
+    </div>
+  </header>
+
+  <main class="wrap" id="app" aria-live="polite">
+    <p style="padding:20px 0;">Loading…</p>
+  </main>
+
+  <footer>
+    <div class="wrap"><span id="meta"></span></div>
+  </footer>
+
+  <script>
+    function text(el, sel){
+      const n = el.querySelector(sel);
+      return n ? (n.textContent || '').trim() : '';
+    }
+
+    async function loadXML(){
+      const res = await fetch('teams.xml', { cache:'no-store' });
+      const raw = await res.text();
+      return new DOMParser().parseFromString(raw, 'text/xml');
+    }
+
+    function groupData(dom){
+      const teams = [...dom.querySelectorAll('team')].map(t => ({
+        league: text(t, 'league'),
+        conference: text(t, 'conference') || '—',
+        conference_short: text(t, 'conference_short'),
+        subdivision: text(t, 'subdivision'),
+        name: text(t, 'name'),
+        logo: text(t, 'visual_identity > logo_url') || text(t, 'logo_url')
+      })).filter(t => t.league && t.name);
+
+      // by league -> conference
+      const byLeague = new Map();
+      for(const team of teams){
+        if(!byLeague.has(team.league)) byLeague.set(team.league, new Map());
+        const m = byLeague.get(team.league);
+        const key = team.conference || '—';
+        if(!m.has(key)) m.set(key, []);
+        m.get(key).push(team);
+      }
+      return byLeague;
+    }
+
+    function render(byLeague){
+      const app = document.getElementById('app');
+      app.innerHTML = '';
+
+      const leagues = [...byLeague.keys()].sort((a,b)=>a.localeCompare(b));
+      for(const lg of leagues){
+        const confMap = byLeague.get(lg);
+
+        // League label (sticky)
+        const sec = document.createElement('section');
+        const label = document.createElement('div');
+        label.className = 'section-label';
+        const ln = document.createElement('div');
+        ln.className = 'league-name';
+        ln.textContent = lg;
+        const meta = document.createElement('div');
+        meta.className = 'league-meta';
+        let count = 0; confMap.forEach(v => count += v.length);
+        meta.textContent = count + ' teams';
+        label.appendChild(ln);
+        label.appendChild(meta);
+        sec.appendChild(label);
+
+        // Conferences
+        const confs = [...confMap.keys()].sort((a,b)=>a.localeCompare(b));
+        for(const cf of confs){
+          const badge = document.createElement('div');
+          badge.className = 'conf-badge';
+          badge.textContent = cf;
+          sec.appendChild(badge);
+
+          const list = confMap.get(cf).slice().sort((a,b)=>a.name.localeCompare(b.name));
+          for(const t of list){
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const img = document.createElement('img');
+            img.className = 'logo';
+            if(t.logo){
+              img.src = t.logo;
+              img.alt = '';
+              img.loading = 'lazy';
+              img.onerror = () => { img.classList.add('hidden'); };
+            } else {
+              img.classList.add('hidden');
+            }
+            card.appendChild(img);
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const name = document.createElement('div');
+            name.className = 'name';
+            name.textContent = t.name;
+            body.appendChild(name);
+
+            const right = document.createElement('div');
+            right.className = 'right';
+            right.textContent = [t.conference_short || '', t.subdivision || '']
+              .filter(Boolean).join(' • ');
+            body.appendChild(right);
+
+            card.appendChild(body);
+            sec.appendChild(card);
+          }
+        }
+
+        app.appendChild(sec);
+      }
+    }
+
+    async function init(){
+      try{
+        const dom = await loadXML();
+        const grouped = groupData(dom);
+        render(grouped);
+        const generatedAt = dom.querySelector('meta > generated_at')?.textContent || '';
+        if(generatedAt) document.getElementById('meta').textContent = 'Data generated at ' + generatedAt;
+      }catch(err){
+        console.error(err);
+        document.getElementById('app').innerHTML = '<p style="padding:20px 0;">Failed to load teams.xml</p>';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
