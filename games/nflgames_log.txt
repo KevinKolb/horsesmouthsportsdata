@@ -1,0 +1,553 @@
+[2025-08-09 16:24:15] RUN_START: NFL Schedule fetcher started at 2025-08-09 16:24:15
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_001 - Dallas Cowboys at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_002 - Kansas City Chiefs at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_003 - Tampa Bay Buccaneers at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_004 - Cincinnati Bengals at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_005 - Miami Dolphins at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_006 - Carolina Panthers at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_007 - Las Vegas Raiders at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_008 - Arizona Cardinals at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_009 - Pittsburgh Steelers at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_010 - New York Giants at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_011 - Tennessee Titans at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_012 - San Francisco 49ers at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_013 - Detroit Lions at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_014 - Houston Texans at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_015 - Baltimore Ravens at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_016 - Minnesota Vikings at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_017 - Washington Commanders at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_018 - Cleveland Browns at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_019 - Jacksonville Jaguars at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_020 - New York Giants at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_021 - Chicago Bears at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_022 - New England Patriots at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_023 - San Francisco 49ers at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_024 - Buffalo Bills at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_025 - Seattle Seahawks at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_026 - Los Angeles Rams at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_027 - Carolina Panthers at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_028 - Denver Broncos at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_029 - Philadelphia Eagles at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_030 - Atlanta Falcons at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_031 - Tampa Bay Buccaneers at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_032 - Los Angeles Chargers at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_033 - Miami Dolphins at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_034 - Atlanta Falcons at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_035 - Green Bay Packers at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_036 - Houston Texans at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_037 - Cincinnati Bengals at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_038 - Pittsburgh Steelers at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_039 - Los Angeles Rams at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_040 - New York Jets at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_041 - Indianapolis Colts at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_042 - Las Vegas Raiders at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_043 - Denver Broncos at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_044 - New Orleans Saints at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_045 - Dallas Cowboys at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_046 - Arizona Cardinals at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_047 - Kansas City Chiefs at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_048 - Detroit Lions at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_049 - Seattle Seahawks at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_050 - Minnesota Vikings at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_051 - Washington Commanders at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_052 - New Orleans Saints at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_053 - Cleveland Browns at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_054 - Tennessee Titans at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_055 - Carolina Panthers at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_056 - Los Angeles Chargers at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_057 - Philadelphia Eagles at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_058 - Indianapolis Colts at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_059 - Jacksonville Jaguars at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_060 - Baltimore Ravens at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_061 - Chicago Bears at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_062 - Green Bay Packers at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_063 - New York Jets at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_064 - Cincinnati Bengals at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_065 - San Francisco 49ers at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_066 - Minnesota Vikings at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_067 - Houston Texans at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_068 - Miami Dolphins at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_069 - Las Vegas Raiders at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_070 - New York Giants at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_071 - Dallas Cowboys at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_072 - Denver Broncos at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_073 - Tennessee Titans at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_074 - Tampa Bay Buccaneers at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_075 - Detroit Lions at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_076 - Washington Commanders at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_077 - New England Patriots at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_078 - Kansas City Chiefs at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_079 - Philadelphia Eagles at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_080 - Denver Broncos at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_081 - Los Angeles Rams at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_082 - Dallas Cowboys at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_083 - Arizona Cardinals at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_084 - Seattle Seahawks at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_085 - Los Angeles Chargers at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_086 - Cleveland Browns at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_087 - San Francisco 49ers at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_088 - Tennessee Titans at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_089 - Cincinnati Bengals at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_090 - New England Patriots at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_091 - Detroit Lions at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_092 - Buffalo Bills at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_093 - Chicago Bears at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_094 - Pittsburgh Steelers at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_095 - Los Angeles Rams at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_096 - New Orleans Saints at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_097 - Miami Dolphins at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_098 - Las Vegas Raiders at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_099 - Philadelphia Eagles at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_100 - Carolina Panthers at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_101 - New England Patriots at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_102 - New York Giants at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_103 - Indianapolis Colts at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_104 - Green Bay Packers at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_105 - Washington Commanders at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_106 - Atlanta Falcons at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_107 - Tampa Bay Buccaneers at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_108 - Houston Texans at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_109 - Minnesota Vikings at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_110 - Miami Dolphins at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_111 - Chicago Bears at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_112 - Buffalo Bills at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_113 - New York Jets at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_114 - San Francisco 49ers at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_115 - Cleveland Browns at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_116 - New York Giants at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_117 - Tampa Bay Buccaneers at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_118 - Dallas Cowboys at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_119 - Tennessee Titans at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_120 - Green Bay Packers at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_121 - Washington Commanders at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_122 - Baltimore Ravens at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_123 - Chicago Bears at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_124 - Minnesota Vikings at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_125 - Carolina Panthers at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_126 - Denver Broncos at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_127 - Atlanta Falcons at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_128 - San Francisco 49ers at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_129 - Indianapolis Colts at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_130 - Los Angeles Chargers at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_131 - New Orleans Saints at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_132 - Jacksonville Jaguars at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_133 - Kansas City Chiefs at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_134 - Seattle Seahawks at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_135 - Arizona Cardinals at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_136 - Las Vegas Raiders at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_137 - Atlanta Falcons at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_138 - New Orleans Saints at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_139 - New York Giants at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_140 - Jacksonville Jaguars at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_141 - Buffalo Bills at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_142 - Baltimore Ravens at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_143 - Cleveland Browns at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_144 - New England Patriots at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_145 - Arizona Cardinals at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_146 - Los Angeles Rams at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_147 - Detroit Lions at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_148 - Pittsburgh Steelers at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_149 - Philadelphia Eagles at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_150 - New York Jets at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_151 - Washington Commanders at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_152 - Carolina Panthers at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_153 - Tampa Bay Buccaneers at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_154 - Los Angeles Chargers at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_155 - Chicago Bears at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_156 - Green Bay Packers at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_157 - Cincinnati Bengals at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_158 - Houston Texans at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_159 - San Francisco 49ers at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_160 - Seattle Seahawks at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_161 - Baltimore Ravens at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_162 - Kansas City Chiefs at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_163 - Detroit Lions at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_164 - Dallas Cowboys at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_165 - Buffalo Bills at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_166 - New York Jets at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_167 - Pittsburgh Steelers at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_168 - New England Patriots at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_169 - New York Giants at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_170 - Minnesota Vikings at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_171 - Indianapolis Colts at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_172 - Seattle Seahawks at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_173 - Jacksonville Jaguars at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_174 - Cleveland Browns at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_175 - Philadelphia Eagles at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_176 - Atlanta Falcons at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_177 - Tampa Bay Buccaneers at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_178 - Carolina Panthers at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_179 - Green Bay Packers at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_180 - Kansas City Chiefs at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_181 - Cincinnati Bengals at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_182 - Chicago Bears at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_183 - Los Angeles Rams at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_184 - San Francisco 49ers at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_185 - Houston Texans at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_186 - New Orleans Saints at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_187 - Atlanta Falcons at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_188 - Arizona Cardinals at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_189 - Jacksonville Jaguars at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_190 - Minnesota Vikings at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_191 - Las Vegas Raiders at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_192 - Buffalo Bills at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_193 - Denver Broncos at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_194 - New York Giants at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_195 - Dallas Cowboys at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_196 - Seattle Seahawks at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_197 - Pittsburgh Steelers at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_198 - Tennessee Titans at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_199 - Chicago Bears at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_200 - Indianapolis Colts at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_201 - Washington Commanders at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_202 - Miami Dolphins at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_203 - New Orleans Saints at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_204 - Denver Broncos at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_205 - Los Angeles Rams at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_206 - Cincinnati Bengals at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_207 - Houston Texans at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_208 - Philadelphia Eagles at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_209 - Atlanta Falcons at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_210 - Cleveland Browns at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_211 - Baltimore Ravens at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_212 - Arizona Cardinals at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_213 - New York Jets at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_214 - Los Angeles Chargers at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_215 - Buffalo Bills at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_216 - Washington Commanders at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_217 - Las Vegas Raiders at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_218 - Green Bay Packers at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_219 - Detroit Lions at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_220 - Carolina Panthers at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_221 - Indianapolis Colts at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_222 - Tennessee Titans at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_223 - Minnesota Vikings at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_224 - Miami Dolphins at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_225 - Los Angeles Rams at Seattle Seahawks
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_226 - Green Bay Packers at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_227 - Philadelphia Eagles at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_228 - New England Patriots at Baltimore Ravens
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_229 - Tampa Bay Buccaneers at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_230 - Buffalo Bills at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_231 - Los Angeles Chargers at Dallas Cowboys
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_232 - New York Jets at New Orleans Saints
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_233 - Minnesota Vikings at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_234 - Kansas City Chiefs at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_235 - Atlanta Falcons at Arizona Cardinals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_236 - Jacksonville Jaguars at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_237 - Pittsburgh Steelers at Detroit Lions
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_238 - Las Vegas Raiders at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_239 - Cincinnati Bengals at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_240 - San Francisco 49ers at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_241 - Dallas Cowboys at Washington Commanders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_242 - Detroit Lions at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_243 - Denver Broncos at Kansas City Chiefs
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_244 - Seattle Seahawks at Carolina Panthers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_245 - Arizona Cardinals at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_246 - Baltimore Ravens at Green Bay Packers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_247 - Houston Texans at Los Angeles Chargers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_248 - New York Giants at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_249 - Pittsburgh Steelers at Cleveland Browns
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_250 - Jacksonville Jaguars at Indianapolis Colts
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_251 - Tampa Bay Buccaneers at Miami Dolphins
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_252 - New England Patriots at New York Jets
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_253 - New Orleans Saints at Tennessee Titans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_254 - Philadelphia Eagles at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_255 - Chicago Bears at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_256 - Los Angeles Rams at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_257 - New Orleans Saints at Atlanta Falcons
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_258 - New York Jets at Buffalo Bills
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_259 - Detroit Lions at Chicago Bears
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_260 - Cleveland Browns at Cincinnati Bengals
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_261 - Los Angeles Chargers at Denver Broncos
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_262 - Indianapolis Colts at Houston Texans
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_263 - Tennessee Titans at Jacksonville Jaguars
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_264 - Arizona Cardinals at Los Angeles Rams
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_265 - Kansas City Chiefs at Las Vegas Raiders
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_266 - Green Bay Packers at Minnesota Vikings
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_267 - Miami Dolphins at New England Patriots
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_268 - Dallas Cowboys at New York Giants
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_269 - Washington Commanders at Philadelphia Eagles
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_270 - Baltimore Ravens at Pittsburgh Steelers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_271 - Seattle Seahawks at San Francisco 49ers
+[2025-08-09 16:24:16] APPEND: Game nfl_2025_272 - Carolina Panthers at Tampa Bay Buccaneers
+[2025-08-09 16:24:16] XML_WRITTEN: games/nflgames.xml
+[2025-08-09 16:24:16] MERGE_STATS: 0 existing + 272 NFL = 272 total games
+[2025-08-09 16:24:16] RUN_SUCCESS: Completed with 272 games at 2025-08-09 16:24:16
+[2025-08-09 16:25:01] RUN_START: NFL Schedule fetcher started at 2025-08-09 16:25:01
+[2025-08-09 16:25:01] BACKUP_CREATED: games/nflgames_backup.xml
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_001 - Dallas Cowboys at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_002 - Kansas City Chiefs at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_003 - Tampa Bay Buccaneers at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_004 - Cincinnati Bengals at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_005 - Miami Dolphins at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_006 - Carolina Panthers at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_007 - Las Vegas Raiders at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_008 - Arizona Cardinals at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_009 - Pittsburgh Steelers at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_010 - New York Giants at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_011 - Tennessee Titans at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_012 - San Francisco 49ers at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_013 - Detroit Lions at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_014 - Houston Texans at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_015 - Baltimore Ravens at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_016 - Minnesota Vikings at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_017 - Washington Commanders at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_018 - Cleveland Browns at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_019 - Jacksonville Jaguars at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_020 - New York Giants at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_021 - Chicago Bears at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_022 - New England Patriots at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_023 - San Francisco 49ers at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_024 - Buffalo Bills at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_025 - Seattle Seahawks at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_026 - Los Angeles Rams at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_027 - Carolina Panthers at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_028 - Denver Broncos at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_029 - Philadelphia Eagles at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_030 - Atlanta Falcons at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_031 - Tampa Bay Buccaneers at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_032 - Los Angeles Chargers at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_033 - Miami Dolphins at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_034 - Atlanta Falcons at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_035 - Green Bay Packers at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_036 - Houston Texans at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_037 - Cincinnati Bengals at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_038 - Pittsburgh Steelers at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_039 - Los Angeles Rams at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_040 - New York Jets at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_041 - Indianapolis Colts at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_042 - Las Vegas Raiders at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_043 - Denver Broncos at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_044 - New Orleans Saints at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_045 - Dallas Cowboys at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_046 - Arizona Cardinals at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_047 - Kansas City Chiefs at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_048 - Detroit Lions at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_049 - Seattle Seahawks at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_050 - Minnesota Vikings at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_051 - Washington Commanders at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_052 - New Orleans Saints at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_053 - Cleveland Browns at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_054 - Tennessee Titans at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_055 - Carolina Panthers at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_056 - Los Angeles Chargers at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_057 - Philadelphia Eagles at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_058 - Indianapolis Colts at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_059 - Jacksonville Jaguars at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_060 - Baltimore Ravens at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_061 - Chicago Bears at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_062 - Green Bay Packers at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_063 - New York Jets at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_064 - Cincinnati Bengals at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_065 - San Francisco 49ers at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_066 - Minnesota Vikings at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_067 - Houston Texans at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_068 - Miami Dolphins at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_069 - Las Vegas Raiders at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_070 - New York Giants at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_071 - Dallas Cowboys at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_072 - Denver Broncos at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_073 - Tennessee Titans at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_074 - Tampa Bay Buccaneers at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_075 - Detroit Lions at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_076 - Washington Commanders at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_077 - New England Patriots at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_078 - Kansas City Chiefs at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_079 - Philadelphia Eagles at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_080 - Denver Broncos at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_081 - Los Angeles Rams at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_082 - Dallas Cowboys at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_083 - Arizona Cardinals at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_084 - Seattle Seahawks at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_085 - Los Angeles Chargers at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_086 - Cleveland Browns at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_087 - San Francisco 49ers at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_088 - Tennessee Titans at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_089 - Cincinnati Bengals at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_090 - New England Patriots at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_091 - Detroit Lions at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_092 - Buffalo Bills at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_093 - Chicago Bears at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_094 - Pittsburgh Steelers at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_095 - Los Angeles Rams at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_096 - New Orleans Saints at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_097 - Miami Dolphins at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_098 - Las Vegas Raiders at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_099 - Philadelphia Eagles at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_100 - Carolina Panthers at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_101 - New England Patriots at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_102 - New York Giants at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_103 - Indianapolis Colts at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_104 - Green Bay Packers at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_105 - Washington Commanders at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_106 - Atlanta Falcons at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_107 - Tampa Bay Buccaneers at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_108 - Houston Texans at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_109 - Minnesota Vikings at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_110 - Miami Dolphins at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_111 - Chicago Bears at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_112 - Buffalo Bills at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_113 - New York Jets at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_114 - San Francisco 49ers at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_115 - Cleveland Browns at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_116 - New York Giants at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_117 - Tampa Bay Buccaneers at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_118 - Dallas Cowboys at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_119 - Tennessee Titans at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_120 - Green Bay Packers at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_121 - Washington Commanders at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_122 - Baltimore Ravens at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_123 - Chicago Bears at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_124 - Minnesota Vikings at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_125 - Carolina Panthers at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_126 - Denver Broncos at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_127 - Atlanta Falcons at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_128 - San Francisco 49ers at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_129 - Indianapolis Colts at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_130 - Los Angeles Chargers at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_131 - New Orleans Saints at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_132 - Jacksonville Jaguars at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_133 - Kansas City Chiefs at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_134 - Seattle Seahawks at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_135 - Arizona Cardinals at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_136 - Las Vegas Raiders at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_137 - Atlanta Falcons at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_138 - New Orleans Saints at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_139 - New York Giants at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_140 - Jacksonville Jaguars at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_141 - Buffalo Bills at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_142 - Baltimore Ravens at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_143 - Cleveland Browns at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_144 - New England Patriots at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_145 - Arizona Cardinals at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_146 - Los Angeles Rams at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_147 - Detroit Lions at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_148 - Pittsburgh Steelers at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_149 - Philadelphia Eagles at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_150 - New York Jets at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_151 - Washington Commanders at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_152 - Carolina Panthers at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_153 - Tampa Bay Buccaneers at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_154 - Los Angeles Chargers at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_155 - Chicago Bears at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_156 - Green Bay Packers at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_157 - Cincinnati Bengals at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_158 - Houston Texans at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_159 - San Francisco 49ers at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_160 - Seattle Seahawks at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_161 - Baltimore Ravens at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_162 - Kansas City Chiefs at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_163 - Detroit Lions at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_164 - Dallas Cowboys at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_165 - Buffalo Bills at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_166 - New York Jets at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_167 - Pittsburgh Steelers at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_168 - New England Patriots at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_169 - New York Giants at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_170 - Minnesota Vikings at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_171 - Indianapolis Colts at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_172 - Seattle Seahawks at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_173 - Jacksonville Jaguars at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_174 - Cleveland Browns at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_175 - Philadelphia Eagles at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_176 - Atlanta Falcons at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_177 - Tampa Bay Buccaneers at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_178 - Carolina Panthers at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_179 - Green Bay Packers at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_180 - Kansas City Chiefs at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_181 - Cincinnati Bengals at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_182 - Chicago Bears at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_183 - Los Angeles Rams at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_184 - San Francisco 49ers at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_185 - Houston Texans at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_186 - New Orleans Saints at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_187 - Atlanta Falcons at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_188 - Arizona Cardinals at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_189 - Jacksonville Jaguars at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_190 - Minnesota Vikings at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_191 - Las Vegas Raiders at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_192 - Buffalo Bills at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_193 - Denver Broncos at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_194 - New York Giants at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_195 - Dallas Cowboys at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_196 - Seattle Seahawks at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_197 - Pittsburgh Steelers at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_198 - Tennessee Titans at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_199 - Chicago Bears at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_200 - Indianapolis Colts at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_201 - Washington Commanders at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_202 - Miami Dolphins at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_203 - New Orleans Saints at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_204 - Denver Broncos at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_205 - Los Angeles Rams at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_206 - Cincinnati Bengals at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_207 - Houston Texans at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_208 - Philadelphia Eagles at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_209 - Atlanta Falcons at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_210 - Cleveland Browns at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_211 - Baltimore Ravens at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_212 - Arizona Cardinals at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_213 - New York Jets at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_214 - Los Angeles Chargers at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_215 - Buffalo Bills at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_216 - Washington Commanders at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_217 - Las Vegas Raiders at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_218 - Green Bay Packers at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_219 - Detroit Lions at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_220 - Carolina Panthers at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_221 - Indianapolis Colts at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_222 - Tennessee Titans at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_223 - Minnesota Vikings at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_224 - Miami Dolphins at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_225 - Los Angeles Rams at Seattle Seahawks
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_226 - Green Bay Packers at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_227 - Philadelphia Eagles at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_228 - New England Patriots at Baltimore Ravens
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_229 - Tampa Bay Buccaneers at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_230 - Buffalo Bills at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_231 - Los Angeles Chargers at Dallas Cowboys
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_232 - New York Jets at New Orleans Saints
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_233 - Minnesota Vikings at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_234 - Kansas City Chiefs at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_235 - Atlanta Falcons at Arizona Cardinals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_236 - Jacksonville Jaguars at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_237 - Pittsburgh Steelers at Detroit Lions
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_238 - Las Vegas Raiders at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_239 - Cincinnati Bengals at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_240 - San Francisco 49ers at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_241 - Dallas Cowboys at Washington Commanders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_242 - Detroit Lions at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_243 - Denver Broncos at Kansas City Chiefs
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_244 - Seattle Seahawks at Carolina Panthers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_245 - Arizona Cardinals at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_246 - Baltimore Ravens at Green Bay Packers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_247 - Houston Texans at Los Angeles Chargers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_248 - New York Giants at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_249 - Pittsburgh Steelers at Cleveland Browns
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_250 - Jacksonville Jaguars at Indianapolis Colts
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_251 - Tampa Bay Buccaneers at Miami Dolphins
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_252 - New England Patriots at New York Jets
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_253 - New Orleans Saints at Tennessee Titans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_254 - Philadelphia Eagles at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_255 - Chicago Bears at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_256 - Los Angeles Rams at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_257 - New Orleans Saints at Atlanta Falcons
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_258 - New York Jets at Buffalo Bills
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_259 - Detroit Lions at Chicago Bears
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_260 - Cleveland Browns at Cincinnati Bengals
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_261 - Los Angeles Chargers at Denver Broncos
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_262 - Indianapolis Colts at Houston Texans
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_263 - Tennessee Titans at Jacksonville Jaguars
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_264 - Arizona Cardinals at Los Angeles Rams
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_265 - Kansas City Chiefs at Las Vegas Raiders
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_266 - Green Bay Packers at Minnesota Vikings
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_267 - Miami Dolphins at New England Patriots
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_268 - Dallas Cowboys at New York Giants
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_269 - Washington Commanders at Philadelphia Eagles
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_270 - Baltimore Ravens at Pittsburgh Steelers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_271 - Seattle Seahawks at San Francisco 49ers
+[2025-08-09 16:25:01] APPEND: Game nfl_2025_272 - Carolina Panthers at Tampa Bay Buccaneers
+[2025-08-09 16:25:01] XML_WRITTEN: games/nflgames.xml
+[2025-08-09 16:25:01] MERGE_STATS: 17 existing + 272 NFL = 289 total games
+[2025-08-09 16:25:01] RUN_SUCCESS: Completed with 272 games at 2025-08-09 16:25:01
