@@ -85,7 +85,7 @@ def save_all_teams_xml(all_teams_data):
         
         # Add each game as a single line
         for i, game_data in enumerate(games, 1):
-            attrs = [f'id="{i}"']
+            attrs = [f'seq="{i}"']
             
             # Add all game attributes
             for key, value in game_data.items():
