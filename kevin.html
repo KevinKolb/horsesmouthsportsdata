@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kat's Football">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiS2F0J3MgMjAyNSBGb290YmFsbCBTY2hlZHVsZXMiLCJzaG9ydF9uYW1lIjoiS2F0J3MgRm9vdGJhbGwiLCJzdGFydF91cmwiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmOGY5ZmEiLCJ0aGVtZV9jb2xvciI6IiMxYTFhMWEiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpT0RBaUlHaGxhV2RvZEQwaU9EQWlJSFpwWlhkQ2IzZzlJakFnTUNBNE1DQTRNQ0lnZUcxc2JuTTlJbWgwZEhBNkx5OTNkM2N1ZHpNdWIzSm5Memx6ZG1jaUlHWnBiR3c5SWlNeE9XWmpNMlFpUGp4eVpXTjBJSGRwWkhSb1BTSXlNQ0lnYUdWcFoyaDBQU0l5TUNJZ2VEMGlNakFpSUhrOUlqSXdJaUJ5ZVQwaU5DSWdabWxzYkQwaWFIUm9jRG92TDJNM1kyTm1aU0l2UGp4MGRHVjRkQ0I0UFNJMk5TSWdlVDBpTkRraUlHWnBiR3c5SWlOelkyTnpJaUJtYjI1MExYTnBlbVU5SWpGd2VDSWdkbUZzYVdkdUxYSmxaWFJoUFNJM1lYWWlQa1pQVDFSQ1FVeE1QQzkwWlhoMFBqd3ZjM1puUGc9PSIsInNpemVzIjoiODB4ODAiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
+    <title>Kat's 2025 Football Schedules</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #333;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: #f5f5f5;
+            border-color: #999;
+        }
+
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .filter-btn.my-teams {
+            background: #0EA5E9;
+            color: white;
+            border-color: #0EA5E9;
+        }
+
+        .filter-btn.my-teams:hover {
+            background: #0284C7;
+            border-color: #0284C7;
+        }
+
+        .filter-btn.action-btn {
+            background: #0EA5E9;
+            color: white;
+            border-color: #0EA5E9;
+        }
+
+        .filter-btn.action-btn:hover {
+            background: #0284C7;
+            border-color: #0284C7;
+        }
+
+        /* Blue color options for you to choose from: */
+        /*
+        Option 1 - Royal Blue (current):     #0066CC / #0052A3
+        Option 2 - Navy Blue:                #1E3A8A / #1E40AF  
+        Option 3 - Sky Blue:                 #0EA5E9 / #0284C7
+        Option 4 - Steel Blue:               #475569 / #334155
+        Option 5 - Cobalt Blue:              #2563EB / #1D4ED8
+        Option 6 - Ocean Blue:               #0891B2 / #0E7490
+        Option 7 - Saints Blue (Florida):    #0021A5 / #001B85
+        */
+
+        .games-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+
+        .game-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card.my-team {
+            border-left: 4px solid;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+        }
+
+        .game-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #ccc;
+        }
+
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            object-fit: contain;
+        }
+
+        .team-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .game-league {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .game-league.home {
+            background: #2E8B57;
+            color: white;
+        }
+
+        .game-league.away {
+            background: #B22222;
+            color: white;
+        }
+
+        .game-week {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .game-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .game-time {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .matchup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .team {
+            flex: 1;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .team-conference {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .vs {
+            margin: 0 20px;
+            font-size: 0.8rem;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .game-venue {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .game-network {
+            background: #f8f9fa;
+            color: #666;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .special-notes {
+            background: #fff3cd;
+            color: #856404;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            border-left: 3px solid #ffc107;
+        }
+
+        .neutral-site {
+            background: #e7f3ff;
+            color: #0c5aa6;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .no-games {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+            @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .controls {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .matchup {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .vs {
+                margin: 0;
+            }
+        }
+
+        @media print {
+            .controls {
+                display: none;
+            }
+            
+            .game-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .game-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+            
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kat's 2025 Football Schedules</h1>
+            <div class="subtitle">by Kevin Kolb</div>
+        </header>
+
+        <div class="controls">
+            <button class="filter-btn active my-teams" data-filter="my-teams">My Teams</button>
+            <button class="filter-btn" data-filter="today">Today</button>
+            <button class="filter-btn" data-filter="week">This Week</button>
+            <button class="filter-btn action-btn" id="print-btn">🖨️ Print</button>
+            <button class="filter-btn action-btn" id="install-btn">📱 Add to Home</button>
+        </div>
+
+        <div id="games-container">
+            <div class="loading">Loading games...</div>
+        </div>
+    </div>
+
+    <script>
+        let allGames = [];
+        let currentFilter = 'my-teams';
+
+        async function loadXMLFile(url) {
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const parser = new DOMParser();
+                return parser.parseFromString(text, 'text/xml');
+            } catch (error) {
+                console.error(`Error loading ${url}:`, error);
+                return null;
+            }
+        }
+
+        function parseGames(xmlDoc, type) {
+            const games = [];
+            const teams = xmlDoc.querySelectorAll('team');
+            
+            teams.forEach(team => {
+                const teamName = team.getAttribute('name');
+                const teamCode = team.getAttribute('code');
+                const gameElements = team.querySelectorAll('game');
+                
+                gameElements.forEach(game => {
+                    const startDate = game.getAttribute('startdate');
+                    if (!startDate) return;
+
+                    const gameData = {
+                        id: game.getAttribute('id') || game.getAttribute('seq'),
+                        type: type,
+                        startDate: new Date(startDate),
+                        week: game.getAttribute('week'),
+                        seasonType: game.getAttribute('seasontype'),
+                        homeTeam: game.getAttribute('hometeam'),
+                        awayTeam: game.getAttribute('awayteam'),
+                        homeConference: game.getAttribute('homeconference'),
+                        awayConference: game.getAttribute('awayconference'),
+                        venue: game.getAttribute('venue'),
+                        network: game.getAttribute('network'),
+                        neutralSite: game.getAttribute('neutralsite') === 'True',
+                        conferenceGame: game.getAttribute('conferencegame') === 'True',
+                        notes: game.getAttribute('notes'),
+                        completed: game.getAttribute('completed') === 'True',
+                        timeTBD: game.getAttribute('starttimetbd') === 'True'
+                    };
+                    
+                    games.push(gameData);
+                });
+            });
+            
+            return games;
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function formatTime(date, timeTBD) {
+            if (timeTBD) {
+                return 'Time TBD';
+            }
+            return date.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            });
+        }
+
+        // Your favorite teams with their official colors from NFL data
+        const myFavoriteTeams = {
+            'New Orleans Saints': { 
+                primary: '#101820', // Black (official primary)
+                secondary: '#D3BC8D', // Old Gold (official secondary) 
+                icon: '⚜️',
+                logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx',
+                header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/qk0qesy5im61qccr5vp0',
+                stadium: 'Caesars Superdome',
+                head_coach: 'Kellen Moore'
+            },
+            'Florida Gators': { 
+                primary: '#0021A5', 
+                secondary: '#FA4616', 
+                icon: '🐊' 
+            },
+            'Florida': { 
+                primary: '#0021A5', 
+                secondary: '#FA4616', 
+                icon: '🐊' 
+            },
+            'LSU Tigers': { 
+                primary: '#461D7C', 
+                secondary: '#FDD023', 
+                icon: '🐅' 
+            },
+            'LSU': { 
+                primary: '#461D7C', 
+                secondary: '#FDD023', 
+                icon: '🐅' 
+            },
+            'Tulane Green Wave': { 
+                primary: '#006747', 
+                secondary: '#7BAFD4', 
+                icon: '🌊' 
+            },
+            'Tulane': { 
+                primary: '#006747', 
+                secondary: '#7BAFD4', 
+                icon: '🌊' 
+            }
+        };
+
+        function getTeamColors(teamName) {
+            // Check if it's one of your favorite teams first
+            if (myFavoriteTeams[teamName]) {
+                return myFavoriteTeams[teamName];
+            }
+
+            // Otherwise use the official NFL team data from XML
+            const teamColors = {
+                // NFC West
+                'Arizona Cardinals': { 
+                    primary: '#97233F', secondary: '#000000', icon: '🐦',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/u9fltoslqdsyao8cpm0k',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/zglirxlttuukonnz1il0',
+                    stadium: 'State Farm Stadium', head_coach: 'Jonathan Gannon'
+                },
+                'Los Angeles Rams': { 
+                    primary: '#003594', secondary: '#FFA300', icon: '🐏',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ayvwcmluj2ohkdlbiegi',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/eo223qd5mlxrna3bbdiv',
+                    stadium: 'SoFi Stadium', head_coach: 'Sean McVay'
+                },
+                'San Francisco 49ers': { 
+                    primary: '#AA0000', secondary: '#B3995D', icon: '🏔️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/dxibuyxbk0b9ua5ih9hn',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/aedv7exzsect9be58i0h',
+                    stadium: 'Levi\'s® Stadium', head_coach: 'Kyle Shanahan'
+                },
+                'Seattle Seahawks': { 
+                    primary: '#002244', secondary: '#69BE28', icon: '🦅',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/gcytzwpjdzbpwnwxincg',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/yfmuzipdfeduwgu4kfta',
+                    stadium: 'Lumen Field', head_coach: 'Mike Macdonald'
+                },
+                
+                // NFC South
+                'Atlanta Falcons': { 
+                    primary: '#A71930', secondary: '#000000', icon: '🦅',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/d8m7hzpsbrl6pnqht8op',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/dgksdhs7zhmrioliyq9c',
+                    stadium: 'Mercedes-Benz Stadium', head_coach: 'Raheem Morris'
+                },
+                'Carolina Panthers': { 
+                    primary: '#0085CA', secondary: '#101820', icon: '🐾',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ervfzgrqdpnc7lh5gqwq',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/eyotndxveoeyibcbag5k',
+                    stadium: 'Bank of America Stadium', head_coach: 'Dave Canales'
+                },
+                'Tampa Bay Buccaneers': { 
+                    primary: '#D50A0A', secondary: '#000000', icon: '🏴‍☠️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/v8uqiualryypwqgvwcih',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/odiwi0h6uplawxy54sqc',
+                    stadium: 'Raymond James Stadium', head_coach: 'Todd Bowles'
+                },
+                
+                // NFC North
+                'Chicago Bears': { 
+                    primary: '#0B162A', secondary: '#C83803', icon: '🐻',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ijrplti0kmzsyoaikhv1',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/egkztdkxkhpio4a3unxg',
+                    stadium: 'Soldier Field', head_coach: 'Ben Johnson'
+                },
+                'Detroit Lions': { 
+                    primary: '#0076B6', secondary: '#B0B7BC', icon: '🦁',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ocvxwnapdvwevupe4tpr',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/dlyxxmgt52d7anojsknk',
+                    stadium: 'Ford Field', head_coach: 'Dan Campbell'
+                },
+                'Green Bay Packers': { 
+                    primary: '#203731', secondary: '#FFB612', icon: '🧀',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/gppfvr7n8gljgjaqux2x',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/nn9yhffph5ty4qj2gqwu',
+                    stadium: 'Lambeau Field', head_coach: 'Matt LaFleur'
+                },
+                'Minnesota Vikings': { 
+                    primary: '#4F2683', secondary: '#FFC62F', icon: '⚔️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/teguylrnqqmfcwxvcmmz',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/fnmak0n2pitv59qqmaen',
+                    stadium: 'U.S. Bank Stadium', head_coach: 'Kevin O\'Connell'
+                },
+                
+                // NFC East
+                'Dallas Cowboys': { 
+                    primary: '#003594', secondary: '#C0C0C0', icon: '⭐',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ieid8hoygzdlmzo0tnf6',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/q7qakjbkb5wt7q943epi',
+                    stadium: 'AT&T Stadium', head_coach: 'Brian Schottenheimer'
+                },
+                'New York Giants': { 
+                    primary: '#0B2265', secondary: '#A71930', icon: '🏛️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/t6mhdmgizi6qhndh8b9p',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/i94f24mjvgoc64hnqw3o',
+                    stadium: 'MetLife Stadium', head_coach: 'Brian Daboll'
+                },
+                'Philadelphia Eagles': { 
+                    primary: '#004C54', secondary: '#A5ACAF', icon: '🦅',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/puhrqgj71gobgdkdo6uq',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/p8xl6x8jfe3acs71jtit',
+                    stadium: 'Lincoln Financial Field', head_coach: 'Nick Sirianni'
+                },
+                'Washington Commanders': { 
+                    primary: '#5A1414', secondary: '#FFB612', icon: '🛡️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/xymxwrxtyj9fhaemhdyd',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/kajwfzxaiqkjvgxozpat',
+                    stadium: 'Northwest Stadium', head_coach: 'Dan Quinn'
+                },
+                
+                // AFC North
+                'Baltimore Ravens': { 
+                    primary: '#241773', secondary: '#000000', icon: '🐦‍⬛',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ucsdijmddsqcj1i9tddd',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/o2k317ev82s6pa26dos7',
+                    stadium: 'M&T Bank Stadium', head_coach: 'John Harbaugh'
+                },
+                'Cincinnati Bengals': { 
+                    primary: '#FB4F14', secondary: '#000000', icon: '🐅',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/okxpteoliyayufypqalq',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/maacoshfmktzddy1ob56',
+                    stadium: 'Paycor Stadium', head_coach: 'Zac Taylor'
+                },
+                'Cleveland Browns': { 
+                    primary: '#311D00', secondary: '#FF3C00', icon: '🐕',
+                    logo_url: 'https://static.www.nfl.com/image/upload/f_auto/league/bedyixmmjhszfcx5wv2l',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/skdxhpn1dmksuyrtwc7q',
+                    stadium: 'Huntington Bank Field', head_coach: 'Kevin Stefanski'
+                },
+                'Pittsburgh Steelers': { 
+                    primary: '#000000', secondary: '#FFB612', icon: '🔧',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/xujg9t3t4u5nmjgr54wx',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/s2ugk74phksrnbla46e7',
+                    stadium: 'Acrisure Stadium', head_coach: 'Mike Tomlin'
+                },
+                
+                // AFC East
+                'Buffalo Bills': { 
+                    primary: '#00338D', secondary: '#C60C30', icon: '🦬',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/giphcy6ie9mxbnldntsf',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/kujtrvt65vrfbzvlp9p7',
+                    stadium: 'Highmark Stadium', head_coach: 'Sean McDermott'
+                },
+                'Miami Dolphins': { 
+                    primary: '#008E97', secondary: '#FC4C02', icon: '🐬',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/lits6p8ycthy9to70bnt',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/xfxniandqn2wglltlxgm',
+                    stadium: 'Hard Rock Stadium', head_coach: 'Mike McDaniel'
+                },
+                'New England Patriots': { 
+                    primary: '#002244', secondary: '#C60C30', icon: '🇺🇸',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/moyfxx3dq5pio4aiftnc',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/slea5gcxabohzknqnexo',
+                    stadium: 'Gillette Stadium', head_coach: 'Mike Vrabel'
+                },
+                'New York Jets': { 
+                    primary: '#125740', secondary: '#000000', icon: '✈️',
+                    logo_url: 'https://static.www.nfl.com/image/upload/f_auto/league/vdqo4iiufmdrimkaxslj',
+                    header_background_url: 'https://static.www.nfl.com/image/upload/f_auto/league/exgaakjbdsxmk77dzsed',
+                    stadium: 'MetLife Stadium', head_coach: 'Aaron Glenn'
+                },
+                
+                // AFC West
+                'Denver Broncos': { 
+                    primary: '#FB4F14', secondary: '#002244', icon: '🐴',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/t0p7m5cjdjy18rnzzqbx',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/zclpmokppqisomcdnnsh',
+                    stadium: 'Empower Field at Mile High', head_coach: 'Sean Payton'
+                },
+                'Kansas City Chiefs': { 
+                    primary: '#E31837', secondary: '#FFB81C', icon: '🏹',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ujshjqvmnxce8m4obmvs',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/ginftk4rv6gflay6mwur',
+                    stadium: 'GEHA Field at Arrowhead Stadium', head_coach: 'Andy Reid'
+                },
+                'Las Vegas Raiders': { 
+                    primary: '#000000', secondary: '#A5ACAF', icon: '☠️',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/gzcojbzcyjgubgyb6xf2',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/rthdytrwns8g5aed2uou',
+                    stadium: 'Allegiant Stadium', head_coach: 'Pete Carroll'
+                },
+                'Los Angeles Chargers': { 
+                    primary: '#0080C6', secondary: '#FFC20E', icon: '⚡',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/dhfidtn8jrumakbogeu4',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/mkla4gj5w7882z6q0ywz',
+                    stadium: 'SoFi Stadium', head_coach: 'Jim Harbaugh'
+                },
+                
+                // AFC South
+                'Houston Texans': { 
+                    primary: '#03202F', secondary: '#A71930', icon: '🤠',
+                    logo_url: 'https://static.www.nfl.com/image/upload/f_auto/league/u6camnphqvjc6mku6u3c',
+                    header_background_url: 'https://static.www.nfl.com/image/upload/f_auto/league/j9yzmmknc8qsfhwr62o1',
+                    stadium: 'NRG Stadium', head_coach: 'DeMeco Ryans'
+                },
+                'Indianapolis Colts': { 
+                    primary: '#002C5F', secondary: '#A2AAAD', icon: '🐎',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/ketwqeuschqzjsllbid5',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/q1v6xhz44symvucjoxym',
+                    stadium: 'Lucas Oil Stadium', head_coach: 'Shane Steichen'
+                },
+                'Jacksonville Jaguars': { 
+                    primary: '#101820', secondary: '#D7A22A', icon: '🐆',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/qycbib6ivrm9dqaexryk',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/wok03vphgjx4knlyggx4',
+                    stadium: 'EverBank Stadium', head_coach: 'Liam Coen'
+                },
+                'Tennessee Titans': { 
+                    primary: '#0C2340', secondary: '#4B92DB', icon: '⚡',
+                    logo_url: 'https://static.www.nfl.com/image/private/f_auto/league/pln44vuzugjgipyidsre',
+                    header_background_url: 'https://static.www.nfl.com/image/private/f_auto/league/pctgb2f0u7z0oiwpaci3',
+                    stadium: 'Nissan Stadium', head_coach: 'Brian Callahan'
+                },
+
+                // College Teams (keeping existing)
+                'Alabama Crimson Tide': { primary: '#9E1B32', secondary: '#828A8F', icon: '🌊' },
+                'Alabama': { primary: '#9E1B32', secondary: '#828A8F', icon: '🌊' },
+                'Auburn Tigers': { primary: '#0C2340', secondary: '#F26522', icon: '🐅' },
+                'Auburn': { primary: '#0C2340', secondary: '#F26522', icon: '🐅' },
+                'Georgia Bulldogs': { primary: '#BA0C2F', secondary: '#000000', icon: '🐕' },
+                'Georgia': { primary: '#BA0C2F', secondary: '#000000', icon: '🐕' },
+                'Tennessee Volunteers': { primary: '#FF8200', secondary: '#FFFFFF', icon: '🍊' },
+                'Tennessee': { primary: '#FF8200', secondary: '#FFFFFF', icon: '🍊' },
+                'Texas A&M Aggies': { primary: '#500000', secondary: '#FFFFFF', icon: '🤠' },
+                'Texas A&M': { primary: '#500000', secondary: '#FFFFFF', icon: '🤠' },
+                'Ole Miss Rebels': { primary: '#CE1126', secondary: '#0F1B3C', icon: '⚔️' },
+                'Ole Miss': { primary: '#CE1126', secondary: '#0F1B3C', icon: '⚔️' },
+                'Mississippi State Bulldogs': { primary: '#5D1725', secondary: '#FFFFFF', icon: '🐕' },
+                'Mississippi State': { primary: '#5D1725', secondary: '#FFFFFF', icon: '🐕' },
+                'Kentucky Wildcats': { primary: '#0033A0', secondary: '#FFFFFF', icon: '🐱' },
+                'Kentucky': { primary: '#0033A0', secondary: '#FFFFFF', icon: '🐱' },
+                'South Carolina Gamecocks': { primary: '#73000A', secondary: '#000000', icon: '🐓' },
+                'South Carolina': { primary: '#73000A', secondary: '#000000', icon: '🐓' },
+                'Vanderbilt Commodores': { primary: '#866D4B', secondary: '#000000', icon: '⚓' },
+                'Vanderbilt': { primary: '#866D4B', secondary: '#000000', icon: '⚓' },
+                'Arkansas Razorbacks': { primary: '#9D2235', secondary: '#FFFFFF', icon: '🐗' },
+                'Arkansas': { primary: '#9D2235', secondary: '#FFFFFF', icon: '🐗' },
+                'Missouri Tigers': { primary: '#F1B82D', secondary: '#000000', icon: '🐅' },
+                'Missouri': { primary: '#F1B82D', secondary: '#000000', icon: '🐅' },
+                'Texas Longhorns': { primary: '#BF5700', secondary: '#FFFFFF', icon: '🤘' },
+                'Texas': { primary: '#BF5700', secondary: '#FFFFFF', icon: '🤘' },
+                'Oklahoma Sooners': { primary: '#841617', secondary: '#FDFDFD', icon: '🌪️' },
+                'Oklahoma': { primary: '#841617', secondary: '#FDFDFD', icon: '🌪️' },
+                'Notre Dame Fighting Irish': { primary: '#0C2340', secondary: '#C99700', icon: '🍀' },
+                'Notre Dame': { primary: '#0C2340', secondary: '#C99700', icon: '🍀' },
+                'Ohio State Buckeyes': { primary: '#BB0000', secondary: '#FFFFFF', icon: '🌰' },
+                'Ohio State': { primary: '#BB0000', secondary: '#FFFFFF', icon: '🌰' },
+                'Michigan Wolverines': { primary: '#00274C', secondary: '#FFCB05', icon: '🦡' },
+                'Penn State Nittany Lions': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Penn State': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Clemson Tigers': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Clemson': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Miami Hurricanes': { primary: '#F47321', secondary: '#046A38', icon: '🌀' },
+                'Miami': { primary: '#F47321', secondary: '#046A38', icon: '🌀' }
+            }; },
+                'Michigan': { primary: '#00274C', secondary: '#FFCB05', icon: '🦡' },
+                'Penn State Nittany Lions': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Penn State': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Clemson Tigers': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Clemson': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Miami Hurricanes': { primary: '#F47321', secondary: '#046A38', icon: '🌀' },
+                'Miami': { primary: '#F47321', secondary: '#046A38', icon: '🌀' }
+            }; },
+                'Penn State Nittany Lions': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Penn State': { primary: '#041E42', secondary: '#FFFFFF', icon: '🦁' },
+                'Clemson Tigers': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Clemson': { primary: '#F56600', secondary: '#522D80', icon: '🐅' },
+                'Miami Hurricanes': { primary: '#F47321', secondary: '#046A38', icon: '🌀' },
+                'Miami': { primary: '#F47321', secondary: '#046A38', icon: '🌀' }
+            };
+
+            return teamColors[teamName] || { primary: '#333333', secondary: '#FFFFFF', icon: '🏈' };
+        }
+
+        function createGameCard(game) {
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            card.setAttribute('data-type', game.type);
+            card.setAttribute('data-date', game.startDate.toISOString().split('T')[0]);
+
+            // Define your favorite teams using the stored colors
+            const myTeams = Object.keys(myFavoriteTeams);
+
+            // Determine if this is a home or away game for "my teams"
+            const isMyTeamHome = myTeams.includes(game.homeTeam);
+            const isMyTeamAway = myTeams.includes(game.awayTeam);
+            const isMyTeamGame = isMyTeamHome || isMyTeamAway;
+            const gameTypeLabel = isMyTeamHome ? 'HOME' : isMyTeamAway ? 'AWAY' : 'NEUTRAL';
+            const gameTypeClass = isMyTeamHome ? 'home' : isMyTeamAway ? 'away' : 'neutral';
+
+            // Get team colors for styling
+            const homeTeamColors = getTeamColors(game.homeTeam);
+            const awayTeamColors = getTeamColors(game.awayTeam);
+
+            // Apply my team styling
+            if (isMyTeamGame) {
+                card.classList.add('my-team');
+                const myTeamColors = isMyTeamHome ? homeTeamColors : awayTeamColors;
+                card.style.borderLeftColor = myTeamColors.primary;
+                card.style.background = `linear-gradient(135deg, 
+                    ${myTeamColors.secondary}15 0%, 
+                    ${myTeamColors.secondary}08 50%, 
+                    rgba(255,255,255,0.95) 100%)`;
+            }
+
+            let specialNotes = '';
+            if (game.notes && game.notes.trim()) {
+                let noteClass = 'special-notes';
+                if (game.neutralSite || game.notes.toLowerCase().includes('neutral')) {
+                    noteClass += ' neutral-site';
+                }
+                specialNotes = `<div class="${noteClass}">${game.notes}</div>`;
+            }
+
+            card.innerHTML = `
+                <div class="game-header">
+                    <span class="game-league ${gameTypeClass}">${gameTypeLabel}</span>
+                    <span class="game-week">Week ${game.week}</span>
+                </div>
+                
+                <div class="game-date">${formatDate(game.startDate)}</div>
+                <div class="game-time">${formatTime(game.startDate, game.timeTBD)}</div>
+                
+                <div class="matchup">
+                    <div class="team" style="color: ${awayTeamColors.primary};">
+                        <div class="team-name">
+                            ${awayTeamColors.logo_url ? 
+                                `<img src="${awayTeamColors.logo_url}" alt="${game.awayTeam}" class="team-logo">` : 
+                                `<span class="team-icon">${awayTeamColors.icon}</span>`
+                            }
+                            ${game.awayTeam}
+                        </div>
+                        <div class="team-conference">${game.awayConference || ''}</div>
+                    </div>
+                    <div class="vs">@</div>
+                    <div class="team" style="color: ${homeTeamColors.primary};">
+                        <div class="team-name">
+                            ${homeTeamColors.logo_url ? 
+                                `<img src="${homeTeamColors.logo_url}" alt="${game.homeTeam}" class="team-logo">` : 
+                                `<span class="team-icon">${homeTeamColors.icon}</span>`
+                            }
+                            ${game.homeTeam}
+                        </div>
+                        <div class="team-conference">${game.homeConference || ''}</div>
+                    </div>
+                </div>
+                
+                <div class="game-venue">${game.venue}</div>
+                
+                ${game.network ? `<div class="game-network">${game.network}</div>` : ''}
+                ${specialNotes}
+            `;
+
+            return card;
+        }
+
+        function filterGames(filter) {
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const weekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+            // Use your favorite teams from the stored colors
+            const myTeams = Object.keys(myFavoriteTeams);
+
+            return allGames.filter(game => {
+                const gameDate = new Date(game.startDate.getFullYear(), game.startDate.getMonth(), game.startDate.getDate());
+                
+                switch (filter) {
+                    case 'my-teams':
+                        return myTeams.includes(game.homeTeam) || myTeams.includes(game.awayTeam);
+                    case 'today':
+                        return gameDate.getTime() === today.getTime();
+                    case 'week':
+                        return gameDate >= today && gameDate <= weekFromNow;
+                    default:
+                        return true;
+                }
+            });
+        }
+
+        function displayGames(games) {
+            const container = document.getElementById('games-container');
+            
+            if (games.length === 0) {
+                container.innerHTML = '<div class="no-games">No games found for the selected filter.</div>';
+                return;
+            }
+
+            const grid = document.createElement('div');
+            grid.className = 'games-grid';
+            
+            games.forEach(game => {
+                const card = createGameCard(game);
+                grid.appendChild(card);
+            });
+            
+            container.innerHTML = '';
+            container.appendChild(grid);
+        }
+
+        function setupFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Apply filter
+                    currentFilter = button.getAttribute('data-filter');
+                    const filteredGames = filterGames(currentFilter);
+                    displayGames(filteredGames);
+                });
+            });
+
+            // Setup print button
+            const printBtn = document.getElementById('print-btn');
+            printBtn.addEventListener('click', () => {
+                window.print();
+            });
+
+            // Setup install button (PWA)
+            const installBtn = document.getElementById('install-btn');
+            let deferredPrompt;
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                installBtn.style.display = 'inline-block';
+            });
+
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        installBtn.style.display = 'none';
+                    }
+                    deferredPrompt = null;
+                }
+            });
+
+            window.addEventListener('appinstalled', () => {
+                installBtn.style.display = 'none';
+            });
+        }
+
+        async function loadAllGames() {
+            try {
+                // Load both XML files
+                const [nflXml, collegeXml] = await Promise.all([
+                    loadXMLFile('games/nflgames.xml'),
+                    loadXMLFile('games/collegegames.xml')
+                ]);
+
+                let games = [];
+
+                if (nflXml) {
+                    const nflGames = parseGames(nflXml, 'nfl');
+                    games = games.concat(nflGames);
+                }
+
+                if (collegeXml) {
+                    const collegeGames = parseGames(collegeXml, 'college');
+                    games = games.concat(collegeGames);
+                }
+
+                // Sort by date
+                games.sort((a, b) => a.startDate - b.startDate);
+                
+                allGames = games;
+                
+                // Display filtered games
+                const filteredGames = filterGames(currentFilter);
+                displayGames(filteredGames);
+                
+            } catch (error) {
+                console.error('Error loading games:', error);
+                document.getElementById('games-container').innerHTML = 
+                    '<div class="no-games">Error loading games. Please check that games/nflgames.xml and games/collegegames.xml files are available.</div>';
+            }
+        }
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', () => {
+            setupFilters();
+            loadAllGames();
+        });
+    </script>
+</body>
+</html>

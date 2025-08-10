@@ -1,286 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teams</title>
+  <title>Sports Teams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Swiss / International Typographic Style — mobile-first */
-    :root{
-      --bg:#ffffff;
-      --fg:#101010;
-      --muted:#666666;
-      --rule:#e6e6e6;
-      --ink:#000000;
-      --accent:#000000;
-      --maxw:980px;
-      --leading:1.5;
+    :root {
+      --ink: #0a0a0a; /* near-black */
+      --paper: #ffffff; /* white */
+      --ash: #e6e6e6;  /* light gray rules */
     }
-    *,*::before,*::after{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--fg);
-      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height:var(--leading);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    html, body { height: 100%; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--ink); background: var(--paper); }
+    /* Swiss grid rhythm */
+    .container-grid { max-width: 1200px; margin-inline: auto; padding-inline: 1rem; }
+    .hairline { border-top: 1px solid var(--ash); }
+    .card-hairline { border: 1px solid var(--ash); }
+    .label { letter-spacing: .06em; font-size: .75rem; text-transform: uppercase; color: #6b7280; }
+    .mono { font-feature-settings: "tnum" 1, "ss01" 1; }
+    .squircle { border-radius: 1.25rem; }
+    .swatch { width: 1.1rem; height: 1.1rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,.1); }
+    .grid-auto { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+      gap: 16px; 
     }
-    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 16px; }
-
-    header{
-      padding:56px 0 28px;
-      border-bottom:1px solid var(--rule);
+    .col-span-full { 
+      grid-column: 1 / -1; 
     }
-    .title{
-      font-size:clamp(36px, 7vw, 60px);
-      font-weight:900;
-      letter-spacing:-.02em;
-      text-transform:uppercase;
-      margin:0;
-    }
-    .tagline{
-      color:var(--muted);
-      margin-top:8px;
-      font-size:14px;
-      text-transform:lowercase;
-    }
-
-    /* Section labels */
-    .section-label{
-      position:sticky;
-      top:0;
-      z-index:2;
-      background:linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
-      backdrop-filter:saturate(180%) blur(6px);
-      -webkit-backdrop-filter:saturate(180%) blur(6px);
-      padding:14px 0 10px;
-      border-bottom:1px solid var(--rule);
-    }
-    .league-name{
-      font-size:18px;
-      font-weight:800;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-    }
-    .league-meta{
-      color:var(--muted);
-      font-size:12px;
-      margin-top:2px;
-    }
-
-    .conf-badge{
-      display:inline-block;
-      margin:18px 0 12px;
-      padding:6px 10px;
-      background:var(--ink);
-      color:#fff;
-      border-radius:4px;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    /* Horizontal full-width team cards */
-    .card{
-      width:100%;
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:14px 4px;
-      border-bottom:1px solid var(--rule);
-    }
-    .card:last-child{ border-bottom:none; }
-
-    .logo{
-      width:34px;
-      height:34px;
-      flex:0 0 34px;
-      border:1px solid var(--rule);
-      border-radius:6px;
-      background:#fff;
-      object-fit:contain;
-      display:block;
-    }
-    .logo.hidden{ display:none; }
-
-    .card-body{
-      display:flex;
-      align-items:baseline;
-      gap:10px;
-      width:100%;
-      min-width:0;
-    }
-
-    .name{
-      font-size:16px;
-      font-weight:700;
-      letter-spacing:.01em;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .right{
-      margin-left:auto;
-      font-size:11px;
-      color:var(--muted);
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      white-space:nowrap;
-    }
-
-    /* Hover affordance on larger screens */
-    @media (hover:hover){
-      .card{ transition:background .15s ease; }
-      .card:hover{ background:#fafafa; }
-    }
-
-    footer{
-      border-top:1px solid var(--rule);
-      color:var(--muted);
-      font-size:12px;
-      padding:24px 0 40px;
-      text-align:center;
-      margin-top:28px;
+    .focus-ring:focus { outline: 2px solid #111827; outline-offset: 2px; }
+    .kbd { border:1px solid var(--ash); border-bottom-width:2px; padding:0 .35rem; border-radius:.375rem; font-size:.75rem; }
+    .link { text-decoration-thickness: .09em; text-underline-offset: 2px; }
+    .league-logo { 
+      width: 40px; 
+      height: 40px; 
+      object-fit: contain; 
+      filter: grayscale(20%) opacity(90%);
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <h1 class="title">Teams</h1>
-      <div class="tagline">by Kevin Kolb</div>
+  <!-- Header -->
+  <header class="container-grid pt-8 pb-6">
+    <div>
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Sports Teams</h1>
+      <p class="text-sm md:text-base text-gray-600 mt-1">Data live from <code class="kbd">teams.xml</code> · <a href="teams.xml" download class="link underline font-bold">Download</a></p>
     </div>
   </header>
 
-  <main class="wrap" id="app" aria-live="polite">
-    <p style="padding:20px 0;">Loading…</p>
+  <div class="hairline"></div>
+
+  <!-- Controls -->
+  <section class="container-grid py-4">
+    <div class="flex flex-col md:flex-row gap-3 md:items-end md:justify-between">
+      <div class="flex gap-3 items-end w-full md:w-auto">
+        <div class="flex-1 md:flex-none">
+          <label class="label" for="q">Search</label>
+          <input id="q" type="search" placeholder="Team, city, coach…" class="focus-ring w-full md:w-80 rounded-lg border border-gray-300 px-3 py-2" />
+        </div>
+        <div>
+          <label class="label" for="league">League</label>
+          <select id="league" class="focus-ring rounded-lg border border-gray-300 px-3 py-2 min-w-40">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div>
+          <label class="label" for="conf">Conference</label>
+          <select id="conf" class="focus-ring rounded-lg border border-gray-300 px-3 py-2 min-w-40">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div>
+          <label class="label" for="div">Division</label>
+          <select id="div" class="focus-ring rounded-lg border border-gray-300 px-3 py-2 min-w-40">
+            <option value="">All</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="sort" class="focus-ring rounded-lg border card-hairline px-2 py-1.5 font-medium h-10 text-sm whitespace-nowrap">Sort A→Z</button>
+        <button id="reset" class="focus-ring rounded-lg border card-hairline px-2 py-1.5 h-10 text-sm whitespace-nowrap">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main class="container-grid pb-20">
+    <div id="grid" class="grid-auto"></div>
+    <div id="empty" class="hidden text-center text-gray-500 py-10">No teams match your filters.</div>
   </main>
 
-  <footer>
-    <div class="wrap"><span id="meta"></span></div>
+  <footer class="hairline">
+    <div class="container-grid py-6 text-xs text-gray-500 flex flex-wrap items-center justify-between gap-2">
+      <span>by Kevin Kolb</span>
+      <span class="mono" id="meta"></span>
+    </div>
   </footer>
 
+  <template id="card-tpl">
+    <article class="team-card card-hairline rounded-2xl p-5 bg-white flex flex-col gap-4">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <a class="logo-link" target="_blank" rel="noopener" href="#">
+            <img class="logo" alt="Team logo" />
+          </a>
+          <div>
+            <h2 class="text-xl font-semibold leading-tight team-name"></h2>
+            <div class="text-sm text-gray-600 mt-0.5 loc mono"></div>
+          </div>
+        </div>
+        <div class="flex gap-1.5 colors"></div>
+      </div>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-2 md:grid-cols-3">
+        <div>
+          <div class="label">Conference</div>
+          <div class="font-medium conf"></div>
+        </div>
+        <div>
+          <div class="label">Division</div>
+          <div class="font-medium div"></div>
+        </div>
+        <div>
+          <div class="label">Founded</div>
+          <div class="mono founded"></div>
+        </div>
+        <div>
+          <div class="label">Head Coach</div>
+          <div class="coach"></div>
+        </div>
+        <div>
+          <div class="label">Owner</div>
+          <div class="owner"></div>
+        </div>
+        <div>
+          <div class="label">Stadium</div>
+          <div class="stadium"></div>
+        </div>
+      </div>
+      <div class="hairline"></div>
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="text-xs text-gray-500 mono slug"></span>
+      </div>
+    </article>
+  </template>
+
   <script>
-    function text(el, sel){
-      const n = el.querySelector(sel);
-      return n ? (n.textContent || '').trim() : '';
+    // Utility helpers
+    const qs = (sel, el=document) => el.querySelector(sel);
+    const qsa = (sel, el=document) => [...el.querySelectorAll(sel)];
+
+    function text(el, tag) {
+      const n = el?.getElementsByTagName(tag)?.[0];
+      return (n?.textContent || '').trim();
     }
 
-    async function loadXML(){
-      const res = await fetch('teams.xml', { cache:'no-store' });
-      const raw = await res.text();
-      return new DOMParser().parseFromString(raw, 'text/xml');
+    function find(el, path) {
+      // simple path: a>b>c returns first match at each level
+      return path.split('>').reduce((acc, t) => acc?.getElementsByTagName(t)?.[0] || null, el);
     }
 
-    function groupData(dom){
-      const teams = [...dom.querySelectorAll('team')].map(t => ({
-        league: text(t, 'league'),
-        conference: text(t, 'conference') || '—',
-        conference_short: text(t, 'conference_short'),
-        subdivision: text(t, 'subdivision'),
-        name: text(t, 'name'),
-        logo: text(t, 'visual_identity > logo_url') || text(t, 'logo_url')
-      })).filter(t => t.league && t.name);
-
-      // by league -> conference
-      const byLeague = new Map();
-      for(const team of teams){
-        if(!byLeague.has(team.league)) byLeague.set(team.league, new Map());
-        const m = byLeague.get(team.league);
-        const key = team.conference || '—';
-        if(!m.has(key)) m.set(key, []);
-        m.get(key).push(team);
+    function colorsFrom(el) {
+      const out = [];
+      const primary = find(el, 'colors>primaryColor');
+      if (primary) {
+        out.push({ name: primary.getAttribute('name') || 'Primary', hex: primary.getAttribute('hex') || '#000000' });
       }
-      return byLeague;
+      const secondaryWrap = find(el, 'colors>secondaryColors');
+      if (secondaryWrap) {
+        qsa('color', secondaryWrap).forEach(c => {
+          out.push({ name: c.getAttribute('name') || 'Secondary', hex: c.getAttribute('hex') || '#666666' });
+        });
+      }
+      return out;
     }
 
-    function render(byLeague){
-      const app = document.getElementById('app');
-      app.innerHTML = '';
+    function logosFrom(el) {
+      const logos = find(el, 'logos');
+      const url = logos?.getElementsByTagName('logo')?.[0]?.getAttribute('url') || '';
+      const alt = logos?.getElementsByTagName('alternateLogo')?.[0]?.getAttribute('url') || '';
+      return { url, alt };
+    }
 
-      const leagues = [...byLeague.keys()].sort((a,b)=>a.localeCompare(b));
-      for(const lg of leagues){
-        const confMap = byLeague.get(lg);
+    function uniqueSorted(arr) { return [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b)); }
 
-        // League label (sticky)
-        const sec = document.createElement('section');
-        const label = document.createElement('div');
-        label.className = 'section-label';
-        const ln = document.createElement('div');
-        ln.className = 'league-name';
-        ln.textContent = lg;
-        const meta = document.createElement('div');
-        meta.className = 'league-meta';
-        let count = 0; confMap.forEach(v => count += v.length);
-        meta.textContent = count + ' teams';
-        label.appendChild(ln);
-        label.appendChild(meta);
-        sec.appendChild(label);
+    const state = { teams: [], filtered: [], sortAZ: true, leagues: new Map() };
 
-        // Conferences
-        const confs = [...confMap.keys()].sort((a,b)=>a.localeCompare(b));
-        for(const cf of confs){
-          const badge = document.createElement('div');
-          badge.className = 'conf-badge';
-          badge.textContent = cf;
-          sec.appendChild(badge);
+    function teamObj(el) {
+      const teamData = {
+        name: text(el, 'name'),
+        slug: text(el, 'slug'),
+        founded: text(el, 'founded'),
+        league: text(el, 'league'),
+        leagueAbbreviation: text(el, 'leagueAbbreviation') || text(el, 'leagueabbr') || text(el, 'league_abbr'),
+        conference: text(el, 'conference'),
+        division: text(el, 'division'),
+        location: text(el, 'location'),
+        coach: text(el, 'headCoach') || text(el, 'headcoach'),
+        owner: text(el, 'owner'),
+        stadium: text(el, 'stadium'),
+        website: text(el, 'website'),
+        colors: colorsFrom(el),
+        logos: logosFrom(el)
+      };
+      console.log('Processing team:', teamData.name, 'League:', teamData.league);
+      return teamData;
+    }
 
-          const list = confMap.get(cf).slice().sort((a,b)=>a.name.localeCompare(b.name));
-          for(const t of list){
-            const card = document.createElement('div');
-            card.className = 'card';
+    function render() {
+      const grid = qs('#grid');
+      grid.innerHTML = '';
+      const list = state.filtered.length ? state.filtered : state.teams;
+      qs('#empty').classList.toggle('hidden', list.length !== 0);
 
-            const img = document.createElement('img');
-            img.className = 'logo';
-            if(t.logo){
-              img.src = t.logo;
-              img.alt = '';
-              img.loading = 'lazy';
-              img.onerror = () => { img.classList.add('hidden'); };
-            } else {
-              img.classList.add('hidden');
-            }
-            card.appendChild(img);
-
-            const body = document.createElement('div');
-            body.className = 'card-body';
-
-            const name = document.createElement('div');
-            name.className = 'name';
-            name.textContent = t.name;
-            body.appendChild(name);
-
-            const right = document.createElement('div');
-            right.className = 'right';
-            right.textContent = [t.conference_short || '', t.subdivision || '']
-              .filter(Boolean).join(' • ');
-            body.appendChild(right);
-
-            card.appendChild(body);
-            sec.appendChild(card);
-          }
+      // Group teams by league abbreviation - prioritize NFL first
+      const leagueGroups = {};
+      list.forEach(team => {
+        const league = team.leagueAbbreviation || 'Unknown';
+        if (!leagueGroups[league]) {
+          leagueGroups[league] = [];
         }
+        leagueGroups[league].push(team);
+      });
 
-        app.appendChild(sec);
-      }
+      // Sort leagues with NFL first
+      const sortedLeagues = Object.keys(leagueGroups).sort((a, b) => {
+        if (a === 'NFL') return -1;
+        if (b === 'NFL') return 1;
+        return a.localeCompare(b);
+      });
+
+      // Render each league with header
+      sortedLeagues.forEach((leagueName, index) => {
+        const leagueInfo = state.leagues.get(leagueName);
+        
+        // Create league header
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'col-span-full mb-6';
+        
+        // Add top margin only if not the first league
+        if (index > 0) {
+          headerDiv.style.marginTop = '3rem';
+        }
+        
+        headerDiv.innerHTML = `
+          <div class="flex items-center gap-4 mb-4">
+            ${leagueInfo?.logoUrl ? `<img src="${leagueInfo.logoUrl}" alt="${leagueName} logo" class="league-logo" />` : ''}
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">${leagueName}</h2>
+          </div>
+          <div class="hairline"></div>
+        `;
+        grid.appendChild(headerDiv);
+
+        // Render teams in this league
+        leagueGroups[leagueName].forEach(t => {
+          const tpl = qs('#card-tpl').content.cloneNode(true);
+          const card = qs('article', tpl);
+          
+          // Keep card background simple and clean
+          card.style.backgroundColor = 'white';
+          
+          // Style the logo container (link) to be exactly 125x125 SQUARE
+          const logoLink = qs('.logo-link', tpl);
+          logoLink.href = t.website || '#';
+          logoLink.style.display = 'flex';
+          logoLink.style.alignItems = 'center';
+          logoLink.style.justifyContent = 'center';
+          logoLink.style.width = '125px';
+          logoLink.style.height = '125px';
+          logoLink.style.borderRadius = '8px';
+          logoLink.style.flexShrink = '0';
+          
+          // Set background color on the container to make it a solid square
+          if (t.colors.length > 0) {
+            const primaryColor = t.colors[0].hex;
+            logoLink.style.backgroundColor = primaryColor;
+          }
+          
+          // Set logo image styles - center in the square container
+          const logoImg = qs('img.logo', tpl);
+          logoImg.src = t.logos.url || t.logos.alt || '';
+          logoImg.style.maxWidth = '80px';
+          logoImg.style.maxHeight = '80px';
+          logoImg.style.objectFit = 'contain';
+          logoImg.style.display = 'block';
+          
+          qs('.team-name', tpl).textContent = t.name;
+          qs('.loc', tpl).textContent = t.location || '';
+          qs('.conf', tpl).textContent = t.conference || t.leagueAbbreviation || '';
+          qs('.div', tpl).textContent = t.division || '—';
+          qs('.founded', tpl).textContent = t.founded || '—';
+          qs('.coach', tpl).textContent = t.coach || '—';
+          qs('.owner', tpl).textContent = t.owner || '—';
+          qs('.stadium', tpl).textContent = t.stadium || '—';
+          qs('.slug', tpl).textContent = t.slug ? `/${t.slug}` : '';
+          
+          const colorsWrap = qs('.colors', tpl);
+          t.colors.slice(0,4).forEach(c => {
+            const sw = document.createElement('div');
+            sw.className = 'swatch';
+            sw.title = `${c.name} ${c.hex}`;
+            sw.style.background = c.hex;
+            colorsWrap.appendChild(sw);
+          });
+          
+          grid.appendChild(tpl);
+        });
+      });
+
+      qs('#meta').textContent = `${list.length} team${list.length === 1 ? '' : 's'} shown`;
     }
 
-    async function init(){
-      try{
-        const dom = await loadXML();
-        const grouped = groupData(dom);
-        render(grouped);
-        const generatedAt = dom.querySelector('meta > generated_at')?.textContent || '';
-        if(generatedAt) document.getElementById('meta').textContent = 'Data generated at ' + generatedAt;
-      }catch(err){
-        console.error(err);
-        document.getElementById('app').innerHTML = '<p style="padding:20px 0;">Failed to load teams.xml</p>';
+    function applyFilters() {
+      const q = qs('#q').value.toLowerCase().trim();
+      const league = qs('#league').value;
+      const conf = qs('#conf').value;
+      const div = qs('#div').value;
+      let arr = [...state.teams];
+      if (q) {
+        arr = arr.filter(t => [t.name, t.location, t.coach, t.owner, t.stadium, t.slug].some(v => (v||'').toLowerCase().includes(q)));
       }
+      if (league) arr = arr.filter(t => t.leagueAbbreviation === league);
+      if (conf) arr = arr.filter(t => t.conference === conf);
+      if (div) arr = arr.filter(t => t.division === div);
+      arr.sort((a,b) => state.sortAZ ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
+      state.filtered = arr;
+      render();
     }
 
-    init();
+    function populateFilters() {
+      // Get unique league abbreviations only
+      const leagues = uniqueSorted(state.teams.map(t => t.leagueAbbreviation).filter(Boolean));
+      
+      const leagueSel = qs('#league');
+      const confSel = qs('#conf'); 
+      const divSel = qs('#div');
+      
+      // Clear existing options except "All"
+      leagueSel.innerHTML = '<option value="">All</option>';
+      
+      leagues.forEach(v => { 
+        const o = document.createElement('option'); 
+        o.value = v; 
+        o.textContent = v; 
+        leagueSel.appendChild(o); 
+      });
+      
+      updateConferenceFilter();
+    }
+
+    function updateConferenceFilter() {
+      const selectedLeague = qs('#league').value;
+      const confSel = qs('#conf');
+      
+      // Clear existing options
+      confSel.innerHTML = '<option value="">All</option>';
+      
+      // Get conferences for selected league
+      let filteredTeams = state.teams;
+      if (selectedLeague) {
+        filteredTeams = state.teams.filter(t => t.leagueAbbreviation === selectedLeague);
+      }
+      
+      const confs = uniqueSorted(filteredTeams.map(t => t.conference).filter(Boolean));
+      confs.forEach(v => { 
+        const o = document.createElement('option'); 
+        o.value = v; 
+        o.textContent = v; 
+        confSel.appendChild(o); 
+      });
+      
+      updateDivisionFilter();
+    }
+
+    function updateDivisionFilter() {
+      const selectedLeague = qs('#league').value;
+      const selectedConf = qs('#conf').value;
+      const divSel = qs('#div');
+      
+      // Clear existing options
+      divSel.innerHTML = '<option value="">All</option>';
+      
+      // Get divisions for selected league and conference
+      let filteredTeams = state.teams;
+      if (selectedLeague) {
+        filteredTeams = filteredTeams.filter(t => t.leagueAbbreviation === selectedLeague);
+      }
+      if (selectedConf) {
+        filteredTeams = filteredTeams.filter(t => t.conference === selectedConf);
+      }
+      
+      const divs = uniqueSorted(filteredTeams.map(t => t.division).filter(Boolean));
+      divs.forEach(v => { 
+        const o = document.createElement('option'); 
+        o.value = v; 
+        o.textContent = v; 
+        divSel.appendChild(o); 
+      });
+    }
+
+    async function loadXML(src) {
+      try {
+        const res = await fetch(src, { credentials: 'omit' });
+        if (!res.ok) throw new Error(`Fetch failed ${res.status}`);
+        const xmlText = await res.text();
+        console.log('XML loaded, length:', xmlText.length);
+        
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, 'application/xml');
+        console.log('XML parsed, root element:', xml.documentElement.tagName);
+        
+        // Check for XML parsing errors
+        const parserError = xml.querySelector('parsererror');
+        if (parserError) {
+          throw new Error('XML parsing error: ' + parserError.textContent);
+        }
+        
+        // Extract league information
+        const leagueElements = qsa('league', xml);
+        console.log('Found leagues:', leagueElements.length);
+        
+        leagueElements.forEach(leagueEl => {
+          const name = leagueEl.getAttribute('name');
+          const abbreviation = leagueEl.getAttribute('abbreviation');
+          const brandingEl = leagueEl.querySelector('branding');
+          const logoUrl = brandingEl ? brandingEl.querySelector('logo_url')?.textContent?.trim() : '';
+          
+          console.log('Processing league:', name, 'Logo:', logoUrl);
+          
+          if (name) {
+            state.leagues.set(name, { 
+              name, 
+              abbreviation, 
+              logoUrl: logoUrl || null 
+            });
+          }
+          if (abbreviation && abbreviation !== name) {
+            state.leagues.set(abbreviation, { 
+              name, 
+              abbreviation, 
+              logoUrl: logoUrl || null 
+            });
+          }
+        });
+        
+        // Extract all team elements from anywhere in the document
+        const teamElements = qsa('team', xml);
+        console.log('Total team elements found:', teamElements.length);
+        
+        if (teamElements.length === 0) {
+          throw new Error('No team elements found in XML');
+        }
+        
+        const teams = teamElements.map(teamObj).filter(t => t.name);
+        console.log('Processed teams:', teams.length);
+        
+        if (teams.length > 0) {
+          console.log('Sample team:', teams[0]);
+        }
+        
+        state.teams = teams;
+      } catch (error) {
+        console.error('Failed to load teams.xml:', error);
+        qs('#grid').innerHTML = `<div class="text-red-600 p-4">Failed to load: teams.xml<br><span class='text-sm text-gray-600'>${error.message}</span></div>`;
+        state.teams = [];
+      }
+      state.filtered = [];
+      populateFilters();
+      applyFilters();
+    }
+
+    function initFromQuery() {
+      loadXML('teams.xml');
+    }
+
+    // Events
+    addEventListener('DOMContentLoaded', () => {
+      initFromQuery();
+      qs('#q').addEventListener('input', applyFilters);
+      qs('#league').addEventListener('change', () => {
+        updateConferenceFilter();
+        applyFilters();
+      });
+      qs('#conf').addEventListener('change', () => {
+        updateDivisionFilter();
+        applyFilters();
+      });
+      qs('#div').addEventListener('change', applyFilters);
+      qs('#sort').addEventListener('click', (e) => {
+        e.preventDefault();
+        state.sortAZ = !state.sortAZ;
+        qs('#sort').textContent = state.sortAZ ? 'Sort A→Z' : 'Sort Z→A';
+        applyFilters();
+      });
+      qs('#reset').addEventListener('click', (e) => {
+        e.preventDefault();
+        qs('#q').value = '';
+        qs('#league').value = '';
+        qs('#conf').value = '';
+        qs('#div').value = '';
+        state.sortAZ = true;
+        qs('#sort').textContent = 'Sort A→Z';
+        updateConferenceFilter();
+        applyFilters();
+      });
+    });
   </script>
 </body>
 </html>

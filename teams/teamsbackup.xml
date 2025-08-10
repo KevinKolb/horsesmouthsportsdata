@@ -1,0 +1,1218 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sports_teams last_updated="2025-08-09T23:12:56.148578" total_teams="32" total_leagues="1">
+  <league name="National Football League" abbreviation="NFL" country="USA" sport="American Football">
+    <branding>
+      <logo_url>https://static.www.nfl.com/image/upload/v1554321393/league/nvfr7ogywskqrfaiu38m.svg</logo_url>
+    </branding>
+    <conferences>
+      <conference name="AFC Conference" abbreviation="AFC">
+        <divisions>
+          <division name="East">
+            <team id="nfl_buffalo-bills">
+              <basic_info>
+                <name>Buffalo Bills</name>
+                <slug>buffalo-bills</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Orchard Park, NY (Buffalo metro)</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Royal Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/giphcy6ie9mxbnldntsf</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/kujtrvt65vrfbzvlp9p7</header_background_url>
+                <hex_colors>
+                  <primary_hex>#00338D</primary_hex>
+                  <secondary_hex>#C60C30</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean McDermott</head_coach>
+                <owners>Terry &amp; Kim Pegula</owners>
+              </organization>
+              <venue>
+                <stadium>Highmark Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/buffalo-bills/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_miami-dolphins">
+              <basic_info>
+                <name>Miami Dolphins</name>
+                <slug>miami-dolphins</slug>
+                <established>1966</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Miami Gardens, FL</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Aqua</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/lits6p8ycthy9to70bnt</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/xfxniandqn2wglltlxgm</header_background_url>
+                <hex_colors>
+                  <primary_hex>#008E97</primary_hex>
+                  <secondary_hex>#FC4C02</secondary_hex>
+                  <tertiary_hex>#005778</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike McDaniel</head_coach>
+                <owners>Stephen M. Ross</owners>
+              </organization>
+              <venue>
+                <stadium>Hard Rock Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/miami-dolphins/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-england-patriots">
+              <basic_info>
+                <name>New England Patriots</name>
+                <slug>new-england-patriots</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Foxborough, MA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Nautical Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/moyfxx3dq5pio4aiftnc</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/slea5gcxabohzknqnexo</header_background_url>
+                <hex_colors>
+                  <primary_hex>#002244</primary_hex>
+                  <secondary_hex>#C60C30</secondary_hex>
+                  <tertiary_hex>#B0B7BC</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Vrabel</head_coach>
+                <owners>Robert Kraft</owners>
+              </organization>
+              <venue>
+                <stadium>Gillette Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-england-patriots/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-york-jets">
+              <basic_info>
+                <name>New York Jets</name>
+                <slug>new-york-jets</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>East Rutherford, NJ</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Gotham Green</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/vdqo4iiufmdrimkaxslj</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/upload/f_auto/league/exgaakjbdsxmk77dzsed</header_background_url>
+                <hex_colors>
+                  <primary_hex>#125740</primary_hex>
+                  <secondary_hex>#000000</secondary_hex>
+                  <tertiary_hex>#FFFFFF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Aaron Glenn</head_coach>
+                <owners>Woody Johnson</owners>
+              </organization>
+              <venue>
+                <stadium>MetLife Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-york-jets/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="North">
+            <team id="nfl_baltimore-ravens">
+              <basic_info>
+                <name>Baltimore Ravens</name>
+                <slug>baltimore-ravens</slug>
+                <established>1996</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Baltimore, MD</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Purple</primary_color>
+                <secondary_color>Metallic Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ucsdijmddsqcj1i9tddd</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/o2k317ev82s6pa26dos7</header_background_url>
+                <hex_colors>
+                  <primary_hex>#241773</primary_hex>
+                  <secondary_hex>#9E7C0C</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>John Harbaugh</head_coach>
+                <owners>Steve Bisciotti</owners>
+              </organization>
+              <venue>
+                <stadium>M&amp;T Bank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/baltimore-ravens/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_cincinnati-bengals">
+              <basic_info>
+                <name>Cincinnati Bengals</name>
+                <slug>cincinnati-bengals</slug>
+                <established>1968</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Cincinnati, OH</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Orange</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/okxpteoliyayufypqalq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/maacoshfmktzddy1ob56</header_background_url>
+                <hex_colors>
+                  <primary_hex>#FB4F14</primary_hex>
+                  <secondary_hex>#000000</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Zac Taylor</head_coach>
+                <owners>Mike Brown</owners>
+              </organization>
+              <venue>
+                <stadium>Paycor Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/cincinnati-bengals/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_cleveland-browns">
+              <basic_info>
+                <name>Cleveland Browns</name>
+                <slug>cleveland-browns</slug>
+                <established>1946</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Cleveland, OH</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Brown</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/bedyixmmjhszfcx5wv2l</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/skdxhpn1dmksuyrtwc7q</header_background_url>
+                <hex_colors>
+                  <primary_hex>#311D00</primary_hex>
+                  <secondary_hex>#FF3C00</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Kevin Stefanski</head_coach>
+                <owners>Haslam Sports Group</owners>
+              </organization>
+              <venue>
+                <stadium>Cleveland Browns Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/cleveland-browns/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_pittsburgh-steelers">
+              <basic_info>
+                <name>Pittsburgh Steelers</name>
+                <slug>pittsburgh-steelers</slug>
+                <established>1933</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Pittsburgh, PA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Gold</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/xujg9t3t4u5nmjgr54wx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/s2ugk74phksrnbla46e7</header_background_url>
+                <hex_colors>
+                  <primary_hex>#FFB612</primary_hex>
+                  <secondary_hex>#101820</secondary_hex>
+                  <tertiary_hex>#003087</tertiary_hex>
+                  <quaternary_hex>#C60C30</quaternary_hex>
+                  <quinary_hex>#A5ACAF</quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Tomlin</head_coach>
+                <owners>Rooney family</owners>
+              </organization>
+              <venue>
+                <stadium>Acrisure Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/pittsburgh-steelers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="South">
+            <team id="nfl_houston-texans">
+              <basic_info>
+                <name>Houston Texans</name>
+                <slug>houston-texans</slug>
+                <established>2002</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Houston, TX</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Deep Steel Blue</primary_color>
+                <secondary_color>Battle Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/upload/f_auto/league/u6camnphqvjc6mku6u3c</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/upload/f_auto/league/j9yzmmknc8qsfhwr62o1</header_background_url>
+                <hex_colors>
+                  <primary_hex>#03202F</primary_hex>
+                  <secondary_hex>#A71930</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>DeMeco Ryans</head_coach>
+                <owners>Janice S. McNair</owners>
+              </organization>
+              <venue>
+                <stadium>NRG Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/houston-texans/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_indianapolis-colts">
+              <basic_info>
+                <name>Indianapolis Colts</name>
+                <slug>indianapolis-colts</slug>
+                <established>1953</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Indianapolis, IN</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Speed Blue</primary_color>
+                <secondary_color>Gray</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ketwqeuschqzjsllbid5</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/q1v6xhz44symvucjoxym</header_background_url>
+                <hex_colors>
+                  <primary_hex>#002C5F</primary_hex>
+                  <secondary_hex>#A2AAAD</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Shane Steichen</head_coach>
+                <owners>Irsay family</owners>
+              </organization>
+              <venue>
+                <stadium>Lucas Oil Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/indianapolis-colts/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_jacksonville-jaguars">
+              <basic_info>
+                <name>Jacksonville Jaguars</name>
+                <slug>jacksonville-jaguars</slug>
+                <established>1995</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Jacksonville, FL</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/qycbib6ivrm9dqaexryk</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/wok03vphgjx4knlyggx4</header_background_url>
+                <hex_colors>
+                  <primary_hex>#101820</primary_hex>
+                  <secondary_hex>#D7A22A</secondary_hex>
+                  <tertiary_hex>#9F792C</tertiary_hex>
+                  <quaternary_hex>#006778</quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Liam Coen</head_coach>
+                <owners>Shad Khan</owners>
+              </organization>
+              <venue>
+                <stadium>EverBank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/jacksonville-jaguars/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_tennessee-titans">
+              <basic_info>
+                <name>Tennessee Titans</name>
+                <slug>tennessee-titans</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Nashville, TN</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Navy</primary_color>
+                <secondary_color>Titans Blue</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/pln44vuzugjgipyidsre</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/pctgb2f0u7z0oiwpaci3</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0C2340</primary_hex>
+                  <secondary_hex>#4B92DB</secondary_hex>
+                  <tertiary_hex>#C8102E</tertiary_hex>
+                  <quaternary_hex>#8A8D8F</quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Callahan</head_coach>
+                <owners>Amy Adams Strunk</owners>
+              </organization>
+              <venue>
+                <stadium>Nissan Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/tennessee-titans/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="West">
+            <team id="nfl_denver-broncos">
+              <basic_info>
+                <name>Denver Broncos</name>
+                <slug>denver-broncos</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Denver, CO</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Broncos Orange</primary_color>
+                <secondary_color>Navy</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/t0p7m5cjdjy18rnzzqbx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/zclpmokppqisomcdnnsh</header_background_url>
+                <hex_colors>
+                  <primary_hex>#FB4F14</primary_hex>
+                  <secondary_hex>#002244</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean Payton</head_coach>
+                <owners>Walton-Penner family</owners>
+              </organization>
+              <venue>
+                <stadium>Empower Field at Mile High</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/denver-broncos/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_kansas-city-chiefs">
+              <basic_info>
+                <name>Kansas City Chiefs</name>
+                <slug>kansas-city-chiefs</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Kansas City, MO</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ujshjqvmnxce8m4obmvs</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/ginftk4rv6gflay6mwur</header_background_url>
+                <hex_colors>
+                  <primary_hex>#E31837</primary_hex>
+                  <secondary_hex>#FFB81C</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Andy Reid</head_coach>
+                <owners>Hunt family</owners>
+              </organization>
+              <venue>
+                <stadium>GEHA Field at Arrowhead Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/kansas-city-chiefs/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_las-vegas-raiders">
+              <basic_info>
+                <name>Las Vegas Raiders</name>
+                <slug>las-vegas-raiders</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Paradise, NV (Las Vegas)</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Black</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gzcojbzcyjgubgyb6xf2</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/rthdytrwns8g5aed2uou</header_background_url>
+                <hex_colors>
+                  <primary_hex>#000000</primary_hex>
+                  <secondary_hex>#A5ACAF</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Pete Carroll</head_coach>
+                <owners>Mark Davis</owners>
+              </organization>
+              <venue>
+                <stadium>Allegiant Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/las-vegas-raiders/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_los-angeles-chargers">
+              <basic_info>
+                <name>Los Angeles Chargers</name>
+                <slug>los-angeles-chargers</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Inglewood, CA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Powder Blue</primary_color>
+                <secondary_color>Sunshine Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/dhfidtn8jrumakbogeu4</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/mkla4gj5w7882z6q0ywz</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0080C6</primary_hex>
+                  <secondary_hex>#FFC20E</secondary_hex>
+                  <tertiary_hex>#FFFFFF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Jim Harbaugh</head_coach>
+                <owners>Spanos family</owners>
+              </organization>
+              <venue>
+                <stadium>SoFi Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/los-angeles-chargers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+        </divisions>
+      </conference>
+      <conference name="NFC Conference" abbreviation="NFC">
+        <divisions>
+          <division name="East">
+            <team id="nfl_dallas-cowboys">
+              <basic_info>
+                <name>Dallas Cowboys</name>
+                <slug>dallas-cowboys</slug>
+                <established>1960</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Arlington, TX</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Royal Blue</primary_color>
+                <secondary_color>Navy</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ieid8hoygzdlmzo0tnf6</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/q7qakjbkb5wt7q943epi</header_background_url>
+                <hex_colors>
+                  <primary_hex>#003594</primary_hex>
+                  <secondary_hex>#041E42</secondary_hex>
+                  <tertiary_hex>#869397</tertiary_hex>
+                  <quaternary_hex>#7F9695</quaternary_hex>
+                  <quinary_hex>#FFFFFF</quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Schottenheimer</head_coach>
+                <owners>Jerry Jones</owners>
+              </organization>
+              <venue>
+                <stadium>AT&amp;T Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/dallas-cowboys/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-york-giants">
+              <basic_info>
+                <name>New York Giants</name>
+                <slug>new-york-giants</slug>
+                <established>1925</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>East Rutherford, NJ</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Blue</primary_color>
+                <secondary_color>Red</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/t6mhdmgizi6qhndh8b9p</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/i94f24mjvgoc64hnqw3o</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0B2265</primary_hex>
+                  <secondary_hex>#A71930</secondary_hex>
+                  <tertiary_hex>#A5ACAF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Brian Daboll</head_coach>
+                <owners>John Mara &amp; Steve Tisch</owners>
+              </organization>
+              <venue>
+                <stadium>MetLife Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-york-giants/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_philadelphia-eagles">
+              <basic_info>
+                <name>Philadelphia Eagles</name>
+                <slug>philadelphia-eagles</slug>
+                <established>1933</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Philadelphia, PA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Midnight Green</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/puhrqgj71gobgdkdo6uq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/p8xl6x8jfe3acs71jtit</header_background_url>
+                <hex_colors>
+                  <primary_hex>#004C54</primary_hex>
+                  <secondary_hex>#A5ACAF</secondary_hex>
+                  <tertiary_hex>#ACC0C6</tertiary_hex>
+                  <quaternary_hex>#000000</quaternary_hex>
+                  <quinary_hex>#565A5C</quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Nick Sirianni</head_coach>
+                <owners>Jeffrey Lurie</owners>
+              </organization>
+              <venue>
+                <stadium>Lincoln Financial Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/philadelphia-eagles/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_washington-commanders">
+              <basic_info>
+                <name>Washington Commanders</name>
+                <slug>washington-commanders</slug>
+                <established>1932</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Landover, MD / Washington, DC</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Burgundy</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/xymxwrxtyj9fhaemhdyd</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/kajwfzxaiqkjvgxozpat</header_background_url>
+                <hex_colors>
+                  <primary_hex>#5A1414</primary_hex>
+                  <secondary_hex>#FFB612</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Dan Quinn</head_coach>
+                <owners>Josh Harris group</owners>
+              </organization>
+              <venue>
+                <stadium>Commanders Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/washington-commanders/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="North">
+            <team id="nfl_chicago-bears">
+              <basic_info>
+                <name>Chicago Bears</name>
+                <slug>chicago-bears</slug>
+                <established>1920</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Chicago, IL</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Navy Blue</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ijrplti0kmzsyoaikhv1</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/egkztdkxkhpio4a3unxg</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0B162A</primary_hex>
+                  <secondary_hex>#C83803</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Ben Johnson</head_coach>
+                <owners>McCaskey family</owners>
+              </organization>
+              <venue>
+                <stadium>Soldier Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/chicago-bears/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_detroit-lions">
+              <basic_info>
+                <name>Detroit Lions</name>
+                <slug>detroit-lions</slug>
+                <established>1930</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Detroit, MI</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Honolulu Blue</primary_color>
+                <secondary_color>Silver</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ocvxwnapdvwevupe4tpr</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/dlyxxmgt52d7anojsknk</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0076B6</primary_hex>
+                  <secondary_hex>#B0B7BC</secondary_hex>
+                  <tertiary_hex>#000000</tertiary_hex>
+                  <quaternary_hex>#FFFFFF</quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Dan Campbell</head_coach>
+                <owners>Sheila Ford Hamp</owners>
+              </organization>
+              <venue>
+                <stadium>Ford Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/detroit-lions/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_green-bay-packers">
+              <basic_info>
+                <name>Green Bay Packers</name>
+                <slug>green-bay-packers</slug>
+                <established>1921</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Green Bay, WI</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Dark Green</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gppfvr7n8gljgjaqux2x</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/nn9yhffph5ty4qj2gqwu</header_background_url>
+                <hex_colors>
+                  <primary_hex>#203731</primary_hex>
+                  <secondary_hex>#FFB612</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Matt LaFleur</head_coach>
+                <owners>Green Bay Packers, Inc.</owners>
+              </organization>
+              <venue>
+                <stadium>Lambeau Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/green-bay-packers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_minnesota-vikings">
+              <basic_info>
+                <name>Minnesota Vikings</name>
+                <slug>minnesota-vikings</slug>
+                <established>1961</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Minneapolis, MN</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Purple</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/teguylrnqqmfcwxvcmmz</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/fnmak0n2pitv59qqmaen</header_background_url>
+                <hex_colors>
+                  <primary_hex>#4F2683</primary_hex>
+                  <secondary_hex>#FFC62F</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Kevin O'Connell</head_coach>
+                <owners>Zygi Wilf &amp; family</owners>
+              </organization>
+              <venue>
+                <stadium>U.S. Bank Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/minnesota-vikings/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="South">
+            <team id="nfl_atlanta-falcons">
+              <basic_info>
+                <name>Atlanta Falcons</name>
+                <slug>atlanta-falcons</slug>
+                <established>1966</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Atlanta, GA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/d8m7hzpsbrl6pnqht8op</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/dgksdhs7zhmrioliyq9c</header_background_url>
+                <hex_colors>
+                  <primary_hex>#A71930</primary_hex>
+                  <secondary_hex>#000000</secondary_hex>
+                  <tertiary_hex>#A5ACAF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Raheem Morris</head_coach>
+                <owners>Arthur Blank</owners>
+              </organization>
+              <venue>
+                <stadium>Mercedes-Benz Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/atlanta-falcons/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_carolina-panthers">
+              <basic_info>
+                <name>Carolina Panthers</name>
+                <slug>carolina-panthers</slug>
+                <established>1995</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Charlotte, NC</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Panther Blue</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ervfzgrqdpnc7lh5gqwq</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/eyotndxveoeyibcbag5k</header_background_url>
+                <hex_colors>
+                  <primary_hex>#0085CA</primary_hex>
+                  <secondary_hex>#101820</secondary_hex>
+                  <tertiary_hex>#BFC0BF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Dave Canales</head_coach>
+                <owners>David Tepper</owners>
+              </organization>
+              <venue>
+                <stadium>Bank of America Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/carolina-panthers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_new-orleans-saints">
+              <basic_info>
+                <name>New Orleans Saints</name>
+                <slug>new-orleans-saints</slug>
+                <established>1967</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>New Orleans, LA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Old Gold</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/qk0qesy5im61qccr5vp0</header_background_url>
+                <hex_colors>
+                  <primary_hex>#D3BC8D</primary_hex>
+                  <secondary_hex>#101820</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Kellen Moore</head_coach>
+                <owners>Gayle Benson</owners>
+              </organization>
+              <venue>
+                <stadium>Caesars Superdome</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/new-orleans-saints/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_tampa-bay-buccaneers">
+              <basic_info>
+                <name>Tampa Bay Buccaneers</name>
+                <slug>tampa-bay-buccaneers</slug>
+                <established>1976</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Tampa, FL</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Red</primary_color>
+                <secondary_color>Orange</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/v8uqiualryypwqgvwcih</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/odiwi0h6uplawxy54sqc</header_background_url>
+                <hex_colors>
+                  <primary_hex>#D50A0A</primary_hex>
+                  <secondary_hex>#FF7900</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex>#B1BABF</quaternary_hex>
+                  <quinary_hex>#34302B</quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Todd Bowles</head_coach>
+                <owners>Glazer family</owners>
+              </organization>
+              <venue>
+                <stadium>Raymond James Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/tampa-bay-buccaneers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+          <division name="West">
+            <team id="nfl_arizona-cardinals">
+              <basic_info>
+                <name>Arizona Cardinals</name>
+                <slug>arizona-cardinals</slug>
+                <established>1920</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Glendale, AZ</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Cardinal Red</primary_color>
+                <secondary_color>Black</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/u9fltoslqdsyao8cpm0k</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/zglirxlttuukonnz1il0</header_background_url>
+                <hex_colors>
+                  <primary_hex>#97233F</primary_hex>
+                  <secondary_hex>#000000</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex>#FFB612</quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Jonathan Gannon</head_coach>
+                <owners>Michael Bidwill</owners>
+              </organization>
+              <venue>
+                <stadium>State Farm Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/arizona-cardinals/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_los-angeles-rams">
+              <basic_info>
+                <name>Los Angeles Rams</name>
+                <slug>los-angeles-rams</slug>
+                <established>1937</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Inglewood, CA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>Rams Royal</primary_color>
+                <secondary_color>Sol</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/ayvwcmluj2ohkdlbiegi</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/eo223qd5mlxrna3bbdiv</header_background_url>
+                <hex_colors>
+                  <primary_hex>#003594</primary_hex>
+                  <secondary_hex>#FFA300</secondary_hex>
+                  <tertiary_hex>#FF8200</tertiary_hex>
+                  <quaternary_hex>#FFD100</quaternary_hex>
+                  <quinary_hex>#FFFFFF</quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Sean McVay</head_coach>
+                <owners>Stan Kroenke</owners>
+              </organization>
+              <venue>
+                <stadium>SoFi Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/los-angeles-rams/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_san-francisco-49ers">
+              <basic_info>
+                <name>San Francisco 49ers</name>
+                <slug>san-francisco-49ers</slug>
+                <established>1946</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Santa Clara, CA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>49ers Red</primary_color>
+                <secondary_color>Gold</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/dxibuyxbk0b9ua5ih9hn</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/aedv7exzsect9be58i0h</header_background_url>
+                <hex_colors>
+                  <primary_hex>#AA0000</primary_hex>
+                  <secondary_hex>#B3995D</secondary_hex>
+                  <tertiary_hex></tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Kyle Shanahan</head_coach>
+                <owners>York family</owners>
+              </organization>
+              <venue>
+                <stadium>Levi's Stadium</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/san-francisco-49ers/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+            <team id="nfl_seattle-seahawks">
+              <basic_info>
+                <name>Seattle Seahawks</name>
+                <slug>seattle-seahawks</slug>
+                <established>1976</established>
+                <league>National Football League</league>
+                <league_abbr>NFL</league_abbr>
+              </basic_info>
+              <location>
+                <hometown>Seattle, WA</hometown>
+                <population>Unknown</population>
+              </location>
+              <visual_identity>
+                <primary_color>College Navy</primary_color>
+                <secondary_color>Action Green</secondary_color>
+                <logo_url>https://static.www.nfl.com/image/private/f_auto/league/gcytzwpjdzbpwnwxincg</logo_url>
+                <header_background_url>https://static.www.nfl.com/image/private/f_auto/league/yfmuzipdfeduwgu4kfta</header_background_url>
+                <hex_colors>
+                  <primary_hex>#002244</primary_hex>
+                  <secondary_hex>#69BE28</secondary_hex>
+                  <tertiary_hex>#A5ACAF</tertiary_hex>
+                  <quaternary_hex></quaternary_hex>
+                  <quinary_hex></quinary_hex>
+                </hex_colors>
+              </visual_identity>
+              <organization>
+                <head_coach>Mike Macdonald</head_coach>
+                <owners>Paul G. Allen Trust / Jody Allen</owners>
+              </organization>
+              <venue>
+                <stadium>Lumen Field</stadium>
+              </venue>
+              <urls>
+                <official_url>https://www.nfl.com/teams/seattle-seahawks/</official_url>
+                <operations_url></operations_url>
+              </urls>
+            </team>
+          </division>
+        </divisions>
+      </conference>
+    </conferences>
+  </league>
+</sports_teams>
