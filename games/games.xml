@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NFLSchedule year="2025">
+    <Game week="1" away_team="Dallas Cowboys" home_team="Philadelphia Eagles" game_time="2025-09-05T00:20Z" location="Lincoln Financial Field" odds="PHI -7"/>
+    <Game week="1" away_team="Kansas City Chiefs" home_team="Los Angeles Chargers" game_time="2025-09-06T00:00Z" location="Corinthians Arena" odds="KC -3.5"/>
+    <Game week="1" away_team="Tampa Bay Buccaneers" home_team="Atlanta Falcons" game_time="2025-09-07T17:00Z" location="Mercedes-Benz Stadium" odds="TB -2"/>
+    <Game week="1" away_team="Cincinnati Bengals" home_team="Cleveland Browns" game_time="2025-09-07T17:00Z" location="Huntington Bank Field" odds="CIN -5.5"/>
+    <Game week="1" away_team="Miami Dolphins" home_team="Indianapolis Colts" game_time="2025-09-07T17:00Z" location="Lucas Oil Stadium" odds="IND -1.5"/>
+    <Game week="1" away_team="Las Vegas Raiders" home_team="New England Patriots" game_time="2025-09-07T17:00Z" location="Gillette Stadium" odds="NE -3"/>
+    <Game week="1" away_team="Arizona Cardinals" home_team="New Orleans Saints" game_time="2025-09-07T17:00Z" location="Caesars Superdome" odds="ARI -5.5"/>
+    <Game week="1" away_team="Pittsburgh Steelers" home_team="New York Jets" game_time="2025-09-07T17:00Z" location="MetLife Stadium" odds="PIT -3"/>
+    <Game week="1" away_team="New York Giants" home_team="Washington Commanders" game_time="2025-09-07T17:00Z" location="Northwest Stadium" odds="WSH -6.5"/>
+    <Game week="1" away_team="Carolina Panthers" home_team="Jacksonville Jaguars" game_time="2025-09-07T17:00Z" location="EverBank Stadium" odds="JAX -3"/>
+    <Game week="1" away_team="Tennessee Titans" home_team="Denver Broncos" game_time="2025-09-07T20:05Z" location="Empower Field at Mile High" odds="DEN -8"/>
+    <Game week="1" away_team="San Francisco 49ers" home_team="Seattle Seahawks" game_time="2025-09-07T20:05Z" location="Lumen Field" odds="SF -2.5"/>
+    <Game week="1" away_team="Detroit Lions" home_team="Green Bay Packers" game_time="2025-09-07T20:25Z" location="Lambeau Field" odds="GB -2"/>
+    <Game week="1" away_team="Houston Texans" home_team="Los Angeles Rams" game_time="2025-09-07T20:25Z" location="SoFi Stadium" odds="LAR -2.5"/>
+    <Game week="1" away_team="Baltimore Ravens" home_team="Buffalo Bills" game_time="2025-09-08T00:20Z" location="Highmark Stadium" odds="BUF -1.5"/>
+    <Game week="1" away_team="Minnesota Vikings" home_team="Chicago Bears" game_time="2025-09-09T00:15Z" location="Soldier Field" odds="MIN -2"/>
+    <Game week="2" away_team="Washington Commanders" home_team="Green Bay Packers" game_time="2025-09-12T00:15Z" location="Lambeau Field" odds="GB -1.5"/>
+    <Game week="2" away_team="Jacksonville Jaguars" home_team="Cincinnati Bengals" game_time="2025-09-14T17:00Z" location="Paycor Stadium" odds="CIN -5.5"/>
+    <Game week="2" away_team="New York Giants" home_team="Dallas Cowboys" game_time="2025-09-14T17:00Z" location="AT&amp;T Stadium" odds="DAL -4.5"/>
+    <Game week="2" away_team="Chicago Bears" home_team="Detroit Lions" game_time="2025-09-14T17:00Z" location="Ford Field" odds="DET -4.5"/>
+    <Game week="2" away_team="Los Angeles Rams" home_team="Tennessee Titans" game_time="2025-09-14T17:00Z" location="Nissan Stadium" odds="LAR -5.5"/>
+    <Game week="2" away_team="New England Patriots" home_team="Miami Dolphins" game_time="2025-09-14T17:00Z" location="Hard Rock Stadium" odds="MIA -2.5"/>
+    <Game week="2" away_team="San Francisco 49ers" home_team="New Orleans Saints" game_time="2025-09-14T17:00Z" location="Caesars Superdome" odds="SF -7"/>
+    <Game week="2" away_team="Buffalo Bills" home_team="New York Jets" game_time="2025-09-14T17:00Z" location="MetLife Stadium" odds="BUF -8.5"/>
+    <Game week="2" away_team="Seattle Seahawks" home_team="Pittsburgh Steelers" game_time="2025-09-14T17:00Z" location="Acrisure Stadium" odds="PIT -1.5"/>
+    <Game week="2" away_team="Cleveland Browns" home_team="Baltimore Ravens" game_time="2025-09-14T17:00Z" location="M&amp;T Bank Stadium" odds="BAL -12.5"/>
+    <Game week="2" away_team="Denver Broncos" home_team="Indianapolis Colts" game_time="2025-09-14T20:05Z" location="Lucas Oil Stadium" odds="DEN -3.5"/>
+    <Game week="2" away_team="Carolina Panthers" home_team="Arizona Cardinals" game_time="2025-09-14T20:05Z" location="State Farm Stadium" odds="ARI -4.5"/>
+    <Game week="2" away_team="Philadelphia Eagles" home_team="Kansas City Chiefs" game_time="2025-09-14T20:25Z" location="GEHA Field at Arrowhead Stadium" odds="KC -1.5"/>
+    <Game week="2" away_team="Atlanta Falcons" home_team="Minnesota Vikings" game_time="2025-09-15T00:20Z" location="U.S. Bank Stadium" odds="MIN -4.5"/>
+    <Game week="2" away_team="Tampa Bay Buccaneers" home_team="Houston Texans" game_time="2025-09-15T23:00Z" location="NRG Stadium" odds="HOU -1.5"/>
+    <Game week="2" away_team="Los Angeles Chargers" home_team="Las Vegas Raiders" game_time="2025-09-16T02:00Z" location="Allegiant Stadium" odds="LAC -3"/>
+    <Game week="3" away_team="Miami Dolphins" home_team="Buffalo Bills" game_time="2025-09-19T00:15Z" location="Highmark Stadium" odds="BUF -8.5"/>
+    <Game week="3" away_team="Green Bay Packers" home_team="Cleveland Browns" game_time="2025-09-21T17:00Z" location="Huntington Bank Field" odds="GB -5.5"/>
+    <Game week="3" away_team="Indianapolis Colts" home_team="Tennessee Titans" game_time="2025-09-21T17:00Z" location="Nissan Stadium" odds="TEN -1.5"/>
+    <Game week="3" away_team="Cincinnati Bengals" home_team="Minnesota Vikings" game_time="2025-09-21T17:00Z" location="U.S. Bank Stadium" odds="MIN -1.5"/>
+    <Game week="3" away_team="Pittsburgh Steelers" home_team="New England Patriots" game_time="2025-09-21T17:00Z" location="Gillette Stadium" odds="NE -1.5"/>
+    <Game week="3" away_team="Los Angeles Rams" home_team="Philadelphia Eagles" game_time="2025-09-21T17:00Z" location="Lincoln Financial Field" odds="PHI -4.5"/>
+    <Game week="3" away_team="New York Jets" home_team="Tampa Bay Buccaneers" game_time="2025-09-21T17:00Z" location="Raymond James Stadium" odds="TB -7.5"/>
+    <Game week="3" away_team="Las Vegas Raiders" home_team="Washington Commanders" game_time="2025-09-21T17:00Z" location="Northwest Stadium" odds="WSH -7.5"/>
+    <Game week="3" away_team="Atlanta Falcons" home_team="Carolina Panthers" game_time="2025-09-21T17:00Z" location="Bank of America Stadium" odds="CAR -1.5"/>
+    <Game week="3" away_team="Houston Texans" home_team="Jacksonville Jaguars" game_time="2025-09-21T17:00Z" location="EverBank Stadium" odds="HOU -1.5"/>
+    <Game week="3" away_team="Denver Broncos" home_team="Los Angeles Chargers" game_time="2025-09-21T20:05Z" location="SoFi Stadium" odds="N/A"/>
+    <Game week="3" away_team="New Orleans Saints" home_team="Seattle Seahawks" game_time="2025-09-21T20:05Z" location="Lumen Field" odds="SEA -7"/>
+    <Game week="3" away_team="Dallas Cowboys" home_team="Chicago Bears" game_time="2025-09-21T20:25Z" location="Soldier Field" odds="CHI -3"/>
+    <Game week="3" away_team="Arizona Cardinals" home_team="San Francisco 49ers" game_time="2025-09-21T20:25Z" location="Levi's Stadium" odds="SF -3.5"/>
+    <Game week="3" away_team="Kansas City Chiefs" home_team="New York Giants" game_time="2025-09-22T00:20Z" location="MetLife Stadium" odds="N/A"/>
+    <Game week="3" away_team="Detroit Lions" home_team="Baltimore Ravens" game_time="2025-09-23T00:15Z" location="M&amp;T Bank Stadium" odds="BAL -3.5"/>
+    <Game week="4" away_team="Seattle Seahawks" home_team="Arizona Cardinals" game_time="2025-09-26T00:15Z" location="State Farm Stadium" odds="ARI -2.5"/>
+    <Game week="4" away_team="Minnesota Vikings" home_team="Pittsburgh Steelers" game_time="2025-09-28T13:30Z" location="Croke Park" odds="MIN -1.5"/>
+    <Game week="4" away_team="Washington Commanders" home_team="Atlanta Falcons" game_time="2025-09-28T17:00Z" location="Mercedes-Benz Stadium" odds="WSH -3.5"/>
+    <Game week="4" away_team="New Orleans Saints" home_team="Buffalo Bills" game_time="2025-09-28T17:00Z" location="Highmark Stadium" odds="BUF -12.5"/>
+    <Game week="4" away_team="Cleveland Browns" home_team="Detroit Lions" game_time="2025-09-28T17:00Z" location="Ford Field" odds="DET -10.5"/>
+    <Game week="4" away_team="Carolina Panthers" home_team="New England Patriots" game_time="2025-09-28T17:00Z" location="Gillette Stadium" odds="NE -3.5"/>
+    <Game week="4" away_team="Los Angeles Chargers" home_team="New York Giants" game_time="2025-09-28T17:00Z" location="MetLife Stadium" odds="N/A"/>
+    <Game week="4" away_team="Philadelphia Eagles" home_team="Tampa Bay Buccaneers" game_time="2025-09-28T17:00Z" location="Raymond James Stadium" odds="PHI -1.5"/>
+    <Game week="4" away_team="Tennessee Titans" home_team="Houston Texans" game_time="2025-09-28T17:00Z" location="NRG Stadium" odds="HOU -5.5"/>
+    <Game week="4" away_team="Indianapolis Colts" home_team="Los Angeles Rams" game_time="2025-09-28T20:05Z" location="SoFi Stadium" odds="N/A"/>
+    <Game week="4" away_team="Jacksonville Jaguars" home_team="San Francisco 49ers" game_time="2025-09-28T20:05Z" location="Levi's Stadium" odds="SF -5.5"/>
+    <Game week="4" away_team="Baltimore Ravens" home_team="Kansas City Chiefs" game_time="2025-09-28T20:25Z" location="GEHA Field at Arrowhead Stadium" odds="N/A"/>
+    <Game week="4" away_team="Chicago Bears" home_team="Las Vegas Raiders" game_time="2025-09-28T20:25Z" location="Allegiant Stadium" odds="CHI -1.5"/>
+    <Game week="4" away_team="Green Bay Packers" home_team="Dallas Cowboys" game_time="2025-09-29T00:20Z" location="AT&amp;T Stadium" odds="GB -1.5"/>
+    <Game week="4" away_team="New York Jets" home_team="Miami Dolphins" game_time="2025-09-29T23:15Z" location="Hard Rock Stadium" odds="MIA -5.5"/>
+    <Game week="4" away_team="Cincinnati Bengals" home_team="Denver Broncos" game_time="2025-09-30T00:15Z" location="Empower Field at Mile High" odds="DEN -2.5"/>
+    <Game week="5" away_team="San Francisco 49ers" home_team="Los Angeles Rams" game_time="2025-10-03T00:15Z" location="SoFi Stadium" odds="LAR -1.5"/>
+    <Game week="5" away_team="Minnesota Vikings" home_team="Cleveland Browns" game_time="2025-10-05T13:30Z" location="Tottenham Hotspur Stadium" odds="MIN -7"/>
+    <Game week="5" away_team="Las Vegas Raiders" home_team="Indianapolis Colts" game_time="2025-10-05T17:00Z" location="Lucas Oil Stadium" odds="IND -1.5"/>
+    <Game week="5" away_team="New York Giants" home_team="New Orleans Saints" game_time="2025-10-05T17:00Z" location="Caesars Superdome" odds="NYG -1.5"/>
+    <Game week="5" away_team="Dallas Cowboys" home_team="New York Jets" game_time="2025-10-05T17:00Z" location="MetLife Stadium" odds="DAL -1.5"/>
+    <Game week="5" away_team="Denver Broncos" home_team="Philadelphia Eagles" game_time="2025-10-05T17:00Z" location="Lincoln Financial Field" odds="PHI -4.5"/>
+    <Game week="5" away_team="Miami Dolphins" home_team="Carolina Panthers" game_time="2025-10-05T17:00Z" location="Bank of America Stadium" odds="MIA -1.5"/>
+    <Game week="5" away_team="Houston Texans" home_team="Baltimore Ravens" game_time="2025-10-05T17:00Z" location="M&amp;T Bank Stadium" odds="BAL -7.5"/>
+    <Game week="5" away_team="Tennessee Titans" home_team="Arizona Cardinals" game_time="2025-10-05T20:05Z" location="State Farm Stadium" odds="ARI -5.5"/>
+    <Game week="5" away_team="Tampa Bay Buccaneers" home_team="Seattle Seahawks" game_time="2025-10-05T20:05Z" location="Lumen Field" odds="TB -1.5"/>
+    <Game week="5" away_team="Detroit Lions" home_team="Cincinnati Bengals" game_time="2025-10-05T20:25Z" location="Paycor Stadium" odds="DET -1.5"/>
+    <Game week="5" away_team="Washington Commanders" home_team="Los Angeles Chargers" game_time="2025-10-05T20:25Z" location="SoFi Stadium" odds="N/A"/>
+    <Game week="5" away_team="New England Patriots" home_team="Buffalo Bills" game_time="2025-10-06T00:20Z" location="Highmark Stadium" odds="BUF -8.5"/>
+    <Game week="5" away_team="Kansas City Chiefs" home_team="Jacksonville Jaguars" game_time="2025-10-07T00:15Z" location="EverBank Stadium" odds="KC -4.5"/>
+    <Game week="6" away_team="Philadelphia Eagles" home_team="New York Giants" game_time="2025-10-10T00:15Z" location="MetLife Stadium" odds="PHI -7"/>
+    <Game week="6" away_team="Denver Broncos" home_team="New York Jets" game_time="2025-10-12T13:30Z" location="Tottenham Hotspur Stadium" odds="DEN -6.5"/>
+    <Game week="6" away_team="Arizona Cardinals" home_team="Indianapolis Colts" game_time="2025-10-12T17:00Z" location="Lucas Oil Stadium" odds="N/A"/>
+    <Game week="6" away_team="Los Angeles Chargers" home_team="Miami Dolphins" game_time="2025-10-12T17:00Z" location="Hard Rock Stadium" odds="LAC -1.5"/>
+    <Game week="6" away_team="Cleveland Browns" home_team="Pittsburgh Steelers" game_time="2025-10-12T17:00Z" location="Acrisure Stadium" odds="N/A"/>
+    <Game week="6" away_team="San Francisco 49ers" home_team="Tampa Bay Buccaneers" game_time="2025-10-12T17:00Z" location="Raymond James Stadium" odds="TB -1.5"/>
+    <Game week="6" away_team="Dallas Cowboys" home_team="Carolina Panthers" game_time="2025-10-12T17:00Z" location="Bank of America Stadium" odds="DAL -1.5"/>
+    <Game week="6" away_team="Seattle Seahawks" home_team="Jacksonville Jaguars" game_time="2025-10-12T17:00Z" location="EverBank Stadium" odds="JAX -1.5"/>
+    <Game week="6" away_team="Los Angeles Rams" home_team="Baltimore Ravens" game_time="2025-10-12T17:00Z" location="M&amp;T Bank Stadium" odds="BAL -5.5"/>
+    <Game week="6" away_team="Tennessee Titans" home_team="Las Vegas Raiders" game_time="2025-10-12T20:05Z" location="Allegiant Stadium" odds="LV -3"/>
+    <Game week="6" away_team="Cincinnati Bengals" home_team="Green Bay Packers" game_time="2025-10-12T20:25Z" location="Lambeau Field" odds="GB -2.5"/>
+    <Game week="6" away_team="New England Patriots" home_team="New Orleans Saints" game_time="2025-10-12T20:25Z" location="Caesars Superdome" odds="NE -3"/>
+    <Game week="6" away_team="Detroit Lions" home_team="Kansas City Chiefs" game_time="2025-10-13T00:20Z" location="GEHA Field at Arrowhead Stadium" odds="KC -3"/>
+    <Game week="6" away_team="Buffalo Bills" home_team="Atlanta Falcons" game_time="2025-10-13T23:15Z" location="Mercedes-Benz Stadium" odds="N/A"/>
+    <Game week="6" away_team="Chicago Bears" home_team="Washington Commanders" game_time="2025-10-14T00:15Z" location="Northwest Stadium" odds="WSH -4.5"/>
+    <Game week="7" away_team="Pittsburgh Steelers" home_team="Cincinnati Bengals" game_time="2025-10-17T00:15Z" location="Paycor Stadium" odds="CIN -4.5"/>
+    <Game week="7" away_team="Los Angeles Rams" home_team="Jacksonville Jaguars" game_time="2025-10-19T13:30Z" location="Wembley Stadium" odds="LAR -3.5"/>
+    <Game week="7" away_team="New Orleans Saints" home_team="Chicago Bears" game_time="2025-10-19T17:00Z" location="Soldier Field" odds="CHI -7.5"/>
+    <Game week="7" away_team="Miami Dolphins" home_team="Cleveland Browns" game_time="2025-10-19T17:00Z" location="Huntington Bank Field" odds="MIA -1.5"/>
+    <Game week="7" away_team="New England Patriots" home_team="Tennessee Titans" game_time="2025-10-19T17:00Z" location="Nissan Stadium" odds="NE -1.5"/>
+    <Game week="7" away_team="Las Vegas Raiders" home_team="Kansas City Chiefs" game_time="2025-10-19T17:00Z" location="GEHA Field at Arrowhead Stadium" odds="KC -9.5"/>
+    <Game week="7" away_team="Philadelphia Eagles" home_team="Minnesota Vikings" game_time="2025-10-19T17:00Z" location="U.S. Bank Stadium" odds="N/A"/>
+    <Game week="7" away_team="Carolina Panthers" home_team="New York Jets" game_time="2025-10-19T17:00Z" location="MetLife Stadium" odds="NYJ -1.5"/>
+    <Game week="7" away_team="New York Giants" home_team="Denver Broncos" game_time="2025-10-19T20:05Z" location="Empower Field at Mile High" odds="DEN -7.5"/>
+    <Game week="7" away_team="Indianapolis Colts" home_team="Los Angeles Chargers" game_time="2025-10-19T20:05Z" location="SoFi Stadium" odds="LAC -6"/>
+    <Game week="7" away_team="Washington Commanders" home_team="Dallas Cowboys" game_time="2025-10-19T20:25Z" location="AT&amp;T Stadium" odds="WSH -2.5"/>
+    <Game week="7" away_team="Green Bay Packers" home_team="Arizona Cardinals" game_time="2025-10-19T20:25Z" location="State Farm Stadium" odds="GB -1.5"/>
+    <Game week="7" away_team="Atlanta Falcons" home_team="San Francisco 49ers" game_time="2025-10-20T00:20Z" location="Levi's Stadium" odds="SF -6.5"/>
+    <Game week="7" away_team="Tampa Bay Buccaneers" home_team="Detroit Lions" game_time="2025-10-20T23:00Z" location="Ford Field" odds="DET -3.5"/>
+    <Game week="7" away_team="Houston Texans" home_team="Seattle Seahawks" game_time="2025-10-21T02:00Z" location="Lumen Field" odds="SEA -1.5"/>
+    <Game week="8" away_team="Minnesota Vikings" home_team="Los Angeles Chargers" game_time="2025-10-24T00:15Z" location="SoFi Stadium" odds="N/A"/>
+    <Game week="8" away_team="Miami Dolphins" home_team="Atlanta Falcons" game_time="2025-10-26T17:00Z" location="Mercedes-Benz Stadium" odds="ATL -1.5"/>
+    <Game week="8" away_team="New York Jets" home_team="Cincinnati Bengals" game_time="2025-10-26T17:00Z" location="Paycor Stadium" odds="CIN -7.5"/>
+    <Game week="8" away_team="Cleveland Browns" home_team="New England Patriots" game_time="2025-10-26T17:00Z" location="Gillette Stadium" odds="NE -5.5"/>
+    <Game week="8" away_team="New York Giants" home_team="Philadelphia Eagles" game_time="2025-10-26T17:00Z" location="Lincoln Financial Field" odds="PHI -10.5"/>
+    <Game week="8" away_team="Buffalo Bills" home_team="Carolina Panthers" game_time="2025-10-26T17:00Z" location="Bank of America Stadium" odds="BUF -7"/>
+    <Game week="8" away_team="Chicago Bears" home_team="Baltimore Ravens" game_time="2025-10-26T17:00Z" location="M&amp;T Bank Stadium" odds="BAL -7"/>
+    <Game week="8" away_team="San Francisco 49ers" home_team="Houston Texans" game_time="2025-10-26T17:00Z" location="NRG Stadium" odds="SF -1.5"/>
+    <Game week="8" away_team="Tampa Bay Buccaneers" home_team="New Orleans Saints" game_time="2025-10-26T20:05Z" location="Caesars Superdome" odds="TB -5.5"/>
+    <Game week="8" away_team="Dallas Cowboys" home_team="Denver Broncos" game_time="2025-10-26T20:25Z" location="Empower Field at Mile High" odds="DEN -4.5"/>
+    <Game week="8" away_team="Tennessee Titans" home_team="Indianapolis Colts" game_time="2025-10-26T20:25Z" location="Lucas Oil Stadium" odds="N/A"/>
+    <Game week="8" away_team="Green Bay Packers" home_team="Pittsburgh Steelers" game_time="2025-10-27T00:20Z" location="Acrisure Stadium" odds="GB -1.5"/>
+    <Game week="8" away_team="Washington Commanders" home_team="Kansas City Chiefs" game_time="2025-10-28T00:15Z" location="GEHA Field at Arrowhead Stadium" odds="KC -3.5"/>
+    <Game week="9" away_team="Baltimore Ravens" home_team="Miami Dolphins" game_time="2025-10-31T00:15Z" location="Hard Rock Stadium" odds="BAL -5.5"/>
+    <Game week="9" away_team="Chicago Bears" home_team="Cincinnati Bengals" game_time="2025-11-02T18:00Z" location="Paycor Stadium" odds="CIN -3"/>
+    <Game week="9" away_team="Minnesota Vikings" home_team="Detroit Lions" game_time="2025-11-02T18:00Z" location="Ford Field" odds="DET -4.5"/>
+    <Game week="9" away_team="Carolina Panthers" home_team="Green Bay Packers" game_time="2025-11-02T18:00Z" location="Lambeau Field" odds="GB -7.5"/>
+    <Game week="9" away_team="Los Angeles Chargers" home_team="Tennessee Titans" game_time="2025-11-02T18:00Z" location="Nissan Stadium" odds="LAC -4.5"/>
+    <Game week="9" away_team="Atlanta Falcons" home_team="New England Patriots" game_time="2025-11-02T18:00Z" location="Gillette Stadium" odds="NE -3"/>
+    <Game week="9" away_team="San Francisco 49ers" home_team="New York Giants" game_time="2025-11-02T18:00Z" location="MetLife Stadium" odds="SF -3.5"/>
+    <Game week="9" away_team="Indianapolis Colts" home_team="Pittsburgh Steelers" game_time="2025-11-02T18:00Z" location="Acrisure Stadium" odds="PIT -3.5"/>
+    <Game week="9" away_team="Denver Broncos" home_team="Houston Texans" game_time="2025-11-02T18:00Z" location="NRG Stadium" odds="DEN -1.5"/>
+    <Game week="9" away_team="Jacksonville Jaguars" home_team="Las Vegas Raiders" game_time="2025-11-02T21:05Z" location="Allegiant Stadium" odds="LV -1.5"/>
+    <Game week="9" away_team="New Orleans Saints" home_team="Los Angeles Rams" game_time="2025-11-02T21:05Z" location="SoFi Stadium" odds="LAR -9.5"/>
+    <Game week="9" away_team="Kansas City Chiefs" home_team="Buffalo Bills" game_time="2025-11-02T21:25Z" location="Highmark Stadium" odds="BUF -2.5"/>
+    <Game week="9" away_team="Seattle Seahawks" home_team="Washington Commanders" game_time="2025-11-03T01:20Z" location="Northwest Stadium" odds="WSH -5.5"/>
+    <Game week="9" away_team="Arizona Cardinals" home_team="Dallas Cowboys" game_time="2025-11-04T01:15Z" location="AT&amp;T Stadium" odds="DAL -1.5"/>
+    <Game week="10" away_team="Las Vegas Raiders" home_team="Denver Broncos" game_time="2025-11-07T01:15Z" location="Empower Field at Mile High" odds="DEN -6.5"/>
+    <Game week="10" away_team="Atlanta Falcons" home_team="Indianapolis Colts" game_time="2025-11-09T14:30Z" location="Olympic Stadium Berlin" odds="ATL -1.5"/>
+    <Game week="10" away_team="New York Giants" home_team="Chicago Bears" game_time="2025-11-09T18:00Z" location="Soldier Field" odds="CHI -5.5"/>
+    <Game week="10" away_team="Buffalo Bills" home_team="Miami Dolphins" game_time="2025-11-09T18:00Z" location="Hard Rock Stadium" odds="N/A"/>
+    <Game week="10" away_team="Baltimore Ravens" home_team="Minnesota Vikings" game_time="2025-11-09T18:00Z" location="U.S. Bank Stadium" odds="BAL -3.5"/>
+    <Game week="10" away_team="Cleveland Browns" home_team="New York Jets" game_time="2025-11-09T18:00Z" location="MetLife Stadium" odds="NYJ -2.5"/>
+    <Game week="10" away_team="New England Patriots" home_team="Tampa Bay Buccaneers" game_time="2025-11-09T18:00Z" location="Raymond James Stadium" odds="N/A"/>
+    <Game week="10" away_team="New Orleans Saints" home_team="Carolina Panthers" game_time="2025-11-09T18:00Z" location="Bank of America Stadium" odds="CAR -4.5"/>
+    <Game week="10" away_team="Jacksonville Jaguars" home_team="Houston Texans" game_time="2025-11-09T18:00Z" location="NRG Stadium" odds="N/A"/>
+    <Game week="10" away_team="Arizona Cardinals" home_team="Seattle Seahawks" game_time="2025-11-09T21:05Z" location="Lumen Field" odds="SEA -1.5"/>
+    <Game week="10" away_team="Los Angeles Rams" home_team="San Francisco 49ers" game_time="2025-11-09T21:25Z" location="Levi's Stadium" odds="SF -1.5"/>
+    <Game week="10" away_team="Detroit Lions" home_team="Washington Commanders" game_time="2025-11-09T21:25Z" location="Northwest Stadium" odds="WSH -1.5"/>
+    <Game week="10" away_team="Pittsburgh Steelers" home_team="Los Angeles Chargers" game_time="2025-11-10T01:20Z" location="SoFi Stadium" odds="LAC -4.5"/>
+    <Game week="10" away_team="Philadelphia Eagles" home_team="Green Bay Packers" game_time="2025-11-11T01:15Z" location="Lambeau Field" odds="PHI -1.5"/>
+    <Game week="11" away_team="New York Jets" home_team="New England Patriots" game_time="2025-11-14T01:15Z" location="Gillette Stadium" odds="NE -5.5"/>
+    <Game week="11" away_team="Washington Commanders" home_team="Miami Dolphins" game_time="2025-11-16T14:30Z" location="Santiago Bernabéu" odds="WSH -4.5"/>
+    <Game week="11" away_team="Carolina Panthers" home_team="Atlanta Falcons" game_time="2025-11-16T18:00Z" location="Mercedes-Benz Stadium" odds="ATL -3"/>
+    <Game week="11" away_team="Tampa Bay Buccaneers" home_team="Buffalo Bills" game_time="2025-11-16T18:00Z" location="Highmark Stadium" odds="BUF -5.5"/>
+    <Game week="11" away_team="Houston Texans" home_team="Tennessee Titans" game_time="2025-11-16T18:00Z" location="Nissan Stadium" odds="HOU -3"/>
+    <Game week="11" away_team="Chicago Bears" home_team="Minnesota Vikings" game_time="2025-11-16T18:00Z" location="U.S. Bank Stadium" odds="MIN -2.5"/>
+    <Game week="11" away_team="Green Bay Packers" home_team="New York Giants" game_time="2025-11-16T18:00Z" location="MetLife Stadium" odds="GB -4.5"/>
+    <Game week="11" away_team="Cincinnati Bengals" home_team="Pittsburgh Steelers" game_time="2025-11-16T18:00Z" location="Acrisure Stadium" odds="N/A"/>
+    <Game week="11" away_team="Los Angeles Chargers" home_team="Jacksonville Jaguars" game_time="2025-11-16T18:00Z" location="EverBank Stadium" odds="N/A"/>
+    <Game week="11" away_team="Seattle Seahawks" home_team="Los Angeles Rams" game_time="2025-11-16T21:05Z" location="SoFi Stadium" odds="LAR -4.5"/>
+    <Game week="11" away_team="San Francisco 49ers" home_team="Arizona Cardinals" game_time="2025-11-16T21:05Z" location="State Farm Stadium" odds="SF -1.5"/>
+    <Game week="11" away_team="Baltimore Ravens" home_team="Cleveland Browns" game_time="2025-11-16T21:25Z" location="Huntington Bank Field" odds="BAL -8.5"/>
+    <Game week="11" away_team="Kansas City Chiefs" home_team="Denver Broncos" game_time="2025-11-16T21:25Z" location="Empower Field at Mile High" odds="N/A"/>
+    <Game week="11" away_team="Detroit Lions" home_team="Philadelphia Eagles" game_time="2025-11-17T01:20Z" location="Lincoln Financial Field" odds="N/A"/>
+    <Game week="11" away_team="Dallas Cowboys" home_team="Las Vegas Raiders" game_time="2025-11-18T01:15Z" location="Allegiant Stadium" odds="DAL -1.5"/>
+    <Game week="12" away_team="Buffalo Bills" home_team="Houston Texans" game_time="2025-11-21T01:15Z" location="NRG Stadium" odds="BUF -3.5"/>
+    <Game week="12" away_team="Pittsburgh Steelers" home_team="Chicago Bears" game_time="2025-11-23T18:00Z" location="Soldier Field" odds="CHI -2.5"/>
+    <Game week="12" away_team="New England Patriots" home_team="Cincinnati Bengals" game_time="2025-11-23T18:00Z" location="Paycor Stadium" odds="CIN -4.5"/>
+    <Game week="12" away_team="New York Giants" home_team="Detroit Lions" game_time="2025-11-23T18:00Z" location="Ford Field" odds="DET -8.5"/>
+    <Game week="12" away_team="Minnesota Vikings" home_team="Green Bay Packers" game_time="2025-11-23T18:00Z" location="Lambeau Field" odds="GB -3.5"/>
+    <Game week="12" away_team="Seattle Seahawks" home_team="Tennessee Titans" game_time="2025-11-23T18:00Z" location="Nissan Stadium" odds="SEA -1.5"/>
+    <Game week="12" away_team="Indianapolis Colts" home_team="Kansas City Chiefs" game_time="2025-11-23T18:00Z" location="GEHA Field at Arrowhead Stadium" odds="KC -9.5"/>
+    <Game week="12" away_team="New York Jets" home_team="Baltimore Ravens" game_time="2025-11-23T18:00Z" location="M&amp;T Bank Stadium" odds="BAL -11.5"/>
+    <Game week="12" away_team="Cleveland Browns" home_team="Las Vegas Raiders" game_time="2025-11-23T21:05Z" location="Allegiant Stadium" odds="LV -3.5"/>
+    <Game week="12" away_team="Jacksonville Jaguars" home_team="Arizona Cardinals" game_time="2025-11-23T21:05Z" location="State Farm Stadium" odds="ARI -3"/>
+    <Game week="12" away_team="Philadelphia Eagles" home_team="Dallas Cowboys" game_time="2025-11-23T21:25Z" location="AT&amp;T Stadium" odds="PHI -4.5"/>
+    <Game week="12" away_team="Atlanta Falcons" home_team="New Orleans Saints" game_time="2025-11-23T21:25Z" location="Caesars Superdome" odds="ATL -2.5"/>
+    <Game week="12" away_team="Tampa Bay Buccaneers" home_team="Los Angeles Rams" game_time="2025-11-24T01:20Z" location="SoFi Stadium" odds="LAR -2.5"/>
+    <Game week="12" away_team="Carolina Panthers" home_team="San Francisco 49ers" game_time="2025-11-25T01:15Z" location="Levi's Stadium" odds="SF -7"/>
+    <Game week="13" away_team="Green Bay Packers" home_team="Detroit Lions" game_time="2025-11-27T18:00Z" location="Ford Field" odds="DET -2.5"/>
+    <Game week="13" away_team="Kansas City Chiefs" home_team="Dallas Cowboys" game_time="2025-11-27T21:30Z" location="AT&amp;T Stadium" odds="KC -5.5"/>
+    <Game week="13" away_team="Cincinnati Bengals" home_team="Baltimore Ravens" game_time="2025-11-28T01:20Z" location="M&amp;T Bank Stadium" odds="BAL -5.5"/>
+    <Game week="13" away_team="Chicago Bears" home_team="Philadelphia Eagles" game_time="2025-11-28T20:00Z" location="Lincoln Financial Field" odds="PHI -7"/>
+    <Game week="13" away_team="San Francisco 49ers" home_team="Cleveland Browns" game_time="2025-11-30T18:00Z" location="Huntington Bank Field" odds="SF -6"/>
+    <Game week="13" away_team="Jacksonville Jaguars" home_team="Tennessee Titans" game_time="2025-11-30T18:00Z" location="Nissan Stadium" odds="JAX -1.5"/>
+    <Game week="13" away_team="Houston Texans" home_team="Indianapolis Colts" game_time="2025-11-30T18:00Z" location="Lucas Oil Stadium" odds="HOU -1.5"/>
+    <Game week="13" away_team="New Orleans Saints" home_team="Miami Dolphins" game_time="2025-11-30T18:00Z" location="Hard Rock Stadium" odds="MIA -6"/>
+    <Game week="13" away_team="Atlanta Falcons" home_team="New York Jets" game_time="2025-11-30T18:00Z" location="MetLife Stadium" odds="ATL -1.5"/>
+    <Game week="13" away_team="Arizona Cardinals" home_team="Tampa Bay Buccaneers" game_time="2025-11-30T18:00Z" location="Raymond James Stadium" odds="TB -3.5"/>
+    <Game week="13" away_team="Los Angeles Rams" home_team="Carolina Panthers" game_time="2025-11-30T18:00Z" location="Bank of America Stadium" odds="LAR -3.5"/>
+    <Game week="13" away_team="Minnesota Vikings" home_team="Seattle Seahawks" game_time="2025-11-30T21:05Z" location="Lumen Field" odds="SEA -1.5"/>
+    <Game week="13" away_team="Buffalo Bills" home_team="Pittsburgh Steelers" game_time="2025-11-30T21:25Z" location="Acrisure Stadium" odds="BUF -4.5"/>
+    <Game week="13" away_team="Las Vegas Raiders" home_team="Los Angeles Chargers" game_time="2025-11-30T21:25Z" location="SoFi Stadium" odds="LAC -6.5"/>
+    <Game week="13" away_team="Denver Broncos" home_team="Washington Commanders" game_time="2025-12-01T01:20Z" location="Northwest Stadium" odds="WSH -2.5"/>
+    <Game week="13" away_team="New York Giants" home_team="New England Patriots" game_time="2025-12-02T01:15Z" location="Gillette Stadium" odds="NE -3"/>
+    <Game week="14" away_team="Dallas Cowboys" home_team="Detroit Lions" game_time="2025-12-05T01:15Z" location="Ford Field" odds="N/A"/>
+    <Game week="14" away_team="Seattle Seahawks" home_team="Atlanta Falcons" game_time="2025-12-07T18:00Z" location="Mercedes-Benz Stadium" odds="ATL -1.5"/>
+    <Game week="14" away_team="Tennessee Titans" home_team="Cleveland Browns" game_time="2025-12-07T18:00Z" location="Huntington Bank Field" odds="CLE -1.5"/>
+    <Game week="14" away_team="Chicago Bears" home_team="Green Bay Packers" game_time="2025-12-07T18:00Z" location="Lambeau Field" odds="GB -3.5"/>
+    <Game week="14" away_team="Washington Commanders" home_team="Minnesota Vikings" game_time="2025-12-07T18:00Z" location="U.S. Bank Stadium" odds="WSH -1.5"/>
+    <Game week="14" away_team="Miami Dolphins" home_team="New York Jets" game_time="2025-12-07T18:00Z" location="MetLife Stadium" odds="MIA -1.5"/>
+    <Game week="14" away_team="New Orleans Saints" home_team="Tampa Bay Buccaneers" game_time="2025-12-07T18:00Z" location="Raymond James Stadium" odds="TB -9.5"/>
+    <Game week="14" away_team="Indianapolis Colts" home_team="Jacksonville Jaguars" game_time="2025-12-07T18:00Z" location="EverBank Stadium" odds="JAX -3"/>
+    <Game week="14" away_team="Pittsburgh Steelers" home_team="Baltimore Ravens" game_time="2025-12-07T18:00Z" location="M&amp;T Bank Stadium" odds="BAL -8.5"/>
+    <Game week="14" away_team="Denver Broncos" home_team="Las Vegas Raiders" game_time="2025-12-07T21:05Z" location="Allegiant Stadium" odds="DEN -3.5"/>
+    <Game week="14" away_team="Cincinnati Bengals" home_team="Buffalo Bills" game_time="2025-12-07T21:25Z" location="Highmark Stadium" odds="BUF -5.5"/>
+    <Game week="14" away_team="Los Angeles Rams" home_team="Arizona Cardinals" game_time="2025-12-07T21:25Z" location="State Farm Stadium" odds="LAR -1.5"/>
+    <Game week="14" away_team="Houston Texans" home_team="Kansas City Chiefs" game_time="2025-12-08T01:20Z" location="GEHA Field at Arrowhead Stadium" odds="KC -6.5"/>
+    <Game week="14" away_team="Philadelphia Eagles" home_team="Los Angeles Chargers" game_time="2025-12-09T01:15Z" location="SoFi Stadium" odds="PHI -2.5"/>
+    <Game week="15" away_team="Atlanta Falcons" home_team="Tampa Bay Buccaneers" game_time="2025-12-12T01:15Z" location="Raymond James Stadium" odds="TB -5.5"/>
+    <Game week="15" away_team="Cleveland Browns" home_team="Chicago Bears" game_time="2025-12-14T18:00Z" location="Soldier Field" odds="CHI -7"/>
+    <Game week="15" away_team="Baltimore Ravens" home_team="Cincinnati Bengals" game_time="2025-12-14T18:00Z" location="Paycor Stadium" odds="BAL -2.5"/>
+    <Game week="15" away_team="Los Angeles Chargers" home_team="Kansas City Chiefs" game_time="2025-12-14T18:00Z" location="GEHA Field at Arrowhead Stadium" odds="KC -4.5"/>
+    <Game week="15" away_team="Buffalo Bills" home_team="New England Patriots" game_time="2025-12-14T18:00Z" location="Gillette Stadium" odds="BUF -4.5"/>
+    <Game week="15" away_team="Washington Commanders" home_team="New York Giants" game_time="2025-12-14T18:00Z" location="MetLife Stadium" odds="WSH -4.5"/>
+    <Game week="15" away_team="Las Vegas Raiders" home_team="Philadelphia Eagles" game_time="2025-12-14T18:00Z" location="Lincoln Financial Field" odds="PHI -10.5"/>
+    <Game week="15" away_team="New York Jets" home_team="Jacksonville Jaguars" game_time="2025-12-14T18:00Z" location="EverBank Stadium" odds="JAX -4.5"/>
+    <Game week="15" away_team="Arizona Cardinals" home_team="Houston Texans" game_time="2025-12-14T18:00Z" location="NRG Stadium" odds="HOU -2.5"/>
+    <Game week="15" away_team="Green Bay Packers" home_team="Denver Broncos" game_time="2025-12-14T21:25Z" location="Empower Field at Mile High" odds="DEN -1.5"/>
+    <Game week="15" away_team="Detroit Lions" home_team="Los Angeles Rams" game_time="2025-12-14T21:25Z" location="SoFi Stadium" odds="DET -1.5"/>
+    <Game week="15" away_team="Carolina Panthers" home_team="New Orleans Saints" game_time="2025-12-14T21:25Z" location="Caesars Superdome" odds="CAR -1.5"/>
+    <Game week="15" away_team="Tennessee Titans" home_team="San Francisco 49ers" game_time="2025-12-14T21:25Z" location="Levi's Stadium" odds="SF -7.5"/>
+    <Game week="15" away_team="Indianapolis Colts" home_team="Seattle Seahawks" game_time="2025-12-14T21:25Z" location="Lumen Field" odds="SEA -3.5"/>
+    <Game week="15" away_team="Minnesota Vikings" home_team="Dallas Cowboys" game_time="2025-12-15T01:20Z" location="AT&amp;T Stadium" odds="MIN -1.5"/>
+    <Game week="15" away_team="Miami Dolphins" home_team="Pittsburgh Steelers" game_time="2025-12-16T01:15Z" location="Acrisure Stadium" odds="PIT -2.5"/>
+    <Game week="16" away_team="Los Angeles Rams" home_team="Seattle Seahawks" game_time="2025-12-19T01:15Z" location="Lumen Field" odds="LAR -1.5"/>
+    <Game week="16" away_team="Green Bay Packers" home_team="Chicago Bears" game_time="2025-12-20T05:00Z" location="Soldier Field" odds="GB -1.5"/>
+    <Game week="16" away_team="Philadelphia Eagles" home_team="Washington Commanders" game_time="2025-12-20T05:00Z" location="Northwest Stadium" odds="PHI -1.5"/>
+    <Game week="16" away_team="Buffalo Bills" home_team="Cleveland Browns" game_time="2025-12-21T18:00Z" location="Huntington Bank Field" odds="BUF -8.5"/>
+    <Game week="16" away_team="Los Angeles Chargers" home_team="Dallas Cowboys" game_time="2025-12-21T18:00Z" location="AT&amp;T Stadium" odds="LAC -1.5"/>
+    <Game week="16" away_team="Kansas City Chiefs" home_team="Tennessee Titans" game_time="2025-12-21T18:00Z" location="Nissan Stadium" odds="KC -7"/>
+    <Game week="16" away_team="New York Jets" home_team="New Orleans Saints" game_time="2025-12-21T18:00Z" location="Caesars Superdome" odds="NO -1.5"/>
+    <Game week="16" away_team="Minnesota Vikings" home_team="New York Giants" game_time="2025-12-21T18:00Z" location="MetLife Stadium" odds="MIN -2.5"/>
+    <Game week="16" away_team="Tampa Bay Buccaneers" home_team="Carolina Panthers" game_time="2025-12-21T18:00Z" location="Bank of America Stadium" odds="TB -3.5"/>
+    <Game week="16" away_team="New England Patriots" home_team="Baltimore Ravens" game_time="2025-12-21T18:00Z" location="M&amp;T Bank Stadium" odds="BAL -8.5"/>
+    <Game week="16" away_team="Jacksonville Jaguars" home_team="Denver Broncos" game_time="2025-12-21T21:05Z" location="Empower Field at Mile High" odds="N/A"/>
+    <Game week="16" away_team="Atlanta Falcons" home_team="Arizona Cardinals" game_time="2025-12-21T21:05Z" location="State Farm Stadium" odds="ARI -3.5"/>
+    <Game week="16" away_team="Pittsburgh Steelers" home_team="Detroit Lions" game_time="2025-12-21T21:25Z" location="Ford Field" odds="DET -6"/>
+    <Game week="16" away_team="Las Vegas Raiders" home_team="Houston Texans" game_time="2025-12-21T21:25Z" location="NRG Stadium" odds="HOU -4.5"/>
+    <Game week="16" away_team="Cincinnati Bengals" home_team="Miami Dolphins" game_time="2025-12-22T01:20Z" location="Hard Rock Stadium" odds="CIN -1.5"/>
+    <Game week="16" away_team="San Francisco 49ers" home_team="Indianapolis Colts" game_time="2025-12-23T01:15Z" location="Lucas Oil Stadium" odds="SF -3"/>
+    <Game week="17" away_team="Dallas Cowboys" home_team="Washington Commanders" game_time="2025-12-25T18:00Z" location="Northwest Stadium" odds="WSH -5.5"/>
+    <Game week="17" away_team="Detroit Lions" home_team="Minnesota Vikings" game_time="2025-12-25T21:30Z" location="U.S. Bank Stadium" odds="DET -2.5"/>
+    <Game week="17" away_team="Denver Broncos" home_team="Kansas City Chiefs" game_time="2025-12-26T01:15Z" location="GEHA Field at Arrowhead Stadium" odds="KC -4.5"/>
+    <Game week="17" away_team="Arizona Cardinals" home_team="Cincinnati Bengals" game_time="2025-12-27T05:00Z" location="Paycor Stadium" odds="N/A"/>
+    <Game week="17" away_team="Baltimore Ravens" home_team="Green Bay Packers" game_time="2025-12-27T05:00Z" location="Lambeau Field" odds="N/A"/>
+    <Game week="17" away_team="New York Giants" home_team="Las Vegas Raiders" game_time="2025-12-27T05:00Z" location="Allegiant Stadium" odds="N/A"/>
+    <Game week="17" away_team="Houston Texans" home_team="Los Angeles Chargers" game_time="2025-12-27T05:00Z" location="SoFi Stadium" odds="N/A"/>
+    <Game week="17" away_team="Seattle Seahawks" home_team="Carolina Panthers" game_time="2025-12-27T05:00Z" location="Bank of America Stadium" odds="N/A"/>
+    <Game week="17" away_team="Pittsburgh Steelers" home_team="Cleveland Browns" game_time="2025-12-28T18:00Z" location="Huntington Bank Field" odds="PIT -2.5"/>
+    <Game week="17" away_team="New Orleans Saints" home_team="Tennessee Titans" game_time="2025-12-28T18:00Z" location="Nissan Stadium" odds="TEN -3.5"/>
+    <Game week="17" away_team="Jacksonville Jaguars" home_team="Indianapolis Colts" game_time="2025-12-28T18:00Z" location="Lucas Oil Stadium" odds="IND -1.5"/>
+    <Game week="17" away_team="Tampa Bay Buccaneers" home_team="Miami Dolphins" game_time="2025-12-28T18:00Z" location="Hard Rock Stadium" odds="TB -1.5"/>
+    <Game week="17" away_team="New England Patriots" home_team="New York Jets" game_time="2025-12-28T18:00Z" location="MetLife Stadium" odds="NE -1.5"/>
+    <Game week="17" away_team="Philadelphia Eagles" home_team="Buffalo Bills" game_time="2025-12-28T21:25Z" location="Highmark Stadium" odds="BUF -1.5"/>
+    <Game week="17" away_team="Chicago Bears" home_team="San Francisco 49ers" game_time="2025-12-29T01:20Z" location="Levi's Stadium" odds="SF -3.5"/>
+    <Game week="17" away_team="Los Angeles Rams" home_team="Atlanta Falcons" game_time="2025-12-30T01:15Z" location="Mercedes-Benz Stadium" odds="N/A"/>
+    <Game week="18" away_team="New Orleans Saints" home_team="Atlanta Falcons" game_time="2026-01-04T05:00Z" location="Mercedes-Benz Stadium" odds="ATL -4.5"/>
+    <Game week="18" away_team="New York Jets" home_team="Buffalo Bills" game_time="2026-01-04T05:00Z" location="Highmark Stadium" odds="BUF -9.5"/>
+    <Game week="18" away_team="Detroit Lions" home_team="Chicago Bears" game_time="2026-01-04T05:00Z" location="Soldier Field" odds="DET -1.5"/>
+    <Game week="18" away_team="Cleveland Browns" home_team="Cincinnati Bengals" game_time="2026-01-04T05:00Z" location="Paycor Stadium" odds="CIN -8.5"/>
+    <Game week="18" away_team="Los Angeles Chargers" home_team="Denver Broncos" game_time="2026-01-04T05:00Z" location="Empower Field at Mile High" odds="DEN -2.5"/>
+    <Game week="18" away_team="Kansas City Chiefs" home_team="Las Vegas Raiders" game_time="2026-01-04T05:00Z" location="Allegiant Stadium" odds="KC -6"/>
+    <Game week="18" away_team="Arizona Cardinals" home_team="Los Angeles Rams" game_time="2026-01-04T05:00Z" location="SoFi Stadium" odds="LAR -3.5"/>
+    <Game week="18" away_team="Green Bay Packers" home_team="Minnesota Vikings" game_time="2026-01-04T05:00Z" location="U.S. Bank Stadium" odds="GB -1.5"/>
+    <Game week="18" away_team="Miami Dolphins" home_team="New England Patriots" game_time="2026-01-04T05:00Z" location="Gillette Stadium" odds="NE -2.5"/>
+    <Game week="18" away_team="Dallas Cowboys" home_team="New York Giants" game_time="2026-01-04T05:00Z" location="MetLife Stadium" odds="DAL -1.5"/>
+    <Game week="18" away_team="Washington Commanders" home_team="Philadelphia Eagles" game_time="2026-01-04T05:00Z" location="Lincoln Financial Field" odds="PHI -4.5"/>
+    <Game week="18" away_team="Baltimore Ravens" home_team="Pittsburgh Steelers" game_time="2026-01-04T05:00Z" location="Acrisure Stadium" odds="BAL -4.5"/>
+    <Game week="18" away_team="Seattle Seahawks" home_team="San Francisco 49ers" game_time="2026-01-04T05:00Z" location="Levi's Stadium" odds="SF -4.5"/>
+    <Game week="18" away_team="Carolina Panthers" home_team="Tampa Bay Buccaneers" game_time="2026-01-04T05:00Z" location="Raymond James Stadium" odds="TB -7"/>
+    <Game week="18" away_team="Tennessee Titans" home_team="Jacksonville Jaguars" game_time="2026-01-04T05:00Z" location="EverBank Stadium" odds="JAX -4.5"/>
+    <Game week="18" away_team="Indianapolis Colts" home_team="Houston Texans" game_time="2026-01-04T05:00Z" location="NRG Stadium" odds="HOU -4.5"/>
+</NFLSchedule>

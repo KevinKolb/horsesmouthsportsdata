@@ -1,281 +1,88 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Scrape 2025 NFL schedule from NFL Operations and write games/nflgames.xml.
-
-- Source: https://operations.nfl.com/gameday/nfl-schedule/2025-nfl-schedule/
-- Produces a compact XML compatible with your college-football-ish fields
-- Marks neutral-site games when matchup uses "vs"
-- Stores time as ET string exactly as listed (e.g., "1:00p (ET)")
-- Creates games/nflgames.xml.bak before overwrite
-
-Requires: requests, beautifulsoup4
-    pip install requests beautifulsoup4
-"""
-
-import os
-import re
-import shutil
-from datetime import datetime
-from pathlib import Path
-
 import requests
-from bs4 import BeautifulSoup, NavigableString
+import xml.etree.ElementTree as ET
+import xml.dom.minidom as minidom
+import os
+import time
 
-URL = "https://operations.nfl.com/gameday/nfl-schedule/2025-nfl-schedule/"
-OUT_PATH = Path("games/nflgames.xml")
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/124.0.0.0 Safari/537.36"
-)
+def fetch_nfl_schedule(year, week, seasontype=2):
+    url = f"https://cdn.espn.com/core/nfl/schedule?xhr=1&year={year}&seasontype={seasontype}&week={week}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        raise Exception(f"Failed to fetch data for week {week}: {response.status_code}")
+    return response.json()
 
-# ---- helpers ---------------------------------------------------------------
-
-def fetch_html(url: str, timeout: int = 30) -> str:
-    r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=timeout)
-    r.raise_for_status()
-    return r.text
-
-def normalize_spaces(s: str) -> str:
-    return re.sub(r"\s+", " ", s.strip())
-
-def extract_text_blocks(soup: BeautifulSoup) -> list[str]:
-    """
-    The page mixes headings and bare text nodes inside the article.
-    We walk the main article content and collect clean text lines,
-    preserving order. Empty lines are discarded.
-    """
-    article = soup.find(id="main") or soup  # fallback
-    # The schedule sits under the h1/h2 content; safest is to walk all strings:
-    lines = []
-    for node in article.descendants:
-        if isinstance(node, NavigableString):
-            txt = normalize_spaces(str(node))
-            if txt:
-                lines.append(txt)
-    return lines
-
-def is_week_header(line: str) -> bool:
-    return re.fullmatch(r"WEEK\s+\d+", line.upper()) is not None
-
-def is_date_header(line: str) -> bool:
-    # e.g., "Thursday, Sept. 4, 2025"
-    return bool(re.match(r"^(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday),\s", line))
-
-def is_matchup(line: str) -> bool:
-    # "Team A at Team B" or "Team A vs Team B (Sao Paulo)" etc.
-    return (" at " in line) or re.search(r"\s+vs\s+", line)
-
-def is_time_et(line: str) -> bool:
-    # Want the ET-bearing time like "1:00p (ET)" or "8:20p (ET)"
-    return bool(re.search(r"\b\d{1,2}:\d{2}p\s*\(ET\)", line))
-
-def is_network(line: str) -> bool:
-    # Networks are short tokens like FOX, CBS, NBC, ABC/ESPN, Prime Video, NFLN, YouTube, ESPN/ABC, etc.
-    return bool(re.fullmatch(r"[A-Z0-9+/& ]{2,20}", line)) and "ET" not in line
-
-def split_matchup(line: str):
-    """
-    Returns (away, home, neutral_site: bool, note)
-    - For 'at' -> away at home
-    - For 'vs' -> neutral site; first is nominal home? We'll store first as away and second as home,
-      but mark neutralsite=True. (You can swap if you prefer.)
-    The page sometimes includes a location in parentheses after the second team: capture as 'note'.
-    """
-    # capture trailing "(...)" note
-    note = ""
-    m_note = re.search(r"\(([^)]*)\)$", line)
-    if m_note:
-        note = m_note.group(1).strip()
-        core = line[:m_note.start()].strip()
-    else:
-        core = line
-
-    if " at " in core:
-        away, home = core.split(" at ", 1)
-        neutral = False
-    else:
-        # "vs" case
-        parts = re.split(r"\s+vs\s+", core)
-        if len(parts) == 2:
-            away, home = parts
-        else:
-            # Fallback: if something odd, return as-is
-            away, home = core, ""
-        neutral = True
-
-    return normalize_spaces(away), normalize_spaces(home), neutral, note
-
-MONTH_MAP = {
-    "Sept.": "Sep", "Sep.": "Sep", "Sept": "Sep",
-    "Oct.": "Oct", "Nov.": "Nov", "Dec.": "Dec", "Jan.": "Jan",
-    "February": "Feb", "January": "Jan", "October": "Oct",
-}
-
-def parse_date_header(line: str) -> str:
-    """
-    Convert 'Thursday, Sept. 4, 2025' -> '2025-09-04'
-    """
-    # Remove weekday:
-    line = re.sub(r"^[A-Za-z]+,\s+", "", line).strip()
-    # Normalize month token:
-    tokens = line.replace(",", "").split()
-    # Expect: [Mon, DD, YYYY]
-    if len(tokens) >= 3:
-        mon, day, year = tokens[0], tokens[1], tokens[2]
-        mon = MONTH_MAP.get(mon, mon[:3])  # crude normalize
-        dt = datetime.strptime(f"{day} {mon} {year}", "%d %b %Y")
-        return dt.strftime("%Y-%m-%d")
-    return ""
-
-def ensure_dir(p: Path):
-    p.parent.mkdir(parents=True, exist_ok=True)
-
-def backup_file(p: Path):
-    if p.exists():
-        shutil.copy2(p, p.with_suffix(p.suffix + f".bak"))
-
-# ---- main scrape/parse -----------------------------------------------------
-
-def scrape_schedule():
-    html = fetch_html(URL)
-    soup = BeautifulSoup(html, "html.parser")
-    lines = extract_text_blocks(soup)
-
-    season_year = 2025
-    week = None
-    cur_date = None
-
-    games = []  # list of dicts with fields below
-
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-
-        if is_week_header(line):
-            week = int(line.split()[-1])
-            i += 1
-            continue
-
-        if is_date_header(line):
-            cur_date = parse_date_header(line)
-            i += 1
-            continue
-
-        if is_matchup(line):
-            away, home, neutral, note = split_matchup(line)
-
-            # Expect the ET time on the next few lines; the page often lists ET time and then repeats a bare time.
-            t_et = ""
-            tv = ""
-            j = i + 1
-            # Scan a small window ahead for "ET" time and then a network token
-            scan_limit = min(len(lines), i + 8)
-            while j < scan_limit:
-                nxt = lines[j]
-                if not t_et and is_time_et(nxt):
-                    t_et = nxt
-                elif not tv and is_network(nxt):
-                    tv = nxt.strip()
-                    break
-                j += 1
-
-            games.append({
-                "season": season_year,
-                "week": week,
-                "date": cur_date,           # YYYY-MM-DD
-                "time_et": t_et,            # as listed, e.g. "1:00p (ET)"
-                "away": away,
-                "home": home,
-                "tv": tv,
-                "neutralsite": "True" if neutral else "False",
-                "note": note,               # e.g., "Sao Paulo", "Dublin", "Tottenham"
-            })
-
-            i = j + 1
-            continue
-
-        i += 1
-
+def parse_game_data(json_data, week):
+    games = []
+    try:
+        for date_key, schedule in json_data['content']['schedule'].items():
+            for game in schedule['games']:
+                game_info = {
+                    'week': week,
+                    'away_team': game['competitions'][0]['competitors'][1]['team']['displayName'],
+                    'home_team': game['competitions'][0]['competitors'][0]['team']['displayName'],
+                    'game_time': game['date'],
+                    'location': game['competitions'][0]['venue']['fullName'],
+                    'odds': game['competitions'][0].get('odds', [{}])[0].get('details', 'N/A')
+                }
+                games.append(game_info)
+    except KeyError:
+        print(f"No game data found for week {week}.")
     return games
 
-# ---- XML output ------------------------------------------------------------
-
-def to_xml(games: list[dict]) -> str:
-    from xml.etree.ElementTree import Element, SubElement, tostring
-    from xml.dom import minidom
-
-    root = Element("games", {
-        "generated": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        "source": "NFL Football Operations",
-        "year": "2025",
-        "last_updated": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        "total_teams": "32",
-    })
-
-    # group by team like your college file, but here we’ll group by home team for compactness
-    # also add a <team code=""> wrapper like your structure
-    # collect unique team codes from home/away names (use display names as codes for now)
-    from collections import defaultdict
-    buckets = defaultdict(list)
-    for g in games:
-        buckets[g["home"]].append(g)
-
-    gid = 1
-    for team_name in sorted(buckets.keys()):
-        team_el = SubElement(root, "team", {
-            "code": team_name,
-            "name": team_name,
-            "total_games": str(len(buckets[team_name])),
-            "updated": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        })
-        for g in buckets[team_name]:
-            # id scheme: YYYYWW_home_vs_away_serial
-            game_id = f"{g['season']}{str(g['week']).zfill(2)}_{re.sub(r'\\W+','', g['home'])}_vs_{re.sub(r'\\W+','', g['away'])}_{gid}"
-            SubElement(team_el, "game", {
-                "id": str(gid),
-                "extid": game_id,
-                "season": str(g["season"]),
-                "week": str(g["week"]),
-                "seasontype": "regular",
-                "startdate": f"{g['date']}",
-                "starttimetbd": "False",
-                "completed": "False",
-                "neutralsite": g["neutralsite"],
-                "conferencegame": "False",
-                "venueid": "",
-                "venue": g["note"] if g["neutralsite"] == "True" else "",
-                "homeid": "",
-                "hometeam": g["home"],
-                "homeclassification": "pro",
-                "homeconference": "NFL",
-                "homepregameelo": "",
-                "awayid": "",
-                "awayteam": g["away"],
-                "awayclassification": "pro",
-                "awayconference": "NFL",
-                "awaypregameelo": "",
-                "notes": g["tv"],
-                "tv": g["tv"],
-                "time_et": g["time_et"],
-            })
-            gid += 1
-
-    ugly = tostring(root, encoding="utf-8")
-    pretty = minidom.parseString(ugly).toprettyxml(indent="  ", encoding="utf-8")
-    return pretty.decode("utf-8")
+def save_to_xml(all_games, year, folder="games", filename="games.xml"):
+    # Ensure the games folder exists
+    os.makedirs(folder, exist_ok=True)
+    filepath = os.path.join(folder, filename)
+    
+    root = ET.Element("NFLSchedule")
+    root.set("year", str(year))
+    
+    for game in all_games:
+        game_elem = ET.SubElement(root, "Game")
+        game_elem.set("week", str(game['week']))
+        game_elem.set("away_team", game['away_team'])
+        game_elem.set("home_team", game['home_team'])
+        game_elem.set("game_time", game['game_time'])
+        game_elem.set("location", game['location'])
+        game_elem.set("odds", game['odds'])
+    
+    # Convert ElementTree to string and prettify
+    rough_string = ET.tostring(root, 'utf-8')
+    parsed = minidom.parseString(rough_string)
+    pretty_xml = parsed.toprettyxml(indent="    ", encoding="utf-8").decode("utf-8")
+    
+    # Write to file
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(pretty_xml)
+    print(f"All schedules saved to {filepath}")
 
 def main():
-    games = scrape_schedule()
-    if not games:
-        raise SystemExit("No games parsed — the page structure may have changed.")
-
-    xml_text = to_xml(games)
-    ensure_dir(OUT_PATH)
-    backup_file(OUT_PATH)
-    OUT_PATH.write_text(xml_text, encoding="utf-8")
-    print(f"Wrote {OUT_PATH} with {len(games)} games.")
+    year = 2025
+    weeks = range(1, 19)  # NFL regular season typically has 18 weeks
+    seasontype = 2  # Regular season
+    all_games = []
+    
+    for week in weeks:
+        try:
+            print(f"Fetching schedule for week {week}...")
+            json_data = fetch_nfl_schedule(year, week, seasontype)
+            games = parse_game_data(json_data, week)
+            if games:
+                all_games.extend(games)
+            else:
+                print(f"No games found for week {week}.")
+            time.sleep(1)  # Avoid overwhelming the API
+        except Exception as e:
+            print(f"Error for week {week}: {e}")
+            time.sleep(2)  # Wait longer if there's an error
+    
+    if all_games:
+        save_to_xml(all_games, year, folder="games", filename="games.xml")
+    else:
+        print("No games found for any week, no XML file created.")
 
 if __name__ == "__main__":
     main()
