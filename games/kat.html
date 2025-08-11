@@ -198,6 +198,9 @@
             border: 1px solid #ddd;
             background: #fff;
             transition: all 0.2s;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            overflow: hidden; /* Ensures border-radius contains children */
         }
 
         .game-item:hover {
@@ -217,50 +220,39 @@
             border: 2px solid #fff;
         }
 
-        .game-header {
-            padding: 16px 20px;
-            border-bottom: 1px solid #ddd;
-            display: grid;
-            grid-template-columns: 50px 1fr auto;
-            gap: 16px;
-            align-items: center;
-            color: white;
-        }
-
-        .game-header .game-league {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding: 6px 12px;
-            border-radius: 2px;
-            font-weight: 500;
-        }
-
-        .team-icon {
-            width: 40px;
-            height: 100%;
-            border-radius: 0;
+        .game-logo-cell {
+            grid-row: 1 / span 2;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            border: none;
+            padding: 8px;
         }
 
-        .team-icon img {
-            width: 100%;
-            height: 100%;
+        .game-logo-cell img {
+            max-width: 100%;
+            max-height: 50px;
             object-fit: contain;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
         }
-
+        
+        .game-header{
+          display: grid;
+          grid-template-columns: 1fr auto; /* names | HOME/AWAY */
+          align-items: center;
+          padding: 16px 20px;
+          color: #fff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         .game-teams {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 18px;
-            font-weight: 500;
+            gap: 8px;
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: 700;
         }
 
         .vs {
@@ -273,6 +265,7 @@
 
         .game-details {
             padding: 16px 20px;
+            background: #fff;
         }
 
         .game-info {
@@ -394,6 +387,12 @@
                 margin-bottom: 8px;
                 border: 1px solid #ddd;
                 break-inside: avoid;
+                grid-template-columns: 40px 1fr; /* Shrink logo cell */
+            }
+
+            .game-logo-cell img {
+                max-height: 30px;
+                filter: none;
             }
 
             .game-item::before {
@@ -406,7 +405,7 @@
             .game-header {
                 padding: 6px 8px;
                 color: white !important;
-                grid-template-columns: auto 1fr auto;
+                grid-template-columns: 1fr auto;
                 gap: 8px;
                 border-bottom: 1px solid rgba(255,255,255,0.2);
             }
@@ -422,14 +421,8 @@
                 padding: 2px 4px;
             }
 
-            .team-icon {
-                width: 20px;
-                height: 20px;
-            }
-
-            .game-teams {
+            .team-name {
                 font-size: 11px;
-                gap: 6px;
             }
 
             .vs {
@@ -462,10 +455,8 @@
                 color: #666;
             }
         }
-    </style>
-<!-- Favicon for browser tab -->
-  <link rel="icon" type="image/png" href="../images/katopus.png">
-  <!-- Apple Touch Icon for iOS home screen -->
+</style>
+<link rel="icon" type="image/png" href="../images/katopus.png">
   <link rel="apple-touch-icon" href="../images/katopus.png">
 </head>
 <body>
@@ -478,23 +469,8 @@
                 <h1>Kat's Football Schedule</h1>
                 <div class="meta">2025 Season • <span style="color: #D3BC8D;">Saints</span>, <span style="color: #FA4616;">Gators</span>, <span style="color: #461D7C;">Tigers</span>, <span style="color: #006747;">Wave</span></div>
             </div>
-            <button class="header-btn" onclick="shareToScreen()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                Share
-            </button>
-            <button class="header-btn" onclick="printSchedule()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6,9 6,2 18,2 18,9"/>
-                    <path d="M6,18H4a2,2,0,0,1-2-2V11a2,2,0,0,1,2-2H20a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2H18"/>
-                    <rect x="6" y="14" width="12" height="8"/>
-                </svg>
-                Print
-            </button>
+            <button class="header-btn" onclick="shareToScreen()">Share</button>
+            <button class="header-btn" onclick="printSchedule()">Print</button>
         </header>
 
         <div class="katopus-modal" id="katopusModal" onclick="hideKatopusModal()">
@@ -580,60 +556,50 @@
             return { name: teamSlug, conference: '', division: '', location: '' };
         }
 
-        function formatGameDate(isoString) {
-            const date = new Date(isoString);
-            return date.toLocaleDateString('en-US', {
+        // --- TBD handling helpers ---
+        function isTimeTBD(gameEl) {
+            const v = (gameEl.getAttribute('starttimetbd')
+                    || gameEl.getAttribute('start_time_tbd')
+                    || gameEl.getAttribute('time_tbd')
+                    || gameEl.getAttribute('tbd')
+                    || '').toString().toLowerCase();
+            return v === 'true' || v === '1' || v === 'yes';
+        }
+        function getStartISO(gameEl) {
+            return gameEl.getAttribute('start_date') || gameEl.getAttribute('startdate');
+        }
+        function dateForDisplay(isoString, tbd) {
+            const d = new Date(isoString);
+            if (tbd) d.setHours(d.getHours() + 6);
+            return d;
+        }
+        function formatGameDate(isoString, tbd=false) {
+            const d = dateForDisplay(isoString, tbd);
+            return d.toLocaleDateString('en-US', {
                 weekday: 'short',
                 month: 'short',
                 day: 'numeric',
                 timeZone: 'America/Chicago'
             });
         }
-
         function formatGameTime(isoString) {
-            const date = new Date(isoString);
-            return date.toLocaleTimeString('en-US', {
+            const d = new Date(isoString);
+            return d.toLocaleTimeString('en-US', {
                 hour: 'numeric',
                 minute: '2-digit',
                 timeZone: 'America/Chicago',
                 timeZoneName: 'short'
             });
         }
-
-        function getMonthYear(isoString) {
-            const date = new Date(isoString);
-            return date.toLocaleDateString('en-US', {
+        function monthYearLabel(isoString, tbd=false) {
+            const d = dateForDisplay(isoString, tbd);
+            return d.toLocaleDateString('en-US', {
                 month: 'long',
                 year: 'numeric',
                 timeZone: 'America/Chicago'
             });
         }
-
-        function renderTeamStats(teamStats) {
-            const statsContainer = document.getElementById('team-stats');
-            statsContainer.innerHTML = '';
-            
-            Object.entries(targetTeams).forEach(([teamName, config]) => {
-                const stats = teamStats[teamName];
-                const total = stats.home + stats.away;
-                
-                const statDiv = document.createElement('div');
-                statDiv.className = 'team-stat';
-                statDiv.style.background = config.colors.primary;
-                statDiv.style.color = 'white';
-                
-                statDiv.innerHTML = `
-                    <div class="team-stat-name">${teamName.replace('New Orleans ', '')}</div>
-                    <div class="team-stat-counts">
-                        <div class="stat-item">🏠 ${stats.home}</div>
-                        <div class="stat-item">✈️ ${stats.away}</div>
-                        <div class="stat-item">📊 ${total}</div>
-                    </div>
-                `;
-                
-                statsContainer.appendChild(statDiv);
-            });
-        }
+        // --- end TBD helpers ---
 
         function renderSchedule() {
             const allGames = [];
@@ -654,16 +620,17 @@
                                 
                                 const games = team.querySelectorAll('game');
                                 games.forEach(game => {
-                                    const startDate = game.getAttribute('start_date') || game.getAttribute('startdate');
-                                    if (startDate) {
-                                        const homeTeam = game.getAttribute('home_team');
-                                        const isHome = (homeTeam === teamName || homeTeam === teamCode);
-                                        
+                                    const startISO = getStartISO(game);
+                                    if (startISO) {
+                                        const tbd = isTimeTBD(game);
+                                        const sortDate = dateForDisplay(startISO, tbd);
                                         allGames.push({
                                             team: teamName,
                                             teamCode: teamCode || teamFullName,
                                             game: game,
-                                            date: new Date(startDate),
+                                            startISO,
+                                            tbd,
+                                            date: sortDate,
                                             config: config
                                         });
                                     }
@@ -680,8 +647,8 @@
             let currentMonth = '';
 
             allGames.forEach(gameData => {
-                const { team, teamCode, game, date, config } = gameData;
-                const monthYear = getMonthYear(date.toISOString());
+                const { team, teamCode, game, startISO, tbd, config } = gameData;
+                const monthYear = monthYearLabel(startISO, tbd);
                 
                 if (monthYear !== currentMonth) {
                     currentMonth = monthYear;
@@ -697,7 +664,6 @@
                 const homeTeam = game.getAttribute('home_team');
                 const awayTeam = game.getAttribute('away_team');
                 const venue = game.getAttribute('venue');
-                const startDate = game.getAttribute('start_date') || game.getAttribute('startdate');
                 
                 const isHome = (homeTeam === team || homeTeam === teamCode);
                 const opponent = isHome ? awayTeam : homeTeam;
@@ -705,25 +671,24 @@
                 const favoredTeam = team;
                 const otherTeam = opponent;
                 
-                const gameDateTime = formatGameDate(startDate);
-                const gameTime = formatGameTime(startDate);
+                const gameDateTime = formatGameDate(startISO, tbd);
+                const gameTime = tbd ? 'TBD' : formatGameTime(startISO);
                 
                 const leagueLabel = isHome ? 'HOME' : 'AWAY';
-                const headerStyle = `style="background: ${config.colors.primary};"`;
-                
-                gameItem.style.borderLeft = `4px solid ${config.colors.secondary}`;
+                const headerStyle = `style="background:${config.colors.primary};"`;
+                const logoCellStyle = `style="background:${config.colors.secondary};"`;
 
                 gameItem.innerHTML = `
+                    <div class="game-logo-cell" ${logoCellStyle}>
+                        <img src="${config.icon}" alt="${team} Logo" onerror="this.style.display='none'">
+                    </div>
                     <div class="game-header" ${headerStyle}>
-                        <div class="team-icon" style="background: ${config.colors.secondary};">
-                            <img src="${config.icon}" alt="${team} logo" onerror="this.style.display='none'; this.parentNode.innerHTML='${team.substring(0,2).toUpperCase()}'; this.parentNode.style.color='white';">
-                        </div>
                         <div class="game-teams">
-                            <span style="color: white; font-size: 18px; font-weight: 500;">${favoredTeam}</span>
-                            <span class="vs" style="color: white; font-size: 12px; font-weight: 500; text-transform: lowercase;">vs</span>
-                            <span style="color: white; font-size: 18px; font-weight: 500;">${otherTeam}</span>
+                            <span class="team-name">${favoredTeam}</span>
+                            <span class="vs">vs</span>
+                            <span class="team-name">${otherTeam}</span>
                         </div>
-                        <div class="game-league" style="color: white; font-size: 12px; font-weight: 500;">${leagueLabel}</div>
+                        <div class="game-league">${leagueLabel}</div>
                     </div>
                     <div class="game-details">
                         <div class="game-info">
