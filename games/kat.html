@@ -857,6 +857,11 @@
             });
         }
         function formatGameTime(isoString) {
+            // Check if this is the specific Saints @ Falcons game time that should be TBD
+            if (isoString === '2026-01-04T05:00Z') {
+                return 'TBD';
+            }
+            
             const d = new Date(isoString);
             return d.toLocaleTimeString('en-US', {
                 hour: 'numeric',
@@ -987,7 +992,7 @@
         }
 
         function addToHomeScreen() {
-            alert("To add Kat's Football Schedule to your phone's home screen:\n\n1. Tap the Share icon at the bottom of Safari (not Chrome)\n2. Scroll down and tap 'Add to Home Screen'\n3. Tap 'Add' to confirm\n\nYou'll then have quick access to Kat's Football Schedule from your phone's home screen!");
+            alert("To add this schedule to your home screen:\n\n1. Tap the Share icon (□↗) at the bottom of Safari\n2. Scroll down and tap 'Add to Home Screen'\n3. Tap 'Add' to confirm\n\nYou'll then have quick access to Kat's schedule from your home screen!");
         }
 
         function printSchedule() {
