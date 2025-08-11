@@ -237,6 +237,12 @@
             align-items: center;
             justify-content: center;
             padding: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .game-logo-cell:hover {
+            transform: scale(1.05);
         }
 
         .game-logo-cell img {
@@ -766,25 +772,29 @@
                 slug: 'tulane-green-wave', 
                 league: 'College', 
                 colors: { primary: '#006747', secondary: '#66C7E1' }, 
-                icon: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/tulanegreenwave.com/images/sng_2025/main_nav_logo.svg'
+                icon: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/tulanegreenwave.com/images/sng_2025/main_nav_logo.svg',
+                website: 'https://tulanegreenwave.com/sports/football/schedule'
             },
             'LSU': { 
                 slug: 'lsu-tigers', 
                 league: 'College', 
                 colors: { primary: '#461D7C', secondary: '#FDD023' }, 
-                icon: 'https://storage.googleapis.com/lsusports-com/2021/06/3c6e097b-logo.svg'
+                icon: 'https://storage.googleapis.com/lsusports-com/2021/06/3c6e097b-logo.svg',
+                website: 'https://lsusports.net/sports/fb/schedule'
             },
             'Florida': { 
                 slug: 'florida-gators', 
                 league: 'College', 
                 colors: { primary: '#FA4616', secondary: '#0021A5' }, 
-                icon: 'https://upload.wikimedia.org/wikipedia/en/7/74/Florida_Gators_football_logo.svg'
+                icon: 'https://upload.wikimedia.org/wikipedia/en/7/74/Florida_Gators_football_logo.svg',
+                website: 'https://floridagators.com/sports/football/schedule'
             },
             'New Orleans Saints': { 
                 slug: 'new-orleans-saints', 
                 league: 'NFL', 
                 colors: { primary: '#D3BC8D', secondary: '#101820' }, 
-                icon: 'https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx'
+                icon: 'https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx',
+                website: 'https://www.neworleanssaints.com/schedule/'
             }
         };
 
@@ -958,7 +968,7 @@
                 const logoCellStyle = `style="background:${config.colors.secondary};"`;
 
                 gameItem.innerHTML = `
-                    <div class="game-logo-cell" ${logoCellStyle}>
+                    <div class="game-logo-cell" ${logoCellStyle} onclick="window.open('${config.website}', '_blank')">
                         <img src="${config.icon}" alt="${team} Logo" onerror="this.style.display='none'">
                     </div>
                     <div class="game-header" ${headerStyle}>
