@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Viewer - Horses Mouth Sports Data</title>
+    <title>Games Schedule 2025</title>
     <style>
         * {
             margin: 0;
@@ -12,12 +12,11 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            font-size: 14px;
         }
 
         .container {
@@ -26,588 +25,436 @@
             padding: 40px 20px;
         }
 
-        header {
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
+        .header {
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
 
-        h1 {
-            font-size: 48px;
-            font-weight: 100;
+        .header h1 {
+            font-size: 32px;
+            font-weight: 400;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
         }
 
-        .subtitle {
-            font-size: 18px;
-            color: #666;
-            font-weight: 300;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-            padding: 40px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 36px;
-            font-weight: 100;
-            color: #000;
-            display: block;
-            letter-spacing: -0.02em;
-        }
-
-        .stat-label {
-            font-size: 14px;
+        .header .meta {
+            font-size: 12px;
             color: #666;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 8px;
-        }
-
-        .week-selector {
-            margin-bottom: 40px;
-        }
-
-        .week-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 40px;
-        }
-
-        .week-tab {
-            padding: 12px 20px;
-            background: none;
-            border: 1px solid #e0e0e0;
-            color: #666;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 400;
-            transition: all 0.2s ease;
             letter-spacing: 0.05em;
         }
 
-        .week-tab:hover {
-            background-color: #f8f8f8;
-            border-color: #ccc;
+        .league-section {
+            margin-bottom: 60px;
         }
 
-        .week-tab.active {
-            background-color: #000;
+        .league-header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            border-bottom: 1px solid #000;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+        }
+
+        .league-title {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .league-count {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .team-card {
+            border: 1px solid #ddd;
+        }
+
+        .team-header {
+            background: #f8f8f8;
+            padding: 16px 20px;
+            border-bottom: 1px solid #ddd;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .team-info h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .team-meta {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .team-stats {
+            text-align: right;
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .games-list {
+            list-style: none;
+        }
+
+        .game-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 40px 1fr auto 80px;
+            gap: 16px;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .game-item:hover {
+            background: #f8f8f8;
+        }
+
+        .game-item:last-child {
+            border-bottom: none;
+        }
+
+        .game-week {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .game-matchup {
+            font-size: 13px;
+        }
+
+        .game-opponent {
+            font-weight: 500;
+        }
+
+        .game-venue {
+            font-size: 11px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .game-date {
+            font-size: 11px;
+            color: #666;
+            text-align: right;
+        }
+
+        .game-time {
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .home-indicator {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #000;
+            margin-right: 8px;
+        }
+
+        .away-indicator {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .conference-game {
+            background: #f0f0f0;
+        }
+
+        .filter-controls {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #000;
             color: #fff;
             border-color: #000;
         }
 
-        .week-content {
-            display: none;
-        }
-
-        .week-content.active {
-            display: block;
-        }
-
-        .week-header {
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 30px;
-            letter-spacing: -0.01em;
-        }
-
-        .date-section {
-            margin-bottom: 40px;
-        }
-
-        .date-header {
-            font-size: 16px;
-            font-weight: 500;
-            color: #000;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #f0f0f0;
-            letter-spacing: 0.02em;
-        }
-
-        .games-grid {
-            display: grid;
-            gap: 16px;
-        }
-
-        .game-card {
-            border: 1px solid #e8e8e8;
-            padding: 24px;
-            background-color: #fafafa;
-            transition: all 0.2s ease;
-        }
-
-        .game-card:hover {
-            background-color: #f5f5f5;
-            border-color: #d0d0d0;
-        }
-
-        .game-matchup {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-
-        .teams {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex: 1;
-        }
-
-        .team {
-            font-size: 16px;
-            font-weight: 400;
-            color: #000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .team-logo {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-        }
-
-        .game-card:hover .team-logo {
-            opacity: 1;
-        }
-
-        .vs {
-            font-size: 14px;
-            color: #999;
-            font-weight: 300;
-        }
-
-        .game-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
+        .loading {
+            text-align: center;
+            padding: 40px;
             color: #666;
         }
 
-        .time {
-            font-weight: 400;
-        }
-
-        .odds {
-            padding: 4px 8px;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
-
-        .location-note {
-            font-style: italic;
-            color: #999;
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .search-box {
-            width: 100%;
-            max-width: 400px;
-            padding: 16px;
-            border: 1px solid #e0e0e0;
-            font-size: 16px;
-            font-family: inherit;
-            background-color: #fafafa;
-            margin-bottom: 30px;
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: #000;
-            background-color: #fff;
-        }
-
-        .search-box::placeholder {
-            color: #999;
-            font-weight: 300;
-        }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 20px 16px;
+            .teams-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            .stat-number {
-                font-size: 28px;
-            }
-
-            .week-tabs {
-                justify-content: center;
-            }
-
-            .week-tab {
-                padding: 10px 16px;
-                font-size: 13px;
-            }
-
-            .game-matchup {
-                flex-direction: column;
-                align-items: flex-start;
+            
+            .game-item {
+                grid-template-columns: 30px 1fr auto;
                 gap: 12px;
             }
-
-            .teams {
-                gap: 12px;
-            }
-
-            .team-logo {
-                width: 18px;
-                height: 18px;
-            }
-
-            .game-details {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
+            
+            .game-time {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Games Viewer</h1>
-            <div class="subtitle">Horses Mouth Sports Data</div>
+        <header class="header">
+            <h1>2025 Football Schedule</h1>
+            <div class="meta">Generated <span id="generation-date"></span> • College & Professional</div>
         </header>
 
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-number">0</span>
-                <div class="stat-label">Total Games</div>
-            </div>
-            <div class="stat">
-                <span class="stat-number">0</span>
-                <div class="stat-label">Weeks</div>
-            </div>
-            <div class="stat">
-                <span class="stat-number">0</span>
-                <div class="stat-label">Teams</div>
-            </div>
-            <div class="stat">
-                <span class="stat-number">-</span>
-                <div class="stat-label">Season Start</div>
-            </div>
+        <div class="filter-controls">
+            <button class="filter-btn active" onclick="filterLeague('all')">All</button>
+            <button class="filter-btn" onclick="filterLeague('college')">College</button>
+            <button class="filter-btn" onclick="filterLeague('nfl')">NFL</button>
         </div>
 
-        <div class="week-selector">
-            <input type="text" class="search-box" placeholder="Search teams, dates, or locations..." id="searchBox">
-            
-            <div class="week-tabs" id="weekTabs">
-                <!-- Week tabs will be generated by JavaScript -->
-            </div>
-
-            <div id="weekContent">
-                <!-- Week content will be generated by JavaScript -->
-            </div>
-        </div>
+        <div id="loading" class="loading">Loading schedule data...</div>
+        <div id="content" style="display: none;"></div>
     </div>
 
     <script>
-        let gamesData = {};
-        let teamsData = {};
-        let totalGames = 0;
-        let totalWeeks = 0;
-        let seasonStart = '';
-        let uniqueTeams = new Set();
+        let gamesData = null;
+        let teamsData = null;
 
-        async function loadXMLData() {
+        // Load and parse XML files
+        async function loadData() {
             try {
-                console.log('Loading XML data...');
-                
-                // Load games data
-                console.log('Fetching games.xml...');
-                const gamesResponse = await fetch('games.xml');
-                if (!gamesResponse.ok) {
-                    throw new Error(`Failed to load games.xml: ${gamesResponse.status} ${gamesResponse.statusText}`);
-                }
-                const gamesXMLText = await gamesResponse.text();
-                const gamesParser = new DOMParser();
-                const gamesXML = gamesParser.parseFromString(gamesXMLText, 'text/xml');
+                const [gamesResponse, teamsResponse] = await Promise.all([
+                    fetch('./games.xml'),
+                    fetch('./teams.xml')
+                ]);
 
-                // Check for XML parsing errors
-                const gamesParseError = gamesXML.querySelector('parsererror');
-                if (gamesParseError) {
-                    throw new Error('Failed to parse games.xml: ' + gamesParseError.textContent);
-                }
+                const gamesText = await gamesResponse.text();
+                const teamsText = await teamsResponse.text();
 
-                // Load teams data
-                console.log('Fetching teams.xml...');
-                const teamsResponse = await fetch('../teams/teams.xml');
-                if (!teamsResponse.ok) {
-                    throw new Error(`Failed to load teams.xml: ${teamsResponse.status} ${teamsResponse.statusText}`);
-                }
-                const teamsXMLText = await teamsResponse.text();
-                const teamsParser = new DOMParser();
-                const teamsXML = teamsParser.parseFromString(teamsXMLText, 'text/xml');
+                const parser = new DOMParser();
+                gamesData = parser.parseFromString(gamesText, 'text/xml');
+                teamsData = parser.parseFromString(teamsText, 'text/xml');
 
-                // Check for XML parsing errors
-                const teamsParseError = teamsXML.querySelector('parsererror');
-                if (teamsParseError) {
-                    throw new Error('Failed to parse teams.xml: ' + teamsParseError.textContent);
-                }
+                // Update generation date
+                const generatedDate = gamesData.querySelector('games').getAttribute('generated');
+                document.getElementById('generation-date').textContent = formatDate(generatedDate);
 
-                console.log('XML files loaded successfully, parsing data...');
-
-                // Parse data
-                parseGamesData(gamesXML);
-                parseTeamsData(teamsXML);
-                
-                console.log('Data parsed successfully');
-                console.log('Games data:', Object.keys(gamesData).length, 'weeks');
-                console.log('Teams data:', Object.keys(teamsData).length, 'teams');
-                
-                // Update stats
-                updateStats();
-                
-                // Initialize UI
-                createWeekTabs();
-                showWeek(1);
-                initSearch();
-                
+                renderSchedule();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
             } catch (error) {
-                console.error('Error loading XML data:', error);
-                const errorMsg = `
-                    <div style="color: #666; font-style: italic; text-align: center; padding: 40px;">
-                        <h3 style="color: #333; margin-bottom: 16px;">Error loading game data</h3>
-                        <p style="margin-bottom: 16px;">${error.message}</p>
-                        <div style="font-size: 14px; color: #999; text-align: left; max-width: 600px; margin: 0 auto;">
-                            <strong>Possible solutions:</strong><br>
-                            • Make sure you're running a local web server (not opening index.html directly)<br>
-                            • Check that games/games.xml and ../teams/teams.xml files exist<br>
-                            • Try running: <code style="background: #f0f0f0; padding: 2px 4px;">python -m http.server 8000</code> in the project directory<br>
-                            • Then open: <code style="background: #f0f0f0; padding: 2px 4px;">http://localhost:8000/games/</code>
-                        </div>
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = 'Error loading schedule data. Please check that games.xml and teams.xml are in the same directory.';
+            }
+        }
+
+        function formatDate(isoString) {
+            return new Date(isoString).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function formatGameDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        function formatGameTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            });
+        }
+
+        function getTeamInfo(teamSlug, league) {
+            const teams = teamsData.querySelectorAll(`league[name="${league}"] team`);
+            for (let team of teams) {
+                if (team.querySelector('slug').textContent === teamSlug) {
+                    return {
+                        name: team.querySelector('name').textContent,
+                        conference: team.querySelector('conference')?.textContent || '',
+                        division: team.querySelector('division')?.textContent || '',
+                        location: team.querySelector('location')?.textContent || '',
+                        colors: {
+                            primary: team.querySelector('colors primaryColor')?.getAttribute('hex') || '#000',
+                            secondary: team.querySelector('colors secondaryColors color')?.getAttribute('hex') || '#666'
+                        }
+                    };
+                }
+            }
+            return { name: teamSlug, conference: '', division: '', location: '', colors: { primary: '#000', secondary: '#666' } };
+        }
+
+        function renderSchedule() {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+
+            // Get leagues from games data
+            const leagues = gamesData.querySelectorAll('league');
+
+            leagues.forEach(league => {
+                const leagueName = league.getAttribute('name');
+                const leagueId = leagueName === 'College' ? 'college' : 'nfl';
+                const leagueFormalName = leagueName === 'College' ? 'NCAA Football' : 'National Football League';
+                
+                const teams = league.querySelectorAll('team');
+                
+                const section = document.createElement('div');
+                section.className = 'league-section';
+                section.id = `${leagueId}-section`;
+
+                section.innerHTML = `
+                    <div class="league-header">
+                        <h2 class="league-title">${leagueFormalName}</h2>
+                        <div class="league-count">${teams.length} Teams</div>
                     </div>
+                    <div class="teams-grid" id="${leagueId}-teams"></div>
                 `;
-                document.getElementById('weekContent').innerHTML = errorMsg;
-            }
-        }
 
-        function parseGamesData(xml) {
-            const schedule = xml.querySelector('NFLSchedule');
-            const games = xml.querySelectorAll('Game');
-            totalGames = games.length;
-            
-            // Initialize gamesData structure
-            gamesData = {};
-            
-            games.forEach(game => {
-                const week = game.getAttribute('week');
-                const awayTeam = game.getAttribute('away_team');
-                const homeTeam = game.getAttribute('home_team');
-                const gameTime = game.getAttribute('game_time');
-                const location = game.getAttribute('location');
-                const odds = game.getAttribute('odds');
-                
-                // Parse date from game_time (ISO format: 2025-09-05T00:20Z)
-                const dateObj = new Date(gameTime);
-                const dateString = dateObj.toLocaleDateString('en-US', {
-                    weekday: 'long',
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric'
-                });
-                
-                // Add teams to uniqueTeams set
-                uniqueTeams.add(awayTeam);
-                uniqueTeams.add(homeTeam);
-                
-                // Initialize week and date in gamesData if not present
-                if (!gamesData[week]) {
-                    gamesData[week] = {};
-                }
-                if (!gamesData[week][dateString]) {
-                    gamesData[week][dateString] = [];
-                }
-                
-                // Add game data
-                gamesData[week][dateString].push({
-                    away: awayTeam,
-                    home: homeTeam,
-                    time: dateObj.toLocaleTimeString('en-US', {
-                        hour: 'numeric',
-                        minute: '2-digit',
-                        timeZone: 'America/New_York' // Assuming ET for NFL games
-                    }),
-                    location: location,
-                    odds: odds
-                });
-                
-                // Set season start from first game
-                if (week === '1' && !seasonStart) {
-                    seasonStart = formatSeasonStartDate(dateString);
-                }
-            });
-            
-            totalWeeks = Object.keys(gamesData).length;
-        }
+                content.appendChild(section);
 
-        function parseTeamsData(xml) {
-            // Only parse NFL teams since games.xml contains NFL games
-            const nflLeague = xml.querySelector('league[name="National Football League"]');
-            const teams = nflLeague.querySelectorAll('team');
-            teams.forEach(team => {
-                const name = team.querySelector('name').textContent;
-                const slug = team.querySelector('slug').textContent;
-                const logo = team.querySelector('logos logo').getAttribute('url');
-                
-                teamsData[name] = {
-                    name: name,
-                    slug: slug,
-                    logo: logo
-                };
-            });
-        }
+                const teamsGrid = section.querySelector(`#${leagueId}-teams`);
 
-        function formatSeasonStartDate(dateString) {
-            // Extract month and day from date string like "Friday, Sep 5, 2025"
-            const parts = dateString.split(' ');
-            if (parts.length >= 3) {
-                return `${parts[1]} ${parts[2].replace(',', '')}`;
-            }
-            return 'Sep 5';
-        }
+                teams.forEach(team => {
+                    const teamCode = team.getAttribute('code') || team.getAttribute('name');
+                    const teamName = team.getAttribute('name');
+                    const teamSlug = team.getAttribute('slug');
+                    const totalGames = team.getAttribute('total_games');
 
-        function getTeamLogo(teamName) {
-            const team = teamsData[teamName];
-            if (team && team.logo) {
-                return `<img src="${team.logo}" alt="${teamName}" class="team-logo" onerror="this.style.display='none'">`;
-            }
-            return '';
-        }
+                    // Get team info from teams.xml
+                    const teamInfo = getTeamInfo(teamSlug, leagueFormalName);
 
-        function updateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            if (statNumbers.length >= 4) {
-                statNumbers[0].textContent = totalGames;
-                statNumbers[1].textContent = totalWeeks;
-                statNumbers[2].textContent = uniqueTeams.size;
-                statNumbers[3].textContent = seasonStart;
-            } else {
-                console.warn('Could not find all stat number elements');
-            }
-        }
+                    const games = team.querySelectorAll('game');
+                    
+                    const teamCard = document.createElement('div');
+                    teamCard.className = 'team-card';
 
-        function createWeekTabs() {
-            const tabsContainer = document.getElementById('weekTabs');
-            tabsContainer.innerHTML = ''; // Clear existing tabs
-            for (let i = 1; i <= totalWeeks; i++) {
-                const tab = document.createElement('button');
-                tab.className = `week-tab ${i === 1 ? 'active' : ''}`;
-                tab.textContent = `Week ${i}`;
-                tab.onclick = () => showWeek(i);
-                tabsContainer.appendChild(tab);
-            }
-        }
+                    let gamesHtml = '';
+                    games.forEach(game => {
+                        const seq = game.getAttribute('seq');
+                        const week = game.getAttribute('week') || `W${seq}`;
+                        const homeTeam = game.getAttribute('home_team');
+                        const awayTeam = game.getAttribute('away_team');
+                        const venue = game.getAttribute('venue');
+                        const startDate = game.getAttribute('start_date') || game.getAttribute('startdate');
+                        const isConferenceGame = game.getAttribute('conferencegame') === 'True';
+                        const isHome = homeTeam === teamName || homeTeam === teamCode;
+                        
+                        const opponent = isHome ? awayTeam : homeTeam;
+                        const indicator = isHome ? 'home-indicator' : 'away-indicator';
+                        const prefix = isHome ? '' : '@ ';
+                        
+                        let gameTime = 'TBD';
+                        let gameDate = '';
+                        
+                        if (startDate) {
+                            gameTime = formatGameTime(startDate);
+                            gameDate = formatGameDate(startDate);
+                        }
 
-        function showWeek(weekNumber) {
-            // Update active tab
-            document.querySelectorAll('.week-tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.week-tab')[weekNumber - 1].classList.add('active');
+                        const conferenceClass = isConferenceGame ? 'conference-game' : '';
 
-            // Show week content
-            const contentContainer = document.getElementById('weekContent');
-            contentContainer.innerHTML = createWeekContent(weekNumber);
-        }
+                        gamesHtml += `
+                            <li class="game-item ${conferenceClass}">
+                                <div class="game-week">${week}</div>
+                                <div class="game-matchup">
+                                    <div><span class="${indicator}"></span><span class="game-opponent">${prefix}${opponent}</span></div>
+                                    <div class="game-venue">${venue}</div>
+                                </div>
+                                <div class="game-date">
+                                    <div class="game-time">${gameTime}</div>
+                                    <div>${gameDate}</div>
+                                </div>
+                            </li>
+                        `;
+                    });
 
-        function createWeekContent(weekNumber) {
-            if (!gamesData[weekNumber]) {
-                return `<div class="week-content active">
-                    <div class="week-header">Week ${weekNumber}</div>
-                    <p style="color: #666; font-style: italic;">Games data not available for this week.</p>
-                </div>`;
-            }
-
-            const weekData = gamesData[weekNumber];
-            let content = `<div class="week-content active">
-                <div class="week-header">Week ${weekNumber}</div>`;
-
-            Object.entries(weekData).forEach(([date, games]) => {
-                content += `<div class="date-section">
-                    <div class="date-header">${date}</div>
-                    <div class="games-grid">`;
-
-                games.forEach(game => {
-                    content += `<div class="game-card">
-                        <div class="game-matchup">
-                            <div class="teams">
-                                <span class="team">
-                                    ${getTeamLogo(game.away)}
-                                    ${game.away}
-                                </span>
-                                <span class="vs">@</span>
-                                <span class="team">
-                                    ${getTeamLogo(game.home)}
-                                    ${game.home}
-                                </span>
+                    teamCard.innerHTML = `
+                        <div class="team-header">
+                            <div class="team-info">
+                                <h3>${teamName}</h3>
+                                <div class="team-meta">${teamInfo.conference}${teamInfo.division ? ' ' + teamInfo.division : ''} • ${teamInfo.location}</div>
                             </div>
+                            <div class="team-stats">${totalGames} Games</div>
                         </div>
-                        <div class="game-details">
-                            <span class="time">${game.time}</span>
-                            <span class="odds">${game.odds}</span>
-                        </div>
-                        <div class="location-note">${game.location}</div>
-                    </div>`;
-                });
+                        <ul class="games-list">
+                            ${gamesHtml}
+                        </ul>
+                    `;
 
-                content += `</div></div>`;
-            });
-
-            content += '</div>';
-            return content;
-        }
-
-        function initSearch() {
-            const searchBox = document.getElementById('searchBox');
-            searchBox.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase();
-                const gameCards = document.querySelectorAll('.game-card');
-                
-                gameCards.forEach(card => {
-                    const text = card.textContent.toLowerCase();
-                    if (text.includes(query)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    teamsGrid.appendChild(teamCard);
                 });
             });
         }
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            loadXMLData();
-        });
+        function filterLeague(league) {
+            // Update button states
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/hide sections
+            const collegeSection = document.getElementById('college-section');
+            const nflSection = document.getElementById('nfl-section');
+
+            if (league === 'all') {
+                if (collegeSection) collegeSection.style.display = 'block';
+                if (nflSection) nflSection.style.display = 'block';
+            } else if (league === 'college') {
+                if (collegeSection) collegeSection.style.display = 'block';
+                if (nflSection) nflSection.style.display = 'none';
+            } else if (league === 'nfl') {
+                if (collegeSection) collegeSection.style.display = 'none';
+                if (nflSection) nflSection.style.display = 'block';
+            }
+        }
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadData);
     </script>
 </body>
 </html>

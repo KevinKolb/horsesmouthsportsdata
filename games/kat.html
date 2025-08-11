@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kat's Football Schedule</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .header-content .meta {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .header-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .header-btn:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .header-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .katopus-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .katopus-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .katopus-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+            padding: 16px;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .team-stat {
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .team-stat-name {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .team-stat-counts {
+            font-size: 10px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .games-timeline {
+            border-left: 2px solid #ddd;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .month-section {
+            margin-bottom: 40px;
+        }
+
+        .month-header {
+            margin-left: -32px;
+            margin-bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .game-item {
+            position: relative;
+            margin-left: 40px;
+            margin-bottom: 24px;
+            border: 1px solid #ddd;
+            background: #fff;
+            transition: all 0.2s;
+        }
+
+        .game-item:hover {
+            border-color: #000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .game-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 20px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #000;
+            border: 2px solid #fff;
+        }
+
+        .game-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #ddd;
+            display: grid;
+            grid-template-columns: 50px 1fr auto;
+            gap: 16px;
+            align-items: center;
+            color: white;
+        }
+
+        .game-header .game-league {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 6px 12px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        .team-icon {
+            width: 40px;
+            height: 100%;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: none;
+        }
+
+        .team-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .game-teams {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .vs {
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            text-transform: lowercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .game-details {
+            padding: 16px 20px;
+        }
+
+        .game-info {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .game-datetime {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .game-venue {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .header-buttons {
+                justify-content: center;
+            }
+            
+            .game-header {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .game-info {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+
+            .team-stat {
+                padding: 4px;
+            }
+
+            .team-stat-name {
+                font-size: 9px;
+                margin-bottom: 2px;
+            }
+
+            .team-stat-counts {
+                font-size: 8px;
+                gap: 4px;
+            }
+        }
+
+        @media print {
+            .header-buttons, .header-btn, .katopus-modal {
+                display: none !important;
+            }
+
+            .team-stats {
+                display: none !important;
+            }
+
+            .header {
+                grid-template-columns: auto 1fr;
+                margin-bottom: 20px;
+                padding-bottom: 8px;
+            }
+
+            .header-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .header-content h1 {
+                font-size: 18px;
+                margin-bottom: 2px;
+            }
+
+            .header-content .meta {
+                font-size: 8px;
+            }
+
+            .container {
+                padding: 10px;
+                max-width: none;
+            }
+
+            .games-timeline {
+                margin-left: 8px;
+                border-left: 1px solid #ddd;
+            }
+
+            .month-section {
+                margin-bottom: 15px;
+            }
+
+            .month-header {
+                font-size: 12px;
+                padding: 3px 8px;
+                margin-left: -12px;
+                margin-bottom: 8px;
+            }
+
+            .game-item {
+                margin-left: 16px;
+                margin-bottom: 8px;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+
+            .game-item::before {
+                left: -22px;
+                top: 12px;
+                width: 4px;
+                height: 4px;
+            }
+
+            .game-header {
+                padding: 6px 8px;
+                color: white !important;
+                grid-template-columns: auto 1fr auto;
+                gap: 8px;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+
+            .game-header *, .game-header span, .game-teams, .game-teams span, .vs {
+                color: white !important;
+            }
+
+            .game-header .game-league {
+                background: rgba(255,255,255,0.2) !important;
+                color: white !important;
+                font-size: 7px;
+                padding: 2px 4px;
+            }
+
+            .team-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            .game-teams {
+                font-size: 11px;
+                gap: 6px;
+            }
+
+            .vs {
+                font-size: 7px;
+            }
+
+            .game-details {
+                padding: 4px 8px;
+            }
+
+            .game-info {
+                grid-template-columns: 1fr auto;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .game-datetime {
+                font-size: 9px;
+                font-weight: 500;
+            }
+
+            .game-venue {
+                font-size: 8px;
+                color: #555;
+                margin-top: 1px;
+            }
+
+            .game-info > div:last-child {
+                font-size: 7px;
+                color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-icon" onclick="showKatopusModal()">
+                <img src="../images/katopus.png" alt="Kat's Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='🏈';">
+            </div>
+            <div class="header-content">
+                <h1>Kat's Football Schedule</h1>
+                <div class="meta">2025 Season • <span style="color: #D3BC8D;">Saints</span>, <span style="color: #FA4616;">Gators</span>, <span style="color: #461D7C;">Tigers</span>, <span style="color: #006747;">Wave</span></div>
+            </div>
+            <button class="header-btn" onclick="shareToScreen()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Share
+            </button>
+            <button class="header-btn" onclick="printSchedule()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6,9 6,2 18,2 18,9"/>
+                    <path d="M6,18H4a2,2,0,0,1-2-2V11a2,2,0,0,1,2-2H20a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2H18"/>
+                    <rect x="6" y="14" width="12" height="8"/>
+                </svg>
+                Print
+            </button>
+        </header>
+
+        <div class="katopus-modal" id="katopusModal" onclick="hideKatopusModal()">
+            <img src="../images/katopus.png" alt="Katopus - Large View">
+        </div>
+
+        <div id="loading" class="loading">Loading schedule data...</div>
+        <div id="content" style="display: none;">
+            <div class="games-timeline" id="games-timeline"></div>
+        </div>
+    </div>
+
+    <script>
+        let gamesData = null;
+        let teamsData = null;
+
+        const targetTeams = {
+            'Tulane': { 
+                slug: 'tulane-green-wave', 
+                league: 'College', 
+                colors: { primary: '#006747', secondary: '#66C7E1' }, 
+                icon: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/tulanegreenwave.com/images/sng_2025/main_nav_logo.svg'
+            },
+            'LSU': { 
+                slug: 'lsu-tigers', 
+                league: 'College', 
+                colors: { primary: '#461D7C', secondary: '#FDD023' }, 
+                icon: 'https://storage.googleapis.com/lsusports-com/2021/06/3c6e097b-logo.svg'
+            },
+            'Florida': { 
+                slug: 'florida-gators', 
+                league: 'College', 
+                colors: { primary: '#FA4616', secondary: '#0021A5' }, 
+                icon: 'https://upload.wikimedia.org/wikipedia/en/7/74/Florida_Gators_football_logo.svg'
+            },
+            'New Orleans Saints': { 
+                slug: 'new-orleans-saints', 
+                league: 'NFL', 
+                colors: { primary: '#D3BC8D', secondary: '#101820' }, 
+                icon: 'https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx'
+            }
+        };
+
+        async function loadData() {
+            try {
+                const [gamesResponse, teamsResponse] = await Promise.all([
+                    fetch('./games.xml'),
+                    fetch('../teams/teams.xml')
+                ]);
+
+                if (!gamesResponse.ok || !teamsResponse.ok) {
+                    throw new Error('Failed to load XML files');
+                }
+
+                const gamesText = await gamesResponse.text();
+                const teamsText = await teamsResponse.text();
+
+                const parser = new DOMParser();
+                gamesData = parser.parseFromString(gamesText, 'text/xml');
+                teamsData = parser.parseFromString(teamsText, 'text/xml');
+
+                renderSchedule();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = 'Error loading schedule data.';
+            }
+        }
+
+        function getTeamInfo(teamSlug, league) {
+            const teams = teamsData.querySelectorAll('league team');
+            for (let team of teams) {
+                if (team.querySelector('slug')?.textContent === teamSlug) {
+                    return {
+                        name: team.querySelector('name').textContent,
+                        conference: team.querySelector('conference')?.textContent || '',
+                        division: team.querySelector('division')?.textContent || '',
+                        location: team.querySelector('location')?.textContent || ''
+                    };
+                }
+            }
+            return { name: teamSlug, conference: '', division: '', location: '' };
+        }
+
+        function formatGameDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                timeZone: 'America/Chicago'
+            });
+        }
+
+        function formatGameTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                timeZone: 'America/Chicago',
+                timeZoneName: 'short'
+            });
+        }
+
+        function getMonthYear(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'America/Chicago'
+            });
+        }
+
+        function renderTeamStats(teamStats) {
+            const statsContainer = document.getElementById('team-stats');
+            statsContainer.innerHTML = '';
+            
+            Object.entries(targetTeams).forEach(([teamName, config]) => {
+                const stats = teamStats[teamName];
+                const total = stats.home + stats.away;
+                
+                const statDiv = document.createElement('div');
+                statDiv.className = 'team-stat';
+                statDiv.style.background = config.colors.primary;
+                statDiv.style.color = 'white';
+                
+                statDiv.innerHTML = `
+                    <div class="team-stat-name">${teamName.replace('New Orleans ', '')}</div>
+                    <div class="team-stat-counts">
+                        <div class="stat-item">🏠 ${stats.home}</div>
+                        <div class="stat-item">✈️ ${stats.away}</div>
+                        <div class="stat-item">📊 ${total}</div>
+                    </div>
+                `;
+                
+                statsContainer.appendChild(statDiv);
+            });
+        }
+
+        function renderSchedule() {
+            const allGames = [];
+            
+            Object.entries(targetTeams).forEach(([teamName, config]) => {
+                const leagues = gamesData.querySelectorAll('league');
+                
+                leagues.forEach(league => {
+                    const leagueName = league.getAttribute('name');
+                    if (leagueName === config.league) {
+                        const teams = league.querySelectorAll('team');
+                        teams.forEach(team => {
+                            const teamCode = team.getAttribute('code');
+                            const teamFullName = team.getAttribute('name');
+                            
+                            if (teamFullName === teamName || teamCode === teamName || 
+                                (teamName === 'New Orleans Saints' && teamFullName === 'New Orleans Saints')) {
+                                
+                                const games = team.querySelectorAll('game');
+                                games.forEach(game => {
+                                    const startDate = game.getAttribute('start_date') || game.getAttribute('startdate');
+                                    if (startDate) {
+                                        const homeTeam = game.getAttribute('home_team');
+                                        const isHome = (homeTeam === teamName || homeTeam === teamCode);
+                                        
+                                        allGames.push({
+                                            team: teamName,
+                                            teamCode: teamCode || teamFullName,
+                                            game: game,
+                                            date: new Date(startDate),
+                                            config: config
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
+            allGames.sort((a, b) => a.date - b.date);
+
+            const timeline = document.getElementById('games-timeline');
+            let currentMonth = '';
+
+            allGames.forEach(gameData => {
+                const { team, teamCode, game, date, config } = gameData;
+                const monthYear = getMonthYear(date.toISOString());
+                
+                if (monthYear !== currentMonth) {
+                    currentMonth = monthYear;
+                    const monthHeader = document.createElement('div');
+                    monthHeader.className = 'month-section';
+                    monthHeader.innerHTML = `<div class="month-header">${monthYear}</div>`;
+                    timeline.appendChild(monthHeader);
+                }
+
+                const gameItem = document.createElement('div');
+                gameItem.className = 'game-item';
+                
+                const homeTeam = game.getAttribute('home_team');
+                const awayTeam = game.getAttribute('away_team');
+                const venue = game.getAttribute('venue');
+                const startDate = game.getAttribute('start_date') || game.getAttribute('startdate');
+                
+                const isHome = (homeTeam === team || homeTeam === teamCode);
+                const opponent = isHome ? awayTeam : homeTeam;
+                
+                const favoredTeam = team;
+                const otherTeam = opponent;
+                
+                const gameDateTime = formatGameDate(startDate);
+                const gameTime = formatGameTime(startDate);
+                
+                const leagueLabel = isHome ? 'HOME' : 'AWAY';
+                const headerStyle = `style="background: ${config.colors.primary};"`;
+                
+                gameItem.style.borderLeft = `4px solid ${config.colors.secondary}`;
+
+                gameItem.innerHTML = `
+                    <div class="game-header" ${headerStyle}>
+                        <div class="team-icon" style="background: ${config.colors.secondary};">
+                            <img src="${config.icon}" alt="${team} logo" onerror="this.style.display='none'; this.parentNode.innerHTML='${team.substring(0,2).toUpperCase()}'; this.parentNode.style.color='white';">
+                        </div>
+                        <div class="game-teams">
+                            <span style="color: white; font-size: 18px; font-weight: 500;">${favoredTeam}</span>
+                            <span class="vs" style="color: white; font-size: 12px; font-weight: 500; text-transform: lowercase;">vs</span>
+                            <span style="color: white; font-size: 18px; font-weight: 500;">${otherTeam}</span>
+                        </div>
+                        <div class="game-league" style="color: white; font-size: 18px; font-weight: 500;">${leagueLabel}</div>
+                    </div>
+                    <div class="game-details">
+                        <div class="game-info">
+                            <div class="game-datetime">${gameDateTime} • ${gameTime}</div>
+                            <div class="game-venue">${venue}</div>
+                        </div>
+                    </div>
+                `;
+
+                timeline.appendChild(gameItem);
+            });
+        }
+
+        function showKatopusModal() {
+            document.getElementById('katopusModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideKatopusModal() {
+            document.getElementById('katopusModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function shareToScreen() {
+            if (navigator.getDisplayMedia) {
+                navigator.mediaDevices.getDisplayMedia({ video: true })
+                    .then(stream => {
+                        console.log('Screen sharing started');
+                    })
+                    .catch(err => {
+                        console.error('Error starting screen share:', err);
+                        alert('Screen sharing not available or denied');
+                    });
+            } else {
+                alert('Screen sharing not supported in this browser');
+            }
+        }
+
+        function printSchedule() {
+            window.print();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
