@@ -81,17 +81,22 @@
         .header-btn {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 8px 16px;
-            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
             background: #fff;
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             cursor: pointer;
             transition: all 0.2s;
             text-decoration: none;
             color: #000;
+            border-radius: 8px;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .header-btn:hover {
@@ -100,9 +105,14 @@
             border-color: #000;
         }
 
+        .header-btn:active {
+            transform: scale(0.95);
+        }
+
         .header-btn svg {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
         }
 
         .katopus-modal {
@@ -325,14 +335,23 @@
             
             .header-buttons {
                 justify-content: center;
-                gap: 8px;
+                gap: 12px;
             }
 
             .header-btn {
-                padding: 10px 20px;
-                font-size: 11px;
-                border-radius: 6px;
-                min-width: 80px;
+                padding: 14px 24px;
+                font-size: 12px;
+                font-weight: 600;
+                border-radius: 12px;
+                min-width: 120px;
+                min-height: 48px;
+                border-width: 2px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            .header-btn svg {
+                width: 20px;
+                height: 20px;
             }
 
             .games-timeline {
@@ -463,9 +482,15 @@
             }
 
             .header-btn {
-                padding: 8px 16px;
-                font-size: 10px;
-                min-width: 70px;
+                padding: 12px 20px;
+                font-size: 11px;
+                min-width: 100px;
+                min-height: 44px;
+            }
+
+            .header-btn svg {
+                width: 18px;
+                height: 18px;
             }
 
             .games-timeline {
@@ -541,114 +566,153 @@
             .header {
                 grid-template-columns: auto 1fr;
                 margin-bottom: 20px;
-                padding-bottom: 8px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #000;
             }
 
             .header-icon {
                 width: 48px;
                 height: 48px;
+                background: #f0f0f0;
+                border-radius: 6px;
             }
 
             .header-content h1 {
-                font-size: 18px;
-                margin-bottom: 2px;
+                font-size: 20px;
+                margin-bottom: 4px;
+                font-weight: 400;
+                letter-spacing: -0.01em;
             }
 
             .header-content .meta {
-                font-size: 8px;
+                font-size: 9px;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
             }
 
             .container {
-                padding: 10px;
+                padding: 15px;
                 max-width: none;
             }
 
             .games-timeline {
-                margin-left: 8px;
-                border-left: 1px solid #ddd;
+                margin-left: 15px;
+                border-left: 2px solid #ddd;
             }
 
             .month-section {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
 
             .month-header {
-                font-size: 12px;
-                padding: 3px 8px;
-                margin-left: -12px;
-                margin-bottom: 8px;
+                font-size: 13px;
+                padding: 5px 10px;
+                margin-left: -20px;
+                margin-bottom: 12px;
+                background: #000;
+                color: #fff;
+                font-weight: 500;
+                display: inline-block;
             }
 
             .game-item {
-                margin-left: 16px;
-                margin-bottom: 8px;
+                margin-left: 25px;
+                margin-bottom: 12px;
                 border: 1px solid #ddd;
                 break-inside: avoid;
-                grid-template-columns: 40px 1fr;
-            }
-
-            .game-logo-cell img {
-                max-height: 30px;
-                filter: none;
+                grid-template-columns: 48px 1fr;
+                border-radius: 6px;
+                overflow: hidden;
+                background: #fff;
             }
 
             .game-item::before {
-                left: -22px;
-                top: 12px;
-                width: 4px;
-                height: 4px;
+                left: -31px;
+                top: 15px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #000;
+                border: 2px solid #fff;
+            }
+
+            .game-logo-cell {
+                grid-row: 1 / span 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
+            }
+
+            .game-logo-cell img {
+                max-height: 36px;
+                max-width: 100%;
+                object-fit: contain;
+                filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
             }
 
             .game-header {
-                padding: 6px 8px;
+                padding: 10px 12px;
                 color: white !important;
                 grid-template-columns: 1fr auto;
                 gap: 8px;
                 border-bottom: 1px solid rgba(255,255,255,0.2);
+                align-items: center;
             }
 
             .game-header *, .game-header span, .game-teams, .game-teams span, .vs {
                 color: white !important;
             }
 
-            .game-header .game-league {
-                background: rgba(255,255,255,0.2) !important;
-                color: white !important;
-                font-size: 7px;
-                padding: 2px 4px;
+            .game-teams {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-wrap: wrap;
             }
 
             .team-name {
-                font-size: 11px;
+                font-size: 13px;
+                font-weight: 700;
             }
 
             .vs {
-                font-size: 7px;
+                font-size: 8px;
+                color: rgba(255,255,255,0.8);
+                text-transform: lowercase;
+                letter-spacing: 0.1em;
+                font-weight: 500;
+            }
+
+            .game-league {
+                font-size: 8px;
+                padding: 3px 6px;
+                background: rgba(255,255,255,0.2) !important;
+                color: white !important;
+                border-radius: 10px;
+                display: inline-block;
             }
 
             .game-details {
-                padding: 4px 8px;
+                padding: 8px 12px;
+                background: #fff;
             }
 
             .game-info {
-                grid-template-columns: 1fr auto;
-                gap: 8px;
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                gap: 12px;
                 align-items: center;
             }
 
             .game-datetime {
-                font-size: 9px;
+                font-size: 10px;
                 font-weight: 500;
             }
 
             .game-venue {
-                font-size: 8px;
-                color: #555;
-                margin-top: 1px;
-            }
-
-            .game-info > div:last-child {
-                font-size: 7px;
+                font-size: 9px;
                 color: #666;
             }
         }
@@ -666,8 +730,21 @@
                 <h1>Kat's Football Schedule</h1>
                 <div class="meta">2025 Season • <span style="color: #D3BC8D;">Saints</span>, <span style="color: #FA4616;">Gators</span>, <span style="color: #461D7C;">Tigers</span>, <span style="color: #006747;">Wave</span></div>
             </div>
-            <button class="header-btn" onclick="shareToHomeScreen()">Share</button>
-            <button class="header-btn" onclick="printSchedule()">Print</button>
+            <button class="header-btn" onclick="addToHomeScreen()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add
+            </button>
+            <button class="header-btn" onclick="printSchedule()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6,9 6,2 18,2 18,9"/>
+                    <path d="M6,18H4a2,2 0 0,1-2-2v-5a2,2 0 0,1,2-2H20a2,2 0 0,1,2,2v5a2,2 0 0,1-2,2H18"/>
+                    <rect x="6" y="14" width="12" height="8"/>
+                </polyline>
+                Print
+            </button>
         </header>
 
         <div class="katopus-modal" id="katopusModal" onclick="hideKatopusModal()">
@@ -909,33 +986,8 @@
             document.body.style.overflow = 'auto';
         }
 
-function shareToHomeScreen() {
-    if (navigator.share) {
-        navigator.share({
-            title: document.title,
-            text: "Check out Kat's Football Schedule",
-            url: window.location.href
-        })
-        .catch(err => {
-            console.warn("Share cancelled or failed:", err);
-        });
-    } else {
-        // Basic instructions based on platform
-        const ua = navigator.userAgent.toLowerCase();
-        let instructions = "To add this page to your home screen:\n\n";
-
-        if (/iphone|ipad|ipod/.test(ua)) {
-            instructions += "1. Tap the Share icon (square with an up arrow) in Safari.\n";
-            instructions += "2. Scroll down and tap 'Add to Home Screen'.";
-        } else if (/android/.test(ua)) {
-            instructions += "1. Tap the menu button (⋮) in Chrome.\n";
-            instructions += "2. Tap 'Add to Home screen'.";
-        } else {
-            instructions += "Use your browser's 'Add to Home Screen' or bookmarking feature.";
-        }
-
-        alert(instructions);
-    }
+        function addToHomeScreen() {
+            alert("To add Kat's Football Schedule to your phone's home screen:\n\n1. Tap the Share icon at the bottom of Safari (not Chrome)\n2. Scroll down and tap 'Add to Home Screen'\n3. Tap 'Add' to confirm\n\nYou'll then have quick access to Kat's Football Schedule from your phone's home screen!");
         }
 
         function printSchedule() {
