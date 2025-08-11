@@ -537,8 +537,8 @@
         async function loadData() {
             try {
                 const [gamesResponse, teamsResponse] = await Promise.all([
-                    fetch('games.xml'),
-                    fetch('../teams/teams.xml')
+                    fetch('https://kevinkolb.github.io/horsesmouthsportsdata/games/games.xml'),
+                    fetch('https://kevinkolb.github.io/horsesmouthsportsdata/teams/teams.xml')
                 ]);
 
                 if (!gamesResponse.ok || !teamsResponse.ok) {
