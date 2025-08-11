@@ -537,7 +537,7 @@
         async function loadData() {
             try {
                 const [gamesResponse, teamsResponse] = await Promise.all([
-                    fetch('./games.xml'),
+                    fetch('games.xml'),
                     fetch('../teams/teams.xml')
                 ]);
 
