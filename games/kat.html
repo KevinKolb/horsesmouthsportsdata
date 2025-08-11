@@ -469,7 +469,7 @@
                 <h1>Kat's Football Schedule</h1>
                 <div class="meta">2025 Season • <span style="color: #D3BC8D;">Saints</span>, <span style="color: #FA4616;">Gators</span>, <span style="color: #461D7C;">Tigers</span>, <span style="color: #006747;">Wave</span></div>
             </div>
-            <button class="header-btn" onclick="shareToScreen()">Share</button>
+            <button class="header-btn" onclick="shareToHomeScreen()">Share</button>
             <button class="header-btn" onclick="printSchedule()">Print</button>
         </header>
 
@@ -712,19 +712,33 @@
             document.body.style.overflow = 'auto';
         }
 
-        function shareToScreen() {
-            if (navigator.getDisplayMedia) {
-                navigator.mediaDevices.getDisplayMedia({ video: true })
-                    .then(stream => {
-                        console.log('Screen sharing started');
-                    })
-                    .catch(err => {
-                        console.error('Error starting screen share:', err);
-                        alert('Screen sharing not available or denied');
-                    });
-            } else {
-                alert('Screen sharing not supported in this browser');
-            }
+function shareToHomeScreen() {
+    if (navigator.share) {
+        navigator.share({
+            title: document.title,
+            text: "Check out Kat's Football Schedule",
+            url: window.location.href
+        })
+        .catch(err => {
+            console.warn("Share cancelled or failed:", err);
+        });
+    } else {
+        // Basic instructions based on platform
+        const ua = navigator.userAgent.toLowerCase();
+        let instructions = "To add this page to your home screen:\n\n";
+
+        if (/iphone|ipad|ipod/.test(ua)) {
+            instructions += "1. Tap the Share icon (square with an up arrow) in Safari.\n";
+            instructions += "2. Scroll down and tap 'Add to Home Screen'.";
+        } else if (/android/.test(ua)) {
+            instructions += "1. Tap the menu button (⋮) in Chrome.\n";
+            instructions += "2. Tap 'Add to Home screen'.";
+        } else {
+            instructions += "Use your browser's 'Add to Home Screen' or bookmarking feature.";
+        }
+
+        alert(instructions);
+    }
         }
 
         function printSchedule() {
