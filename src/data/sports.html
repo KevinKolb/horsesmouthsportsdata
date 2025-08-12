@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!-- 
+    DOCTYPE declaration tells the browser this is HTML5
+    Always put this at the very top of HTML documents
+-->
+<html lang="en">
+<!-- 
+    <html> is the root element that contains everything
+    lang="en" tells screen readers and browsers the page language
+-->
+<head>
+    <!-- 
+        <head> contains metadata about the page - not visible to users
+        This is where we put CSS, page title, character encoding, etc.
+    -->
+    <meta charset="UTF-8">
+    <!-- Tells browser how to interpret text characters (UTF-8 supports all languages) -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        CRITICAL for mobile responsiveness!
+        Tells mobile browsers to match screen width and don't zoom out
+        Without this, mobile sites look tiny and zoomed out
+    -->
+    
+    <title>LEAGUES.XML</title>
+    <!-- Text that appears in browser tab/bookmark -->
+    
+    <style>
+        /* 
+            CSS (Cascading Style Sheets) goes between <style> tags
+            CSS controls how HTML elements look and are positioned
+            Format: selector { property: value; }
+        */
+        
+        * {
+            /* 
+                * is the "universal selector" - applies to ALL elements
+                This is a CSS reset to remove browser default spacing
+            */
+            margin: 0;          /* Remove default margins */
+            padding: 0;         /* Remove default padding */
+            box-sizing: border-box;  /* Makes width/height include padding/borders */
+        }
+
+        body {
+            /* 
+                body contains all visible content
+                Setting styles here affects the entire page
+            */
+            font-family: 'Helvetica Neue', Arial, sans-serif;  /* Font stack - browser tries first, falls back */
+            background: #fafafa;    /* Light gray background (#fafafa is hex color) */
+            color: #333;            /* Dark gray text color */
+            line-height: 1.4;       /* Space between lines (1.4 = 140% of font size) */
+        }
+
+        .container {
+            /* 
+                Classes in CSS start with a period (.)
+                This targets any element with class="container"
+            */
+            max-width: 1200px;      /* Wider container for more complex league data */
+            margin: 0 auto;         /* Centers the container horizontally */
+            padding: 30px 20px;     /* 30px top/bottom, 20px left/right */
+        }
+
+        header {
+            /* 
+                This targets the <header> HTML element (no period = element selector)
+                Header is a semantic HTML5 element for page/section headers
+            */
+            text-align: center;             /* Centers text horizontally */
+            margin-bottom: 40px;            /* Space below header */
+            border-bottom: 1px solid #e0e0e0;  /* Thin gray line below */
+            padding-bottom: 25px;           /* Space between content and border */
+        }
+
+        .header-content {
+            /* Container for header text and logo */
+            display: flex;                  /* Flexbox for side-by-side layout */
+            align-items: center;            /* Vertically center items */
+            justify-content: space-between; /* Space between text and logo */
+            max-width: 100%;
+        }
+
+        .header-text {
+            /* Container for text content in header */
+            flex: 1;                       /* Takes most of the space */
+            text-align: left;              /* Left-align text content */
+        }
+
+        .header-logo {
+            /* Container for logo */
+            flex-shrink: 0;                /* Prevents logo from shrinking */
+            margin-left: 30px;             /* Space between text and logo */
+        }
+
+        .main-logo {
+            /* Main site logo styling */
+            max-height: 80px;              /* Limit logo height */
+            max-width: 150px;              /* Limit logo width */
+            object-fit: contain;           /* Maintain aspect ratio */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); /* Subtle shadow */
+        }
+
+        h1 {
+            /* Targets all <h1> elements (main heading) */
+            font-size: 2.5rem;      /* rem = relative to root font size, more responsive than px */
+            font-weight: 100;       /* Very thin font weight (100-900, 400 is normal) */
+            letter-spacing: -0.02em; /* Slightly tighter letter spacing */
+            margin-bottom: 8px;     /* Space below heading */
+        }
+
+        .subtitle {
+            /* Class selector for subtitle text */
+            font-size: 1rem;        /* 1rem = default font size */
+            color: #666;            /* Medium gray */
+            font-weight: 300;       /* Light font weight */
+            margin-bottom: 12px;
+        }
+
+        .attribution {
+            /* Styling for author/credit information */
+            font-size: 0.8rem;      /* Smaller than default */
+            color: #999;            /* Light gray */
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1.3;       /* Tighter line spacing for small text */
+        }
+
+        .button-group {
+            /* Container for buttons using Flexbox layout */
+            display: flex;          /* Flexbox = flexible box layout system */
+            gap: 15px;             /* Space between flex items (modern CSS property) */
+            justify-content: center; /* Centers flex items horizontally */
+            flex-wrap: wrap;        /* Allows buttons to wrap on small screens */
+        }
+
+        .download-btn, .home-btn, .filter-btn {
+            /* 
+                Multiple selectors separated by commas
+                Styles apply to elements with ANY of these classes
+            */
+            display: inline-block;   /* Makes links behave like buttons */
+            background: #333;        /* Dark background */
+            color: white;           /* White text */
+            text-decoration: none;   /* Removes underline from links */
+            padding: 8px 16px;      /* 8px top/bottom, 16px left/right */
+            font-size: 0.85rem;
+            font-weight: 400;       /* Normal weight */
+            letter-spacing: 0.5px;  /* Slightly spaced out letters */
+            text-transform: uppercase; /* Makes text ALL CAPS */
+            transition: background 0.3s ease; /* Smooth color change on hover */
+            border: none;           /* Remove default button border */
+            cursor: pointer;        /* Show pointer cursor on hover */
+        }
+
+        .download-btn:hover, .home-btn:hover, .filter-btn:hover {
+            /* 
+                :hover is a pseudo-class - activates when mouse hovers
+                Creates interactive feedback for users
+            */
+            background: #555;       /* Lighter gray on hover */
+        }
+
+        .filter-btn.active {
+            /* 
+                .filter-btn.active targets elements with BOTH classes
+                Used to highlight the currently selected filter
+            */
+            background: #e74c3c;    /* Red background for active filter */
+        }
+
+        .filter-btn.active:hover {
+            background: #c0392b;    /* Darker red on hover for active filter */
+        }
+
+        .stats-bar {
+            /* Container for statistics display */
+            background: white;
+            border: 1px solid #e8e8e8;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            display: flex;          /* Flexbox for horizontal layout */
+            justify-content: space-between; /* Spread items across space */
+            align-items: center;
+            flex-wrap: wrap;        /* Allow wrapping on small screens */
+            gap: 20px;
+        }
+
+        .stat-item {
+            /* Individual statistic display */
+            text-align: center;
+        }
+
+        .stat-number {
+            /* Large number display */
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e74c3c;         /* Red color for emphasis */
+            display: block;         /* Forces to new line */
+        }
+
+        .stat-label {
+            /* Label below the number */
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .leagues-list {
+            /* Container for the list of leagues (similar to sports-list) */
+            background: white;
+            border: 1px solid #e8e8e8;  /* Light border around entire list */
+            margin-top: 30px;
+        }
+
+        .league-row {
+            /* Each individual league entry (similar to sport-row) */
+            border-bottom: 1px solid #f0f0f0; /* Separator line between rows */
+            transition: background 0.2s ease;  /* Smooth hover effect */
+            overflow: hidden;           /* Keeps content contained */
+        }
+
+        .league-row:last-child {
+            /* 
+                :last-child pseudo-class targets the last element
+                Removes border from final row for cleaner look
+            */
+            border-bottom: none;
+        }
+
+        .league-row:hover {
+            /* Hover effect for interactive feedback */
+            background: #f8f8f8;       /* Very light gray on hover */
+        }
+
+        .league-header {
+            /* Header section of each league card */
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .league-sport {
+            /* Sport name in league header */
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;           /* Slightly transparent */
+            margin-bottom: 5px;
+        }
+
+        .league-name {
+            /* Main league name */
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .league-abbr {
+            /* League abbreviation */
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .league-body {
+            /* Main content area of league row */
+            padding: 20px;
+            display: flex;              /* Flexbox for horizontal layout */
+            gap: 30px;                  /* Space between sections */
+            align-items: flex-start;    /* Align to top */
+        }
+
+        .conferences-section {
+            /* Section containing conference information */
+            flex: 1;                    /* Takes most of the space */
+        }
+
+        .league-links-section {
+            /* Section for official website link */
+            flex-shrink: 0;             /* Prevents shrinking */
+            min-width: 150px;
+        }
+
+        .section-title {
+            /* Title for sections within league cards */
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+
+        .conference {
+            /* Individual conference display */
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: #f8f9fa;       /* Very light gray background */
+            border-left: 3px solid #e74c3c; /* Red accent bar */
+            border-radius: 0 4px 4px 0; /* Rounded right corners only */
+            display: inline-block;      /* Allow conferences to flow horizontally */
+            margin-right: 10px;         /* Space between conferences */
+            margin-bottom: 8px;         /* Space below each conference */
+        }
+
+        .conference:last-child {
+            margin-right: 0;            /* Remove right margin from last conference */
+        }
+
+        .conference-name {
+            /* Conference name styling */
+            font-weight: bold;
+            color: #333;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        .conference-abbr {
+            /* Conference abbreviation */
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divisions {
+            /* Container for divisions within a conference */
+            margin-top: 5px;
+            font-size: 0.8rem;
+        }
+
+        .division {
+            /* Individual division styling */
+            color: #555;
+            margin-bottom: 2px;
+        }
+
+        .division-name {
+            font-weight: 500;          /* Medium font weight */
+        }
+
+        .division-abbr {
+            color: #888;
+            margin-left: 5px;
+        }
+
+        .league-links {
+            /* Container for official website */
+            padding-top: 10px;
+        }
+
+        .official-link {
+            /* Styling for official website link */
+            color: #e74c3c;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .official-link:hover {
+            color: #c0392b;            /* Darker red on hover */
+            text-decoration: underline; /* Show underline on hover */
+        }
+
+        .league-logo {
+            /* Official league logo image */
+            max-height: 30px;
+            max-width: 80px;
+            object-fit: contain;       /* Maintain aspect ratio */
+        }
+
+        .loading {
+            /* Styles for loading message */
+            text-align: center;
+            padding: 60px 40px;
+            font-size: 1.2rem;
+            color: #666;
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+        }
+
+        .error {
+            /* Styles for error message */
+            text-align: center;
+            padding: 60px 40px;
+            color: #e74c3c;         /* Red for errors */
+            font-size: 1.1rem;
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+        }
+
+        .hidden {
+            /* Utility class to hide elements */
+            display: none !important;  /* !important overrides other display values */
+        }
+
+        /* 
+            SPORT-SPECIFIC STYLING
+            Different colors for different sports to create visual hierarchy
+        */
+        .sport-american-football .league-header { background: #2c5234; }  /* Dark green for football */
+        .sport-baseball .league-header { background: #1e3a8a; }          /* Blue for baseball */
+        .sport-basketball .league-header { background: #dc2626; }        /* Red for basketball */
+        .sport-hockey .league-header { background: #374151; }           /* Dark gray for hockey */
+        .sport-soccer .league-header { background: #059669; }           /* Green for soccer */
+
+        /* 
+            MEDIA QUERY for responsive design
+            @media targets specific screen conditions
+        */
+        @media (max-width: 768px) {
+            /* These styles only apply when screen is 768px wide or smaller (tablets/phones) */
+            
+            .container {
+                padding: 20px 15px;     /* Less padding on small screens */
+            }
+            
+            h1 {
+                font-size: 2rem;        /* Smaller heading on mobile */
+            }
+
+            .stats-bar {
+                flex-direction: column; /* Stack stats vertically on mobile */
+                text-align: center;
+            }
+
+            .league-header {
+                flex-direction: column; /* Stack logo and text vertically on mobile */
+                text-align: center;
+                padding: 15px;
+            }
+
+            .league-header-text {
+                flex-direction: column; /* Stack text elements vertically */
+                gap: 8px;
+                margin-bottom: 15px;    /* Space below text on mobile */
+                text-align: center;
+            }
+
+            .league-sport, .league-abbr {
+                min-width: auto;        /* Remove fixed widths on mobile */
+                text-align: center;
+            }
+
+            .league-body {
+                flex-direction: column; /* Stack sections vertically on mobile */
+                gap: 20px;
+            }
+
+            .conferences-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 10px;
+            }
+
+            .conference {
+                margin-bottom: 0;       /* Remove margin, grid gap handles spacing */
+                min-height: auto;       /* Remove minimum height on mobile */
+            }
+
+            .divisions {
+                margin-left: 10px;      /* Less indentation on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Extra small screens (phones in portrait) */
+            .button-group {
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+            }
+
+            .filter-btn, .download-btn, .home-btn {
+                width: 200px;          /* Fixed width for better touch targets */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <body> contains all visible page content
+        Everything users see and interact with goes here
+    -->
+    
+    <div class="container">
+        <!-- 
+            <div> is a generic container element
+            class="container" applies the .container CSS styles
+        -->
+        
+        <header>
+            <!-- Semantic HTML5 element for page header -->
+            
+            <h1>LEAGUES.XML</h1>
+            <!-- <h1> is the main page heading (most important) -->
+            
+            <p class="subtitle">Horses Mouth Sports League Data</p>
+            <!-- <p> = paragraph, class applies .subtitle styles -->
+            
+            <p class="attribution">Generated with AI assistance and maintained manually by kevinmkolb@gmail.com.</p>
+            <!-- Attribution/credit paragraph -->
+            
+            <div class="button-group">
+                <!-- Container for navigation and download buttons (first line) -->
+                
+                <a href="https://kevinkolb.github.io/horsesmouthsportsdata" class="home-btn">Home</a>
+                <!-- 
+                    <a> = anchor/link element
+                    href = destination URL
+                    class applies button styling
+                -->
+                
+                <a href="sports.xml" download class="download-btn">Download sports.xml</a>
+                <!-- Download link for sports data -->
+                
+                <a href="leagues.xml" download class="download-btn">Download leagues.xml</a>
+                <!-- 
+                    download attribute makes browser download the file instead of navigating to it
+                    Useful for providing data files to users
+                -->
+            </div>
+            
+            <div class="button-group" style="margin-top: 15px;">
+                <!-- Container for filter buttons (second line) -->
+                
+                <button class="filter-btn active" data-sport="all">All Sports</button>
+                <button class="filter-btn" data-sport="american-football">Football</button>
+                <button class="filter-btn" data-sport="baseball">Baseball</button>
+                <button class="filter-btn" data-sport="basketball">Basketball</button>
+                <button class="filter-btn" data-sport="hockey">Hockey</button>
+                <!-- 
+                    data-sport is a custom data attribute
+                    Used to store filter information for JavaScript
+                    Can be accessed via element.dataset.sport
+                -->
+            </div>
+        </header>
+
+        <div class="stats-bar">
+            <!-- Statistics display bar -->
+            <div class="stat-item">
+                <span class="stat-number" id="total-leagues">-</span>
+                <span class="stat-label">Total Leagues</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="total-conferences">-</span>
+                <span class="stat-label">Conferences</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="total-divisions">-</span>
+                <span class="stat-label">Divisions</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="sports-count">-</span>
+                <span class="stat-label">Sports</span>
+            </div>
+        </div>
+
+        <div id="leagues-container">
+            <!-- 
+                id="leagues-container" creates unique identifier
+                JavaScript uses this ID to find and modify this element
+                IDs must be unique (only one per page), unlike classes
+            -->
+            <div class="loading">Loading leagues data...</div>
+            <!-- Initial loading message, replaced by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        /* 
+            JavaScript goes in <script> tags
+            JavaScript makes pages interactive and dynamic
+            This script loads XML data and displays it with filtering
+        */
+        
+        // Global variables to store data
+        let allLeagues = [];        // Array to store all league data
+        let currentFilter = 'all';  // Currently active filter
+        
+        function getSportClass(sport) {
+            /*
+                Function converts sport name to CSS class name
+                Used for sport-specific styling and filtering
+            */
+            return 'sport-' + sport.toLowerCase().replace(/\s+/g, '-');
+            /*
+                .toLowerCase() converts to lowercase
+                .replace(/\s+/g, '-') replaces spaces with hyphens using regex
+                /\s+/g means: find one or more whitespace characters, globally
+            */
+        }
+
+        function calculateStats(leagues) {
+            /*
+                Function calculates statistics from league data
+                Returns object with counts for display
+            */
+            let totalConferences = 0;
+            let totalDivisions = 0;
+            const sportsSet = new Set(); // Set automatically removes duplicates
+            
+            leagues.forEach(league => {
+                /*
+                    forEach() runs function for each array item
+                    Arrow function: (parameter) => { code }
+                    More concise than: function(league) { code }
+                */
+                sportsSet.add(league.sport);
+                totalConferences += league.conferences.length;
+                
+                league.conferences.forEach(conf => {
+                    if (conf.divisions) {
+                        totalDivisions += conf.divisions.length;
+                    }
+                });
+            });
+            
+            return {
+                leagues: leagues.length,
+                conferences: totalConferences,
+                divisions: totalDivisions,
+                sports: sportsSet.size
+            };
+        }
+
+        function updateStats(leagues) {
+            /*
+                Function updates the statistics display
+                Takes filtered leagues array as input
+            */
+            const stats = calculateStats(leagues);
+            
+            // Update each statistic display
+            document.getElementById('total-leagues').textContent = stats.leagues;
+            document.getElementById('total-conferences').textContent = stats.conferences;
+            document.getElementById('total-divisions').textContent = stats.divisions;
+            document.getElementById('sports-count').textContent = stats.sports;
+            /*
+                .textContent sets the text inside an element
+                Safer than .innerHTML when displaying user data
+            */
+        }
+
+        function filterLeagues(sport) {
+            /*
+                Function filters leagues by sport
+                Updates display and active filter button
+            */
+            currentFilter = sport;
+            
+            // Update active button styling
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                /*
+                    querySelectorAll() finds all elements matching CSS selector
+                    Returns NodeList (array-like) of elements
+                */
+                btn.classList.remove('active');
+                /*
+                    classList provides methods to manipulate CSS classes
+                    .remove() removes specified class
+                */
+            });
+            
+            // Add active class to clicked button
+            document.querySelector(`[data-sport="${sport}"]`).classList.add('active');
+            /*
+                querySelector() finds FIRST element matching CSS selector
+                [data-sport="value"] is attribute selector
+                .add() adds specified class
+            */
+            
+            // Filter and display leagues
+            let filteredLeagues;
+            if (sport === 'all') {
+                filteredLeagues = allLeagues;
+            } else {
+                filteredLeagues = allLeagues.filter(league => 
+                    getSportClass(league.sport) === getSportClass(sport.replace('-', ' '))
+                );
+                /*
+                    .filter() creates new array with items that pass test
+                    Arrow function returns true/false for each item
+                    Only items returning true are included
+                */
+            }
+            
+            displayLeagues(filteredLeagues);
+            updateStats(filteredLeagues);
+        }
+
+        async function loadLeaguesData() {
+            /*
+                async function can use 'await' for asynchronous operations
+                Async is needed because loading files takes time
+                This prevents the page from freezing while loading data
+            */
+            
+            try {
+                /*
+                    try/catch handles errors gracefully
+                    Code in 'try' block runs normally
+                    If error occurs, 'catch' block runs instead
+                */
+                
+                // Fetch the XML file from server
+                const response = await fetch('leagues.xml');
+                /*
+                    fetch() loads files/data from URLs
+                    await pauses function until fetch completes
+                    const creates unchangeable variable
+                */
+                
+                // Convert response to text
+                const xmlText = await response.text();
+                
+                // Parse XML string into document object
+                const parser = new DOMParser();
+                /*
+                    DOMParser is built-in browser API for parsing XML/HTML
+                    Converts text into structured document we can navigate
+                */
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                // Check if XML parsing failed
+                if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
+                    throw new Error('XML parsing failed');
+                    /*
+                        throw creates custom error
+                        This jumps directly to catch block
+                    */
+                }
+
+                // Get all <league> elements from XML
+                const leagues = xmlDoc.getElementsByTagName('league');
+                /*
+                    getElementsByTagName() finds all elements with specified tag name
+                    Returns HTMLCollection (array-like list of elements)
+                */
+                
+                // Process each league
+                for (let i = 0; i < leagues.length; i++) {
+                    /*
+                        for loop repeats code for each item
+                        let i = 0: start counter at 0
+                        i < leagues.length: continue while counter less than total items
+                        i++: add 1 to counter each time
+                    */
+                    
+                    const league = leagues[i];  // Get current league element
+                    
+                    // Extract basic league information
+                    const leagueData = {
+                        sport: league.getElementsByTagName('sport')[0].textContent,
+                        name: league.getElementsByTagName('league_name')[0].textContent,
+                        abbr: league.getElementsByTagName('league_abbr')[0].textContent,
+                        conferences: [],
+                        officialSite: league.getElementsByTagName('official_site')[0]?.textContent || '',
+                        officialLogo: league.getElementsByTagName('official_logo')[0]?.textContent || ''
+                        /*
+                            Optional chaining (?.) safely accesses properties
+                            If element doesn't exist, returns undefined instead of error
+                            || '' provides empty string as fallback value
+                        */
+                    };
+                    
+                    // Process conferences
+                    const conferences = league.getElementsByTagName('conference');
+                    for (let j = 0; j < conferences.length; j++) {
+                        const conf = conferences[j];
+                        
+                        const confData = {
+                            name: conf.getElementsByTagName('conference_name')[0].textContent,
+                            abbr: conf.getElementsByTagName('conf_abbr')[0].textContent,
+                            divisions: []
+                        };
+                        
+                        // Process divisions if they exist
+                        const divisions = conf.getElementsByTagName('division');
+                        for (let k = 0; k < divisions.length; k++) {
+                            const div = divisions[k];
+                            confData.divisions.push({
+                                name: div.getElementsByTagName('division_name')[0].textContent,
+                                abbr: div.getElementsByTagName('div_abbr')[0].textContent
+                            });
+                        }
+                        
+                        leagueData.conferences.push(confData);
+                    }
+                    
+                    allLeagues.push(leagueData);
+                    /*
+                        .push() adds item to end of array
+                        Builds up complete list of all leagues
+                    */
+                }
+
+                // Display all leagues initially
+                displayLeagues(allLeagues);
+                updateStats(allLeagues);
+                
+            } catch (error) {
+                /*
+                    catch block runs if any error occurs in try block
+                    'error' variable contains details about what went wrong
+                */
+                console.error('Error loading leagues data:', error);
+                /*
+                    console.error() prints error message to browser developer tools
+                    Helpful for debugging - users don't see this
+                */
+                
+                // Show error message to user
+                document.getElementById('leagues-container').innerHTML = 
+                    '<div class="error">Error loading leagues.xml. Please ensure the file exists and is properly formatted.</div>';
+                /*
+                    document.getElementById() finds element with specified ID
+                    .innerHTML replaces element's content with new HTML
+                */
+            }
+        }
+
+        function displayLeagues(leaguesData) {
+            /*
+                Function that creates HTML from leagues data
+                Takes array of league objects as input
+            */
+            
+            // Find the container element
+            const container = document.getElementById('leagues-container');
+            
+            if (leaguesData.length === 0) {
+                // Show message when no leagues match filter
+                container.innerHTML = '<div class="loading">No leagues found for the selected sport.</div>';
+                return;
+            }
+            
+            // Generate HTML for each league in rows
+            const html = `
+                <div class="leagues-list">
+                    ${leaguesData.map(league => `
+                        <div class="league-row ${getSportClass(league.sport)}">
+                            <div class="league-header">
+                                <div class="league-header-text">
+                                    <div class="league-sport">${league.sport}</div>
+                                    <div class="league-name">${league.name}</div>
+                                    <div class="league-abbr">${league.abbr}</div>
+                                </div>
+                                ${league.officialLogo ? `
+                                    <img src="${league.officialLogo}" alt="${league.name} logo" class="league-logo">
+                                ` : ''}
+                            </div>
+                            <div class="league-body">
+                                <div class="conferences-section">
+                                    <div class="section-title">Conferences</div>
+                                    <div class="conferences-grid">
+                                        ${league.conferences.map(conf => `
+                                            <div class="conference">
+                                                <div class="conference-name">${conf.name}</div>
+                                                <div class="conference-abbr">${conf.abbr}</div>
+                                                ${conf.divisions.length > 0 ? `
+                                                    <div class="divisions">
+                                                        ${conf.divisions.map(div => `
+                                                            <div class="division">
+                                                                <span class="division-name">${div.name}</span>
+                                                                <span class="division-abbr">(${div.abbr})</span>
+                                                            </div>
+                                                        `).join('')}
+                                                    </div>
+                                                ` : ''}
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                                ${league.officialSite ? `
+                                    <div class="league-links-section">
+                                        <div class="league-links">
+                                            <a href="${league.officialSite}" target="_blank" class="official-link">
+                                                Official Website
+                                            </a>
+                                        </div>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            /*
+                Template literals use backticks (`) instead of quotes
+                ${} inserts JavaScript expressions into strings
+                .map() transforms each array item using provided function
+                .join('') combines array items into single string
+                Conditional rendering: condition ? 'html if true' : 'html if false'
+                target="_blank" opens links in new tab/window
+            */
+            
+            // Replace loading message with generated HTML
+            container.innerHTML = html;
+            
+            // Force browser to recalculate layout
+            container.offsetHeight;
+        }
+
+        // Event listeners for filter buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            /*
+                Event listener waits for specific events to happen
+                'DOMContentLoaded' fires when HTML is fully loaded and parsed
+                This ensures all elements exist before JavaScript tries to use them
+            */
+            
+            // Load the leagues data
+            loadLeaguesData();
+            
+            // Add click handlers to filter buttons
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    /*
+                        addEventListener() attaches event handler to element
+                        'click' event fires when user clicks the element
+                        function() defines what happens when event occurs
+                    */
+                    const sport = this.dataset.sport;
+                    /*
+                        'this' refers to the clicked button element
+                        .dataset accesses data-* attributes
+                        data-sport="value" becomes dataset.sport
+                    */
+                    filterLeagues(sport);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- 
+    This XML document was generated with the help of AI and is maintained manually by kevinmkolb@gmail.com.
+    There is no automation or code that adds, appends, edits, or deletes content.
+-->
+<leagues generated="2025-08-12T00:27:05+00:00" source="Manual">
+<league>
+  <sport>American Football</sport>
+  <league_name>National Football League</league_name>
+  <league_abbr>NFL</league_abbr>
+  <conference>
+    <conference_name>American Football Conference</conference_name>
+    <conf_abbr>AFC</conf_abbr>
+    <division>
+      <division_name>AFC East</division_name>
+      <div_abbr>AFC East</div_abbr>
+    </division>
+    <division>
+      <division_name>AFC North</division_name>
+      <div_abbr>AFC North</div_abbr>
+    </division>
+    <division>
+      <division_name>AFC South</division_name>
+      <div_abbr>AFC South</div_abbr>
+    </division>
+    <division>
+      <division_name>AFC West</division_name>
+      <div_abbr>AFC West</div_abbr>
+    </division>
+  </conference>
+  <conference>
+    <conference_name>National Football Conference</conference_name>
+    <conf_abbr>NFC</conf_abbr>
+    <division>
+      <division_name>NFC East</division_name>
+      <div_abbr>NFC East</div_abbr>
+    </division>
+    <division>
+      <division_name>NFC North</division_name>
+      <div_abbr>NFC North</div_abbr>
+    </division>
+    <division>
+      <division_name>NFC South</division_name>
+      <div_abbr>NFC South</div_abbr>
+    </division>
+    <division>
+      <division_name>NFC West</division_name>
+      <div_abbr>NFC West</div_abbr>
+    </division>
+  </conference>
+  <official_site>https://www.nfl.com</official_site>
+  <official_logo>https://static.www.nfl.com/image/upload/v1554321393/league/nvfr7ogywskqrfaiu38m.svg</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>NCAA Division I Football Bowl Subdivision</league_name>
+  <league_abbr>FBS</league_abbr>
+  <conference>
+    <conference_name>Atlantic Coast Conference</conference_name>
+    <conf_abbr>ACC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Big Ten Conference</conference_name>
+    <conf_abbr>Big Ten</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Big 12 Conference</conference_name>
+    <conf_abbr>Big 12</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southeastern Conference</conference_name>
+    <conf_abbr>SEC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>American Conference</conference_name>
+    <conf_abbr>American</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Conference USA</conference_name>
+    <conf_abbr>CUSA</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Mid-American Conference</conference_name>
+    <conf_abbr>MAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Mountain West Conference</conference_name>
+    <conf_abbr>Mountain West</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Pac-12 Conference</conference_name>
+    <conf_abbr>Pac-12</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Sun Belt Conference</conference_name>
+    <conf_abbr>Sun Belt</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>FBS Independents</conference_name>
+    <conf_abbr>Independent</conf_abbr>
+  </conference>
+  <official_site>https://www.ncaa.com</official_site>
+  <official_logo>https://upload.wikimedia.org/wikipedia/en/c/cf/NCAA_football_icon_logo.svg</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>NCAA Division I Football Championship Subdivision</league_name>
+  <league_abbr>FCS</league_abbr>
+  <conference>
+    <conference_name>Big Sky Conference</conference_name>
+    <conf_abbr>Big Sky</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Big South-OVC Football</conference_name>
+    <conf_abbr>Big South-OVC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Colonial Athletic Association</conference_name>
+    <conf_abbr>CAA</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Missouri Valley Football Conference</conference_name>
+    <conf_abbr>MVFC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Northeast Conference</conference_name>
+    <conf_abbr>NEC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Patriot League</conference_name>
+    <conf_abbr>Patriot</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southern Conference</conference_name>
+    <conf_abbr>SoCon</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southland Conference</conference_name>
+    <conf_abbr>Southland</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>SWAC</conference_name>
+    <conf_abbr>SWAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Ivy League</conference_name>
+    <conf_abbr>Ivy</conf_abbr>
+  </conference>
+  <official_site>https://www.ncaa.com/sports/football/fcs</official_site>
+  <official_logo>https://upload.wikimedia.org/wikipedia/en/d/d4/NCAA_Division_I_FCS_logo.svg</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>NCAA Division II Football</league_name>
+  <league_abbr>D2</league_abbr>
+  <conference>
+    <conference_name>Great American Conference</conference_name>
+    <conf_abbr>GAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Great Lakes Intercollegiate Athletic Conference</conference_name>
+    <conf_abbr>GLIAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Gulf South Conference</conference_name>
+    <conf_abbr>GSC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Mid-America Intercollegiate Athletics Association</conference_name>
+    <conf_abbr>MIAA</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Northern Sun Intercollegiate Conference</conference_name>
+    <conf_abbr>NSIC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Pennsylvania State Athletic Conference</conference_name>
+    <conf_abbr>PSAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Rocky Mountain Athletic Conference</conference_name>
+    <conf_abbr>RMAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>South Atlantic Conference</conference_name>
+    <conf_abbr>SAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southern Intercollegiate Athletic Conference</conference_name>
+    <conf_abbr>SIAC</conf_abbr>
+  </conference>
+  <official_site>https://www.ncaa.com/sports/football/d2</official_site>
+  <official_logo>https://www.ncaa.com/modules/custom/casablanca_core/img/sportbanners/football.svg</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>NCAA Division III Football</league_name>
+  <league_abbr>D3</league_abbr>
+  <conference>
+    <conference_name>American Rivers Conference</conference_name>
+    <conf_abbr>ARC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Centennial Conference</conference_name>
+    <conf_abbr>CC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>College Conference of Illinois and Wisconsin</conference_name>
+    <conf_abbr>CCIW</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Liberty League</conference_name>
+    <conf_abbr>Liberty</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Michigan Intercollegiate Athletic Association</conference_name>
+    <conf_abbr>MIAA</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Minnesota Intercollegiate Athletic Conference</conference_name>
+    <conf_abbr>MIAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>New England Small College Athletic Conference</conference_name>
+    <conf_abbr>NESCAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Old Dominion Athletic Conference</conference_name>
+    <conf_abbr>ODAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Presidents' Athletic Conference</conference_name>
+    <conf_abbr>PAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Wisconsin Intercollegiate Athletic Conference</conference_name>
+    <conf_abbr>WIAC</conf_abbr>
+  </conference>
+  <official_site>https://www.ncaa.com/sports/football/d3</official_site>
+  <official_logo>https://www.ncaa.com/modules/custom/casablanca_core/img/sportbanners/football.svg</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>National Association of Intercollegiate Athletics</league_name>
+  <league_abbr>NAIA</league_abbr>
+  <conference>
+    <conference_name>Central States Football League</conference_name>
+    <conf_abbr>CSFL</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Frontier Conference</conference_name>
+    <conf_abbr>Frontier</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Great Plains Athletic Conference</conference_name>
+    <conf_abbr>GPAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Heart of America Athletic Conference</conference_name>
+    <conf_abbr>HAAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Kansas Collegiate Athletic Conference</conference_name>
+    <conf_abbr>KCAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Mid-South Conference</conference_name>
+    <conf_abbr>MSC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Sooner Athletic Conference</conference_name>
+    <conf_abbr>SAC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southern States Athletic Conference</conference_name>
+    <conf_abbr>SSAC</conf_abbr>
+  </conference>
+  <official_site>https://www.naia.org</official_site>
+  <official_logo>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/National_Association_of_Intercollegiate_Athletics_logo.svg/2560px-National_Association_of_Intercollegiate_Athletics_logo.svg.png</official_logo>
+</league>
+<league>
+  <sport>American Football</sport>
+  <league_name>National Junior College Athletic Association</league_name>
+  <league_abbr>NJCAA</league_abbr>
+  <conference>
+    <conference_name>California Community College Athletic Association</conference_name>
+    <conf_abbr>CCCAA</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Eastern Conference</conference_name>
+    <conf_abbr>Eastern</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Jayhawk Conference</conference_name>
+    <conf_abbr>Jayhawk</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Midwest Conference</conference_name>
+    <conf_abbr>Midwest</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Northeast Football Conference</conference_name>
+    <conf_abbr>NEFC</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Southwest Conference</conference_name>
+    <conf_abbr>Southwest</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>Western States Football League</conference_name>
+    <conf_abbr>WSFL</conf_abbr>
+  </conference>
+  <official_site>https://www.njcaa.org</official_site>
+  <official_logo>https://upload.wikimedia.org/wikipedia/en/f/fd/National_Junior_College_Athletic_Association_logo.png</official_logo>
+</league>
+<league>
+  <sport>Baseball</sport>
+  <league_name>Major League Baseball</league_name>
+  <league_abbr>MLB</league_abbr>
+  <conference>
+    <conference_name>American League East</conference_name>
+    <conf_abbr>AL East</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>American League Central</conference_name>
+    <conf_abbr>AL Central</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>American League West</conference_name>
+    <conf_abbr>AL West</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>National League East</conference_name>
+    <conf_abbr>NL East</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>National League Central</conference_name>
+    <conf_abbr>NL Central</conf_abbr>
+  </conference>
+  <conference>
+    <conference_name>National League West</conference_name>
+    <conf_abbr>NL West</conf_abbr>
+  </conference>
+  <official_site>https://www.mlb.com</official_site>
+  <official_logo>https://www.mlbstatic.com/team-logos/league-on-dark/1.svg</official_logo>
+</league>
+<league>
+  <sport>Basketball</sport>
+  <league_name>National Basketball Association</league_name>
+  <league_abbr>NBA</league_abbr>
+  <conference>
+    <conference_name>Eastern Conference</conference_name>
+    <conf_abbr>Eastern</conf_abbr>
+    <division>
+      <division_name>Atlantic Division</division_name>
+      <div_abbr>Atlantic</div_abbr>
+    </division>
+    <division>
+      <division_name>Central Division</division_name>
+      <div_abbr>Central</div_abbr>
+    </division>
+    <division>
+      <division_name>Southeast Division</division_name>
+      <div_abbr>Southeast</div_abbr>
+    </division>
+  </conference>
+  <conference>
+    <conference_name>Western Conference</conference_name>
+    <conf_abbr>Western</conf_abbr>
+    <division>
+      <division_name>Northwest Division</division_name>
+      <div_abbr>Northwest</div_abbr>
+    </division>
+    <division>
+      <division_name>Pacific Division</division_name>
+      <div_abbr>Pacific</div_abbr>
+    </division>
+    <division>
+      <division_name>Southwest Division</division_name>
+      <div_abbr>Southwest</div_abbr>
+    </division>
+  </conference>
+  <official_site>https://www.nba.com</official_site>
+  <official_logo>https://cdn.nba.com/logos/leagues/logo-nba.svg</official_logo>
+</league>
+<league>
+  <sport>Hockey</sport>
+  <league_name>National Hockey League</league_name>
+  <league_abbr>NHL</league_abbr>
+  <conference>
+    <conference_name>Eastern Conference</conference_name>
+    <conf_abbr>Eastern</conf_abbr>
+    <division>
+      <division_name>Atlantic Division</division_name>
+      <div_abbr>Atlantic</div_abbr>
+    </division>
+    <division>
+      <division_name>Metropolitan Division</division_name>
+      <div_abbr>Metropolitan</div_abbr>
+    </division>
+  </conference>
+  <conference>
+    <conference_name>Western Conference</conference_name>
+    <conf_abbr>Western</conf_abbr>
+    <division>
+      <division_name>Central Division</division_name>
+      <div_abbr>Central</div_abbr>
+    </division>
+    <division>
+      <division_name>Pacific Division</division_name>
+      <div_abbr>Pacific</div_abbr>
+    </division>
+  </conference>
+  <official_site>https://www.nhl.com</official_site>
+  <official_logo>https://media.d3.nhle.com/image/private/t_q-best/prd/assets/nhl/logos/nhl_shield_wm_on_dark_fqkbph</official_logo>
+</league>
+</leagues>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This XML document was generated with the help of AI and is maintained manually by kevinmkolb@gmail.com.
+    There is no automation or code that adds, appends, edits, or deletes content.
+-->
+<sports>
+    <sport rank="1">
+        <sportname>Football (Soccer)</sportname>
+        <estimated_participants>4_billion</estimated_participants>
+        <primary_regions>Global</primary_regions>
+    </sport>
+    <sport rank="2">
+        <sportname>Cricket</sportname>
+        <estimated_participants>2.5_billion</estimated_participants>
+        <primary_regions>India, Pakistan, Australia, England, South Africa</primary_regions>
+    </sport>
+    <sport rank="3">
+        <sportname>Basketball</sportname>
+        <estimated_participants>2.2_billion</estimated_participants>
+        <primary_regions>USA, China, Europe, Philippines</primary_regions>
+    </sport>
+    <sport rank="4">
+        <sportname>Field Hockey</sportname>
+        <estimated_participants>2_billion</estimated_participants>
+        <primary_regions>India, Pakistan, Netherlands, Argentina</primary_regions>
+    </sport>
+    <sport rank="5">
+        <sportname>Volleyball</sportname>
+        <estimated_participants>900_million</estimated_participants>
+        <primary_regions>Brazil, Russia, Italy, USA, China</primary_regions>
+    </sport>
+    <sport rank="6">
+        <sportname>Table Tennis (Ping Pong)</sportname>
+        <estimated_participants>850_million</estimated_participants>
+        <primary_regions>China, Germany, Japan, South Korea</primary_regions>
+    </sport>
+    <sport rank="7">
+        <sportname>Baseball</sportname>
+        <estimated_participants>500_million</estimated_participants>
+        <primary_regions>USA, Japan, South Korea, Latin America</primary_regions>
+    </sport>
+    <sport rank="8">
+        <sportname>Rugby</sportname>
+        <estimated_participants>475_million</estimated_participants>
+        <primary_regions>New Zealand, South Africa, England, Wales, France</primary_regions>
+    </sport>
+    <sport rank="9">
+        <sportname>American Football</sportname>
+        <estimated_participants>400_million</estimated_participants>
+        <primary_regions>USA, Canada</primary_regions>
+    </sport>
+    <sport rank="10">
+        <sportname>Badminton</sportname>
+        <estimated_participants>220_million</estimated_participants>
+        <primary_regions>China, Indonesia, Malaysia, Denmark</primary_regions>
+    </sport>
+    <sport rank="11">
+        <sportname>Ice Hockey</sportname>
+        <estimated_participants>200_million</estimated_participants>
+        <primary_regions>Canada, USA, Russia, Sweden, Finland</primary_regions>
+    </sport>
+    <sport rank="12">
+        <sportname>Handball</sportname>
+        <estimated_participants>180_million</estimated_participants>
+        <primary_regions>Germany, France, Denmark, Norway, Croatia</primary_regions>
+    </sport>
+    <sport rank="13">
+        <sportname>Water Polo</sportname>
+        <estimated_participants>120_million</estimated_participants>
+        <primary_regions>Hungary, Italy, Croatia, Serbia, USA</primary_regions>
+    </sport>
+    <sport rank="14">
+        <sportname>Softball</sportname>
+        <estimated_participants>100_million</estimated_participants>
+        <primary_regions>USA, Japan, Australia, Canada</primary_regions>
+    </sport>
+    <sport rank="15">
+        <sportname>Lacrosse</sportname>
+        <estimated_participants>80_million</estimated_participants>
+        <primary_regions>USA, Canada, Australia</primary_regions>
+    </sport>
+    <sport rank="16">
+        <sportname>Netball</sportname>
+        <estimated_participants>75_million</estimated_participants>
+        <primary_regions>Australia, New Zealand, England, Jamaica</primary_regions>
+    </sport>
+    <sport rank="17">
+        <sportname>Floorball</sportname>
+        <estimated_participants>50_million</estimated_participants>
+        <primary_regions>Sweden, Finland, Switzerland, Czech Republic</primary_regions>
+    </sport>
+    <sport rank="18">
+        <sportname>Australian Football</sportname>
+        <estimated_participants>45_million</estimated_participants>
+        <primary_regions>Australia</primary_regions>
+    </sport>
+    <sport rank="19">
+        <sportname>Futsal</sportname>
+        <estimated_participants>40_million</estimated_participants>
+        <primary_regions>Brazil, Spain, Argentina, Portugal</primary_regions>
+    </sport>
+    <sport rank="20">
+        <sportname>Sepak Takraw</sportname>
+        <estimated_participants>35_million</estimated_participants>
+        <primary_regions>Thailand, Malaysia, Indonesia, Myanmar</primary_regions>
+    </sport>
+    <sport rank="21">
+        <sportname>Kabaddi</sportname>
+        <estimated_participants>30_million</estimated_participants>
+        <primary_regions>India, Bangladesh, Pakistan, Iran</primary_regions>
+    </sport>
+    <sport rank="22">
+        <sportname>Ultimate Frisbee</sportname>
+        <estimated_participants>25_million</estimated_participants>
+        <primary_regions>USA, Canada, Germany, Japan</primary_regions>
+    </sport>
+    <sport rank="23">
+        <sportname>Tchoukball</sportname>
+        <estimated_participants>20_million</estimated_participants>
+        <primary_regions>Switzerland, Taiwan, Brazil, Czech Republic</primary_regions>
+    </sport>
+    <sport rank="24">
+        <sportname>Korfball</sportname>
+        <estimated_participants>15_million</estimated_participants>
+        <primary_regions>Netherlands, Belgium, Germany, Taiwan</primary_regions>
+    </sport>
+    <sport rank="25">
+        <sportname>Bandy</sportname>
+        <estimated_participants>10_million</estimated_participants>
+        <primary_regions>Russia, Sweden, Finland, Norway</primary_regions>
+    </sport>
+</sports>
