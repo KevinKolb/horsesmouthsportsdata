@@ -23,7 +23,7 @@
         Without this, mobile sites look tiny and zoomed out
     -->
     
-    <title>LEAGUES.XML</title>
+    <title>SPORTS.XML</title>
     <!-- Text that appears in browser tab/bookmark -->
     
     <style>
@@ -59,7 +59,7 @@
                 Classes in CSS start with a period (.)
                 This targets any element with class="container"
             */
-            max-width: 1200px;      /* Wider container for more complex league data */
+            max-width: 1200px;      /* Wider container for more complex sport data */
             margin: 0 auto;         /* Centers the container horizontally */
             padding: 30px 20px;     /* 30px top/bottom, 20px left/right */
         }
@@ -73,34 +73,6 @@
             margin-bottom: 40px;            /* Space below header */
             border-bottom: 1px solid #e0e0e0;  /* Thin gray line below */
             padding-bottom: 25px;           /* Space between content and border */
-        }
-
-        .header-content {
-            /* Container for header text and logo */
-            display: flex;                  /* Flexbox for side-by-side layout */
-            align-items: center;            /* Vertically center items */
-            justify-content: space-between; /* Space between text and logo */
-            max-width: 100%;
-        }
-
-        .header-text {
-            /* Container for text content in header */
-            flex: 1;                       /* Takes most of the space */
-            text-align: left;              /* Left-align text content */
-        }
-
-        .header-logo {
-            /* Container for logo */
-            flex-shrink: 0;                /* Prevents logo from shrinking */
-            margin-left: 30px;             /* Space between text and logo */
-        }
-
-        .main-logo {
-            /* Main site logo styling */
-            max-height: 80px;              /* Limit logo height */
-            max-width: 150px;              /* Limit logo width */
-            object-fit: contain;           /* Maintain aspect ratio */
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); /* Subtle shadow */
         }
 
         h1 {
@@ -209,85 +181,70 @@
             letter-spacing: 0.5px;
         }
 
-        .leagues-list {
-            /* Container for the list of leagues (similar to sports-list) */
-            background: white;
-            border: 1px solid #e8e8e8;  /* Light border around entire list */
+        .sports-container {
+            /* Main container for all sports */
+            display: grid;              /* CSS Grid for layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+            gap: 30px;                  /* Space between grid items */
             margin-top: 30px;
         }
 
-        .league-row {
-            /* Each individual league entry (similar to sport-row) */
-            border-bottom: 1px solid #f0f0f0; /* Separator line between rows */
-            transition: background 0.2s ease;  /* Smooth hover effect */
-            overflow: hidden;           /* Keeps content contained */
+        .sport-card {
+            /* Individual sport display card */
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;         /* Rounded corners */
+            overflow: hidden;           /* Keeps content within rounded corners */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover animation */
         }
 
-        .league-row:last-child {
-            /* 
-                :last-child pseudo-class targets the last element
-                Removes border from final row for cleaner look
-            */
-            border-bottom: none;
+        .sport-card:hover {
+            /* Hover effect for sport cards */
+            transform: translateY(-2px); /* Slight upward movement */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow effect */
         }
 
-        .league-row:hover {
-            /* Hover effect for interactive feedback */
-            background: #f8f8f8;       /* Very light gray on hover */
-        }
-
-        .league-header {
-            /* Header section of each league card */
-            background: #333;
+        .sport-header {
+            /* Header section of each sport card */
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
 
-        .league-sport {
-            /* Sport name in league header */
+        .sport-rank {
+            /* Rank number in sport header */
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
             font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;           /* Slightly transparent */
-            margin-bottom: 5px;
+            font-weight: bold;
         }
 
-        .league-name {
-            /* Main league name */
+        .sport-name {
+            /* Main sport name */
             font-size: 1.3rem;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .league-abbr {
-            /* League abbreviation */
+        .sport-participants {
+            /* Participant count display */
             font-size: 1rem;
             opacity: 0.9;
             font-weight: 300;
         }
 
-        .league-body {
-            /* Main content area of league row */
+        .sport-body {
+            /* Main content area of sport card */
             padding: 20px;
-            display: flex;              /* Flexbox for horizontal layout */
-            gap: 30px;                  /* Space between sections */
-            align-items: flex-start;    /* Align to top */
-        }
-
-        .conferences-section {
-            /* Section containing conference information */
-            flex: 1;                    /* Takes most of the space */
-        }
-
-        .league-links-section {
-            /* Section for official website link */
-            flex-shrink: 0;             /* Prevents shrinking */
-            min-width: 150px;
         }
 
         .section-title {
-            /* Title for sections within league cards */
+            /* Title for sections within sport cards */
             font-size: 1rem;
             font-weight: bold;
             color: #333;
@@ -298,82 +255,39 @@
             padding-bottom: 5px;
         }
 
-        .conference {
-            /* Individual conference display */
-            margin-bottom: 10px;
-            padding: 8px 12px;
+        .regions-list {
+            /* Container for primary regions */
             background: #f8f9fa;       /* Very light gray background */
             border-left: 3px solid #e74c3c; /* Red accent bar */
             border-radius: 0 4px 4px 0; /* Rounded right corners only */
-            display: inline-block;      /* Allow conferences to flow horizontally */
-            margin-right: 10px;         /* Space between conferences */
-            margin-bottom: 8px;         /* Space below each conference */
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
-        .conference:last-child {
-            margin-right: 0;            /* Remove right margin from last conference */
+        .sport-links {
+            /* Container for sport action links */
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
         }
 
-        .conference-name {
-            /* Conference name styling */
-            font-weight: bold;
-            color: #333;
-            font-size: 0.9rem;
-            margin-bottom: 2px;
-        }
-
-        .conference-abbr {
-            /* Conference abbreviation */
-            font-size: 0.8rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        .divisions {
-            /* Container for divisions within a conference */
-            margin-top: 5px;
-            font-size: 0.8rem;
-        }
-
-        .division {
-            /* Individual division styling */
-            color: #555;
-            margin-bottom: 2px;
-        }
-
-        .division-name {
-            font-weight: 500;          /* Medium font weight */
-        }
-
-        .division-abbr {
-            color: #888;
-            margin-left: 5px;
-        }
-
-        .league-links {
-            /* Container for official website */
-            padding-top: 10px;
-        }
-
-        .official-link {
-            /* Styling for official website link */
-            color: #e74c3c;
+        .leagues-link {
+            /* Styling for leagues link button */
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.2s ease;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .official-link:hover {
-            color: #c0392b;            /* Darker red on hover */
-            text-decoration: underline; /* Show underline on hover */
-        }
-
-        .league-logo {
-            /* Official league logo image */
-            max-height: 30px;
-            max-width: 80px;
-            object-fit: contain;       /* Maintain aspect ratio */
+        .leagues-link:hover {
+            background: #c0392b;            /* Darker red on hover */
         }
 
         .loading {
@@ -404,14 +318,14 @@
         }
 
         /* 
-            SPORT-SPECIFIC STYLING
-            Different colors for different sports to create visual hierarchy
+            POPULARITY-BASED STYLING
+            Different colors based on popularity rank to create visual hierarchy
         */
-        .sport-american-football .league-header { background: #2c5234; }  /* Dark green for football */
-        .sport-baseball .league-header { background: #1e3a8a; }          /* Blue for baseball */
-        .sport-basketball .league-header { background: #dc2626; }        /* Red for basketball */
-        .sport-hockey .league-header { background: #374151; }           /* Dark gray for hockey */
-        .sport-soccer .league-header { background: #059669; }           /* Green for soccer */
+        .rank-1-5 .sport-header { background: #2c5234; }     /* Dark green for top 5 */
+        .rank-6-10 .sport-header { background: #1e3a8a; }    /* Blue for 6-10 */
+        .rank-11-15 .sport-header { background: #dc2626; }   /* Red for 11-15 */
+        .rank-16-20 .sport-header { background: #374151; }   /* Dark gray for 16-20 */
+        .rank-21-25 .sport-header { background: #059669; }   /* Green for 21-25 */
 
         /* 
             MEDIA QUERY for responsive design
@@ -428,46 +342,14 @@
                 font-size: 2rem;        /* Smaller heading on mobile */
             }
 
-            .stats-bar {
-                flex-direction: column; /* Stack stats vertically on mobile */
-                text-align: center;
-            }
-
-            .league-header {
-                flex-direction: column; /* Stack logo and text vertically on mobile */
-                text-align: center;
-                padding: 15px;
-            }
-
-            .league-header-text {
-                flex-direction: column; /* Stack text elements vertically */
-                gap: 8px;
-                margin-bottom: 15px;    /* Space below text on mobile */
-                text-align: center;
-            }
-
-            .league-sport, .league-abbr {
-                min-width: auto;        /* Remove fixed widths on mobile */
-                text-align: center;
-            }
-
-            .league-body {
-                flex-direction: column; /* Stack sections vertically on mobile */
+            .sports-container {
+                grid-template-columns: 1fr; /* Single column on mobile */
                 gap: 20px;
             }
 
-            .conferences-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-                gap: 10px;
-            }
-
-            .conference {
-                margin-bottom: 0;       /* Remove margin, grid gap handles spacing */
-                min-height: auto;       /* Remove minimum height on mobile */
-            }
-
-            .divisions {
-                margin-left: 10px;      /* Less indentation on mobile */
+            .stats-bar {
+                flex-direction: column; /* Stack stats vertically on mobile */
+                text-align: center;
             }
         }
 
@@ -499,10 +381,10 @@
         <header>
             <!-- Semantic HTML5 element for page header -->
             
-            <h1>LEAGUES.XML</h1>
+            <h1>SPORTS.XML</h1>
             <!-- <h1> is the main page heading (most important) -->
             
-            <p class="subtitle">Horses Mouth Sports League Data</p>
+            <p class="subtitle">Horses Mouth Sports Data</p>
             <!-- <p> = paragraph, class applies .subtitle styles -->
             
             <p class="attribution">Generated with AI assistance and maintained manually by kevinmkolb@gmail.com.</p>
@@ -531,15 +413,16 @@
             <div class="button-group" style="margin-top: 15px;">
                 <!-- Container for filter buttons (second line) -->
                 
-                <button class="filter-btn active" data-sport="all">All Sports</button>
-                <button class="filter-btn" data-sport="american-football">Football</button>
-                <button class="filter-btn" data-sport="baseball">Baseball</button>
-                <button class="filter-btn" data-sport="basketball">Basketball</button>
-                <button class="filter-btn" data-sport="hockey">Hockey</button>
+                <button class="filter-btn active" data-rank="all">All Sports</button>
+                <button class="filter-btn" data-rank="1-5">Top 5</button>
+                <button class="filter-btn" data-rank="6-10">6-10</button>
+                <button class="filter-btn" data-rank="11-15">11-15</button>
+                <button class="filter-btn" data-rank="16-20">16-20</button>
+                <button class="filter-btn" data-rank="21-25">21-25</button>
                 <!-- 
-                    data-sport is a custom data attribute
+                    data-rank is a custom data attribute
                     Used to store filter information for JavaScript
-                    Can be accessed via element.dataset.sport
+                    Can be accessed via element.dataset.rank
                 -->
             </div>
         </header>
@@ -547,30 +430,30 @@
         <div class="stats-bar">
             <!-- Statistics display bar -->
             <div class="stat-item">
-                <span class="stat-number" id="total-leagues">-</span>
-                <span class="stat-label">Total Leagues</span>
+                <span class="stat-number" id="total-sports">-</span>
+                <span class="stat-label">Total Sports</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" id="total-conferences">-</span>
-                <span class="stat-label">Conferences</span>
+                <span class="stat-number" id="total-participants">-</span>
+                <span class="stat-label">Participants (Billions)</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" id="total-divisions">-</span>
-                <span class="stat-label">Divisions</span>
+                <span class="stat-number" id="unique-regions">-</span>
+                <span class="stat-label">Unique Regions</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" id="sports-count">-</span>
-                <span class="stat-label">Sports</span>
+                <span class="stat-number" id="avg-participants">-</span>
+                <span class="stat-label">Avg Participants (M)</span>
             </div>
         </div>
 
-        <div id="leagues-container">
+        <div id="sports-container">
             <!-- 
-                id="leagues-container" creates unique identifier
+                id="sports-container" creates unique identifier
                 JavaScript uses this ID to find and modify this element
                 IDs must be unique (only one per page), unlike classes
             -->
-            <div class="loading">Loading leagues data...</div>
+            <div class="loading">Loading sports data...</div>
             <!-- Initial loading message, replaced by JavaScript -->
         </div>
     </div>
@@ -583,79 +466,108 @@
         */
         
         // Global variables to store data
-        let allLeagues = [];        // Array to store all league data
+        let allSports = [];         // Array to store all sport data
         let currentFilter = 'all';  // Currently active filter
         
-        function getSportClass(sport) {
+        function getRankClass(rank) {
             /*
-                Function converts sport name to CSS class name
-                Used for sport-specific styling and filtering
+                Function converts rank number to CSS class name
+                Used for rank-specific styling and filtering
             */
-            return 'sport-' + sport.toLowerCase().replace(/\s+/g, '-');
-            /*
-                .toLowerCase() converts to lowercase
-                .replace(/\s+/g, '-') replaces spaces with hyphens using regex
-                /\s+/g means: find one or more whitespace characters, globally
-            */
+            const rankNum = parseInt(rank);
+            if (rankNum >= 1 && rankNum <= 5) return 'rank-1-5';
+            if (rankNum >= 6 && rankNum <= 10) return 'rank-6-10';
+            if (rankNum >= 11 && rankNum <= 15) return 'rank-11-15';
+            if (rankNum >= 16 && rankNum <= 20) return 'rank-16-20';
+            if (rankNum >= 21 && rankNum <= 25) return 'rank-21-25';
+            return 'rank-other';
         }
 
-        function calculateStats(leagues) {
+        function formatParticipants(participants) {
             /*
-                Function calculates statistics from league data
+                Function formats participant numbers for display
+                Converts strings like "4_billion" to readable format
+            */
+            const cleanNum = participants.replace(/_/g, '');
+            if (cleanNum.includes('billion')) {
+                return cleanNum.replace('billion', 'B');
+            } else if (cleanNum.includes('million')) {
+                return cleanNum.replace('million', 'M');
+            }
+            return cleanNum;
+        }
+
+        function parseParticipantsToNumber(participants) {
+            /*
+                Function converts participant strings to numbers for calculations
+                Used for statistics calculations
+            */
+            const cleanNum = participants.replace(/_/g, '').toLowerCase();
+            if (cleanNum.includes('billion')) {
+                return parseFloat(cleanNum.replace('billion', '')) * 1000;
+            } else if (cleanNum.includes('million')) {
+                return parseFloat(cleanNum.replace('million', ''));
+            }
+            return parseFloat(cleanNum);
+        }
+
+        function calculateStats(sports) {
+            /*
+                Function calculates statistics from sport data
                 Returns object with counts for display
             */
-            let totalConferences = 0;
-            let totalDivisions = 0;
-            const sportsSet = new Set(); // Set automatically removes duplicates
+            let totalParticipantsMillions = 0;
+            const regionsSet = new Set(); // Set automatically removes duplicates
             
-            leagues.forEach(league => {
+            sports.forEach(sport => {
                 /*
                     forEach() runs function for each array item
                     Arrow function: (parameter) => { code }
-                    More concise than: function(league) { code }
+                    More concise than: function(sport) { code }
                 */
-                sportsSet.add(league.sport);
-                totalConferences += league.conferences.length;
+                totalParticipantsMillions += parseParticipantsToNumber(sport.participants);
                 
-                league.conferences.forEach(conf => {
-                    if (conf.divisions) {
-                        totalDivisions += conf.divisions.length;
-                    }
+                // Split regions by comma and add each to set
+                sport.regions.split(',').forEach(region => {
+                    regionsSet.add(region.trim());
                 });
             });
             
+            const avgParticipants = sports.length > 0 ? 
+                Math.round(totalParticipantsMillions / sports.length) : 0;
+            
             return {
-                leagues: leagues.length,
-                conferences: totalConferences,
-                divisions: totalDivisions,
-                sports: sportsSet.size
+                sports: sports.length,
+                totalParticipants: (totalParticipantsMillions / 1000).toFixed(1), // Convert to billions
+                uniqueRegions: regionsSet.size,
+                avgParticipants: avgParticipants
             };
         }
 
-        function updateStats(leagues) {
+        function updateStats(sports) {
             /*
                 Function updates the statistics display
-                Takes filtered leagues array as input
+                Takes filtered sports array as input
             */
-            const stats = calculateStats(leagues);
+            const stats = calculateStats(sports);
             
             // Update each statistic display
-            document.getElementById('total-leagues').textContent = stats.leagues;
-            document.getElementById('total-conferences').textContent = stats.conferences;
-            document.getElementById('total-divisions').textContent = stats.divisions;
-            document.getElementById('sports-count').textContent = stats.sports;
+            document.getElementById('total-sports').textContent = stats.sports;
+            document.getElementById('total-participants').textContent = stats.totalParticipants;
+            document.getElementById('unique-regions').textContent = stats.uniqueRegions;
+            document.getElementById('avg-participants').textContent = stats.avgParticipants;
             /*
                 .textContent sets the text inside an element
                 Safer than .innerHTML when displaying user data
             */
         }
 
-        function filterLeagues(sport) {
+        function filterSports(rankRange) {
             /*
-                Function filters leagues by sport
+                Function filters sports by rank range
                 Updates display and active filter button
             */
-            currentFilter = sport;
+            currentFilter = rankRange;
             
             // Update active button styling
             document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -671,21 +583,23 @@
             });
             
             // Add active class to clicked button
-            document.querySelector(`[data-sport="${sport}"]`).classList.add('active');
+            document.querySelector(`[data-rank="${rankRange}"]`).classList.add('active');
             /*
                 querySelector() finds FIRST element matching CSS selector
-                [data-sport="value"] is attribute selector
+                [data-rank="value"] is attribute selector
                 .add() adds specified class
             */
             
-            // Filter and display leagues
-            let filteredLeagues;
-            if (sport === 'all') {
-                filteredLeagues = allLeagues;
+            // Filter and display sports
+            let filteredSports;
+            if (rankRange === 'all') {
+                filteredSports = allSports;
             } else {
-                filteredLeagues = allLeagues.filter(league => 
-                    getSportClass(league.sport) === getSportClass(sport.replace('-', ' '))
-                );
+                const [min, max] = rankRange.split('-').map(Number);
+                filteredSports = allSports.filter(sport => {
+                    const rank = parseInt(sport.rank);
+                    return rank >= min && rank <= max;
+                });
                 /*
                     .filter() creates new array with items that pass test
                     Arrow function returns true/false for each item
@@ -693,11 +607,11 @@
                 */
             }
             
-            displayLeagues(filteredLeagues);
-            updateStats(filteredLeagues);
+            displaySports(filteredSports);
+            updateStats(filteredSports);
         }
 
-        async function loadLeaguesData() {
+        async function loadSportsData() {
             /*
                 async function can use 'await' for asynchronous operations
                 Async is needed because loading files takes time
@@ -712,7 +626,7 @@
                 */
                 
                 // Fetch the XML file from server
-                const response = await fetch('leagues.xml');
+                const response = await fetch('sports.xml');
                 /*
                     fetch() loads files/data from URLs
                     await pauses function until fetch completes
@@ -739,88 +653,61 @@
                     */
                 }
 
-                // Get all <league> elements from XML
-                const leagues = xmlDoc.getElementsByTagName('league');
+                // Get all <sport> elements from XML
+                const sports = xmlDoc.getElementsByTagName('sport');
                 /*
                     getElementsByTagName() finds all elements with specified tag name
                     Returns HTMLCollection (array-like list of elements)
                 */
                 
-                // Process each league
-                for (let i = 0; i < leagues.length; i++) {
+                // Process each sport
+                for (let i = 0; i < sports.length; i++) {
                     /*
                         for loop repeats code for each item
                         let i = 0: start counter at 0
-                        i < leagues.length: continue while counter less than total items
+                        i < sports.length: continue while counter less than total items
                         i++: add 1 to counter each time
                     */
                     
-                    const league = leagues[i];  // Get current league element
+                    const sport = sports[i];  // Get current sport element
                     
-                    // Extract basic league information
-                    const leagueData = {
-                        sport: league.getElementsByTagName('sport')[0].textContent,
-                        name: league.getElementsByTagName('league_name')[0].textContent,
-                        abbr: league.getElementsByTagName('league_abbr')[0].textContent,
-                        conferences: [],
-                        officialSite: league.getElementsByTagName('official_site')[0]?.textContent || '',
-                        officialLogo: league.getElementsByTagName('official_logo')[0]?.textContent || ''
+                    // Extract sport information
+                    const sportData = {
+                        rank: sport.getAttribute('rank'),
+                        name: sport.getElementsByTagName('sportname')[0].textContent,
+                        participants: sport.getElementsByTagName('estimated_participants')[0].textContent,
+                        regions: sport.getElementsByTagName('primary_regions')[0].textContent
                         /*
-                            Optional chaining (?.) safely accesses properties
-                            If element doesn't exist, returns undefined instead of error
-                            || '' provides empty string as fallback value
+                            .getAttribute() gets HTML attribute value
+                            .textContent gets the text inside an element
                         */
                     };
                     
-                    // Process conferences
-                    const conferences = league.getElementsByTagName('conference');
-                    for (let j = 0; j < conferences.length; j++) {
-                        const conf = conferences[j];
-                        
-                        const confData = {
-                            name: conf.getElementsByTagName('conference_name')[0].textContent,
-                            abbr: conf.getElementsByTagName('conf_abbr')[0].textContent,
-                            divisions: []
-                        };
-                        
-                        // Process divisions if they exist
-                        const divisions = conf.getElementsByTagName('division');
-                        for (let k = 0; k < divisions.length; k++) {
-                            const div = divisions[k];
-                            confData.divisions.push({
-                                name: div.getElementsByTagName('division_name')[0].textContent,
-                                abbr: div.getElementsByTagName('div_abbr')[0].textContent
-                            });
-                        }
-                        
-                        leagueData.conferences.push(confData);
-                    }
-                    
-                    allLeagues.push(leagueData);
+                    allSports.push(sportData);
                     /*
                         .push() adds item to end of array
-                        Builds up complete list of all leagues
+                        Builds up complete list of all sports
                     */
                 }
 
-                // Display all leagues initially
-                displayLeagues(allLeagues);
-                updateStats(allLeagues);
+                // Display all sports initially
+                displaySports(allSports);
+                updateStats(allSports);
                 
             } catch (error) {
                 /*
                     catch block runs if any error occurs in try block
                     'error' variable contains details about what went wrong
                 */
-                console.error('Error loading leagues data:', error);
+                console.error('Error loading sports data:', error);
                 /*
                     console.error() prints error message to browser developer tools
                     Helpful for debugging - users don't see this
                 */
                 
                 // Show error message to user
-                document.getElementById('leagues-container').innerHTML = 
-                    '<div class="error">Error loading leagues.xml. Please ensure the file exists and is properly formatted.</div>';
+                document.getElementById('sports-container').innerHTML = 
+                    '<div class="error">Error loading sports.xml. Please ensure the file exists and is properly formatted.</div>';
                 /*
                     document.getElementById() finds element with specified ID
                     .innerHTML replaces element's content with new HTML
@@ -828,67 +715,41 @@
             }
         }
 
-        function displayLeagues(leaguesData) {
+        function displaySports(sportsData) {
             /*
-                Function that creates HTML from leagues data
-                Takes array of league objects as input
+                Function that creates HTML from sports data
+                Takes array of sport objects as input
             */
             
             // Find the container element
-            const container = document.getElementById('leagues-container');
+            const container = document.getElementById('sports-container');
             
-            if (leaguesData.length === 0) {
-                // Show message when no leagues match filter
-                container.innerHTML = '<div class="loading">No leagues found for the selected sport.</div>';
+            if (sportsData.length === 0) {
+                // Show message when no sports match filter
+                container.innerHTML = '<div class="loading">No sports found for the selected rank range.</div>';
                 return;
             }
             
-            // Generate HTML for each league in rows
+            // Generate HTML for each sport
             const html = `
-                <div class="leagues-list">
-                    ${leaguesData.map(league => `
-                        <div class="league-row ${getSportClass(league.sport)}">
-                            <div class="league-header">
-                                <div class="league-header-text">
-                                    <div class="league-sport">${league.sport}</div>
-                                    <div class="league-name">${league.name}</div>
-                                    <div class="league-abbr">${league.abbr}</div>
-                                </div>
-                                ${league.officialLogo ? `
-                                    <img src="${league.officialLogo}" alt="${league.name} logo" class="league-logo">
-                                ` : ''}
+                <div class="sports-container">
+                    ${sportsData.map(sport => `
+                        <div class="sport-card ${getRankClass(sport.rank)}">
+                            <div class="sport-header">
+                                <div class="sport-rank">#${sport.rank}</div>
+                                <div class="sport-name">${sport.name}</div>
+                                <div class="sport-participants">${formatParticipants(sport.participants)} participants</div>
                             </div>
-                            <div class="league-body">
-                                <div class="conferences-section">
-                                    <div class="section-title">Conferences</div>
-                                    <div class="conferences-grid">
-                                        ${league.conferences.map(conf => `
-                                            <div class="conference">
-                                                <div class="conference-name">${conf.name}</div>
-                                                <div class="conference-abbr">${conf.abbr}</div>
-                                                ${conf.divisions.length > 0 ? `
-                                                    <div class="divisions">
-                                                        ${conf.divisions.map(div => `
-                                                            <div class="division">
-                                                                <span class="division-name">${div.name}</span>
-                                                                <span class="division-abbr">(${div.abbr})</span>
-                                                            </div>
-                                                        `).join('')}
-                                                    </div>
-                                                ` : ''}
-                                            </div>
-                                        `).join('')}
-                                    </div>
+                            <div class="sport-body">
+                                <div class="section-title">Primary Regions</div>
+                                <div class="regions-list">
+                                    <div class="regions-text">${sport.regions}</div>
                                 </div>
-                                ${league.officialSite ? `
-                                    <div class="league-links-section">
-                                        <div class="league-links">
-                                            <a href="${league.officialSite}" target="_blank" class="official-link">
-                                                Official Website
-                                            </a>
-                                        </div>
-                                    </div>
-                                ` : ''}
+                                <div class="sport-links">
+                                    <a href="leagues.html?sport=${encodeURIComponent(sport.name.toLowerCase())}" class="leagues-link">
+                                        View Leagues
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     `).join('')}
@@ -899,15 +760,10 @@
                 ${} inserts JavaScript expressions into strings
                 .map() transforms each array item using provided function
                 .join('') combines array items into single string
-                Conditional rendering: condition ? 'html if true' : 'html if false'
-                target="_blank" opens links in new tab/window
             */
             
             // Replace loading message with generated HTML
             container.innerHTML = html;
-            
-            // Force browser to recalculate layout
-            container.offsetHeight;
         }
 
         // Event listeners for filter buttons
@@ -918,8 +774,8 @@
                 This ensures all elements exist before JavaScript tries to use them
             */
             
-            // Load the leagues data
-            loadLeaguesData();
+            // Load the sports data
+            loadSportsData();
             
             // Add click handlers to filter buttons
             document.querySelectorAll('.filter-btn').forEach(button => {
@@ -929,13 +785,13 @@
                         'click' event fires when user clicks the element
                         function() defines what happens when event occurs
                     */
-                    const sport = this.dataset.sport;
+                    const rankRange = this.dataset.rank;
                     /*
                         'this' refers to the clicked button element
                         .dataset accesses data-* attributes
-                        data-sport="value" becomes dataset.sport
+                        data-rank="value" becomes dataset.rank
                     */
-                    filterLeagues(sport);
+                    filterSports(rankRange);
                 });
             });
         });
