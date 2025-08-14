@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kat's Football Schedule</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .header-content .meta {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .header-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            background: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: #000;
+            border-radius: 8px;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .header-btn:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .header-btn:active {
+            transform: scale(0.95);
+        }
+
+        .header-btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .katopus-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .katopus-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .katopus-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+            padding: 16px;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .team-stat {
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .team-stat-name {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .team-stat-counts {
+            font-size: 10px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .games-timeline {
+            border-left: 2px solid #ddd;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .month-section {
+            margin-bottom: 40px;
+        }
+
+        .month-header {
+            margin-left: -32px;
+            margin-bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .game-item {
+            position: relative;
+            margin-left: 40px;
+            margin-bottom: 24px;
+            border: 1px solid #ddd;
+            background: #fff;
+            transition: all 0.2s;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .game-item:hover {
+            border-color: #000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .game-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 20px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #000;
+            border: 2px solid #fff;
+        }
+
+        .game-logo-cell {
+            grid-row: 1 / span 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .game-logo-cell:hover {
+            transform: scale(1.05);
+        }
+
+        .game-logo-cell img {
+            max-width: 100%;
+            max-height: 50px;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+        }
+        
+        .game-header{
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          padding: 16px 20px;
+          color: #fff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .game-teams {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .vs {
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            text-transform: lowercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .game-details {
+            padding: 16px 20px;
+            background: #fff;
+        }
+
+        .game-info {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .game-datetime {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .game-venue {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        /* Enhanced Mobile Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .header {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                text-align: center;
+                padding-bottom: 16px;
+                margin-bottom: 24px;
+            }
+
+            .header-icon {
+                justify-self: center;
+                width: 56px;
+                height: 56px;
+            }
+            
+            .header-content h1 {
+                font-size: 24px;
+                margin-bottom: 4px;
+            }
+
+            .header-content .meta {
+                font-size: 11px;
+                line-height: 1.3;
+            }
+            
+            .header-buttons {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .header-btn {
+                padding: 14px 24px;
+                font-size: 12px;
+                font-weight: 600;
+                border-radius: 12px;
+                min-width: 120px;
+                min-height: 48px;
+                border-width: 2px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            .header-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .games-timeline {
+                border-left: 2px solid #ddd;
+                margin-left: 12px;
+            }
+
+            .month-section {
+                margin-bottom: 32px;
+            }
+
+            .month-header {
+                margin-left: -20px;
+                margin-bottom: 16px;
+                font-size: 14px;
+                padding: 6px 12px;
+                border-radius: 4px;
+            }
+
+            .game-item {
+                margin-left: 24px;
+                margin-bottom: 16px;
+                grid-template-columns: 56px 1fr;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            .game-item::before {
+                left: -30px;
+                top: 16px;
+                width: 6px;
+                height: 6px;
+            }
+
+            .game-logo-cell {
+                padding: 6px;
+            }
+
+            .game-logo-cell img {
+                max-height: 40px;
+            }
+            
+            .game-header {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 12px 16px;
+                text-align: center;
+            }
+
+            .game-teams {
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .team-name {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .vs {
+                font-size: 10px;
+            }
+
+            .game-league {
+                font-size: 10px;
+                padding: 4px 8px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 12px;
+                display: inline-block;
+            }
+            
+            .game-details {
+                padding: 12px 16px;
+            }
+
+            .game-info {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                text-align: center;
+            }
+
+            .game-datetime {
+                font-size: 12px;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .game-venue {
+                font-size: 11px;
+                color: #666;
+            }
+
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-bottom: 20px;
+                padding: 12px;
+                border-radius: 8px;
+            }
+
+            .team-stat {
+                padding: 8px;
+            }
+
+            .team-stat-name {
+                font-size: 10px;
+                margin-bottom: 4px;
+            }
+
+            .team-stat-counts {
+                font-size: 9px;
+                gap: 6px;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 12px;
+            }
+
+            .header-content h1 {
+                font-size: 20px;
+            }
+
+            .header-content .meta {
+                font-size: 10px;
+            }
+
+            .header-btn {
+                padding: 12px 20px;
+                font-size: 11px;
+                min-width: 100px;
+                min-height: 44px;
+            }
+
+            .header-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .games-timeline {
+                margin-left: 8px;
+            }
+
+            .month-header {
+                margin-left: -16px;
+                font-size: 13px;
+                padding: 5px 10px;
+            }
+
+            .game-item {
+                margin-left: 20px;
+                grid-template-columns: 48px 1fr;
+                border-radius: 10px;
+            }
+
+            .game-item::before {
+                left: -26px;
+                top: 14px;
+                width: 5px;
+                height: 5px;
+            }
+
+            .game-logo-cell {
+                padding: 4px;
+            }
+
+            .game-logo-cell img {
+                max-height: 32px;
+            }
+
+            .game-header {
+                padding: 10px 12px;
+            }
+
+            .team-name {
+                font-size: 14px;
+            }
+
+            .vs {
+                font-size: 9px;
+            }
+
+            .game-league {
+                font-size: 9px;
+                padding: 3px 6px;
+            }
+
+            .game-details {
+                padding: 10px 12px;
+            }
+
+            .game-datetime {
+                font-size: 11px;
+            }
+
+            .game-venue {
+                font-size: 10px;
+            }
+        }
+
+        @media print {
+            .header-buttons, .header-btn, .katopus-modal {
+                display: none !important;
+            }
+
+            .team-stats {
+                display: none !important;
+            }
+
+            .header {
+                grid-template-columns: auto 1fr;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #000;
+            }
+
+            .header-icon {
+                width: 48px;
+                height: 48px;
+                background: #f0f0f0;
+                border-radius: 6px;
+            }
+
+            .header-content h1 {
+                font-size: 20px;
+                margin-bottom: 4px;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+            }
+
+            .header-content .meta {
+                font-size: 9px;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .container {
+                padding: 15px;
+                max-width: none;
+            }
+
+            .games-timeline {
+                margin-left: 15px;
+                border-left: 2px solid #ddd;
+            }
+
+            .month-section {
+                margin-bottom: 20px;
+            }
+
+            .month-header {
+                font-size: 13px;
+                padding: 5px 10px;
+                margin-left: -20px;
+                margin-bottom: 12px;
+                background: #000;
+                color: #fff;
+                font-weight: 500;
+                display: inline-block;
+            }
+
+            .game-item {
+                margin-left: 25px;
+                margin-bottom: 12px;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+                grid-template-columns: 48px 1fr;
+                border-radius: 6px;
+                overflow: hidden;
+                background: #fff;
+            }
+
+            .game-item::before {
+                left: -31px;
+                top: 15px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #000;
+                border: 2px solid #fff;
+            }
+
+            .game-logo-cell {
+                grid-row: 1 / span 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
+            }
+
+            .game-logo-cell img {
+                max-height: 36px;
+                max-width: 100%;
+                object-fit: contain;
+                filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+            }
+
+            .game-header {
+                padding: 10px 12px;
+                color: white !important;
+                grid-template-columns: 1fr auto;
+                gap: 8px;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                align-items: center;
+            }
+
+            .game-header *, .game-header span, .game-teams, .game-teams span, .vs {
+                color: white !important;
+            }
+
+            .game-teams {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-wrap: wrap;
+            }
+
+            .team-name {
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            .vs {
+                font-size: 8px;
+                color: rgba(255,255,255,0.8);
+                text-transform: lowercase;
+                letter-spacing: 0.1em;
+                font-weight: 500;
+            }
+
+            .game-league {
+                font-size: 8px;
+                padding: 3px 6px;
+                background: rgba(255,255,255,0.2) !important;
+                color: white !important;
+                border-radius: 10px;
+                display: inline-block;
+            }
+
+            .game-details {
+                padding: 8px 12px;
+                background: #fff;
+            }
+
+            .game-info {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .game-datetime {
+                font-size: 10px;
+                font-weight: 500;
+            }
+
+            .game-venue {
+                font-size: 9px;
+                color: #666;
+            }
+        }
+</style>
+<link rel="icon" type="image/png" href="../images/katopus.png">
+  <link rel="apple-touch-icon" href="../images/katopus.png">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-icon" onclick="showKatopusModal()">
+                <img src="../images/katopus.png" alt="Kat's Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='🏈';">
+            </div>
+            <div class="header-content">
+                <h1>Kat's Football Schedule</h1>
+                <div class="meta">2025 Season • <span style="color: #D3BC8D;">Saints</span>, <span style="color: #FA4616;">Gators</span>, <span style="color: #461D7C;">Tigers</span>, <span style="color: #006747;">Wave</span></div>
+            </div>
+            <button class="header-btn" onclick="addToHomeScreen()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add
+            </button>
+            <button class="header-btn" onclick="printSchedule()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6,9 6,2 18,2 18,9"/>
+                    <path d="M6,18H4a2,2 0 0,1-2-2v-5a2,2 0 0,1,2-2H20a2,2 0 0,1,2,2v5a2,2 0 0,1-2,2H18"/>
+                    <rect x="6" y="14" width="12" height="8"/>
+                </polyline>
+                Print
+            </button>
+        </header>
+
+        <div class="katopus-modal" id="katopusModal" onclick="hideKatopusModal()">
+            <img src="../images/katopus.png" alt="Katopus - Large View">
+        </div>
+
+        <div id="loading" class="loading">Loading schedule data...</div>
+        <div id="content" style="display: none;">
+            <div class="games-timeline" id="games-timeline"></div>
+        </div>
+    </div>
+
+    <script>
+        let gamesData = null;
+        let teamsData = null;
+
+        const targetTeams = {
+            'Tulane': { 
+                slug: 'tulane-green-wave', 
+                league: 'College', 
+                colors: { primary: '#006747', secondary: '#66C7E1' }, 
+                icon: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/tulanegreenwave.com/images/sng_2025/main_nav_logo.svg',
+                website: 'https://tulanegreenwave.com/sports/football/schedule'
+            },
+            'LSU': { 
+                slug: 'lsu-tigers', 
+                league: 'College', 
+                colors: { primary: '#461D7C', secondary: '#FDD023' }, 
+                icon: 'https://storage.googleapis.com/lsusports-com/2021/06/3c6e097b-logo.svg',
+                website: 'https://lsusports.net/sports/fb/schedule'
+            },
+            'Florida': { 
+                slug: 'florida-gators', 
+                league: 'College', 
+                colors: { primary: '#FA4616', secondary: '#0021A5' }, 
+                icon: 'https://upload.wikimedia.org/wikipedia/en/7/74/Florida_Gators_football_logo.svg',
+                website: 'https://floridagators.com/sports/football/schedule'
+            },
+            'New Orleans Saints': { 
+                slug: 'new-orleans-saints', 
+                league: 'NFL', 
+                colors: { primary: '#D3BC8D', secondary: '#101820' }, 
+                icon: 'https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx',
+                website: 'https://www.neworleanssaints.com/schedule/'
+            }
+        };
+
+        async function loadData() {
+            try {
+                const [gamesResponse, teamsResponse] = await Promise.all([
+                    fetch('https://kevinkolb.github.io/horsesmouthsportsdata/games/games.xml'),
+                    fetch('https://kevinkolb.github.io/horsesmouthsportsdata/teams/teams.xml')
+                ]);
+
+                if (!gamesResponse.ok || !teamsResponse.ok) {
+                    throw new Error('Failed to load XML files');
+                }
+
+                const gamesText = await gamesResponse.text();
+                const teamsText = await teamsResponse.text();
+
+                const parser = new DOMParser();
+                gamesData = parser.parseFromString(gamesText, 'text/xml');
+                teamsData = parser.parseFromString(teamsText, 'text/xml');
+
+                renderSchedule();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = 'Error loading schedule data.';
+            }
+        }
+
+        function getTeamInfo(teamSlug, league) {
+            const teams = teamsData.querySelectorAll('league team');
+            for (let team of teams) {
+                if (team.querySelector('slug')?.textContent === teamSlug) {
+                    return {
+                        name: team.querySelector('name').textContent,
+                        conference: team.querySelector('conference')?.textContent || '',
+                        division: team.querySelector('division')?.textContent || '',
+                        location: team.querySelector('location')?.textContent || ''
+                    };
+                }
+            }
+            return { name: teamSlug, conference: '', division: '', location: '' };
+        }
+
+        // --- TBD handling helpers ---
+        function isTimeTBD(gameEl) {
+            const v = (gameEl.getAttribute('starttimetbd')
+                    || gameEl.getAttribute('start_time_tbd')
+                    || gameEl.getAttribute('time_tbd')
+                    || gameEl.getAttribute('tbd')
+                    || '').toString().toLowerCase();
+            return v === 'true' || v === '1' || v === 'yes';
+        }
+        function getStartISO(gameEl) {
+            return gameEl.getAttribute('start_date') || gameEl.getAttribute('startdate');
+        }
+        function dateForDisplay(isoString, tbd) {
+            const d = new Date(isoString);
+            if (tbd) d.setHours(d.getHours() + 6);
+            return d;
+        }
+        function formatGameDate(isoString, tbd=false) {
+            const d = dateForDisplay(isoString, tbd);
+            return d.toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                timeZone: 'America/Chicago'
+            });
+        }
+        function formatGameTime(isoString) {
+            // Check if this is the specific Saints @ Falcons game time that should be TBD
+            if (isoString === '2026-01-04T05:00Z') {
+                return 'TBD';
+            }
+            
+            const d = new Date(isoString);
+            return d.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                timeZone: 'America/Chicago',
+                timeZoneName: 'short'
+            });
+        }
+        function monthYearLabel(isoString, tbd=false) {
+            const d = dateForDisplay(isoString, tbd);
+            return d.toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'America/Chicago'
+            });
+        }
+        // --- end TBD helpers ---
+
+        function renderSchedule() {
+            const allGames = [];
+            
+            Object.entries(targetTeams).forEach(([teamName, config]) => {
+                const leagues = gamesData.querySelectorAll('league');
+                
+                leagues.forEach(league => {
+                    const leagueName = league.getAttribute('name');
+                    if (leagueName === config.league) {
+                        const teams = league.querySelectorAll('team');
+                        teams.forEach(team => {
+                            const teamCode = team.getAttribute('code');
+                            const teamFullName = team.getAttribute('name');
+                            
+                            if (teamFullName === teamName || teamCode === teamName || 
+                                (teamName === 'New Orleans Saints' && teamFullName === 'New Orleans Saints')) {
+                                
+                                const games = team.querySelectorAll('game');
+                                games.forEach(game => {
+                                    const startISO = getStartISO(game);
+                                    if (startISO) {
+                                        const tbd = isTimeTBD(game);
+                                        const sortDate = dateForDisplay(startISO, tbd);
+                                        allGames.push({
+                                            team: teamName,
+                                            teamCode: teamCode || teamFullName,
+                                            game: game,
+                                            startISO,
+                                            tbd,
+                                            date: sortDate,
+                                            config: config
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
+            allGames.sort((a, b) => a.date - b.date);
+
+            const timeline = document.getElementById('games-timeline');
+            let currentMonth = '';
+
+            allGames.forEach(gameData => {
+                const { team, teamCode, game, startISO, tbd, config } = gameData;
+                const monthYear = monthYearLabel(startISO, tbd);
+                
+                if (monthYear !== currentMonth) {
+                    currentMonth = monthYear;
+                    const monthHeader = document.createElement('div');
+                    monthHeader.className = 'month-section';
+                    monthHeader.innerHTML = `<div class="month-header">${monthYear}</div>`;
+                    timeline.appendChild(monthHeader);
+                }
+
+                const gameItem = document.createElement('div');
+                gameItem.className = 'game-item';
+                
+                const homeTeam = game.getAttribute('home_team');
+                const awayTeam = game.getAttribute('away_team');
+                const venue = game.getAttribute('venue');
+                
+                const isHome = (homeTeam === team || homeTeam === teamCode);
+                const opponent = isHome ? awayTeam : homeTeam;
+                
+                const favoredTeam = team;
+                const otherTeam = opponent;
+                
+                const gameDateTime = formatGameDate(startISO, tbd);
+                const gameTime = tbd ? 'TBD' : formatGameTime(startISO);
+                
+                const leagueLabel = isHome ? 'HOME' : 'AWAY';
+                const headerStyle = `style="background:${config.colors.primary};"`;
+                const logoCellStyle = `style="background:${config.colors.secondary};"`;
+
+                gameItem.innerHTML = `
+                    <div class="game-logo-cell" ${logoCellStyle} onclick="window.open('${config.website}', '_blank')">
+                        <img src="${config.icon}" alt="${team} Logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="game-header" ${headerStyle}>
+                        <div class="game-teams">
+                            <span class="team-name">${favoredTeam}</span>
+                            <span class="vs">vs</span>
+                            <span class="team-name">${otherTeam}</span>
+                        </div>
+                        <div class="game-league">${leagueLabel}</div>
+                    </div>
+                    <div class="game-details">
+                        <div class="game-info">
+                            <div class="game-datetime">${gameDateTime} • ${gameTime}</div>
+                            <div class="game-venue">${venue}</div>
+                        </div>
+                    </div>
+                `;
+
+                timeline.appendChild(gameItem);
+            });
+        }
+
+        function showKatopusModal() {
+            document.getElementById('katopusModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideKatopusModal() {
+            document.getElementById('katopusModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function addToHomeScreen() {
+            alert("To add this schedule to your home screen:\n\n1. Tap the Share icon (□↗) at the bottom of Safari\n2. Scroll down and tap 'Add to Home Screen'\n3. Tap 'Add' to confirm\n\nYou'll then have quick access to Kat's schedule from your home screen!");
+        }
+
+        function printSchedule() {
+            window.print();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
